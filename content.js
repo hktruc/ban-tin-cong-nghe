@@ -1,5 +1,304 @@
 window.ARTICLES=[
   {
+    "id": "viadminshift",
+    "title": "ViAdminShift: biết có thay đổi chưa đủ để AI bỏ câu trả lời cũ",
+    "deck": "Nghiên cứu mới về tri thức có thời hạn, với bài học thực dụng cho doanh nghiệp và giáo dục. Đã đọc nguồn chính, chưa tái lập thực nghiệm.",
+    "sourceDate": "Bản thảo arXiv ngày 02/11/2026",
+    "body": [
+      [
+        "Bằng chứng và phạm vi",
+        "ViAdminShift có 7.995 câu kiểm tra quanh cải cách hành chính 2025. Trong nhóm 20 mô hình vượt tiêu chí ‘biết cải cách’, 14 mô hình chỉ trả lời tên tỉnh mới trong tối đa 11% câu hỏi địa chỉ cũ không kèm gợi ý. Thêm ngày có thể cải thiện, nhưng không bảo đảm. Mã dùng MIT; dữ liệu và kết quả chủ yếu CC BY-SA 4.0, riêng đầu ra tiny-aya-global là CC BY-NC-SA 4.0. Đây là benchmark, không phải công cụ đổi địa chỉ. Giới hạn quan trọng: đáp án neo vào 01/07/2025, chưa phản ánh đầy đủ thay đổi năm 2026; nhiều thí nghiệm chỉ chạy một lần, một phần phân tích thực hiện hậu nghiệm. [Bản thảo ViAdminShift: phương pháp và giới hạn](https://arxiv.org/html/2611.03171v1)"
+      ],
+      [
+        "Một lỗi âm thầm trong quy trình",
+        "Điều đáng quan tâm với SME không phải cuộc đua điểm số, mà là cách một lỗi âm thầm đi qua quy trình. Một chatbot trả lời trôi chảy có thể khiến nhân viên tin rằng địa chỉ đã được chuẩn hóa. Nếu kết quả đó đi thẳng sang phần mềm giao hàng, thông tin sai sẽ được nhân bản qua nhiều hệ thống. Vì thế, đề xuất triển khai của bài viết này là tách hai việc: AI hiểu câu hỏi và bảng dữ liệu có phiên bản quyết định mã địa bàn. Câu trả lời nên kèm ngày hiệu lực, nguồn và cảnh báo khi có nhiều khả năng."
+      ],
+      [
+        "Cách tự kiểm chứng",
+        "Có thể tự kiểm chứng bằng một thử nghiệm nhỏ, chưa cần xây hệ thống lớn. Chọn các trường hợp doanh nghiệp thực sự gặp, gồm địa danh thay đổi, không thay đổi, tên trùng và câu không dấu. Nhờ người phụ trách nghiệp vụ lập đáp án từ nguồn hiện hành trước khi chạy AI. Với cùng từng câu, so sánh ba cách hỏi: không ghi ngày, ghi ngày trong chỉ dẫn chung, và ghi ngày trực tiếp trong câu hỏi. Không chỉ đếm đúng/sai; cần ghi riêng trường hợp trả lời cũ mà không cảnh báo, từ chối hợp lý và trường hợp bị yêu cầu cập nhật đến mức sửa cả dữ liệu vốn đúng."
+      ],
+      [
+        "Chi phí và quyền riêng tư",
+        "Đây là đề xuất thử nghiệm của người viết, không phải kết quả đã tái lập. Nên lưu phiên bản mô hình, thời điểm, cấu hình và toàn bộ đầu ra; chạy lặp vài lần để biết mức dao động. Chi phí cần đo bằng tiền API hoặc thời gian máy cộng thời gian chuyên viên sửa lỗi. Đừng đưa địa chỉ gắn với tên, số điện thoại khách hàng vào dịch vụ thử nghiệm nếu chưa có cơ sở cho phép; dữ liệu giả đủ để kiểm tra cấu trúc."
+      ],
+      [
+        "Hướng nghiên cứu liên ngành",
+        "Trong lớp học, chủ đề này phù hợp bài tập giao thoa tin học, địa lý và năng lực đọc nguồn: học sinh phải chỉ ra ‘đúng ở thời điểm nào’, thay vì chỉ hỏi AI có đúng không. Hướng nghiên cứu tiếp theo đáng làm là thiết kế giao diện biểu đạt thời gian, đo mức người dùng tin câu trả lời, và thử trên dữ liệu địa phương có lỗi chính tả. Mức tin cậy hiện tại đủ để đặt giả thuyết và thiết kế kiểm thử, chưa đủ để suy rộng tỷ lệ lỗi cho mọi chatbot."
+      ]
+    ],
+    "sources": [
+      [
+        "Bài nghiên cứu đầy đủ, gồm phương pháp, giấy phép và giới hạn",
+        "https://arxiv.org/html/2611.03171v1"
+      ]
+    ],
+    "labels": [
+      "Câu hỏi cũ",
+      "Ngày hiệu lực",
+      "Đối chiếu nguồn"
+    ],
+    "color": "blue",
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "05/11/2026",
+    "checked": "05/11/2026",
+    "status": "Đã kiểm tra nguồn; chưa thực nghiệm",
+    "read": "6 phút",
+    "note": "Phân tích nguyên bản dựa trên nguồn trực tiếp được kiểm tra ngày 05/11/2026. Phương pháp và tình huống thử là đề xuất của ban biên tập, chưa thực hiện. Tuyên bố từ tác giả hoặc nhà cung cấp không phải xác nhận độc lập. Sơ đồ là minh họa nguyên bản, không phải ảnh sản phẩm hay kết quả đo.",
+    "illustration": "images/viadminshift.svg",
+    "illustrationCredit": "Đồ họa vector nguyên bản của Bản tin công nghệ. Không sử dụng ảnh hay biểu trưng của bên thứ ba.",
+    "intro": "Nghiên cứu mới về tri thức có thời hạn, với bài học thực dụng cho doanh nghiệp và giáo dục. Đã đọc nguồn chính, chưa tái lập thực nghiệm."
+  },
+  {
+    "id": "gipformer",
+    "title": "Gipformer 1.5: thử nhận dạng tiếng Việt tại chỗ, nhưng đừng bỏ qua quyền dữ liệu",
+    "deck": "Một phương án nhận dạng tiếng nói để khảo sát cho học liệu và SME. Đã đọc tài liệu kỹ thuật, chưa chạy mô hình hay xác nhận hiệu năng độc lập.",
+    "sourceDate": "Chưa xác minh ngày phát hành; khảo sát công cụ ngày 05/11/2026",
+    "body": [
+      [
+        "Số liệu do nhà phát triển công bố",
+        "Gipformer 1.5 của G-Group AI Lab là mô hình nhận dạng tiếng nói 68 triệu tham số, giấy phép MIT. Model card tự báo cáo WER 23,32% trên bộ giáo dục và 27,49% trên bộ công nghệ. Đây là số liệu của nhà phát triển, chưa phải đánh giá độc lập; các tập tổng đài riêng cũng hạn chế khả năng tái lập. WER là tỷ lệ lỗi từ; cách chuẩn hóa số và dấu câu có thể làm điểm số khác trải nghiệm đọc bản chép. [Model card Gipformer 1.5](https://huggingface.co/g-group-ai-lab/gipformer1.5-68M-rnnt)"
+      ],
+      [
+        "Giấy phép mô hình khác giấy phép dữ liệu",
+        "Kho mã cung cấp suy luận ONNX, lựa chọn INT8 và nạp mô hình từ thư mục cục bộ. Bộ kiểm thử giáo dục gồm 495 đoạn, khoảng 0,52 giờ, mang giấy phép CC BY-NC 4.0. Bộ công nghệ gồm 508 đoạn, khoảng 0,49 giờ, cũng giới hạn sử dụng phi thương mại và yêu cầu ghi công. Không được suy từ MIT của mô hình rằng dữ liệu kiểm thử cũng được dùng thương mại. [Mã suy luận](https://github.com/ggroup-ai-lab/gipformer), [dữ liệu giáo dục](https://huggingface.co/datasets/g-group-ai-lab/vi-asr-edu-test), [dữ liệu công nghệ](https://huggingface.co/datasets/g-group-ai-lab/vi-asr-tech-test)"
+      ],
+      [
+        "Một ứng dụng vừa sức",
+        "Với một trung tâm đào tạo, trường hợp đáng thử là tạo bản chép nháp cho video hướng dẫn phần mềm có thuật ngữ tiếng Anh xen tiếng Việt. Với SME, đó có thể là hỗ trợ tìm kiếm trong kho ghi âm nội bộ đã được phép xử lý. Không nên bắt đầu bằng quyết định tự động dựa trên lời nói, vì một từ phủ định hoặc mã sản phẩm bị nghe sai có thể thay đổi hoàn toàn ý nghĩa."
+      ],
+      [
+        "Cách đánh giá trên công việc thật",
+        "Một phép thử thực dụng nên dùng bản ghi của chính đơn vị với sự đồng ý phù hợp, tách người nói giữa tập điều chỉnh và tập đánh giá. Có thể lấy cùng một đoạn âm thanh chạy qua Gipformer và hệ thống đang sử dụng, rồi nhờ hai người chép chuẩn độc lập. Ngoài WER, nên kiểm tra tỷ lệ đúng của thuật ngữ chuyên môn, số, tên riêng và câu phủ định. Với bài giảng lập trình, hãy đo xem người đọc bản chép có thực hiện đúng thao tác hay không: đúng nhiều từ nhưng sai tên hàm vẫn là thất bại về sử dụng."
+      ],
+      [
+        "Chạy tại chỗ vẫn cần quản trị dữ liệu",
+        "Chạy tại chỗ mở ra khả năng hạn chế truyền âm thanh ra ngoài, nhưng không tự tạo ra bảo mật. Người triển khai vẫn cần kiểm tra lưu log, quyền truy cập thư mục, bản sao lưu và thời hạn giữ bản ghi. Không nên tải âm thanh học sinh hoặc khách hàng lên demo công cộng chỉ để thử nhanh. Cũng chưa nên hứa ‘miễn phí’: cần tính máy tính, điện, tích hợp, vận hành và đặc biệt là phút biên tập cho mỗi giờ ghi âm."
+      ],
+      [
+        "Hướng nghiên cứu liên ngành",
+        "Một hướng liên ngành hữu ích là kết hợp kỹ thuật tiếng nói với ngôn ngữ học và thiết kế học liệu: đánh giá theo vùng giọng, mức nhiễu và cách đọc thuật ngữ, sau đó đo lợi ích thực sự cho người học. Các tập test ngắn là điểm khởi đầu, không thay thế được lớp học nhiều người nói hoặc cuộc gọi dài. Khuyến nghị hiện tại là thử nghiệm giới hạn, báo cáo cả lỗi lẫn chi phí sửa; chưa có bằng chứng ở đây để kết luận nên thay toàn bộ hệ thống đang dùng."
+      ]
+    ],
+    "sources": [
+      [
+        "Model card: kiến trúc, số liệu tự báo cáo và giấy phép MIT",
+        "https://huggingface.co/g-group-ai-lab/gipformer1.5-68M-rnnt"
+      ],
+      [
+        "Kho mã và hướng dẫn suy luận chính thức",
+        "https://github.com/ggroup-ai-lab/gipformer"
+      ],
+      [
+        "Dataset giáo dục: quy mô và giấy phép CC BY-NC 4.0",
+        "https://huggingface.co/datasets/g-group-ai-lab/vi-asr-edu-test"
+      ],
+      [
+        "Dataset công nghệ: quy mô và giấy phép CC BY-NC 4.0",
+        "https://huggingface.co/datasets/g-group-ai-lab/vi-asr-tech-test"
+      ]
+    ],
+    "labels": [
+      "Âm thanh",
+      "Bản chép nháp",
+      "Người kiểm tra"
+    ],
+    "color": "teal",
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "05/11/2026",
+    "checked": "05/11/2026",
+    "status": "Đã kiểm tra nguồn; chưa thực nghiệm",
+    "read": "6 phút",
+    "note": "Phân tích nguyên bản dựa trên nguồn trực tiếp được kiểm tra ngày 05/11/2026. Phương pháp và tình huống thử là đề xuất của ban biên tập, chưa thực hiện. Tuyên bố từ tác giả hoặc nhà cung cấp không phải xác nhận độc lập. Sơ đồ là minh họa nguyên bản, không phải ảnh sản phẩm hay kết quả đo.",
+    "illustration": "images/gipformer.svg",
+    "illustrationCredit": "Đồ họa vector nguyên bản của Bản tin công nghệ. Không sử dụng ảnh hay biểu trưng của bên thứ ba.",
+    "intro": "Một phương án nhận dạng tiếng nói để khảo sát cho học liệu và SME. Đã đọc tài liệu kỹ thuật, chưa chạy mô hình hay xác nhận hiệu năng độc lập."
+  },
+  {
+    "id": "nemotron-personas-vietnam",
+    "title": "Một triệu hồ sơ giả lập Việt: thêm tình huống thử AI, chưa thay được người dùng thật",
+    "deck": "Nemotron-Personas-Vietnam 2.0 mở rộng dữ liệu giả lập. Giá trị nằm ở cách thiết kế bài thử, không chỉ ở số lượng hồ sơ.",
+    "sourceDate": "15/10/2026: phát hành dữ liệu; 16/10/2026: FPT công bố mở rộng",
+    "body": [
+      [
+        "Điều đã được xác nhận",
+        "Dataset card NVIDIA ghi bản 2.0 phát hành ngày 15/10/2026, gồm một triệu bản ghi và sáu triệu mô tả persona. Dữ liệu chỉ bao gồm người trưởng thành, sử dụng tiếng Việt phổ thông; nhà phát triển thừa nhận giả định độc lập giữa một số biến nhân khẩu học. Sáu triệu mô tả không đồng nghĩa sáu triệu cá nhân. [Dataset card NVIDIA](https://huggingface.co/datasets/nvidia/Nemotron-Personas-Vietnam) Thông báo FPT ngày 16/10 xác nhận quy mô tăng mười lần và các hồ sơ được tạo tổng hợp dựa trên thống kê dân số, không phải thu thập từ một triệu người thật. [Thông báo FPT ngày 16/10/2026](https://fpt.com/en/news/fpt-and-nvidia-expand-synthetic-user-dataset-tenfold-to-advance-ai-development)"
+      ],
+      [
+        "Phân tích: phong phú chưa chắc đại diện",
+        "Giá trị thực dụng là mở rộng tình huống kiểm thử mà chưa phải mang dữ liệu khách hàng thật vào hệ thống. Tuy nhiên, khớp phân bố dân số không bảo đảm hành vi, nhu cầu và cách diễn đạt của nhóm nhỏ được mô phỏng đúng. Một hệ thống làm tốt với câu hỏi sinh bởi cùng họ mô hình vẫn có thể thất bại trước người dùng thật. Đây là công cụ tạo giả thuyết kiểm thử, không phải khảo sát thị trường hay bằng chứng độc lập về mức độ công bằng."
+      ],
+      [
+        "Một thử nghiệm có thể bắt đầu nhỏ",
+        "Đề xuất chọn quy trình ít rủi ro, như hướng dẫn tìm thông tin dịch vụ. Lấy mẫu theo tuổi, vùng và học vấn; yêu cầu các persona thực hiện cùng một nhiệm vụ. Giữ nguyên thông tin dịch vụ, chỉ thay cách diễn đạt và điều kiện sử dụng. Chấm riêng độ chính xác, mức dễ hiểu, khả năng hỏi lại và sự khác biệt giữa các nhóm. Điểm trung bình đẹp không được che lỗi nghiêm trọng ở nhóm ít mẫu."
+      ],
+      [
+        "Từ câu hỏi sinh tự động đến kiểm chứng",
+        "Chia tình huống thành ba lớp: câu hỏi rõ ràng, câu hỏi thiếu dữ kiện và câu hỏi có tiền đề sai. Người chấm cần biết đáp án chuẩn trước khi xem phản hồi AI. Sau vòng thử tổng hợp, dùng thêm bộ câu hỏi do người Việt thật viết, được phép sử dụng. Nếu kết quả tốt chỉ xuất hiện ở dữ liệu tổng hợp, chưa nên kết luận sản phẩm tiến bộ. Cũng cần giữ một bộ kiểm thử không dùng để tinh chỉnh, tránh việc cải thiện chỉ là học thuộc dạng câu hỏi."
+      ],
+      [
+        "Chi phí và quyền sử dụng",
+        "Dataset ghi giấy phép CC BY 4.0. Theo Creative Commons, được chia sẻ, chỉnh sửa và dùng thương mại nếu ghi công, dẫn giấy phép, nêu thay đổi và tuân thủ các điều kiện liên quan; giấy phép không bảo đảm mọi quyền khác đều được giải quyết. [Điều kiện CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) Miễn phí dữ liệu không đồng nghĩa miễn phí tính toán. Nên dự toán riêng tiền sinh câu hỏi, chạy mô hình, chấm bởi con người và lưu kết quả. Không cần dùng toàn bộ dữ liệu để biết thử nghiệm ban đầu có ích hay không."
+      ],
+      [
+        "Điểm dừng và câu hỏi nghiên cứu",
+        "Chưa có benchmark độc lập được thực hiện trong bài này. Hãy đặt tiêu chí dừng trước khi chạy: lỗi thông tin quan trọng, hướng dẫn gây hiểu nhầm hoặc chênh lệch lớn giữa các nhóm. Lưu phiên bản dữ liệu, mô hình và bộ câu hỏi để có thể lặp lại phép thử. Câu hỏi đáng nghiên cứu tiếp là: persona tổng hợp cải thiện kết quả trên người dùng thật bao nhiêu, và lợi ích còn giữ được khi đổi mô hình sinh câu hỏi?"
+      ]
+    ],
+    "sources": [
+      [
+        "Dataset card NVIDIA",
+        "https://huggingface.co/datasets/nvidia/Nemotron-Personas-Vietnam"
+      ],
+      [
+        "Thông báo FPT ngày 16/10/2026",
+        "https://fpt.com/en/news/fpt-and-nvidia-expand-synthetic-user-dataset-tenfold-to-advance-ai-development"
+      ],
+      [
+        "Điều kiện CC BY 4.0",
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    ],
+    "labels": [
+      "Hồ sơ giả lập",
+      "Tình huống thử",
+      "Người dùng thật"
+    ],
+    "color": "teal",
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "05/11/2026",
+    "checked": "05/11/2026",
+    "status": "Đã kiểm tra nguồn; chưa thực nghiệm",
+    "read": "6 phút",
+    "note": "Phân tích nguyên bản dựa trên nguồn trực tiếp được kiểm tra ngày 05/11/2026. Phương pháp và tình huống thử là đề xuất của ban biên tập, chưa thực hiện. Tuyên bố từ tác giả hoặc nhà cung cấp không phải xác nhận độc lập. Sơ đồ là minh họa nguyên bản, không phải ảnh sản phẩm hay kết quả đo.",
+    "illustration": "images/nemotron-personas-vietnam.svg",
+    "illustrationCredit": "Đồ họa vector nguyên bản của Bản tin công nghệ. Không sử dụng ảnh hay biểu trưng của bên thứ ba.",
+    "intro": "Nemotron-Personas-Vietnam 2.0 mở rộng dữ liệu giả lập. Giá trị nằm ở cách thiết kế bài thử, không chỉ ở số lượng hồ sơ."
+  },
+  {
+    "id": "vnpt-qualcomm-edge-ai",
+    "title": "VNPT–Qualcomm AI biên: đọc lộ trình bằng bài toán vận hành",
+    "deck": "Hợp tác kỹ thuật mở thêm đường thương mại hóa. Doanh nghiệp vẫn cần kiểm chứng độ trễ, chi phí và đường đi của dữ liệu.",
+    "sourceDate": "23/09/2026: công bố CESA; 30/09/2026: bài VNPT đăng",
+    "body": [
+      [
+        "Điều đã được xác nhận",
+        "Ngày 23/9/2026 tại New York, VNPT công bố mở rộng hợp tác với Qualcomm qua thỏa thuận dịch vụ kỹ thuật khách hàng CESA. Danh mục được nêu gồm AI Gateway, camera AI, laptop AI và kết nối XGS-PON/Wi-Fi. Con số đầu tư và cơ hội kinh doanh trong thông cáo là dự kiến, không phải doanh thu đã ghi nhận. [VNPT công bố mở rộng hợp tác CESA](https://vinaphonehanoi.vnpt.vn/tin-tuc-chi-tiet/vnpt-hop-tac-qualcomm-phat-trien-loat-san-pham-ai-the-he-moi-huong-toi-thi-truong-toan-cau-1316) Bài VNPT Technology đăng 10/9, tường thuật buổi làm việc 27/8, nói các nhóm sản phẩm dự kiến được giới thiệu và thương mại hóa đến tháng 6/2027. [VNPT Technology về lộ trình thương mại hóa](https://vnpt-technology.vn/vi/news_detail/vnpt-qualcomm-tang-toc-hop-tac-mo-rong-he-sinh-thai-ai-va-huong-toi-6g)"
+      ],
+      [
+        "Phân tích: cần nhìn cả vòng đời",
+        "Điểm đáng theo dõi không chỉ là chạy AI gần thiết bị hơn, mà còn là năng lực thiết kế, tích hợp, hỗ trợ và bảo trì hệ thống trong nước. Với nhà máy hay chuỗi cửa hàng, triển khai tại chỗ có thể quan trọng ngang tốc độ suy luận. Nhưng thông cáo hợp tác chưa chứng minh độ trễ, điện năng, độ ổn định hoặc tổng chi phí sở hữu. Lộ trình ra thị trường không đồng nghĩa mọi sản phẩm đã bán và sẵn sàng cho mọi quy mô."
+      ],
+      [
+        "Cách thử trước khi mua lớn",
+        "Đề xuất chọn một tác vụ ít rủi ro và dữ liệu không nhạy cảm, rồi chạy cùng tác vụ ở biên và trên đám mây. Đo độ trễ ở phần trăm vị 95, tỷ lệ sai, điện năng, lưu lượng mạng và khả năng hoạt động khi mất kết nối. Phải giữ điều kiện đầu vào tương đương. Không nên duyệt mua sắm chỉ dựa trên tốc độ chip hoặc nhãn AI: một thiết bị nhanh nhưng cần nhiều thao tác sửa lỗi vẫn có thể làm quy trình chậm hơn."
+      ],
+      [
+        "Một kịch bản vận hành đáng kiểm tra",
+        "Trong thử nghiệm giả định tại cửa hàng, cho hệ thống xử lý dữ liệu mẫu ở giờ bình thường và lúc tải tăng. Sau đó ngắt mạng có kiểm soát trong môi trường thử nghiệm để xem chức năng nào còn chạy, dữ liệu nào được đệm và có bị gửi trùng khi kết nối trở lại không. Đây là đề xuất phương pháp, không phải kết quả đã đo trên thiết bị VNPT. Cần thử cả cập nhật mô hình, quay lại phiên bản cũ và thời gian khôi phục khi thiết bị gặp lỗi."
+      ],
+      [
+        "Giá và dữ liệu còn cần hỏi rõ",
+        "Hai nguồn đã đọc chưa cung cấp giá bán, báo giá triển khai, điều khoản lưu dữ liệu hoặc benchmark độc lập. Không thể suy ra dữ liệu không rời thiết bị: mô tả hợp tác có cả thành phần đám mây. Trước khi dùng camera hoặc tài liệu nội bộ, cần yêu cầu sơ đồ luồng dữ liệu, nơi lưu log và quyền truy cập từ xa. Hợp đồng cũng nên làm rõ thời hạn hỗ trợ firmware, trách nhiệm vá lỗi và cách xuất dữ liệu khi đổi nhà cung cấp."
+      ],
+      [
+        "Quyết định bằng chi phí ba năm",
+        "Dự toán nên tách thiết bị, tích hợp, điện, đường truyền, bảo trì, cập nhật mô hình và nhân lực xử lý sự cố. So sánh ở cùng mức chất lượng đầu ra, thay vì coi mọi lượt suy luận là tương đương. Chỉ mở rộng sau khi thử nghiệm đạt ngưỡng đã thống nhất. Câu hỏi nghiên cứu sâu là: tiết kiệm băng thông và độ trễ trong tải thực tế tại Việt Nam có bù được chi phí thiết bị và vận hành trong ba năm không?"
+      ]
+    ],
+    "sources": [
+      [
+        "VNPT công bố mở rộng hợp tác CESA",
+        "https://vinaphonehanoi.vnpt.vn/tin-tuc-chi-tiet/vnpt-hop-tac-qualcomm-phat-trien-loat-san-pham-ai-the-he-moi-huong-toi-thi-truong-toan-cau-1316"
+      ],
+      [
+        "VNPT Technology về lộ trình thương mại hóa",
+        "https://vnpt-technology.vn/vi/news_detail/vnpt-qualcomm-tang-toc-hop-tac-mo-rong-he-sinh-thai-ai-va-huong-toi-6g"
+      ]
+    ],
+    "labels": [
+      "Thiết bị biên",
+      "Mạng & dữ liệu",
+      "Chi phí vận hành"
+    ],
+    "color": "blue",
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "05/11/2026",
+    "checked": "05/11/2026",
+    "status": "Đã kiểm tra nguồn; chưa thực nghiệm",
+    "read": "6 phút",
+    "note": "Phân tích nguyên bản dựa trên nguồn trực tiếp được kiểm tra ngày 05/11/2026. Phương pháp và tình huống thử là đề xuất của ban biên tập, chưa thực hiện. Tuyên bố từ tác giả hoặc nhà cung cấp không phải xác nhận độc lập. Sơ đồ là minh họa nguyên bản, không phải ảnh sản phẩm hay kết quả đo.",
+    "illustration": "images/vnpt-qualcomm-edge-ai.svg",
+    "illustrationCredit": "Đồ họa vector nguyên bản của Bản tin công nghệ. Không sử dụng ảnh hay biểu trưng của bên thứ ba.",
+    "intro": "Hợp tác kỹ thuật mở thêm đường thương mại hóa. Doanh nghiệp vẫn cần kiểm chứng độ trễ, chi phí và đường đi của dữ liệu."
+  },
+  {
+    "id": "ai-phap-luat-viet-nam",
+    "title": "AI pháp luật: câu trả lời chỉ là điểm bắt đầu của việc kiểm chứng",
+    "deck": "Từ tra cứu cho người dân đến rà soát văn bản, giá trị của AI phụ thuộc vào căn cứ, hiệu lực và người chịu trách nhiệm cuối cùng.",
+    "sourceDate": "22/08/2026: trường hợp Hà Tĩnh; 07/09/2026: bài về Cổng Pháp luật quốc gia",
+    "body": [
+      [
+        "Bối cảnh đã được xác nhận",
+        "Bộ KH&CN ngày 7/9/2026 mô tả AI trên Cổng Pháp luật quốc gia giúp tìm kiếm, tổng hợp thông tin bằng câu hỏi tự nhiên, đồng thời yêu cầu kiểm tra căn cứ. [Bộ KH&CN: tiếp cận pháp luật với AI](https://mst.gov.vn/tu-ngai-doc-luat-den-chu-dong-tim-hieu-phap-luat-voi-ai-197260904230214347.htm) Đây là mô tả ứng dụng, không phải công bố tỷ lệ trả lời đúng. Bài ngày 22/8 về Hà Tĩnh nêu yêu cầu kết quả AI phải truy xuất được, được cán bộ kiểm tra và xác nhận; tài liệu bí mật nhà nước không được đưa lên AI công cộng. [Bộ KH&CN: Hà Tĩnh triển khai AI rà soát văn bản](https://mst.gov.vn/ha-tinh-trien-khai-nen-tang-ai-ho-tro-ra-soat-van-ban-quy-pham-phap-luat-197260822141703003.htm)"
+      ],
+      [
+        "Hai bài toán có tiêu chuẩn khác nhau",
+        "Hỏi đáp cho người dân cần ngôn ngữ dễ hiểu và dẫn đúng văn bản. Rà soát quy định cần phát hiện quan hệ sửa đổi, thay thế, thẩm quyền và thời điểm hiệu lực. Câu trả lời trôi chảy có thể hữu ích để định hướng nhưng vẫn gây hại nếu bỏ sót văn bản mới hoặc áp dụng nhầm thời kỳ. Vì vậy, không nên đánh giá cả hai bài toán bằng một điểm chất lượng chung, càng không nên dùng số lượt hỏi đáp làm thước đo độ chính xác."
+      ],
+      [
+        "Quy trình tra cứu an toàn hơn",
+        "Đề xuất bắt đầu bằng câu hỏi đã bỏ thông tin định danh, nêu rõ thời điểm và địa bàn. Yêu cầu AI trả số văn bản, điều khoản, tình trạng hiệu lực và dữ kiện còn thiếu. Sau đó mở văn bản gốc để kiểm tra từng kết luận. Nếu câu trả lời chỉ dẫn tên luật mà không chỉ rõ căn cứ phù hợp, cần tiếp tục tra cứu. Không xem việc có đường dẫn là bảo đảm: đường dẫn có thể đúng nhưng nội dung không hỗ trợ kết luận."
+      ],
+      [
+        "Tình huống kiểm thử cho nhóm pháp chế",
+        "Xây một bộ câu hỏi có đáp án do chuyên gia xác nhận. Đưa vào các tình huống giả định nằm trước và sau ngày quy định thay đổi, câu hỏi thiếu dữ kiện và trường hợp có ngoại lệ. Chấm riêng lỗi trích dẫn, lỗi hiệu lực, bỏ sót ngoại lệ và khả năng nhận ra chưa đủ thông tin. Giữ lại câu trả lời sai để tái kiểm thử sau mỗi cập nhật. Một hệ thống biết hỏi lại đúng lúc có thể hữu ích hơn hệ thống luôn trả lời dứt khoát."
+      ],
+      [
+        "Quyền dữ liệu và giá chưa được xác minh",
+        "Chưa xác minh được giá, hạn mức, chính sách lưu câu hỏi hoặc quyền dùng lại dữ liệu của từng nền tảng. Không nên đồng nhất việc xuất hiện trên cổng nhà nước với mọi công cụ tích hợp đều miễn phí và không lưu dữ liệu. Với hợp đồng, tranh chấp hoặc quyết định ảnh hưởng quyền lợi, cần chuyên gia chịu trách nhiệm cuối cùng. Trước khi nhập tài liệu, phải xác định tài liệu được phép chia sẻ với nhà cung cấp nào và cho mục đích gì."
+      ],
+      [
+        "Dùng như trợ lý, giữ đường kiểm toán",
+        "Một quy trình tốt lưu câu hỏi, thời điểm tra cứu, nguồn chính thức và người kiểm tra, thay vì chỉ sao chép đoạn kết luận. Khi nguồn thay đổi, nhóm có thể xác định kết luận nào cần xem lại. Bài này không thử trực tiếp sản phẩm và không đánh giá nền tảng nào chính xác nhất; đây là phân tích ứng dụng, không phải tin ra mắt mới. Câu hỏi nghiên cứu tiếp: hệ thống nhận ra văn bản hết hiệu lực và điều khoản chuyển tiếp tốt đến đâu khi luật thay đổi nhanh?"
+      ]
+    ],
+    "sources": [
+      [
+        "Bộ KH&CN: tiếp cận pháp luật với AI",
+        "https://mst.gov.vn/tu-ngai-doc-luat-den-chu-dong-tim-hieu-phap-luat-voi-ai-197260904230214347.htm"
+      ],
+      [
+        "Bộ KH&CN: Hà Tĩnh triển khai AI rà soát văn bản",
+        "https://mst.gov.vn/ha-tinh-trien-khai-nen-tang-ai-ho-tro-ra-soat-van-ban-quy-pham-phap-luat-197260822141703003.htm"
+      ]
+    ],
+    "labels": [
+      "Câu hỏi",
+      "Văn bản gốc",
+      "Người xác nhận"
+    ],
+    "color": "orange",
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "05/11/2026",
+    "checked": "05/11/2026",
+    "status": "Đã kiểm tra nguồn; chưa thực nghiệm",
+    "read": "6 phút",
+    "note": "Phân tích nguyên bản dựa trên nguồn trực tiếp được kiểm tra ngày 05/11/2026. Phương pháp và tình huống thử là đề xuất của ban biên tập, chưa thực hiện. Tuyên bố từ tác giả hoặc nhà cung cấp không phải xác nhận độc lập. Sơ đồ là minh họa nguyên bản, không phải ảnh sản phẩm hay kết quả đo.",
+    "illustration": "images/ai-phap-luat-viet-nam.svg",
+    "illustrationCredit": "Đồ họa vector nguyên bản của Bản tin công nghệ. Không sử dụng ảnh hay biểu trưng của bên thứ ba.",
+    "intro": "Từ tra cứu cho người dân đến rà soát văn bản, giá trị của AI phụ thuộc vào căn cứ, hiệu lực và người chịu trách nhiệm cuối cùng."
+  },
+  {
     "id": "vbench-chon-ai-tieng-viet",
     "title": "AI giỏi tiếng Việt đến đâu? Đừng chọn chỉ bằng một điểm số",
     "deck": "Từ V-Bench đến một bộ kiểm tra nhỏ do chính người dùng thiết kế cho công việc của mình.",
