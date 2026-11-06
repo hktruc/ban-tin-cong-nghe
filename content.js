@@ -1,5 +1,431 @@
 window.ARTICLES=[
   {
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "06/11/2026",
+    "checked": "06/11/2026",
+    "status": "Đã kiểm tra nguồn; chưa thực nghiệm",
+    "read": "7 phút",
+    "note": "Phân tích nguyên bản dựa trên nguồn trực tiếp được kiểm tra ngày 06/11/2026. Quy trình và tiêu chí thử nghiệm là đề xuất, chưa được thực hiện. Thông tin do tác giả công bố chưa phải xác nhận độc lập. Sơ đồ là minh họa nguyên bản cho phương pháp đề xuất, không phải ảnh sản phẩm hay kết quả đo.",
+    "id": "vieneu-kiem-thu-giong-doc",
+    "title": "VieNeu: một dấu ngoặc cũng có thể đổi nội dung bài giảng âm thanh",
+    "deck": "Bản Desktop 0.18.22 gợi mở bài toán kiểm thử giọng đọc: phải giữ đúng nội dung trước khi đánh giá âm thanh tự nhiên.",
+    "sourceDate": "VieNeu Desktop 0.18.22: 05/11/2026; tài liệu v3 Turbo kiểm tra 06/11/2026",
+    "labels": [
+      "Văn bản gốc",
+      "Nghe đối chiếu",
+      "Duyệt âm thanh"
+    ],
+    "color": "purple",
+    "sources": [
+      [
+        "Ghi chú phát hành Desktop 0.18.22",
+        "https://github.com/pnnbao97/VieNeu-TTS/releases/tag/app-v0.18.22"
+      ],
+      [
+        "Kho mã và hướng dẫn SDK VieNeu",
+        "https://github.com/pnnbao97/VieNeu-TTS"
+      ],
+      [
+        "Model card v3 Turbo và quyền sử dụng",
+        "https://huggingface.co/pnnbao-ump/VieNeu-TTS-v3-Turbo"
+      ]
+    ],
+    "body": [
+      [
+        "Điểm mới nằm ở cách đọc văn bản",
+        "Ngày 05/11, VieNeu phát hành Desktop 0.18.22. Theo [ghi chú phát hành](https://github.com/pnnbao97/VieNeu-TTS/releases/tag/app-v0.18.22), bản này sửa xử lý khoảng nghỉ cho V4 và thay đổi cách V3 xử lý ngoặc vuông; số chú thích như [12] có thể bị bỏ qua. Đây là thông tin từ nhà phát triển, chưa được người viết thử lại. Ngày 06/11 là ngày kiểm tra nguồn, không phải ngày ra mắt mô hình v3 Turbo."
+      ],
+      [
+        "Đừng nhập nhằng ứng dụng và mô hình",
+        "[Kho mã chính thức](https://github.com/pnnbao97/VieNeu-TTS) phân biệt v3 Turbo mã nguồn mở với V4 độc quyền qua dịch vụ. SDK có đường chạy CPU và giọng dựng sẵn. Một tính năng của Desktop không mặc nhiên tồn tại trong mọi phiên bản SDK. Với nhóm làm học liệu, cần ghi riêng phiên bản ứng dụng, mô hình, bộ xử lý văn bản và giọng đọc; ghi mỗi tên VieNeu chưa đủ để tái tạo đầu ra."
+      ],
+      [
+        "Bài toán thực tế là bảo toàn ý nghĩa",
+        "Một bài giảng có số thứ tự, đơn vị đo và chú thích cần nhiều hơn giọng dễ nghe. Chẳng hạn, nội dung “đọc tài liệu [12]” có thể mất điểm tham chiếu nếu quy trình loại bỏ dấu chú thích mà không có cách thay thế. Đề xuất của bài viết là tạo một bản dành cho đọc thành tiếng, có người duyệt, thay vì đưa nguyên văn tài liệu trình chiếu vào bộ tổng hợp. Bản gốc vẫn được lưu riêng."
+      ],
+      [
+        "Bộ thử nhỏ nhưng có cấu trúc",
+        "Có thể bắt đầu với 40 câu tự viết, chia đều cho ngày tháng, số thập phân, chữ viết tắt, tên riêng và dấu ngoặc. Mỗi câu đi kèm bản ghi cách đọc mong muốn do hai người thống nhất trước. Thêm những cặp chỉ khác một ký tự để phát hiện lỗi: dấu phẩy so với dấu chấm, ngoặc với không ngoặc. Không dùng giọng hoặc nội dung cá nhân của học sinh để tạo bộ thử ban đầu."
+      ],
+      [
+        "Quy trình đề xuất để có thể lặp lại",
+        "Để kiểm thay đổi nêu trong bản tin, so Desktop 0.18.22 với bản Desktop liền trước, giữ cùng mô hình V3, giọng dựng sẵn và cấu hình. Tạo mỗi câu ba lần; lưu đầu vào, bản chuẩn hóa nếu truy xuất được, âm thanh và thời gian theo mã câu. Nếu mục tiêu là tích hợp bằng SDK, chạy một phép thử riêng và khóa phiên bản SDK; kết quả đó không xác nhận thay đổi của Desktop. Đây là thiết kế đề xuất, chưa được thực hiện."
+      ],
+      [
+        "Đo đúng thứ người học cần",
+        "Hai người nghe độc lập nên chấm riêng: mất từ, sai số, sai tên và chỗ ngắt làm đổi nghĩa. Sau đó mới đánh giá độ tự nhiên. Có thể dùng công cụ nhận dạng tiếng nói để gợi ý chỗ đáng kiểm tra, nhưng không dùng nó làm trọng tài duy nhất. Tiêu chí nghiệm thu đề xuất: không còn lỗi nghiêm trọng trong tập kiểm tra, bất đồng được nghe lại, và mọi đoạn sửa đều qua một lượt duyệt cuối."
+      ],
+      [
+        "Giấy phép không thay thế sự đồng ý",
+        "[Model card v3 Turbo](https://huggingface.co/pnnbao-ump/VieNeu-TTS-v3-Turbo) công bố Apache-2.0 cho gói mô hình và giọng kèm theo, đồng thời cho phép nội dung thương mại từ các giọng đó. Đây là xác nhận của tác giả, không phải kiểm toán độc lập. Với giọng tự nhân bản, cần quyền của người nói. Phương án thận trọng cho thử nghiệm là chỉ dùng giọng dựng sẵn và ghi rõ âm thanh tổng hợp, không mô phỏng giáo viên thật."
+      ],
+      [
+        "Chi phí và quyền riêng tư phải được đo",
+        "Không có báo giá API được xác minh trong các nguồn đã đọc; không nên suy từ mô hình mở ra dịch vụ miễn phí. Với chạy cục bộ, hãy tính thời gian máy cộng thời gian nghe sửa cho mỗi phút âm thanh đạt yêu cầu. Về dữ liệu, nên kiểm tra kết nối mạng sau khi tải tài nguyên, giới hạn người truy cập thư mục đầu ra và tắt đồng bộ không cần thiết. Chạy trên máy không tự bảo đảm mọi thành phần đều ngoại tuyến."
+      ],
+      [
+        "Ứng dụng phù hợp và bước nghiên cứu tiếp",
+        "Một nhóm thư viện có thể thử bản nghe cho hướng dẫn sử dụng; giáo viên có thể chuẩn bị đoạn giải thích ngắn đã duyệt. Chưa nên lấy âm thanh tự sinh làm chuẩn phát âm duy nhất hoặc phát hành hàng loạt khi chưa nghe kiểm tra. Nghiên cứu tiếp theo nên so mức hiểu bài giữa bản người đọc và bản tổng hợp, đồng thời đo số phút biên tập. Lợi ích đáng chứng minh là giảm công sửa mà vẫn giữ đúng thông tin."
+      ]
+    ],
+    "intro": "Bản Desktop 0.18.22 gợi mở bài toán kiểm thử giọng đọc: phải giữ đúng nội dung trước khi đánh giá âm thanh tự nhiên.",
+    "illustration": "images/vieneu-kiem-thu-giong-doc.svg",
+    "illustrationCredit": "Đồ họa vector nguyên bản của Bản tin công nghệ. Không sử dụng ảnh hay biểu trưng của bên thứ ba."
+  },
+  {
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "06/11/2026",
+    "checked": "06/11/2026",
+    "status": "Đã kiểm tra nguồn; chưa thực nghiệm",
+    "read": "6 phút",
+    "note": "Phân tích nguyên bản dựa trên nguồn trực tiếp được kiểm tra ngày 06/11/2026. Các quy trình thử và ngưỡng nghiệm thu là đề xuất, chưa thực hiện. Kết quả do tác giả công bố không phải xác nhận độc lập. Sơ đồ là minh họa nguyên bản cho phương pháp đề xuất, không phải ảnh sản phẩm hay kết quả đo.",
+    "id": "datamate-so-lieu",
+    "title": "DataMate: hỏi doanh thu bằng tiếng Việt, nhưng ai kiểm tra phép tính?",
+    "deck": "Đề thi mới của Zalo gợi một hướng ứng dụng cho cửa hàng nhỏ: AI hiểu câu hỏi, công cụ tính số và con người duyệt kết luận.",
+    "intro": "Đề thi mới của Zalo gợi một hướng ứng dụng cho cửa hàng nhỏ: AI hiểu câu hỏi, công cụ tính số và con người duyệt kết luận.",
+    "sourceDate": "Cuộc thi khởi động ngày 26/10/2026",
+    "labels": [
+      "Câu hỏi",
+      "Phép tính",
+      "Đối soát"
+    ],
+    "color": "blue",
+    "body": [
+      [
+        "Tin mới và điều chưa được chứng minh",
+        "Zalo AI Challenge 2026 khởi tranh ngày 26/10 với bảng DataMate về trả lời câu hỏi tiếng Việt từ dữ liệu. Ban tổ chức nhấn mạnh dữ liệu phân mảnh và yêu cầu từ chối khi thiếu thông tin. Đây là đề bài nghiên cứu, chưa phải bằng chứng về một sản phẩm bán sẵn hay hiệu quả triển khai. [Thông báo chính thức của Zalo](https://www.zalo.me/vi/blog/zalo-ai-challenge-2026-khoi-tranh-voi-hai-bai-toan-ve-ai-tac-nhan). Phần dưới đề xuất một thử nghiệm độc lập cho SME, không mô tả giải pháp của đội thi."
+      ],
+      [
+        "Vấn đề nằm trước câu trả lời",
+        "Chủ cửa hàng hỏi mặt hàng bán chạy nhất thường chưa nói rõ tính theo số lượng hay doanh thu. Tuần trước có thể là bảy ngày gần nhất hoặc tuần lịch. Nếu hệ thống tự chọn nghĩa, phép cộng đúng vẫn cho đáp án sai. Bởi vậy, bước đầu nên là tạo bản diễn giải có thể duyệt: chỉ tiêu, khoảng ngày, chi nhánh và cách xử lý đơn hủy. Chưa đủ bốn yếu tố thì hỏi lại."
+      ],
+      [
+        "Chuẩn bị bộ thử có đáp án",
+        "Tạo ba bảng giả lập về đơn hàng, danh mục sản phẩm và hoàn trả, tổng cộng khoảng 300 dòng. Cố ý thêm mã hàng trùng tên, giá trị trống và giao dịch sát nửa đêm. Viết 40 câu hỏi, gồm câu rõ nghĩa, câu mơ hồ và câu không thể trả lời. Người hiểu nghiệp vụ tính đáp án bằng bảng tính trước, rồi khóa tập kiểm tra để tránh sửa câu hỏi theo kết quả AI."
+      ],
+      [
+        "Tách hiểu ngôn ngữ khỏi tính toán",
+        "Quy trình đề xuất có ba tầng: AI chuyển câu hỏi thành yêu cầu có cấu trúc; chương trình chỉ đọc lọc và cộng số; AI giải thích kết quả kèm điều kiện. Chỉ cho phép danh sách phép toán định sẵn ở bản đầu. Không trao quyền viết vào bảng gốc hoặc thực thi mã tùy ý. Mỗi đáp án lưu phiên bản dữ liệu, điều kiện lọc và số dòng được dùng để người khác tính lại."
+      ],
+      [
+        "Thử cả câu không nên trả lời",
+        "Các ca quan trọng gồm hỏi lợi nhuận khi chỉ có doanh thu, hỏi tồn kho khi thiếu nhập hàng và so sánh hai kỳ có số ngày khác nhau. Đáp án đạt phải nêu phần dữ liệu còn thiếu thay vì tạo con số. Thêm một ô chứa câu yêu cầu bỏ qua quy tắc để kiểm tra hệ thống có nhầm nội dung bảng với chỉ thị hay không. Không đưa dữ liệu khách hàng thật vào vòng thử này."
+      ],
+      [
+        "Ứng dụng vừa sức",
+        "Một mục tiêu ban đầu hợp lý là báo cáo bán hàng cuối ngày cho người quản lý đã biết cách đối soát. Hệ thống có thể giảm thao tác lọc và giúp khám phá câu hỏi tiếp theo, nhưng chưa nên tự quyết định nhập hàng. Tách kết quả quan sát, như số đơn giảm, khỏi giả thuyết nguyên nhân, như quảng cáo kém hiệu quả. Muốn kết luận nguyên nhân cần thêm dữ liệu và thiết kế đánh giá riêng."
+      ],
+      [
+        "Chi phí và quyền riêng tư",
+        "Thông báo được đọc không đưa giá sản phẩm DataMate hay cam kết lưu giữ dữ liệu; không thể suy rằng doanh nghiệp được dùng miễn phí hoặc dữ liệu sẽ ở Việt Nam. Với bản thử tự xây, tính cả phí mô hình, công chuẩn hóa bảng và phút đối soát. Chỉ dùng dữ liệu tổng hợp cho đến khi xác minh nơi xử lý, thời hạn lưu, quyền truy cập và quyền xóa của mọi dịch vụ được chọn."
+      ],
+      [
+        "Tiêu chí để tiếp tục",
+        "Đề xuất nghiệm thu: mọi kết quả số phải tái tính được; không câu thiếu dữ liệu nào được bịa đáp án; mọi câu mơ hồ phải được làm rõ. Báo cáo riêng tỷ lệ trả lời đúng, từ chối đúng, thời gian người duyệt và chi phí mỗi câu đã xác nhận. So sánh với thao tác bảng tính thông thường trên cùng câu hỏi, không chỉ đo thời gian sinh văn bản. Các tiêu chí này chưa được thử nghiệm."
+      ],
+      [
+        "Nghiên cứu tiếp theo",
+        "Sau vòng giả lập, thử trên một bản sao dữ liệu đã được cho phép và loại thông tin định danh. Giữ người vận hành ngoài nhóm xây dựng để phát hiện giả định ngầm. Theo dõi liệu họ có đọc điều kiện lọc hay chỉ tin phần kết luận. Một hệ thống nhanh nhưng khiến người dùng bỏ qua ngoại lệ có thể làm tăng rủi ro. Giá trị cần chứng minh là báo cáo đúng với ít công kiểm tra hơn."
+      ]
+    ],
+    "sources": [
+      [
+        "Zalo công bố hai bài toán AI tác nhân",
+        "https://www.zalo.me/vi/blog/zalo-ai-challenge-2026-khoi-tranh-voi-hai-bai-toan-ve-ai-tac-nhan"
+      ]
+    ],
+    "illustration": "images/datamate-so-lieu.svg",
+    "illustrationCredit": "Đồ họa vector nguyên bản của Bản tin công nghệ. Không sử dụng ảnh hay biểu trưng của bên thứ ba."
+  },
+  {
+    "id": "gia-su-ai-hoc-ben",
+    "title": "Gia sư AI: hãy đo điều người học làm được sau khi tắt trợ lý",
+    "deck": "Thử nghiệm Google–Eedi mới công bố cho thấy cần phân biệt sửa được bài ngay với năng lực học lâu dài. Một thiết kế kiểm chứng nhỏ cho lớp học và đào tạo nội bộ.",
+    "sourceDate": "Google–Eedi: 29/10/2026; nghiên cứu đối chiếu PNAS: 25/06/2025",
+    "body": [
+      [
+        "Đặt câu hỏi đúng trước khi mua công cụ",
+        "Một học sinh hoàn thành bài nhanh hơn chưa chắc đã hiểu sâu hơn. Tương tự, nhân viên làm đúng bảng tính khi có trợ lý chưa chắc tự xử lý được tình huống mới. Bài viết này đề xuất đánh giá gia sư AI bằng khả năng tự làm sau hỗ trợ, thay vì chỉ nhìn số câu hoàn thành. Đây là phân tích nghiên cứu và phương án thử nghiệm, chưa phải kết quả triển khai tại Việt Nam."
+      ],
+      [
+        "Bằng chứng mới có điều kiện rõ ràng",
+        "Báo cáo Google–Eedi ngày 29/10/2026 mô tả thử nghiệm ngẫu nhiên đăng ký trước: 1.179 học sinh, 10 trường công tại Anh, 10 tuần học. Hai nhóm AI được so với gia sư người và hỗ trợ chuẩn. AI cho kết quả gần tương đương gia sư ở thước đo gần bài học, nhưng chưa thể hiện lợi thế rõ trên bài chuẩn hóa Star Maths. Điểm mạnh là có nhiều tầng đánh giá; điều kiện quan trọng là chuyên gia duyệt từng tin nhắn AI. Đây là báo cáo của bên phát triển, không phải xác nhận độc lập. [Báo cáo kỹ thuật gốc](https://services.google.com/fh/files/misc/learnlm_oct26.pdf)"
+      ],
+      [
+        "Đừng suy rộng thành “AI thay giáo viên”",
+        "Một nghiên cứu khác, công bố trên PNAS ngày 25/06/2025, ghi nhận nhóm dùng giao diện GPT Base có điểm thấp hơn 17% so với nhóm không dùng AI khi hỗ trợ bị rút đi; thiết kế GPT Tutor giảm đáng kể tác hại này. Đây là bằng chứng đối chiếu về thiết kế học tập, không phải tái lập thử nghiệm Eedi. [Tóm tắt nghiên cứu và ngày xuất bản](https://pubmed.ncbi.nlm.nih.gov/40560616/). Theo phân tích của chúng tôi, không nên gộp khác biệt về công cụ, người học và cách đo thành một kết luận chung rằng mọi chatbot giúp hoặc hại việc học."
+      ],
+      [
+        "Chuẩn bị một thử nghiệm có thể lặp lại",
+        "Đề xuất bắt đầu bằng nhóm người lớn tự nguyện học một kỹ năng hẹp, chẳng hạn tính tỷ lệ phần trăm. Giáo viên chuẩn bị ba bộ đề tương đương: trước học, ngay sau học và sau bảy ngày, mỗi bộ 8–10 câu gồm cả tình huống mới. Chốt đáp án, cách chấm và tiêu chí thành công trước khi chạy. Phân nhóm ngẫu nhiên sau khi cân bằng điểm đầu vào: một nhóm dùng gợi ý tĩnh, nhóm kia dùng gợi ý AI có giáo viên duyệt."
+      ],
+      [
+        "Giữ quy trình hỗ trợ đủ cụ thể",
+        "Trong hai buổi 25 phút, hai nhóm học cùng mục tiêu và tài liệu. Với nhóm AI, người hướng dẫn đưa đề, lời giải chuẩn và lỗi giả định vào công cụ đã được đơn vị cho phép. Mỗi lượt chỉ gợi một bước, yêu cầu người học giải thích lựa chọn rồi mới tiếp tục. Sau ba lượt vẫn bế tắc, chuyển cho người dạy. Ghi phiên bản mô hình, chỉ dẫn, thời lượng, số câu đã gặp và lần người dạy sửa phản hồi để người khác có thể lặp lại."
+      ],
+      [
+        "Đánh giá bằng bài làm không có trợ lý",
+        "Cả ba bài kiểm tra đều làm độc lập; người chấm không biết học viên thuộc nhóm nào. Ưu tiên mức thay đổi điểm sau bảy ngày và khả năng giải thích ở câu chưa gặp. Báo cáo thêm số người bỏ buổi, thời gian hỗ trợ và lỗi hướng dẫn. Với nhóm nhỏ, trình bày điểm từng người bằng mã nội bộ cùng mức dao động; đừng biến chênh lệch vài điểm thành bằng chứng nhân quả chắc chắn. Ngưỡng mở rộng cần thống nhất trước, không chọn sau khi thấy kết quả."
+      ],
+      [
+        "Chi phí thật gồm cả phút giáo viên",
+        "Không cần mua nền tảng mới để thử thiết kế này nếu đơn vị đã có công cụ được duyệt. Tuy nhiên, miễn phí lượt dùng không đồng nghĩa miễn phí vận hành. Ghi riêng giờ soạn đề, duyệt từng phản hồi, chấm bài và sửa lỗi; nếu dùng API, cộng hóa đơn thực tế. Chia tổng chi phí cho số người hoàn tất cả ba lần đánh giá. Bài viết không xác nhận mức giá hay chính sách dữ liệu của một gói thương mại cụ thể."
+      ],
+      [
+        "Quyền riêng tư và giới hạn triển khai",
+        "Bản thử kỹ thuật dùng bài toán và lỗi giả lập, không tải hồ sơ học viên. Nếu thử với học sinh, cần nhà trường phê duyệt quy trình, kiểm tra điều kiện độ tuổi và cơ sở xử lý dữ liệu trước. Mã giả không tự động làm hội thoại hết nhạy cảm. Giữ bảng điểm tại hệ thống của đơn vị; không gửi tên, lớp hoặc lịch sử cá nhân lên chatbot. Không dùng kết quả thử nhỏ để quyết định điểm chính thức, tuyển chọn hay xếp loại người học."
+      ],
+      [
+        "Mở rộng theo câu hỏi, không theo quảng cáo",
+        "Theo Eedi, phân tích Star Maths chỉ gồm 916 học sinh có đủ hai lần thi; tín hiệu khác biệt giữa nhóm giới là thăm dò, cần kiểm chứng tiếp. [Công bố đầy đủ của Eedi](https://www.eedi.com/news/eedi-publishes-full-findings-from-its-most-recent-ai-tutor-trial). Với Việt Nam, bước tiếp theo nên thử độ dễ đọc tiếng Việt, thời lượng hội thoại và số chủ đề thực sự được học. SME có thể áp dụng cùng cấu trúc cho đào tạo bảng tính. Chỉ mở rộng khi năng lực tự làm cải thiện mà khối lượng giám sát vẫn chấp nhận được."
+      ]
+    ],
+    "sources": [
+      [
+        "Báo cáo kỹ thuật Google–Eedi, 29/10/2026",
+        "https://services.google.com/fh/files/misc/learnlm_oct26.pdf"
+      ],
+      [
+        "Eedi: kết quả đầy đủ và giới hạn thử nghiệm",
+        "https://www.eedi.com/news/eedi-publishes-full-findings-from-its-most-recent-ai-tutor-trial"
+      ],
+      [
+        "PNAS: thiết kế trợ lý và tác động lên việc học, 2025",
+        "https://pubmed.ncbi.nlm.nih.gov/40560616/"
+      ]
+    ],
+    "labels": [
+      "Gợi ý từng bước",
+      "Tắt trợ lý",
+      "Kiểm tra sau tuần"
+    ],
+    "color": "violet",
+    "category": "AI thế giới",
+    "region": "Châu Âu",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "06/11/2026",
+    "checked": "06/11/2026",
+    "status": "Đã kiểm tra nguồn; chưa thực nghiệm",
+    "read": "7 phút",
+    "note": "Phân tích nguyên bản, kiểm tra nguồn trực tiếp ngày 06/11/2026. Quy trình thử là đề xuất của ban biên tập, chưa được thực hiện. Báo cáo Google–Eedi là nghiên cứu của bên phát triển; nghiên cứu PNAS năm 2025 là bằng chứng đối chiếu, không phải tái lập độc lập. Sơ đồ là minh họa nguyên bản cho phương pháp đề xuất, không phải ảnh sản phẩm hay kết quả đo.",
+    "intro": "Đo khả năng tự làm sau bảy ngày, thay vì chỉ đo độ trôi chảy của cuộc trò chuyện với AI.",
+    "illustration": "images/gia-su-ai-hoc-ben.svg",
+    "illustrationCredit": "Đồ họa vector nguyên bản của Bản tin công nghệ. Không sử dụng ảnh hay biểu trưng của bên thứ ba."
+  },
+  {
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "06/11/2026",
+    "checked": "06/11/2026",
+    "status": "Đã kiểm tra nguồn; chưa thực nghiệm",
+    "read": "6 phút",
+    "note": "Phân tích nguyên bản dựa trên nguồn trực tiếp được kiểm tra ngày 06/11/2026. Các quy trình thử và ngưỡng nghiệm thu là đề xuất, chưa thực hiện. Kết quả do tác giả công bố không phải xác nhận độc lập. Sơ đồ là minh họa nguyên bản cho phương pháp đề xuất, không phải ảnh sản phẩm hay kết quả đo.",
+    "id": "senocr-vi-tai-lieu",
+    "title": "SenOCR-Vi: số hóa tiếng Việt cần giữ lại đường về trang gốc",
+    "deck": "Mô hình OCR chuyên tiếng Việt đáng để khảo sát, nhưng điểm nhận dạng không thay thế kiểm tra bảng, dấu thanh và thông tin quan trọng.",
+    "intro": "Mô hình OCR chuyên tiếng Việt đáng để khảo sát, nhưng điểm nhận dạng không thay thế kiểm tra bảng, dấu thanh và thông tin quan trọng.",
+    "sourceDate": "Trang nghiên cứu công bố ngày 31/08/2026",
+    "labels": [
+      "Ảnh gốc",
+      "Nhận dạng",
+      "Duyệt lỗi"
+    ],
+    "color": "mint",
+    "body": [
+      [
+        "Nguồn và phạm vi bằng chứng",
+        "VietAlpha Lab giới thiệu SenOCR-Vi ngày 31/08/2026, xây trên PaddleOCR-VL-1.6. Nhóm báo cáo điểm tổng hợp 82,83 trên tập đánh giá tiếng Việt 160 trang. Đây là kết quả do bên phát triển công bố, không phải kiểm chứng của tòa soạn. [Trang nghiên cứu SenOCR-Vi](https://www.vietalpha.org/research/senocr-vi). Bài này tập trung thiết kế thử nghiệm số hóa tài liệu nội bộ, không xếp hạng mô hình hay khẳng định chất lượng trên tài liệu của bạn."
+      ],
+      [
+        "Đừng nhầm hai loại chất lượng",
+        "Model card phân biệt điểm nhận dạng văn bản với điểm tổng hợp tài liệu; đồng thời cảnh báo bảng, công thức và bố cục phức tạp còn khó. Nguồn chưa xác lập benchmark sản xuất về tốc độ trang hay bộ nhớ tối ưu. [Model card và giới hạn](https://huggingface.co/VietAlphaLabs/SenOCR-Vi). Vì vậy, văn bản trông đọc được chưa đủ: một ô tiền lệch hàng có thể nghiêm trọng hơn nhiều lỗi khoảng trắng."
+      ],
+      [
+        "Chọn bài toán ít rủi ro trước",
+        "Một thư viện nhỏ có thể bắt đầu bằng mục lục tài liệu do đơn vị sở hữu quyền sử dụng. SME có thể thử hướng dẫn sản phẩm đã công khai, thay vì chứng từ kế toán hay giấy tờ định danh. Mục tiêu ban đầu là tìm đúng trang, không tự động thay thế bản gốc. Mỗi đoạn nhận dạng nên lưu mã tài liệu và số trang để người đọc mở ảnh đối chiếu ngay khi thấy từ bất thường."
+      ],
+      [
+        "Lập bộ mẫu có kiểm soát",
+        "Đề xuất chọn 60 trang được phép sử dụng: 20 trang in sạch, 20 ảnh chụp điện thoại và 20 trang nhiều cột hoặc bảng. Hai người soát bản chép chuẩn, giải quyết bất đồng trước khi chạy. Giữ nguyên ảnh đầu vào và ghi độ phân giải, góc nghiêng, điều kiện sáng. Phân nhóm theo chất lượng giúp tránh kết luận tốt giả tạo do tập thử chủ yếu gồm trang đẹp."
+      ],
+      [
+        "So sánh đúng một thay đổi",
+        "Chạy cùng bộ trang qua mô hình nền và SenOCR-Vi bằng cùng quy trình phân tích bố cục. Khóa phiên bản, cấu hình và giới hạn đầu ra; lưu kết quả thô trước mọi sửa chữa. Model card có hướng dẫn nhận dạng thành phần bằng Transformers và phân tích trang bằng PaddleOCR. [Hướng dẫn chính thức](https://huggingface.co/VietAlphaLabs/SenOCR-Vi). Không nên so đầu ra một mô hình được sửa thủ công với đầu ra thô của mô hình khác."
+      ],
+      [
+        "Thiết kế màn hình duyệt hữu ích",
+        "Bản thử nên hiển thị ảnh gốc bên trái, văn bản bên phải và cho phép đánh dấu vùng nghi ngờ. Một quy tắc đơn giản có thể gắn cờ chuỗi số, ký hiệu đơn vị và dòng bị thiếu, nhưng không nên tự sửa dựa trên vẻ hợp lý. Đặc biệt, đừng để một mô hình ngôn ngữ viết lại toàn bộ trang rồi coi đó là bản chép. Câu văn trôi chảy có thể che mất sai lệch với bản gốc."
+      ],
+      [
+        "Giấy phép không phải tổng chi phí",
+        "Model card ghi Apache 2.0 cho mô hình; dữ liệu nguồn có điều kiện riêng. [Thông tin giấy phép](https://huggingface.co/VietAlphaLabs/SenOCR-Vi). Không có báo giá triển khai trọn gói được xác minh. Ngân sách thử phải gồm máy chạy, lưu ảnh, công nhập đáp án và phút duyệt mỗi trang. Chạy tại chỗ là phương án kiến trúc có thể kiểm tra, không tự động bảo đảm riêng tư: cần rà kết nối mạng, nhật ký và nơi sao lưu."
+      ],
+      [
+        "Đo lỗi theo hậu quả",
+        "Ngoài lỗi ký tự, chấm riêng dấu tiếng Việt, thứ tự đọc, cặp nhãn–giá trị và ô bảng. Ngưỡng đề xuất cho kho tìm kiếm là mọi kết quả đều dẫn về trang gốc; với trường số quan trọng, bắt buộc duyệt người trước khi xuất. Đo tổng phút hoàn thành một trang đã duyệt, không chỉ giây suy luận. Nếu công sửa tăng, mô hình nhanh hơn vẫn có thể làm quy trình chậm hơn."
+      ],
+      [
+        "Giới hạn và nghiên cứu tiếp",
+        "Tòa soạn chưa chạy mô hình hay kiểm chứng điểm công bố. Sau vòng mẫu, mở rộng sang tài liệu khác nguồn để tránh học thuộc cách trình bày. Thử riêng nén ảnh, chữ mờ và định dạng số có độ chính xác thấp hơn (lượng tử hóa) để đo đánh đổi tốc độ–lỗi. Bước nghiên cứu có ích tiếp theo là xác định loại trang nên chuyển cho người ngay, thay vì cố xử lý mọi tài liệu bằng một cấu hình duy nhất."
+      ]
+    ],
+    "sources": [
+      [
+        "SenOCR-Vi: trang nghiên cứu",
+        "https://www.vietalpha.org/research/senocr-vi"
+      ],
+      [
+        "SenOCR-Vi: model card, hướng dẫn và giấy phép",
+        "https://huggingface.co/VietAlphaLabs/SenOCR-Vi"
+      ]
+    ],
+    "illustration": "images/senocr-vi-tai-lieu.svg",
+    "illustrationCredit": "Đồ họa vector nguyên bản của Bản tin công nghệ. Không sử dụng ảnh hay biểu trưng của bên thứ ba."
+  },
+  {
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "06/11/2026",
+    "checked": "06/11/2026",
+    "status": "Đã kiểm tra nguồn; chưa thực nghiệm",
+    "read": "6 phút",
+    "note": "Phân tích nguyên bản dựa trên nguồn trực tiếp được kiểm tra ngày 06/11/2026. Các quy trình thử và ngưỡng nghiệm thu là đề xuất, chưa thực hiện. Kết quả do tác giả công bố không phải xác nhận độc lập. Sơ đồ là minh họa nguyên bản cho phương pháp đề xuất, không phải ảnh sản phẩm hay kết quả đo.",
+    "id": "deepedu-bang-chung",
+    "title": "DeepEdu-v1: trợ giảng phản hồi nhanh chưa đồng nghĩa học sinh học tốt hơn",
+    "deck": "Bản thảo của nhóm PTIT đặt vấn đề tối ưu trợ giảng tự lưu trữ. Cách đánh giá ở trường cần thêm một lớp bằng chứng khác.",
+    "intro": "Bản thảo của nhóm PTIT đặt vấn đề tối ưu trợ giảng tự lưu trữ. Cách đánh giá ở trường cần thêm một lớp bằng chứng khác.",
+    "sourceDate": "Bản thảo arXiv v1 ngày 25/09/2026",
+    "labels": [
+      "Tốc độ",
+      "Gợi ý",
+      "Học tập"
+    ],
+    "color": "sand",
+    "body": [
+      [
+        "Nghiên cứu thực sự nói gì",
+        "DeepEdu-v1 của nhóm tác giả thuộc PTIT được đưa lên arXiv ngày 25/09/2026. Hệ thống kết hợp tối ưu xử lý ngữ cảnh dài với kho hướng dẫn được cập nhật từ phản hồi. Đây là bản thảo nghiên cứu, không phải chứng nhận hiệu quả giáo dục. [Hồ sơ công bố](https://arxiv.org/abs/2609.31568). Tòa soạn chưa tái lập thực nghiệm; phần sau là đề xuất đánh giá ứng dụng trước khi cân nhắc dùng trong môi trường học tập."
+      ],
+      [
+        "Một khoảng cách cần nhìn thẳng",
+        "Phần thí nghiệm kỹ thuật nêu GPU H100 80 GB; các nhóm kiểm tra gồm truy xuất ngữ cảnh, suy luận tài chính và tác nhân tương tác. Những phép đo này không trực tiếp đo mức tiến bộ của học sinh Việt Nam. [Thiết lập và kết quả trong bản thảo](https://arxiv.org/html/2609.31568v1). Không nên lấy kết quả trên hạ tầng đó làm cam kết tốc độ cho máy trường học, hay lấy độ đúng tác vụ thay cho khả năng giảng giải."
+      ],
+      [
+        "Chọn câu hỏi ứng dụng đúng",
+        "Câu hỏi thực dụng không phải AI có giải được bài hay không, mà là nó có giúp người học tự giải bài tương tự sau đó không. Một trợ giảng đưa luôn đáp án có thể đạt điểm cao mà làm mất cơ hội luyện tập. Đề xuất bắt đầu ở chế độ hỗ trợ giáo viên soạn gợi ý, chưa mở trực tiếp cho trẻ em. Giáo viên quyết định mức hỗ trợ và loại kiến thức được dùng."
+      ],
+      [
+        "Bộ kiểm tra nhỏ có thể lặp lại",
+        "Chọn một chủ đề hẹp với 30 bài do giáo viên tự soạn hoặc có quyền sử dụng. Mỗi bài kèm đáp án, lỗi hiểu thường gặp và ba mức gợi ý. Giữ 10 bài ngoài tập dùng để điều chỉnh hệ thống. Tạo hội thoại giả lập có học sinh trả lời sai, đổi câu hỏi và yêu cầu bỏ qua bước giải. Lưu toàn bộ đầu vào để có thể kiểm tra lại cùng điều kiện sau mỗi thay đổi."
+      ],
+      [
+        "Tách hai lớp thử nghiệm",
+        "Lớp đầu đo vận hành trên máy thực tế: thời gian chờ câu đầu, thời gian hoàn thành, bộ nhớ và số phiên đồng thời. Lớp thứ hai để giáo viên chấm kín các gợi ý: đúng kiến thức, không lộ đáp án quá sớm, phù hợp mức học và dẫn được về tài liệu. Giữ mô hình và bài tập cố định khi so cấu hình tốc độ. Nếu đổi cả tài liệu lẫn hạ tầng, rất khó biết điều gì tạo ra khác biệt."
+      ],
+      [
+        "Kho kinh nghiệm phải có người duyệt",
+        "Trong bản thảo, phản hồi để cập nhật dựa trên đáp án chuẩn hoặc kết quả xác định đã kiểm chứng, không phải lời học sinh chưa kiểm tra. Ý tưởng tích lũy bài học từ phản hồi chỉ hữu ích nếu kiểm soát được điều gì được lưu. Quy trình đề xuất yêu cầu mỗi ghi chú có nguồn, người duyệt và ngày hết hạn rà soát. Một lần trả lời đúng không đủ để tạo quy tắc chung; một phản hồi từ người học cũng chưa phải đáp án chuẩn. Nên cho phép quay lại phiên bản cũ khi một cập nhật làm sai các bài trước đây đã đạt."
+      ],
+      [
+        "Chi phí và quyền riêng tư",
+        "Chưa xác minh được giá sản phẩm, gói triển khai hoặc bộ mã tái lập hoàn chỉnh từ nguồn đã đọc. Không coi giấy phép của bài báo là giấy phép phần mềm. Ngân sách nên tính vận hành máy, bảo trì và thời gian giáo viên duyệt, rồi chia cho phiên hỗ trợ đạt yêu cầu. Chỉ dùng hội thoại giả lập trong vòng đầu; trước dữ liệu thật phải xác định quyền thu thập, nơi lưu, người truy cập và thời hạn xóa."
+      ],
+      [
+        "Điều kiện chuyển sang thí điểm",
+        "Đề xuất dừng nếu hệ thống lộ dữ liệu phiên khác, khẳng định kiến thức sai hoặc không nhận ra câu hỏi ngoài phạm vi. Khi đạt kiểm tra giáo viên, một nghiên cứu người học cần được đơn vị có thẩm quyền phê duyệt, có thông tin đồng thuận và phương án không dùng AI. Điểm sau phiên học chưa đủ: cần bài tương đương sau một khoảng nghỉ để phân biệt nhớ đáp án với hiểu phương pháp."
+      ],
+      [
+        "Hướng nghiên cứu tiếp theo",
+        "Điều đáng theo dõi là liệu có thể giảm thời gian chờ mà không giảm chất lượng gợi ý trên cùng máy và cùng bộ bài. Một nhánh khác là đo công duyệt của giáo viên khi kho kinh nghiệm lớn dần. Nếu bảo trì kiến thức tốn hơn thời gian tiết kiệm, lợi ích triển khai sẽ giảm. Đây là các giả thuyết để kiểm tra, không phải kết quả đã được xác nhận ở lớp học."
+      ]
+    ],
+    "sources": [
+      [
+        "DeepEdu-v1: ngày và phiên bản bản thảo",
+        "https://arxiv.org/abs/2609.31568"
+      ],
+      [
+        "DeepEdu-v1: toàn văn v1",
+        "https://arxiv.org/html/2609.31568v1"
+      ]
+    ],
+    "illustration": "images/deepedu-bang-chung.svg",
+    "illustrationCredit": "Đồ họa vector nguyên bản của Bản tin công nghệ. Không sử dụng ảnh hay biểu trưng của bên thứ ba."
+  },
+  {
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "06/11/2026",
+    "checked": "06/11/2026",
+    "status": "Đã kiểm tra nguồn; chưa thực nghiệm",
+    "read": "7 phút",
+    "note": "Phân tích nguyên bản dựa trên nguồn trực tiếp được kiểm tra ngày 06/11/2026. Quy trình và tiêu chí thử nghiệm là đề xuất, chưa được thực hiện. Thông tin do tác giả công bố chưa phải xác nhận độc lập. Sơ đồ là minh họa nguyên bản cho phương pháp đề xuất, không phải ảnh sản phẩm hay kết quả đo.",
+    "id": "viesvtr-dau-tieng-viet",
+    "title": "VieSVTR: đọc đúng dấu tiếng Việt chưa đồng nghĩa đọc đúng cả tài liệu",
+    "deck": "Mô hình nhận dạng từng dòng mở ra bài tập nghiên cứu gọn nhẹ, với hai điều kiện quan trọng: kiểm tra độc lập và chỉ dùng phi thương mại.",
+    "sourceDate": "Model card v7 ghi năm 2026; chưa xác minh ngày phát hành cụ thể; kiểm tra 06/11/2026",
+    "labels": [
+      "Cắt dòng",
+      "Giữ dấu",
+      "Chấm lỗi"
+    ],
+    "color": "green",
+    "sources": [
+      [
+        "VieSVTR v7: kết quả, giới hạn và giấy phép",
+        "https://huggingface.co/ngocthua830/viesvtr"
+      ]
+    ],
+    "body": [
+      [
+        "Nguồn bằng chứng nói được đến đâu",
+        "[Model card VieSVTR v7](https://huggingface.co/ngocthua830/viesvtr) giới thiệu mô hình 7,66 triệu tham số từ MLCV Lab, UIT, nhận dạng từng ảnh dòng chữ. Tác giả báo cáo CER 6,13% trên VinText, đồng thời cảnh báo chồng lấn dữ liệu ở hai tập kiểm tra tiếng Anh. Đây là kết quả tự công bố, chưa được tái lập trong bài. Nguồn ghi năm 2026; chưa xác minh được ngày phát hành cụ thể."
+      ],
+      [
+        "Một giới hạn quyết định cách sử dụng",
+        "[Tài liệu chính](https://huggingface.co/ngocthua830/viesvtr) nêu rõ mô hình không tìm vị trí chữ trên trang. Giấy phép CC BY-NC 4.0 không cho phép sử dụng thương mại; điểm tin cậy đầu ra cũng chưa được hiệu chỉnh thành xác suất đúng. Vì vậy, hướng thử nghiệm phù hợp ở đây là nghiên cứu phi thương mại với ảnh dòng đã cắt, không phải triển khai ngay một dịch vụ số hóa hồ sơ cho khách hàng."
+      ],
+      [
+        "Tách lỗi nhìn thấy chữ và lỗi đọc chữ",
+        "Một hệ thống OCR có thể mất chữ ở bước cắt ảnh trước khi mô hình nhận dạng được chạy. Đề xuất phân tích là tạo hai nhánh: nhánh dùng dòng do con người cắt chuẩn và nhánh dùng bộ phát hiện tự động. Cùng một bộ nhận dạng xử lý cả hai. Khoảng chênh lệch lỗi giữa hai nhánh cho biết nên đầu tư vào phát hiện dòng hay nhận dạng, thay vì thay mô hình liên tục mà không xác định được nút thắt."
+      ],
+      [
+        "Chuẩn bị bộ dữ liệu có thể kiểm tra",
+        "Một nhóm sinh viên có thể tự dựng 200 dòng tiếng Việt từ văn bản tự viết, cân bằng tên riêng giả, số, từ có nhiều dấu và câu xen tiếng Anh. Chia tập theo nội dung trước khi sinh ảnh, tránh một câu xuất hiện ở cả tập chọn cấu hình và tập chấm cuối. Ghi lại phông chữ, kích thước, nền, độ nghiêng và đáp án. Đây là quy mô thử ban đầu được đề xuất, không phải dữ liệu huấn luyện của dự án."
+      ],
+      [
+        "Thiết kế phép thử về dấu",
+        "Với mỗi dòng, tạo các mức giảm độ phân giải và nén ảnh đã định trước. Giữ cùng nội dung để chỉ thay chất lượng ảnh. Chấm ba loại lỗi: sai chữ cơ sở, sai dấu thanh và sai dấu tạo nguyên âm. Nếu bỏ toàn bộ dấu trước khi tính điểm, một kết quả có vẻ tốt có thể che mất đúng vấn đề cần nghiên cứu. Báo cáo thêm số dòng hoàn toàn chính xác, không chỉ trung bình lỗi ký tự."
+      ],
+      [
+        "Đường chuẩn và điều kiện công bằng",
+        "Nên chọn một công cụ OCR đang dùng làm đường chuẩn và cho cả hai nhận cùng ảnh đã cắt. Chuẩn hóa Unicode giống nhau nhưng giữ khác biệt có ý nghĩa như dấu, chữ số và khoảng trắng trong mã. Lưu phiên bản mô hình, thư viện, máy, số luồng và thời gian khởi động riêng. Đo nhiều lượt sau khởi động, báo trung vị lẫn lượt chậm; không dùng tốc độ của một máy để hứa hẹn trên máy khác."
+      ],
+      [
+        "Không tự động tin một con số tin cậy",
+        "Đề xuất tiếp theo là chia các dự đoán thành nhóm theo điểm tin cậy rồi đối chiếu tỷ lệ đúng thực tế trên tập riêng. Nếu nhóm điểm cao vẫn sai dấu, ngưỡng chuyển cho người đọc phải dựa vào lỗi quan sát được. Có thể đặt tiêu chí không tự duyệt dòng chứa số tiền hoặc mã định danh trong nghiên cứu mô phỏng. Không đưa thêm mô hình ngôn ngữ để sửa mọi câu ngay từ đầu, vì nó có thể che mất lỗi gốc."
+      ],
+      [
+        "Giá thành và dữ liệu cần giữ riêng",
+        "Nguồn đã đọc không đưa giá dịch vụ; bài này không khuyến nghị mua hay triển khai thương mại. Với thử nghiệm phi thương mại, hãy tính tổng thời gian chuẩn bị ảnh, chạy máy và sửa kết quả trên 1.000 dòng, thay vì gọi phần mềm tải về là không tốn chi phí. Chỉ dùng ảnh tổng hợp hoặc tài liệu có quyền sử dụng. Nếu có ảnh thật, nên che thông tin riêng, kiểm tra luồng truyền dữ liệu và hạn chế lưu bản gốc."
+      ],
+      [
+        "Giá trị giáo dục và câu hỏi tiếp theo",
+        "Bài tập này kết nối xử lý ảnh, ngôn ngữ học tiếng Việt và thống kê kiểm định: sinh viên phải giải thích mô hình sai ở đâu, không chỉ trình diễn một ảnh đọc đúng. Kết quả đáng công bố là bộ thử có quyền chia sẻ, bảng lỗi theo điều kiện và thời gian người sửa. Bước kế tiếp có thể nghiên cứu giao diện đánh dấu vùng nghi sai dấu. Chưa có thí nghiệm nào trong quy trình đề xuất này được thực hiện."
+      ]
+    ],
+    "intro": "Mô hình nhận dạng từng dòng mở ra bài tập nghiên cứu gọn nhẹ, với hai điều kiện quan trọng: kiểm tra độc lập và chỉ dùng phi thương mại.",
+    "illustration": "images/viesvtr-dau-tieng-viet.svg",
+    "illustrationCredit": "Đồ họa vector nguyên bản của Bản tin công nghệ. Không sử dụng ảnh hay biểu trưng của bên thứ ba."
+  },
+  {
     "id": "viadminshift",
     "title": "ViAdminShift: biết có thay đổi chưa đủ để AI bỏ câu trả lời cũ",
     "deck": "Nghiên cứu mới về tri thức có thời hạn, với bài học thực dụng cho doanh nghiệp và giáo dục. Đã đọc nguồn chính, chưa tái lập thực nghiệm.",
