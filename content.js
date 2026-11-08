@@ -1,5 +1,361 @@
 window.ARTICLES=[
   {
+    "id": "lam-dong-gemini-bai-toan-nho",
+    "title": "Từ lớp Gemini ở Lâm Đồng đến một phép thử có thể đo",
+    "deck": "Một buổi thực hành AI gợi cách bắt đầu phù hợp với doanh nghiệp nhỏ: chọn công việc lặp lại, tính cả thời gian sửa và bảo vệ dữ liệu đầu vào.",
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Doanh nghiệp & phân tích ứng dụng",
+    "date": "08/11/2026",
+    "sourceDate": "07/11/2026 · sự kiện 06/11/2026",
+    "color": "orange",
+    "art": "05",
+    "read": "5 phút",
+    "intro": "Một cửa hàng có thể tạo mô tả sản phẩm trong vài giây rồi mất nhiều phút sửa thông số sai. Vì thế, câu hỏi sau lớp học AI nên là công việc nào thực sự nhanh hơn sau khi kiểm tra, và ai chịu trách nhiệm cho bản cuối.",
+    "body": [
+      [
+        "Buổi thực hành đã diễn ra, hiệu quả còn cần đo",
+        "[Bộ KH&CN công bố ngày 7/11](https://mst.gov.vn/doanh-nghiep-nho-va-vua-lam-dong-thuc-hanh-ai-de-nang-cao-hieu-qua-kinh-doanh-197261106154051648.htm) về hội nghị tại Lâm Đồng ngày 6/11, phối hợp với Sở KH&CN và Google Việt Nam. Doanh nghiệp thực hành Gemini cho nghiên cứu thị trường, thương hiệu, quảng bá, bán hàng và chăm sóc khách hàng. Phiên Practice Lab sử dụng tình huống gắn với công việc của người tham gia. Nguồn nhấn mạnh bắt đầu từ bài toán nhỏ, kiểm tra thông tin và bảo mật dữ liệu. Đây là báo cáo hoạt động đào tạo; chưa có số liệu chứng minh mức tăng doanh thu hay thời gian tiết kiệm."
+      ],
+      [
+        "Chọn một đầu ra có thể kiểm đến từng con số",
+        "Một phép thử do bản tin đề xuất là viết mô tả cho danh mục sản phẩm giả. Mỗi sản phẩm có bảng thông số, giá, điều kiện bảo quản và những điều chưa được xác nhận. Tạo hai cách làm: viết theo mẫu có sẵn và viết với AI rồi biên tập. Cùng một người nên thử cả hai cách trên hai nhóm sản phẩm tương đương, đổi thứ tự thực hiện để giảm ảnh hưởng của việc quen bài. Chưa cần thử nhiều công cụ. Mục tiêu đầu tiên là tìm phần việc AI giúp được trong quy trình đang có, trước khi tính đến thay đổi toàn bộ hệ thống bán hàng."
+      ],
+      [
+        "Đồng hồ dừng khi bản được duyệt",
+        "Bắt đầu tính thời gian khi người làm nhận bảng sản phẩm, kết thúc khi bản mô tả đã vượt qua kiểm tra. Ghi riêng thời gian nhập dữ liệu, chờ công cụ, sửa văn phong và đối chiếu thông số. Một bản nháp nhanh nhưng cần người quản lý sửa lâu có thể chỉ chuyển gánh nặng sang người khác. Phiếu kiểm nên đánh dấu lỗi giá, kích thước, chất liệu, công dụng và điều kiện đổi trả. Người chấm không cần biết bản nào dùng AI. Chấm độ đúng trước, độ hấp dẫn sau; lời quảng cáo hay không bù được một cam kết mà cửa hàng không thực hiện."
+      ],
+      [
+        "Giữ một số thông tin cố ý chưa đầy đủ",
+        "Trong bộ giả lập, để vài sản phẩm thiếu xuất xứ hoặc chưa có tài liệu chứng minh một công dụng. Đầu ra đạt yêu cầu phải giữ trạng thái chưa biết, không tự lấp chỗ trống bằng câu quen thuộc. Có thể thêm một bảng giá cũ để kiểm việc chọn đúng phiên bản, nhưng ghi rõ ngày hiệu lực trong tài liệu. Khi AI đưa ra kết luận không có căn cứ, người dùng cần truy về nguồn thay vì sửa prompt cho đến khi nghe hợp lý. Cách này kiểm được một kỹ năng quan trọng sau đào tạo: nhận biết giới hạn của dữ kiện trước khi viết thuyết phục."
+      ],
+      [
+        "Tách bản thử khỏi tài khoản và khách hàng thật",
+        "Thử nghiệm không cần lịch sử đơn hàng, số điện thoại hoặc hội thoại của khách. Dùng danh mục giả và nội dung công khai đã được phép sử dụng; không đưa dữ liệu nội bộ vào dịch vụ bên ngoài chỉ vì công cụ có sẵn. Nếu sau này thử trên công việc thật, cần kiểm quyền truy cập, nơi lưu dữ liệu và người duyệt trước khi đăng. Bản nháp AI nên nằm ở một bước riêng, chưa nối tự động với kênh bán hàng. Một nút gửi nhầm có thể tạo cam kết thương mại trước khi ai kịp kiểm các điều kiện của sản phẩm."
+      ],
+      [
+        "Chỉ mở rộng khi lợi ích còn sau bước kiểm tra",
+        "Bảng kết quả cần báo số bản đạt ngay, số lỗi quan trọng và tổng thời gian hoàn thiện cho từng cách làm. Nếu AI chỉ hữu ích với sản phẩm có dữ kiện đầy đủ, có thể giới hạn phạm vi vào nhóm đó. Nếu sửa lỗi chiếm phần lớn thời gian, thử cải thiện bảng đầu vào hoặc mẫu viết trước khi mua thêm công cụ. Một tuần thử nhỏ chưa chứng minh tác động lên doanh thu, vì giá, mùa vụ và quảng cáo đều có thể thay đổi. Bước tiếp theo nên là kiểm lại trên danh mục mới và một người biên tập khác, xem lợi ích có giữ được ngoài bài tập ban đầu hay không."
+      ]
+    ],
+    "prompt": "Dựa chỉ vào bảng sản phẩm giả sau, viết mô tả ngắn và bảng đối chiếu từng dữ kiện. Đánh dấu thông tin thiếu; không thêm công dụng, bảo hành hay cam kết đổi trả. Tách bản nháp khỏi bản sẵn sàng đăng: [dữ liệu giả].",
+    "sources": [
+      [
+        "Bộ KH&CN: thực hành AI cho doanh nghiệp Lâm Đồng",
+        "https://mst.gov.vn/doanh-nghiep-nho-va-vua-lam-dong-thuc-hanh-ai-de-nang-cao-hieu-qua-kinh-doanh-197261106154051648.htm"
+      ]
+    ],
+    "note": "Phép thử, bộ dữ liệu và tiêu chí là đề xuất biên tập, chưa thực hiện. Nguồn không công bố tác động định lượng.",
+    "research": {
+      "question": "AI có giảm tổng thời gian hoàn thiện mô tả sản phẩm mà vẫn giữ đúng dữ kiện?",
+      "evidence": "Bài Bộ KH&CN xác nhận hoạt động và nội dung thực hành, chưa báo kết quả đo hiệu quả.",
+      "method": "So sánh mẫu thủ công và AI có biên tập trên hai bộ danh mục giả tương đương; đổi thứ tự và chấm kín cách tạo bản.",
+      "measure": "Tổng thời gian đến khi duyệt; lỗi thông số; cam kết không có nguồn; tỷ lệ bản đạt.",
+      "conditions": "Không dùng dữ liệu khách hàng; không đăng tự động; thử nhỏ chưa suy ra tác động doanh thu.",
+      "next": "Kiểm lại trên danh mục mới và người biên tập khác trước khi mở rộng."
+    },
+    "checked": "08/11/2026",
+    "status": "Đã kiểm tra nguồn; chưa thực nghiệm"
+  },
+  {
+    "id": "viet-han-ai-nha-may-thu-nghiem",
+    "title": "Hợp tác AI Việt–Hàn: cần gì để một bản demo thành bài thử nhà máy?",
+    "deck": "Đề xuất nghiên cứu chung và trung tâm trình diễn gợi một lộ trình kiểm tra cụ thể: chạy song song, đo lỗi theo điều kiện và giữ quyền quyết định tại hiện trường.",
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Công nghiệp & hợp tác nghiên cứu",
+    "date": "08/11/2026",
+    "sourceDate": "06/11/2026",
+    "color": "blue",
+    "art": "04",
+    "read": "5 phút",
+    "intro": "Một mô hình nhận diện lỗi có thể chạy đẹp trên video giới thiệu nhưng gặp khó khi ánh sáng, vật liệu hoặc tốc độ dây chuyền thay đổi. Giá trị của nơi trình diễn sẽ rõ hơn nếu doanh nghiệp được kiểm chính những điều kiện khó đó.",
+    "body": [
+      [
+        "Cuộc trao đổi chưa phải thông báo vận hành",
+        "[Bộ KH&CN ngày 6/11](https://mst.gov.vn/viet-nam-han-quoc-thuc-day-hop-tac-ai-dien-hat-nhan-so-huu-tri-tue-19726110711422127.htm) cho biết Bộ trưởng Vũ Hải Quân đề xuất tăng nghiên cứu chung về AI và thúc đẩy trung tâm trình diễn mô hình nhà máy thông minh khi tiếp Đại sứ Hàn Quốc. Phía Hàn Quốc nêu hướng thành lập nhóm công tác, tìm đơn vị triển khai và tiến tới thỏa thuận R&D; nhu cầu hỗ trợ AI bằng ODA đang được khảo sát. Đây là các bước hợp tác dự kiến. Nguồn chưa xác nhận một trung tâm mới đã mở hoặc công bố kết quả thí điểm tại doanh nghiệp."
+      ],
+      [
+        "Đưa một lỗi cụ thể lên bàn trước khi chọn mô hình",
+        "Một bài thử giả lập có thể tập trung vào phát hiện vết xước trên cùng một loại chi tiết. Cần thống nhất vết nào đáng đánh dấu, vết nào thuộc biến thiên chấp nhận được và trường hợp nào người kiểm tra cũng chưa thống nhất. Không gom mọi bất thường thành một nhãn lỗi rồi chờ AI tự hiểu. Bộ ảnh thử nên có ví dụ đủ khó nhưng không chứa thông tin bí mật sản xuất. Nếu chuyên gia không thống nhất nhãn, ghi lại bất đồng để xem lại tiêu chí; ép một đáp án duy nhất có thể làm số đo đẹp hơn mà không giúp xử lý thực tế."
+      ],
+      [
+        "Tách các điều kiện vận hành thay vì chỉ tách ảnh",
+        "Bản tin đề xuất chia bộ kiểm tra theo phiên chụp hoặc lô giả lập, không để các ảnh gần như giống nhau rải khắp tập huấn luyện và tập kiểm tra. Tạo biến thể về ánh sáng, góc máy và độ tương phản trong giới hạn của thiết kế thử. Báo kết quả riêng cho từng điều kiện để biết mô hình yếu ở đâu. Một tỷ lệ đúng chung có thể bị nhóm ảnh dễ chi phối. Cần giữ nguyên một tập chưa dùng để tối ưu và ghi rõ những điều kiện chưa thử, chẳng hạn vật liệu khác hoặc tốc độ cao hơn, thay vì suy rộng từ một bộ ảnh thuận lợi."
+      ],
+      [
+        "Chạy chế độ quan sát trước khi trao quyền điều khiển",
+        "Nếu nghiên cứu tiến đến hiện trường trong tương lai, một bước thận trọng là cho hệ thống đưa gợi ý để đối chiếu sau, chưa tác động tới máy hoặc loại sản phẩm. Nhân sự hiện trường vẫn thực hiện quy trình đã được phê duyệt. Nhật ký cần nối được ảnh, thời điểm, phiên bản mô hình và quyết định kiểm tra, nhưng chỉ giữ dữ liệu cần thiết. Thiết kế này là đề xuất biên tập, không phải mô tả dự án đang triển khai. Mọi kết nối với thiết bị thực phải qua người chịu trách nhiệm kỹ thuật và an toàn; bài thử AI không tự tạo quyền thay đổi vận hành."
+      ],
+      [
+        "Tính hai loại sai và chi phí kiểm tra lại",
+        "Bỏ sót một lỗi và báo nhầm một chi tiết tốt tạo hậu quả khác nhau. Trước khi thử, doanh nghiệp cần xác định ai kiểm lại cảnh báo, mất bao lâu và công việc nào bị chậm. Báo cả số bỏ sót, số báo nhầm, độ trễ và số lượt cần xem thủ công trên cùng một lượng mẫu. Nếu thay ngưỡng để giảm bỏ sót nhưng cảnh báo tăng mạnh, phải trình bày sự đánh đổi đó. Có thể so với quy tắc xử lý ảnh đơn giản hoặc quy trình hiện tại. AI chỉ đáng theo đuổi khi phần cải thiện còn tồn tại sau chi phí tích hợp và kiểm tra lại."
+      ],
+      [
+        "Mốc tiếp theo phải có người chịu trách nhiệm và dữ liệu",
+        "Để theo dõi tiến triển hợp tác, nên tìm nhiệm vụ được xác định rõ, đơn vị thực hiện, phạm vi dữ liệu và kế hoạch đánh giá trước khi chờ một tỷ lệ chính xác nổi bật. Một trung tâm trình diễn có thể hữu ích nếu giúp doanh nghiệp mang về hồ sơ thử gồm điều kiện chạy, lỗi thường gặp và giới hạn tích hợp. Khả năng tái lập trên lô mới quan trọng hơn trình diễn một lần. Chưa có các tài liệu đó thì kết luận phù hợp vẫn là hợp tác đang được thúc đẩy; không cộng những dự định thành thành tựu năng suất đã được xác nhận."
+      ]
+    ],
+    "prompt": "Tạo đề cương đánh giá giả lập cho mô hình phát hiện vết xước. Tách điều kiện ánh sáng, lô ảnh, bỏ sót, báo nhầm và thời gian kiểm lại. Không kết nối máy thật; đánh dấu mọi ngưỡng là đề xuất cần chuyên gia duyệt.",
+    "sources": [
+      [
+        "Bộ KH&CN: hợp tác AI Việt Nam–Hàn Quốc",
+        "https://mst.gov.vn/viet-nam-han-quoc-thuc-day-hop-tac-ai-dien-hat-nhan-so-huu-tri-tue-19726110711422127.htm"
+      ]
+    ],
+    "note": "Trung tâm, nhóm công tác và thỏa thuận R&D được mô tả ở mức đề xuất hoặc hướng triển khai. Bài thử nhà máy là thiết kế chưa thực hiện.",
+    "research": {
+      "question": "Mô hình nhận diện lỗi giữ được hiệu năng khi điều kiện chụp thay đổi và tính cả kiểm tra lại không?",
+      "evidence": "Thông tin cuộc gặp chính thức nêu đề xuất hợp tác, chưa báo đánh giá mô hình hoặc kết quả nhà máy.",
+      "method": "Dùng bộ ảnh giả lập; tách theo phiên và điều kiện; so với quy tắc đơn giản; mô tả chế độ quan sát cho bước nghiên cứu sau.",
+      "measure": "Bỏ sót, báo nhầm, độ trễ, thời gian kiểm lại và chênh lệch giữa các điều kiện.",
+      "conditions": "Không thay đổi máy hoặc quy trình thật; tiêu chí an toàn và quyền truy cập phải được phê duyệt riêng.",
+      "next": "Tìm nhiệm vụ, đơn vị triển khai và giao thức kiểm chứng được công bố."
+    },
+    "checked": "08/11/2026",
+    "status": "Đã kiểm tra nguồn; chưa thực nghiệm"
+  },
+  {
+    "id": "dassault-nic-ai-kiem-soat-du-lieu",
+    "title": "AI chủ quyền nhìn từ một bản thiết kế: dữ liệu có theo bạn ra khỏi hệ thống?",
+    "deck": "Trao đổi giữa Bộ KH&CN và Dassault Systèmes gợi câu hỏi thực hành về khả năng kiểm soát dữ liệu, tái lập mô phỏng và chuyển giao năng lực cho đội ngũ trong nước.",
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Hạ tầng & năng lực nghiên cứu",
+    "date": "08/11/2026",
+    "sourceDate": "04/11/2026",
+    "color": "purple",
+    "art": "02",
+    "read": "5 phút",
+    "intro": "Với một nhóm kỹ thuật nhỏ, năng lực tự chủ thể hiện qua những việc cụ thể: biết dữ liệu đang ở đâu, mở lại được phiên bản cũ và tiếp tục công việc khi công cụ hoặc đối tác thay đổi. Đây là góc nhìn đánh giá của bản tin, không phải một định nghĩa pháp lý về AI chủ quyền.",
+    "body": [
+      [
+        "Phòng thí nghiệm tại NIC đang trong kế hoạch",
+        "[Bộ KH&CN công bố ngày 4/11](https://mst.gov.vn/bo-khcn-va-dassault-systemes-thuc-day-hop-tac-phat-trien-ai-chu-quyen-tai-viet-nam-197261104183941661.htm) về buổi làm việc với Dassault Systèmes, trong đó hai bên trao đổi hạ tầng AI, nghiên cứu và hỗ trợ doanh nghiệp. Đại diện tập đoàn cho biết đang lên kế hoạch một phòng thí nghiệm tại NIC, tiếp nối Trung tâm Xuất sắc đã thành lập. Nguồn cũng đề cập bản sao số và nền tảng 3DEXPERIENCE phục vụ thiết kế, mô phỏng, quản lý dữ liệu. Chưa có thông báo phòng thí nghiệm mới đã hoạt động, ngân sách hoặc kết quả thử nghiệm."
+      ],
+      [
+        "Bắt đầu bằng một hồ sơ thiết kế hoàn toàn giả",
+        "Để làm rõ yêu cầu kiểm soát, một nhóm có thể tạo hồ sơ giả của một hộp chứa: kích thước, vật liệu giả định, vài ràng buộc và lịch sử chỉnh sửa. Bài thử không cần bản vẽ độc quyền hay thông số của khách hàng. Yêu cầu hệ thống giữ được nguồn của từng thông số và phân biệt giá trị nhập tay với giá trị do công cụ gợi ý. Khi thay một ràng buộc, người kiểm tra phải tìm được những kết quả liên quan. Nếu không thể lần theo sự thay đổi, nhóm sẽ khó giải thích vì sao hai lần mô phỏng cho kết quả khác nhau."
+      ],
+      [
+        "Thử khả năng bàn giao trước khi thử tính năng hấp dẫn",
+        "Một người tạo hồ sơ, người thứ hai nhận lại và tái lập kết quả theo hướng dẫn. Ghi những thành phần cần để thực hiện: phiên bản phần mềm, cấu hình, dữ liệu đầu vào, quyền truy cập và các phụ thuộc. Có thể thử xuất sang định dạng được hỗ trợ rồi kiểm những thông tin còn giữ được, thay vì chỉ xác nhận tệp đã tải về. Việc chuyển đổi có thể làm mất lịch sử hoặc một phần cấu trúc; bài kiểm phải chỉ ra phần mất đó. Kết quả giúp đặt câu hỏi đúng với nhà cung cấp, không mặc định nền tảng nào có hay không có một khả năng khi chưa kiểm chứng."
+      ],
+      [
+        "Tách mô phỏng khỏi bằng chứng ngoài thực tế",
+        "Trong bài giả lập, có thể cố ý thay một giả định đầu vào và xem độ nhạy của kết quả. Nếu thay đổi nhỏ làm dự đoán biến động lớn, người đọc cần thấy điều đó trong báo cáo. Một hình ảnh mô phỏng trông chân thực chưa xác nhận mô hình phản ánh đúng vật thể thực. Đối với sử dụng kỹ thuật thật, việc đối chiếu với đo đạc và tiêu chuẩn chuyên ngành thuộc trách nhiệm của đội ngũ đủ chuyên môn. Phép thử ở đây chỉ xem khả năng quản lý giả định và tái lập, không đánh giá độ an toàn của sản phẩm hay chứng nhận thiết kế."
+      ],
+      [
+        "Tự chủ còn là khả năng vận hành khi điều kiện thay đổi",
+        "Một kịch bản bàn giấy có thể giả định người quản trị cũ nghỉ việc hoặc một dịch vụ không sẵn sàng. Nhóm cần chỉ ra ai có quyền thu hồi truy cập, dữ liệu nào có bản sao và bước nào phải chờ nhà cung cấp. Chỉ mô tả phương án, không tự thay quyền hoặc làm gián đoạn hệ thống thật. Thêm một bảng chi phí gồm đào tạo, lưu trữ, chuyển dữ liệu và công sức hỗ trợ để tránh chỉ nhìn giá giấy phép. Bảng này giúp doanh nghiệp nhỏ hiểu mức phụ thuộc có thể chấp nhận và phần năng lực cần tự xây trong đội ngũ."
+      ],
+      [
+        "Một cơ sở nghiên cứu hữu ích nên để lại năng lực dùng lại",
+        "Nếu kế hoạch lab được triển khai, những sản phẩm đáng theo dõi có thể là bài thực hành có thể tái lập, dữ liệu mẫu hợp lệ và quy trình bàn giao mà doanh nghiệp áp dụng được. Đây là kỳ vọng phân tích, chưa phải cam kết của các bên. Không phải mọi kết quả nghiên cứu đều có thể mở công khai; phần công bố cần phù hợp quyền sở hữu và bảo mật. Tuy vậy, người đọc vẫn có thể hỏi cách đo năng lực được chuyển giao: nhóm trong nước có tự chạy lại, phát hiện sai giả định và sửa quy trình hay chỉ xem được một bản demo?"
+      ]
+    ],
+    "prompt": "Lập phiếu kiểm cho hồ sơ thiết kế giả: nguồn thông số, phiên bản, tái lập, xuất dữ liệu và bàn giao. Không khẳng định tính năng của nhà cung cấp khi chưa có tài liệu; tách yêu cầu mong muốn khỏi khả năng đã kiểm chứng.",
+    "sources": [
+      [
+        "Bộ KH&CN: trao đổi với Dassault Systèmes về AI chủ quyền",
+        "https://mst.gov.vn/bo-khcn-va-dassault-systemes-thuc-day-hop-tac-phat-trien-ai-chu-quyen-tai-viet-nam-197261104183941661.htm"
+      ]
+    ],
+    "note": "Không xác nhận lab đã khai trương. Các phép thử quản lý dữ liệu, bàn giao và tái lập là đề xuất chưa chạy; không đánh giá an toàn thiết kế.",
+    "research": {
+      "question": "Nhóm kỹ thuật có tái lập và bàn giao hồ sơ mà không mất nguồn dữ liệu hay giả định quan trọng không?",
+      "evidence": "Nguồn chính thức mô tả trao đổi và kế hoạch lab tại NIC; chưa đưa ngân sách, lịch mở hoặc kết quả.",
+      "method": "Dùng hồ sơ thiết kế giả; hai người thực hiện và bàn giao; kiểm phiên bản, xuất dữ liệu và kịch bản gián đoạn trên giấy.",
+      "measure": "Thành phần thiếu khi tái lập, thông tin mất khi xuất, thời gian bàn giao và phụ thuộc cần hỗ trợ.",
+      "conditions": "Không dùng bí mật sản xuất; không thay quyền thực; không suy mô phỏng thành chứng nhận kỹ thuật.",
+      "next": "Theo dõi mốc triển khai và tài liệu đào tạo hoặc kết quả nghiên cứu được phép công bố."
+    },
+    "checked": "08/11/2026",
+    "status": "Đã kiểm tra nguồn; chưa thực nghiệm"
+  },
+  {
+    "id": "duoc-ha-noi-deakin-kiem-chung",
+    "title": "AI trong nghiên cứu dược: chia đúng bài toán trước khi kiểm chứng",
+    "deck": "Trao đổi giữa Đại học Dược Hà Nội và chuyên gia Deakin mở ra hai hướng nghiên cứu. Mỗi hướng cần dữ liệu, tiêu chí và ranh giới sử dụng riêng.",
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu & kiểm chứng",
+    "date": "08/11/2026",
+    "sourceDate": "06/11/2026",
+    "color": "teal",
+    "art": "07",
+    "read": "5 phút",
+    "intro": "Một mô hình xếp hạng phân tử và một hệ thống hỗ trợ chuyên môn không thể dùng chung một thước đo thành công. Điểm khởi đầu hữu ích là xác định đầu ra nào đang được nghiên cứu, ai kiểm tra nó và bằng chứng nào còn thiếu.",
+    "body": [
+      [
+        "Hai hướng hợp tác mới ở giai đoạn đề xuất",
+        "[Thông tin của Đại học Dược Hà Nội ngày 6/11](https://hup.edu.vn/tin-tuc-va-su-kien/truong-dai-hoc-duoc-ha-noi-lam-viec-voi-giao-su-tran-the-truyen-dai-hoc-deakin-australia-thuc-day-hop-tac-nghien-cuu-va-ung-dung-tri-tue-nhan-tao-trong-linh-vuc-duoc-6721) ghi nhận buổi làm việc với GS.TS. Trần Thế Truyền, Đại học Deakin. Hai hướng được đề xuất là tính toán, AI trong phát triển thuốc và AI trong dược lâm sàng. Hướng đầu gồm sàng lọc phân tử, dự đoán hoạt tính; hướng sau có hệ thống hỗ trợ quyết định và cảnh báo tương tác. Bài viết công bố định hướng trao đổi, chưa đưa ra mô hình đã kiểm định, kết quả thử nghiệm hay hệ thống được triển khai. Phần dưới chỉ bàn cách thiết kế đánh giá nghiên cứu, không hướng dẫn lựa chọn thuốc hoặc điều trị."
+      ],
+      [
+        "Chọn một câu hỏi đủ hẹp để có đáp án đối chiếu",
+        "Một nhóm nghiên cứu có thể bắt đầu bằng bài toán xếp hạng các cấu trúc giả lập theo một thuộc tính đã biết trong bộ chuẩn. Mục tiêu phải ghi trước: dự đoán giá trị, phân loại hay ưu tiên mẫu cho bước nghiên cứu tiếp theo. Ba nhiệm vụ này có tiêu chí khác nhau. Cần nêu phạm vi hóa học của dữ liệu, nguồn nhãn và điều kiện tạo nhãn. Một điểm số tốt trên bộ chuẩn chỉ cho thấy hiệu năng trong điều kiện đó. Không chuyển trực tiếp thành phát biểu rằng một hợp chất có hiệu quả hoặc an toàn khi sử dụng."
+      ],
+      [
+        "Tách dữ liệu để tránh bài thi giống bài đã học",
+        "Khi cấu trúc gần nhau xuất hiện ở cả phần huấn luyện và kiểm tra, mô hình có thể hưởng lợi từ sự giống nhau thay vì khái quát tốt. Thiết kế đề xuất nên kiểm mức trùng lặp, nhóm các mẫu liên quan và giữ một tập kiểm tra độc lập ngay từ đầu. Có thể đối chiếu cách tách ngẫu nhiên với cách tách theo nhóm cấu trúc để hiểu kết quả thay đổi ra sao. Quy tắc chia phải được lưu trước khi tối ưu mô hình. Những lần điều chỉnh sau khi xem tập kiểm tra cần được ghi lại, vì tập đó không còn hoàn toàn độc lập."
+      ],
+      [
+        "Một bài kiểm tra khác cho công cụ tổng hợp bằng chứng",
+        "Với hướng hỗ trợ chuyên môn, có thể nghiên cứu một chức năng hạn chế hơn: tìm đúng đoạn trong bộ tài liệu giả và trình bày phần thông tin còn thiếu. Bộ tài liệu có phiên bản, ngày cập nhật và một số mâu thuẫn được người có chuyên môn thiết kế. Hệ thống chỉ trả về trích dẫn và trạng thái cần kiểm tra, không đưa ra phác đồ, liều dùng hay quyết định cho một người bệnh. Đánh giá xem công cụ có chọn đúng tài liệu, dẫn đúng đoạn và từ chối kết luận khi căn cứ chưa đủ hay không. Chức năng hẹp giúp xác định rõ loại lỗi trước khi nghiên cứu phạm vi phức tạp hơn."
+      ],
+      [
+        "Báo cả trường hợp mô hình không biết",
+        "Phiếu kết quả nên tách lỗi tìm sai nguồn, diễn giải sai nguồn và kết luận vượt quá nguồn. Một hệ thống luôn trả lời có vẻ đầy đủ có thể che mất sự thiếu chắc chắn. Bài thử cần có câu không thể trả lời từ tài liệu được cung cấp và chấm việc dừng đúng lúc. Với mô hình dự đoán, cần báo sai số theo từng nhóm dữ liệu và độ ổn định khi đổi cách chia. Không chỉ đưa một con số trung bình tốt nhất. Các ví dụ thất bại, điều kiện chạy và phiên bản mô hình giúp người khác hiểu giới hạn của kết quả hơn một ảnh trình diễn."
+      ],
+      [
+        "Bằng chứng cần tăng dần cùng phạm vi sử dụng",
+        "Bản tin đề xuất bắt đầu trên dữ liệu giả hoặc bộ nghiên cứu công khai có quyền sử dụng phù hợp, không đưa hồ sơ bệnh nhân vào công cụ phổ thông. Mọi nghiên cứu liên quan con người hoặc dữ liệu sức khỏe thật cần quy trình chuyên môn, đạo đức và quản trị dữ liệu thích hợp. Kết quả trên bài kiểm tra tài liệu chỉ hỗ trợ kết luận về khả năng xử lý tài liệu trong bộ thử. Khi theo dõi hợp tác này, những mốc đáng tìm là giao thức đánh giá, bộ dữ liệu được mô tả rõ và công bố có thể kiểm tra, thay vì suy đoán tác động điều trị từ thông báo ban đầu."
+      ]
+    ],
+    "prompt": "Thiết kế phiếu đánh giá một công cụ tìm nguồn trên tài liệu dược hoàn toàn giả. Chỉ kiểm tính đúng của trích dẫn, phiên bản và khả năng nêu thiếu dữ kiện. Không đưa lời khuyên điều trị, liều dùng hoặc dữ liệu bệnh nhân.",
+    "sources": [
+      [
+        "Đại học Dược Hà Nội: trao đổi nghiên cứu AI với chuyên gia Deakin",
+        "https://hup.edu.vn/tin-tuc-va-su-kien/truong-dai-hoc-duoc-ha-noi-lam-viec-voi-giao-su-tran-the-truyen-dai-hoc-deakin-australia-thuc-day-hop-tac-nghien-cuu-va-ung-dung-tri-tue-nhan-tao-trong-linh-vuc-duoc-6721"
+      ]
+    ],
+    "note": "Chỉ phân tích thiết kế kiểm chứng nghiên cứu. Không phải hướng dẫn y khoa; chưa có thử nghiệm do bản tin thực hiện.",
+    "research": {
+      "question": "Hai hướng nghiên cứu cần những bài kiểm tra độc lập nào để tránh kết luận vượt bằng chứng?",
+      "evidence": "Nguồn trường đại học mô tả buổi làm việc và hai hướng đề xuất, chưa công bố hiệu năng hay triển khai.",
+      "method": "Tách bài toán phân tử khỏi tìm nguồn tài liệu; định trước tập kiểm tra, cách chia và tiêu chí; dùng dữ liệu giả hoặc công khai hợp lệ.",
+      "measure": "Sai số theo nhóm, trùng lặp dữ liệu, độ đúng trích dẫn và tỷ lệ dừng khi thiếu căn cứ.",
+      "conditions": "Không dùng dữ liệu bệnh nhân; không suy kết quả bộ chuẩn thành hiệu quả điều trị; nghiên cứu thực tế cần thẩm định phù hợp.",
+      "next": "Theo dõi công bố giao thức, dữ liệu và đánh giá độc lập trước khi bàn khả năng ứng dụng."
+    },
+    "checked": "08/11/2026",
+    "status": "Đã kiểm tra nguồn; chưa thực nghiệm"
+  },
+  {
+    "id": "ai-gian-lan-hang-doi-canh-bao",
+    "title": "AI chống gian lận: đo cả hàng đợi phía sau một cảnh báo",
+    "deck": "Diễn đàn an ninh tài chính số đặt vấn đề quản trị AI và quyết định tự động. Một phép thử có ích phải nhìn cả cảnh báo sai, người kiểm tra và khả năng giải thích.",
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "An toàn & phân tích hệ thống",
+    "date": "08/11/2026",
+    "sourceDate": "07/11/2026 · sự kiện 06/11/2026",
+    "color": "red",
+    "art": "03",
+    "read": "5 phút",
+    "intro": "Một hệ thống báo động nhiều chưa chắc giúp đội xử lý phát hiện vấn đề nhanh hơn. Nếu hàng đợi bị lấp đầy bởi trường hợp vô hại, cảnh báo quan trọng có thể phải chờ. Vì thế, đánh giá AI cần nối chất lượng mô hình với công việc của người kiểm tra.",
+    "body": [
+      [
+        "Diễn đàn đưa ra đề xuất, chưa công bố hệ thống mới",
+        "[Báo Chính phủ ngày 7/11](https://tphcm.baochinhphu.vn/xay-dung-he-sinh-thai-tai-chinh-so-an-toan-tin-cay-101261107105200013.htm) tường thuật Diễn đàn An ninh tài chính số Việt Nam diễn ra tại TP.HCM ngày 6/11. Bài ghi nhận đề xuất chuẩn hóa dữ liệu và quản trị AI, xây dựng cảnh báo gian lận theo thời gian thực, tăng kiểm soát các quyết định tự động. Đây là các định hướng được thảo luận, không phải báo cáo một hệ thống AI quốc gia đã được triển khai hoặc chứng minh hiệu quả. Phần phân tích sau dùng tình huống tổng hợp hoàn toàn giả, không đánh giá tài khoản hay quyết định tài chính của bất kỳ cá nhân nào."
+      ],
+      [
+        "Tạo hàng đợi giả thay vì dùng lịch sử giao dịch thật",
+        "Bài thử đề xuất dùng các sự kiện tổng hợp với mã ngẫu nhiên, thời điểm, mức độ bất thường và nhãn do người thiết kế quy định. Không cần tên, số tài khoản, số thẻ hay số tiền giao dịch thật. Tạo nhiều sự kiện bình thường và một số ít trường hợp cần xem xét, đồng thời công bố tỷ lệ trong bộ thử. Nếu bộ dữ liệu có quá nhiều tình huống bất thường, kết quả có thể tạo cảm giác hệ thống hiệu quả hơn khi dùng trong một luồng chủ yếu bình thường. Mục tiêu là kiểm cách xếp ưu tiên và diễn giải, không mô phỏng chi tiết phương pháp phạm tội."
+      ],
+      [
+        "Đọc kết quả theo lượng việc đội xử lý có thể nhận",
+        "Giả sử nhóm giả lập chỉ xem được một số cảnh báo mỗi giờ. So sánh những ngưỡng khác nhau theo số trường hợp quan trọng lọt vào phần hàng đợi được xử lý, số cảnh báo vô hại và thời gian chờ. Giữ riêng các trường hợp bị bỏ sót để nhìn giới hạn của từng ngưỡng. Không lựa chọn ngưỡng chỉ vì một tỷ lệ trung bình đẹp. Báo kết quả theo năng lực xử lý giả định và thử lại khi luồng sự kiện tăng. Một ngưỡng phù hợp với đội nhiều người có thể không phù hợp với một đội nhỏ, dù cùng dùng một mô hình."
+      ],
+      [
+        "Lời giải thích phải giúp kiểm chứng, không chỉ nghe hợp lý",
+        "Với mỗi cảnh báo giả, yêu cầu hệ thống chỉ ra trường dữ liệu nào đã kích hoạt việc xem xét và thông tin nào còn thiếu. Người kiểm tra cần đối chiếu được với sự kiện gốc. Một đoạn văn tự tin nhưng nêu đặc điểm không tồn tại nên bị đánh dấu lỗi riêng, kể cả khi nhãn cuối cùng tình cờ đúng. Thử thay một trường không liên quan để xem lời giải thích có biến đổi vô cớ không. Nếu có mô hình ngôn ngữ viết phần diễn giải, nên kiểm chức năng này tách khỏi bộ phát hiện, tránh gán toàn bộ độ tin cậy của khâu phân loại cho câu chữ được tạo thêm."
+      ],
+      [
+        "Giữ rõ ranh giới giữa gợi ý và hành động",
+        "Trong thiết kế thử, đầu ra chỉ là một đề nghị xem xét trong môi trường giả lập. Không nối tới chặn thanh toán, khóa tài khoản hoặc liên hệ khách hàng. Những hành động thực có thể gây hậu quả và cần thẩm quyền, quy trình khiếu nại cùng kiểm soát riêng. Nhật ký thử nên lưu phiên bản mô hình, ngưỡng và lý do để người khác tái kiểm quyết định trong bộ giả. Cần quy định ai được sửa nhãn và cách lưu bất đồng. Người kiểm tra không nên chỉ bấm đồng ý theo gợi ý AI vì áp lực giải quyết hết hàng đợi."
+      ],
+      [
+        "Một báo cáo tốt cho biết hệ thống sẽ thất bại ở đâu",
+        "Bản tổng kết nên trình bày độ nhạy với tỷ lệ sự kiện bất thường, tải công việc và thông tin thiếu. Nếu mô hình mất ưu thế khi hàng đợi tăng, giải pháp có thể nằm ở phân luồng hoặc quy trình xử lý thay vì thay mô hình ngay. Kết quả dữ liệu tổng hợp không dự báo được hiệu quả trên gian lận thực, càng không chứng minh tuân thủ hay an toàn tài chính. Giá trị của bài thử là làm rõ câu hỏi cần kiểm chứng trước khi tiếp cận dữ liệu và hệ thống thật bằng một quy trình được phép. Đó cũng là cách đọc thận trọng các đề xuất tại diễn đàn."
+      ]
+    ],
+    "prompt": "Thiết kế đánh giá hàng đợi cảnh báo trên sự kiện hoàn toàn giả. So sánh ngưỡng theo năng lực xử lý, báo nhầm, bỏ sót và lời giải thích có căn cứ. Không dùng dữ liệu cá nhân, mô tả cách gian lận hoặc đề xuất hành động với tài khoản thật.",
+    "sources": [
+      [
+        "Báo Chính phủ: Diễn đàn An ninh tài chính số Việt Nam",
+        "https://tphcm.baochinhphu.vn/xay-dung-he-sinh-thai-tai-chinh-so-an-toan-tin-cay-101261107105200013.htm"
+      ]
+    ],
+    "note": "Nội dung là phân tích quản trị và thiết kế đánh giá chưa thực hiện; không tư vấn tài chính, không đưa ra quyết định hoặc can thiệp tài khoản.",
+    "research": {
+      "question": "Chất lượng cảnh báo còn hữu ích khi xét năng lực xử lý hữu hạn và độ đúng của lời giải thích không?",
+      "evidence": "Báo Chính phủ ghi nhận diễn đàn và các đề xuất quản trị AI; chưa công bố hiệu năng hệ thống mới.",
+      "method": "Tạo sự kiện tổng hợp; thay tỷ lệ bất thường và tải; so ngưỡng trong hàng đợi giả; kiểm lời giải thích độc lập.",
+      "measure": "Báo nhầm, bỏ sót, cảnh báo quan trọng được xem kịp, thời gian chờ và giải thích không có căn cứ.",
+      "conditions": "Không dùng dữ liệu giao dịch thật; không chặn hoặc khóa tài khoản; bộ tổng hợp không chứng minh hiệu quả thực.",
+      "next": "Nếu có nghiên cứu tiếp, cần phạm vi dữ liệu và quy trình đánh giá được phê duyệt riêng."
+    },
+    "checked": "08/11/2026",
+    "status": "Đã kiểm tra nguồn; chưa thực nghiệm"
+  },
+  {
+    "id": "gpt-image-26-kiem-tra-svg",
+    "title": "GPT Image 2.6 có SVG: đừng duyệt hình chỉ bằng ảnh xem trước",
+    "deck": "Định dạng chỉnh sửa được mở thêm một bước kiểm tra: hình phải giữ đúng ý nghĩa khi đổi kích thước, màu và nội dung.",
+    "category": "AI thế giới",
+    "region": "Mỹ",
+    "kind": "Công cụ mới & kiểm định đầu ra",
+    "date": "08/11/2026",
+    "sourceDate": "04/11/2026",
+    "color": "blue",
+    "art": "06",
+    "read": "6 phút",
+    "intro": "Một hình đẹp ở khung lớn chưa chắc dùng được làm biểu tượng nhỏ hay sơ đồ giải thích. Với đầu ra vector do AI tạo, thứ cần nghiệm thu là cả cấu trúc chỉnh sửa lẫn điều người đọc hiểu, không chỉ ảnh xem trước.",
+    "body": [
+      [
+        "Thông báo mới xác nhận điều gì?",
+        "[Changelog OpenAI ngày 04/11/2026](https://developers.openai.com/api/docs/changelog) ghi nhận GPT Image 2.6 Sunburst và Flare, hỗ trợ điều chỉnh độ phức tạp, tạo SVG và GIF động. Đây là thông báo của nhà cung cấp, không phải kết quả so sánh độc lập của bản tin. Bài này tập trung vào một quy trình kiểm tra SVG; không gọi API trả phí hay khẳng định chất lượng hơn công cụ khác."
+      ],
+      [
+        "Đọc đúng giới hạn định dạng",
+        "[Hướng dẫn Image API](https://developers.openai.com/api/docs/guides/image-generation) nêu SVG dùng ở endpoint tạo ảnh, với n bằng 1; endpoint sửa ảnh không xuất SVG. Tài liệu mô tả đầu ra là vector tĩnh, không có script, tài nguyên ngoài hoặc ảnh raster nhúng. Complexity và quality là hai điều khiển khác nhau; tăng complexity có thể tăng độ trễ và tạo thay đổi ngoài ý muốn. Những điều kiện này cần được kiểm tra lại trước triển khai vì tài liệu có thể đổi."
+      ],
+      [
+        "Bài thử nên có một lỗi đủ đắt để đáng tìm",
+        "Đề xuất một bộ ba tài sản giả cho cửa hàng tưởng tượng: biểu tượng nhận hàng, sơ đồ ba bước đổi sản phẩm và nhãn hướng dẫn bảo quản. Viết trước ý nghĩa bắt buộc của mỗi hình, chẳng hạn mũi tên phải đi từ kiểm tra sang xác nhận, không đảo chiều. Không dùng logo thương hiệu thật hay ảnh khách hàng. Một lỗi trang trí có thể chấp nhận trong bản phác, nhưng mũi tên sai làm đổi quy trình phải khiến bản đó bị loại."
+      ],
+      [
+        "Chỉnh một chi tiết để biết có thực sự sửa được",
+        "Người kiểm thử nên mở tệp trong phần mềm vector đã được tổ chức cho phép, thay một màu và một nhãn rồi xuất lại. Ghi thời gian tìm đúng đối tượng, số phần bị thay ngoài ý muốn và việc phông chữ có giữ nguyên không. Đừng đánh đồng phần mở rộng .svg với tài sản dễ bảo trì. Một tệp có thể hiển thị đúng nhưng gồm quá nhiều đường nhỏ khó sửa. Với biểu tượng dùng nhiều lần, thời gian sửa đáng được tính cùng thời gian tạo."
+      ],
+      [
+        "Thu nhỏ, in xám, rồi hỏi người khác đọc",
+        "Xem cùng một hình ở kích thước dùng thật, chẳng hạn biểu tượng trong nút nhỏ và sơ đồ trên màn hình điện thoại. Kiểm tra đường mảnh, độ tương phản, dấu tiếng Việt và phần bị cắt. Tạo bản xám để xem ý nghĩa có phụ thuộc hoàn toàn vào màu hay không. Khi cần đánh giá khả năng hiểu, đưa hình cho vài người không biết prompt và hỏi họ mô tả quy trình. Đây chỉ là kiểm tra thăm dò, không phải bằng chứng về toàn bộ người dùng hoặc chứng nhận tiếp cận."
+      ],
+      [
+        "Nghiệm thu tài sản thay vì tin lời mô tả",
+        "Giữ bản gốc và bản đã sửa, ghi phiên bản công cụ, yêu cầu đầu vào và lý do chọn hoặc loại. Kiểm tra tệp thực tế trước đưa lên web; không mặc định bất kỳ tệp SVG nào cũng an toàn chỉ vì tài liệu mô tả một chế độ xuất tĩnh. Không mở tệp lạ có nội dung chủ động trong môi trường chứa tài khoản nhạy cảm. Khi xuất bản, thêm văn bản thay thế mô tả chức năng, đồng thời giữ nội dung quan trọng bằng chữ thật để người đọc không phải suy đoán từ minh họa."
+      ],
+      [
+        "Bắt đầu mà không cần mua công cụ",
+        "Bạn có thể làm ngay phần đặc tả và phiếu nghiệm thu bằng giấy hoặc trình soạn thảo hiện có. Chỉ thử công cụ sau khi xác nhận chi phí, quyền sử dụng đầu vào, chính sách dữ liệu và quyền truy cập của tài khoản. Chưa cần tạo hàng chục biến thể: một mẫu có tiêu chí rõ thường cho biết điểm yếu của quy trình nhanh hơn một thư mục lớn chỉ toàn hình đẹp. Bản tin chưa thực hiện thử nghiệm này và không đưa ra kết quả tốc độ hay tỷ lệ đạt."
+      ]
+    ],
+    "prompt": "Giúp tôi lập phiếu kiểm cho một sơ đồ vector giả gồm ba bước nhận hàng, kiểm tra và xác nhận. Liệt kê nội dung bắt buộc, lỗi làm sai nghĩa, cách kiểm ở kích thước nhỏ và cách ghi nhận thời gian sửa. Không tạo dữ liệu khách hàng, không tự mua hay gọi dịch vụ.",
+    "sources": [
+      [
+        "OpenAI API changelog, 04/11/2026",
+        "https://developers.openai.com/api/docs/changelog"
+      ],
+      [
+        "OpenAI Image generation: SVG và complexity",
+        "https://developers.openai.com/api/docs/guides/image-generation"
+      ]
+    ],
+    "note": "Nguồn kiểm tra 08/11/2026. Tính năng do nhà cung cấp mô tả; chưa kiểm thử API, chất lượng, giá hoặc quyền truy cập cụ thể. Quy trình nghiệm thu là đề xuất biên tập. Minh họa của bài được viết bằng SVG nguyên bản, không phải đầu ra GPT Image.",
+    "research": {
+      "question": "Tệp vector do AI tạo có giúp giảm tổng thời gian tạo và sửa tài sản đạt yêu cầu so với quy trình hiện có không?",
+      "evidence": "Changelog xác nhận đợt phát hành. Hướng dẫn chính thức mô tả ràng buộc API. Không có đo lường độc lập của bản tin về chất lượng SVG.",
+      "method": "Dùng cùng ba đặc tả giả cho hai quy trình, lưu tất cả bản đầu và bản sửa. Đánh giá mù tên công cụ nếu có thể; không bỏ các lượt tạo thất bại.",
+      "measure": "Thời gian đến bản đạt, số lỗi sai nghĩa, khả năng sửa từng đối tượng, độ rõ khi thu nhỏ và tổng chi phí nếu thử dịch vụ. Công bố cả số mẫu và điều kiện thử.",
+      "conditions": "Không suy rộng từ một prompt; kiểm quyền đầu vào và đầu ra, dữ liệu và chi phí trước thử. Kiểm tra nội dung tệp thực tế trước nhúng vào trang.",
+      "next": "Lặp trên sơ đồ có chữ tiếng Việt dài và nhiều kích thước. Tách lỗi hình học, chữ và khả năng hiểu để biết cần sửa prompt hay đổi cách dựng hình."
+    },
+    "checked": "08/11/2026",
+    "status": "Đã kiểm tra nguồn; chưa thực nghiệm"
+  },
+  {
     "id": "rmit-ky-nang-ai-sau-khoa-hoc",
     "title": "Học AI xong, làm được gì: nhìn từ chương trình RMIT và Bộ GDĐT",
     "deck": "Một chương trình đào tạo đang đến mốc cuối theo kế hoạch gợi câu hỏi quan trọng: đánh giá năng lực bằng sản phẩm đẹp hay bằng cách người học kiểm tra và sửa lỗi?",
