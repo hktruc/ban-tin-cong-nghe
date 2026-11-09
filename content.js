@@ -1,5 +1,423 @@
 window.ARTICLES=[
   {
+    "id": "skywise-ai-hang-khong-moc-thoi-gian",
+    "title": "AI hàng không: cảnh báo sớm chỉ có ý nghĩa khi dữ liệu không đến từ tương lai",
+    "deck": "Từ hợp tác FPT, Vietnam Airlines và Skywise, một câu hỏi cần kiểm trước mô hình: tại thời điểm dự báo, hệ thống thực sự đã biết những gì?",
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Hàng không & đánh giá dự báo",
+    "date": "09/11/2026",
+    "sourceDate": "04/11/2026",
+    "color": "blue",
+    "art": "01",
+    "read": "6 phút",
+    "intro": "Một cảnh báo có thể đúng mà vẫn vô ích nếu xuất hiện sau lúc nhân viên đã biết vấn đề. Với dự báo bảo dưỡng, thời điểm dữ liệu trở nên sẵn có quan trọng không kém nội dung dữ liệu.",
+    "body": [
+      [
+        "Đã có thỏa thuận, chưa có kết quả triển khai được công bố",
+        "[Thông báo FPT ngày 4/11](https://fpt.com/vi/tin-tuc/fpt-hop-tac-cung-vietnam-airlines-va-skywise-cua-airbus-thuc-day-ung-dung-ai-trong-hang-khong) xác nhận biên bản ghi nhớ với Vietnam Airlines và Skywise. Hướng nghiên cứu gồm khai thác đội bay, kế hoạch bảo dưỡng và phụ tùng; các bên dự kiến chọn tối đa bốn bài toán để đánh giá. Thông báo là nguồn trực tiếp về phạm vi hợp tác, chưa phải bằng chứng AI đã giảm chậm chuyến hay nâng độ an toàn. Bài này chọn một bài tập dự báo nhu cầu kiểm tra kỹ thuật để phân tích phương pháp; không mô tả hệ thống mà ba bên đã xây dựng."
+      ],
+      [
+        "Định nghĩa một mốc dự báo thay vì gom mọi bản ghi",
+        "Giả sử một nhóm học thuật muốn dự báo liệu một thiết bị mô phỏng có cần kiểm tra trong 24 giờ tới. Trước hết phải định nghĩa “cần kiểm tra” theo tiêu chí chuyên môn, không lấy mọi lần mở phiếu làm cùng một loại sự cố. Mỗi mẫu gồm mã thiết bị giả, thời điểm dự báo, thông tin đã có vào lúc đó và kết quả quan sát sau đó. Phải tách giờ xảy ra sự kiện khỏi giờ dữ liệu được nhập vào hệ thống. Một nhận xét được bổ sung sau khi sửa xong không thể trở thành đầu vào của dự báo trước sửa."
+      ],
+      [
+        "Chia dữ liệu theo thời gian và thiết bị",
+        "Phép thử đề xuất giữ giai đoạn cuối làm tập kiểm tra chưa dùng để chỉnh mô hình. Trong giai đoạn trước, dùng các cửa sổ thời gian nối tiếp để chọn cách làm; tránh trộn ngẫu nhiên các bản ghi gần nhau. Khi mục tiêu là áp dụng cho thiết bị mới, dành riêng cả thiết bị chưa xuất hiện trong tập học. Một bảng nhắc việc theo số giờ sử dụng là đối chứng hữu ích: mô hình phức tạp phải tạo thêm giá trị so với quy tắc đơn giản đó. Tất cả biến đầu vào cần được rà theo mốc “đã biết”, kể cả trạng thái phụ tùng và lịch bảo dưỡng."
+      ],
+      [
+        "Đo thời gian báo trước cùng số cảnh báo",
+        "Bảng đánh giá nên cho biết mỗi tuần có bao nhiêu cảnh báo cần chuyên gia xem, bao nhiêu sự kiện bị bỏ sót và cảnh báo đúng đến sớm bao lâu. Một sự kiện được cảnh báo nhiều lần phải có cách gộp rõ ràng, nếu không hệ thống có thể tăng số đúng bằng cách nhắc liên tục. Báo kết quả theo từng nhóm điều kiện, kèm số mẫu; một nhóm có quá ít sự kiện chỉ cho tín hiệu ban đầu. Không suy ra chứng nhận an toàn từ tỷ lệ dự báo. Quyết định kỹ thuật và quy trình bảo dưỡng luôn thuộc người có thẩm quyền theo hệ thống quản lý đang áp dụng."
+      ],
+      [
+        "Chi phí nằm cả ở việc dựng lại quá khứ",
+        "Nguồn chưa công bố giá triển khai hay ngân sách thí điểm, nên chưa thể tính khoản tiết kiệm bằng tiền. Dự toán cần tách công làm sạch thời gian, đối chiếu phiếu, kết nối dữ liệu, lưu trữ, chạy mô hình và giờ chuyên gia xem cảnh báo. Bài tập ban đầu có thể dùng dữ liệu tổng hợp trên máy hiện có, chưa cần mua dịch vụ; chi phí nhân sự vẫn có thật. Nếu chỉ đo thời gian suy luận mà bỏ công tạo nhãn đáng tin, kết quả sẽ đánh giá thấp chi phí của toàn bộ hệ thống."
+      ],
+      [
+        "Từ bài tập đến nghiên cứu liên ngành",
+        "Kết quả giả lập chỉ kiểm quy trình tính toán. Nếu tiến tới dữ liệu thực trong tương lai, cần một nghiên cứu được đơn vị vận hành phê duyệt, chạy ở chế độ quan sát và có tiêu chí dừng trước khi ảnh hưởng lịch khai thác. Hướng mở rộng đáng quan tâm là phối hợp dự báo với nghiên cứu vận trù: một cảnh báo có giúp chuẩn bị phụ tùng đúng nơi, đúng lúc không? Cần đánh giá cả khả năng nhân viên hiểu lý do cảnh báo, vì dự báo tốt mà khó xử lý vẫn có thể làm tăng gánh nặng điều phối."
+      ]
+    ],
+    "sources": [
+      [
+        "FPT: hợp tác AI hàng không với Vietnam Airlines và Skywise",
+        "https://fpt.com/vi/tin-tuc/fpt-hop-tac-cung-vietnam-airlines-va-skywise-cua-airbus-thuc-day-ung-dung-ai-trong-hang-khong"
+      ]
+    ],
+    "research": {
+      "question": "Dự báo có tạo thời gian chuẩn bị hữu ích mà không dùng dữ liệu chỉ xuất hiện sau sự kiện?",
+      "evidence": "Nguồn đối tác xác nhận thỏa thuận và hướng nghiên cứu, chưa công bố phép đo hiệu quả.",
+      "method": "Giữ mốc dữ liệu sẵn có; chia theo thời gian và thiết bị; so với lịch nhắc theo giờ sử dụng.",
+      "measure": "Cảnh báo trên mỗi thiết bị-tuần, số bỏ sót, thời gian báo trước và giờ người kiểm tra.",
+      "conditions": "Chỉ nghiên cứu mô phỏng; không can thiệp thiết bị, bảo dưỡng hay vận hành hàng không.",
+      "next": "Kết hợp khoa học dữ liệu, vận trù phụ tùng và nghiên cứu tương tác người–máy."
+    },
+    "prompt": "Tạo bảng kiểm cho dữ liệu dự báo giả lập: thời điểm sự kiện, thời điểm nhập liệu, mốc dự báo, biến có thể dùng và biến phải loại do đến muộn. Không tạo dự báo an toàn bay hoặc đề xuất thay đổi bảo dưỡng.",
+    "note": "Phần thiết kế thử và ví dụ trong bài là đề xuất biên tập, chưa được bản tin thực nghiệm. Không dùng dữ liệu riêng hoặc gọi dịch vụ trả phí. Đồ họa tự tạo, không mô tả kết quả đo.",
+    "checked": "09/11/2026",
+    "status": "Đã kiểm tra nguồn; chưa thực nghiệm"
+  },
+  {
+    "id": "quang-tri-ai-dung-chung-phan-quyen",
+    "title": "AI dùng chung ở Quảng Trị: cùng nền tảng không có nghĩa cùng quyền đọc",
+    "deck": "Mở rộng trợ lý tri thức cần kiểm những tài liệu nó không được thấy, bên cạnh những câu hỏi nó trả lời đúng.",
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Hành chính số & quản trị dữ liệu",
+    "date": "09/11/2026",
+    "sourceDate": "07/11/2026 · sự kiện 06/11/2026",
+    "color": "green",
+    "art": "02",
+    "read": "6 phút",
+    "intro": "Một trợ lý trả lời trôi chảy nhưng dẫn ra văn bản của đơn vị khác có thể làm lộ dữ liệu ngay trong câu trích nguồn. Vì thế, kiểm quyền truy cập phải diễn ra trước khi chấm chất lượng câu trả lời.",
+    "body": [
+      [
+        "Phân biệt phần đã dùng và phần được đề xuất",
+        "[VNPT công bố ngày 7/11](https://vnpt.com.vn/tin-tuc/202611/vnpt-va-quang-tri-tu-ket-qua-chuyen-oi-so-en-nhung-bai-toan-phat-trien-moi-ec12733/) rằng trợ lý iKnow đã được triển khai tại 10 đơn vị với hơn 1.000 tài khoản. Nền tảng AI dùng chung là hướng hợp tác tiếp theo, không phải bằng chứng toàn bộ chức năng đã vận hành. Bài từ [cơ quan địa phương](https://ubmttqvn.quangtri.gov.vn/index.php/nqdh2025/tinh-quang-tri-va-tap-doan-vnpt-ky-ket-thoa-thuan-hop-tac-thuc-day-chuyen-doi-so-8781.html) xác nhận buổi làm việc ngày 6/11 và biên bản ghi nhớ giai đoạn 2027–2030. Các số tài khoản là quy mô triển khai do bên tham gia báo cáo; chưa đo mức độ chính xác hay lợi ích của trợ lý."
+      ],
+      [
+        "Dựng ba vùng tài liệu hoàn toàn giả",
+        "Một nhóm đánh giá có thể tạo ba kho: tài liệu công khai, tài liệu giả dành cho bộ phận A và tài liệu giả dành cho bộ phận B. Dùng những câu nhận diện vô hại, khác nhau trong từng kho, để biết câu trả lời đã lấy thông tin từ đâu. Thiết lập ba vai thử tương ứng với quyền đọc, không dùng danh tính hay hồ sơ của người dân. Danh sách câu hỏi gồm câu được phép trả lời, câu thiếu dữ kiện và câu cố tình yêu cầu một tài liệu ngoài phạm vi. Đây là bài thử được đề xuất, không phải mô tả quyền hiện có của iKnow."
+      ],
+      [
+        "Kiểm từ truy xuất đến dòng trích dẫn",
+        "Không chỉ xem đoạn văn cuối. Nhật ký thử cần ghi tài liệu nào được truy xuất và đoạn nào được chuyển vào ngữ cảnh mô hình. Lọc sau khi mô hình đã đọc tài liệu không chứng minh được dữ liệu chưa bị tiếp xúc. Với mỗi câu hỏi, người kiểm tra so quyền của vai đang dùng với mọi tài liệu đã đưa vào. Kiểm thêm tiêu đề, đoạn xem trước, liên kết nguồn và phần tìm kiếm gợi ý. Thông tin bị lộ qua tiêu đề vẫn là một lỗi dù nội dung chính đã được che."
+      ],
+      [
+        "Thử lại sau khi quyền thay đổi",
+        "Một tình huống quan trọng là người dùng từng có quyền nhưng sau đó không còn. Trong môi trường giả lập, đổi vai rồi hỏi lại ở phiên mới và trong hội thoại cũ; kiểm cả bộ nhớ đệm và câu trả lời được lưu. Phải xác định dữ liệu cũ được xử lý thế nào theo chính sách của đơn vị, thay vì chỉ thử một lần đăng nhập. Mọi đường đọc phía máy chủ cần kiểm quyền độc lập. Lời nhắc “không tiết lộ” giúp hướng dẫn hành vi, nhưng không thay thế cơ chế kiểm soát của ứng dụng và kho dữ liệu."
+      ],
+      [
+        "Tính chi phí theo câu trả lời được phép và có ích",
+        "Chưa có giá nền tảng dùng chung được công bố trong hai nguồn trên. Một dự toán thí điểm phải gồm lập danh mục tài liệu, gắn quyền, đồng bộ thay đổi, kiểm thử, hạ tầng và xử lý khiếu nại; không chỉ gồm phí mô hình. Đo riêng tỷ lệ trả lời đúng trên câu được phép và số lần truy xuất vượt quyền. Một hệ thống từ chối tất cả có thể không lộ dữ liệu nhưng không phục vụ được công việc. Khi kết quả chưa đạt, giới hạn trước vào kho công khai đã được rà soát có thể là bước thử hợp lý hơn mở rộng sang nhiều đơn vị."
+      ],
+      [
+        "Năng lực phục vụ cần được đo với người dùng",
+        "Sau kiểm kỹ thuật, có thể nghiên cứu mức độ hiểu câu trả lời ở các nhóm người dùng khác nhau, thời gian tìm được đúng thủ tục và tần suất phải hỏi lại cán bộ. Các thử nghiệm thực tế cần phê duyệt và bảo vệ dữ liệu; bài này không cung cấp tư vấn thủ tục cụ thể. Hướng liên ngành là kết hợp an toàn thông tin, quản trị hồ sơ và thiết kế dịch vụ công: một câu trả lời phải có nguồn, đúng quyền và đủ rõ để người đọc biết bước tiếp theo hoặc biết khi nào cần gặp người phụ trách."
+      ]
+    ],
+    "sources": [
+      [
+        "VNPT: kết quả và hướng hợp tác tại Quảng Trị",
+        "https://vnpt.com.vn/tin-tuc/202611/vnpt-va-quang-tri-tu-ket-qua-chuyen-oi-so-en-nhung-bai-toan-phat-trien-moi-ec12733/"
+      ],
+      [
+        "Cổng thông tin địa phương: thỏa thuận chuyển đổi số ngày 6/11",
+        "https://ubmttqvn.quangtri.gov.vn/index.php/nqdh2025/tinh-quang-tri-va-tap-doan-vnpt-ky-ket-thoa-thuan-hop-tac-thuc-day-chuyen-doi-so-8781.html"
+      ]
+    ],
+    "research": {
+      "question": "Trợ lý có giữ quyền tài liệu qua truy xuất, trích nguồn và thay đổi vai?",
+      "evidence": "Có báo cáo triển khai iKnow và đề xuất nền tảng chung; chưa có kiểm định độc lập về phân quyền.",
+      "method": "Ba kho giả, ba vai, câu hỏi được phép và vượt phạm vi; thử cả sau khi đổi quyền.",
+      "measure": "Truy xuất vượt quyền, trả lời đúng trong phạm vi và thời gian xử lý sự cố.",
+      "conditions": "Không đưa hồ sơ người dân hay tài liệu nội bộ vào phép thử công khai.",
+      "next": "Kết hợp bảo mật, quản trị hồ sơ và khả năng tiếp cận dịch vụ công."
+    },
+    "prompt": "Lập ma trận kiểm thử trợ lý với kho Công khai, A và B hoàn toàn giả. Với mỗi vai, nêu nguồn được phép đọc, câu cần từ chối, kiểm tra trích dẫn và tình huống thay đổi quyền. Không dùng dữ liệu thật.",
+    "note": "Phần thiết kế thử và ví dụ trong bài là đề xuất biên tập, chưa được bản tin thực nghiệm. Không dùng dữ liệu riêng hoặc gọi dịch vụ trả phí. Đồ họa tự tạo, không mô tả kết quả đo.",
+    "checked": "09/11/2026",
+    "status": "Đã kiểm tra nguồn; chưa thực nghiệm"
+  },
+  {
+    "id": "epu-ai-dien-du-bao-dung-moc",
+    "title": "AI cho lưới điện: sai số trung bình chưa nói hết về giờ cao điểm",
+    "deck": "Từ định hướng nghiên cứu của Đại học Điện lực, một bài thử dự báo phụ tải cần đo cả mức đỉnh, giờ xuất hiện và sai số ở những ngày khó.",
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Năng lượng & phương pháp nghiên cứu",
+    "date": "09/11/2026",
+    "sourceDate": "28/08/2026 · tư liệu nền, không phải tin mới",
+    "color": "orange",
+    "art": "03",
+    "read": "6 phút",
+    "intro": "Hai dự báo có thể sai lệch trung bình gần nhau, nhưng một dự báo bỏ lỡ đúng giờ tải cao. Với bài toán năng lượng, chọn số đo phải bắt đầu từ quyết định mà người vận hành cần chuẩn bị.",
+    "body": [
+      [
+        "Một nguồn tháng 8, không phải công bố mới trong tháng 11",
+        "[Đại học Điện lực ngày 28/8/2026](https://epu.edu.vn/post/truong-dai-hoc-dien-luc-thuc-day-nghien-cuu-va-ung-dung-ai-trong-phat-trien-luoi-dien-thong-minh-MVDny.html) giới thiệu hội thảo về điều khiển, tự động hóa và AI trong lưới điện thông minh, gồm hướng học máy, dữ liệu lớn và bản sao số. Nguồn trực tiếp xác nhận hoạt động học thuật, chưa cung cấp bộ dữ liệu hoặc kết quả thử một thuật toán dự báo cụ thể. Bản tin đọc lại tư liệu này để đề xuất bài tập đào tạo liên ngành. Ngày kiểm tra 9/11 không biến hội thảo tháng 8 thành sự kiện mới."
+      ],
+      [
+        "Bắt đầu bằng một đường phụ tải tổng hợp",
+        "Bài tập đề xuất dùng chuỗi điện tiêu thụ theo giờ của một tòa nhà hư cấu, có nhịp ngày–đêm, ngày nghỉ và một số giờ thiếu dữ liệu. Công bố rõ đơn vị kW hay kWh, múi giờ, cách tạo mẫu và hạt giống ngẫu nhiên nếu có. Mục tiêu ban đầu là dự báo từng giờ của ngày kế tiếp, không điều khiển thiết bị. Đối chứng đơn giản lấy giá trị cùng giờ tuần trước; một mô hình hồi quy theo giờ, thứ và nhiệt độ dự báo là đối chứng thứ hai. Chưa cần chọn mạng học sâu trước khi hiểu lỗi của hai cách này."
+      ],
+      [
+        "Giữ bản dự báo thời tiết đã có lúc ra quyết định",
+        "Nếu bổ sung thời tiết trong nghiên cứu thực tế sau này, phải lưu bản dự báo được phát hành trước mốc dự báo phụ tải, không thay bằng số đo thời tiết đã xảy ra. Trong bài tập tổng hợp, có thể tạo riêng biến “thời tiết dự báo” có sai số và biến “thời tiết thực tế” để minh họa sự khác biệt. Biến thực tế chỉ dùng phân tích sau, không được lẫn vào đầu vào chính. Tương tự, việc điền dữ liệu thiếu và chuẩn hóa phải học từ phần quá khứ; dùng thống kê của toàn chuỗi có thể đưa thông tin tương lai vào phép đo."
+      ],
+      [
+        "Đánh giá theo cửa sổ nối tiếp và giờ cao điểm",
+        "Cho mô hình dự báo một ngày, ghi kết quả, rồi mới mở dữ liệu ngày đó để bước sang ngày tiếp theo. Tất cả cách làm phải dùng cùng các mốc dự báo. Báo sai số tuyệt đối trung bình theo đơn vị điện, cùng sai số ở các giờ tải cao do đề bài quy định trước. Không dùng duy nhất phần trăm sai số khi mẫu có giá trị gần 0. Lưu cả thời điểm dự báo đỉnh tải và mức đỉnh; dự báo đúng tổng ngày nhưng lệch giờ có thể không hữu ích cho người lập kế hoạch. Báo riêng ngày thường, ngày nghỉ và giai đoạn thiếu dữ liệu."
+      ],
+      [
+        "Một mô hình rẻ vẫn có chi phí vận hành",
+        "Tư liệu hội thảo không công bố giá một sản phẩm hay lợi ích tiền điện. Bài tập nhỏ có thể chạy trên máy sẵn có với công cụ miễn phí, nhưng phải tính thời gian chuẩn bị dữ liệu, bảo trì, lưu phiên bản và xem cảnh báo. Trong đề án thật, cảm biến, truyền dữ liệu, đồng bộ thời gian và giám sát chất lượng có thể chiếm phần lớn ngân sách. Không quy đổi phần trăm giảm sai số thành phần trăm tiết kiệm điện: cần một nghiên cứu riêng nối dự báo với quyết định vận hành và ràng buộc an toàn."
+      ],
+      [
+        "Thử độ bền trước khi thử điều khiển",
+        "Đổi nhịp sử dụng, tăng số giờ mất dữ liệu và thêm một đợt nóng giả để xem phương pháp nào xuống chất lượng nhanh. Lưu lại nguyên nhân, không chỉ chọn biểu đồ đẹp nhất. Kết quả trên chuỗi tổng hợp chỉ cho biết pipeline có hoạt động như thiết kế, chưa chứng minh hiệu quả ở lưới điện Việt Nam. Hướng tiếp theo là nghiên cứu phối hợp năng lượng, khí tượng và thống kê trên dữ liệu công khai có giấy phép phù hợp. Mọi thí nghiệm nối thiết bị thật phải do đơn vị có chuyên môn và thẩm quyền chịu trách nhiệm."
+      ]
+    ],
+    "sources": [
+      [
+        "Đại học Điện lực: hội thảo AI và lưới điện thông minh",
+        "https://epu.edu.vn/post/truong-dai-hoc-dien-luc-thuc-day-nghien-cuu-va-ung-dung-ai-trong-phat-trien-luoi-dien-thong-minh-MVDny.html"
+      ]
+    ],
+    "research": {
+      "question": "Mô hình có tốt hơn dự báo cùng giờ tuần trước khi chỉ dùng dữ liệu biết tại thời điểm dự báo?",
+      "evidence": "Nguồn học thuật của trường xác nhận định hướng, không cung cấp kết quả dự báo để tái lập.",
+      "method": "Dữ liệu tổng hợp có công thức; dự báo cuốn chiếu; chuẩn hóa và điền thiếu chỉ từ quá khứ.",
+      "measure": "Sai số theo đơn vị điện, mức và thời điểm đỉnh, kết quả theo nhóm ngày.",
+      "conditions": "Không nối hệ thống điều khiển, không suy ra tiết kiệm từ sai số và không coi dữ liệu giả là đo thực.",
+      "next": "Kết hợp khí tượng, năng lượng và phương pháp đánh giá chuỗi thời gian."
+    },
+    "prompt": "Thiết kế dữ liệu phụ tải tổng hợp cho bài học dự báo ngày kế tiếp. Tách nhiệt độ dự báo và thực tế; nêu đối chứng, cách chia thời gian, xử lý thiếu và số đo. Không tạo kết luận về vận hành lưới thật.",
+    "note": "Phần thiết kế thử và ví dụ trong bài là đề xuất biên tập, chưa được bản tin thực nghiệm. Không dùng dữ liệu riêng hoặc gọi dịch vụ trả phí. Đồ họa tự tạo, không mô tả kết quả đo.",
+    "checked": "09/11/2026",
+    "status": "Đã kiểm tra nguồn; chưa thực nghiệm"
+  },
+  {
+    "id": "aws-khao-sat-ai-viet-nam-doc-mau-so",
+    "title": "Khảo sát AI Việt Nam: hãy đọc mẫu số trước khi đọc mức tăng năng suất",
+    "deck": "Báo cáo AWS và Strand Partners gợi cơ hội ứng dụng, nhưng tỷ lệ doanh nghiệp tự báo hiệu quả không phải phép đo tác động nhân quả.",
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Doanh nghiệp & phương pháp khảo sát",
+    "date": "09/11/2026",
+    "sourceDate": "29/09/2026 · tư liệu phân tích",
+    "color": "green",
+    "art": "04",
+    "read": "6 phút",
+    "intro": "Hai tỷ lệ cùng đúng vẫn có thể trả lời hai câu hỏi khác nhau. “Bao nhiêu doanh nghiệp dùng AI?” khác với “trong số đã dùng, bao nhiêu thấy có lợi?”. Nhầm mẫu số có thể dẫn tới một quyết định đầu tư sai.",
+    "body": [
+      [
+        "Nguồn nói gì và ai đứng sau nghiên cứu",
+        "[Amazon công bố ngày 29/9](https://www.aboutamazon.sg/news/aws/vietnam-is-transforming-its-ai-ambitions-into-business-impact) kết quả nghiên cứu do AWS đặt hàng và Strand Partners thực hiện: 26% doanh nghiệp Việt Nam đã dùng AI; trong nhóm áp dụng, 72% báo tăng năng suất. Đây là kết quả khảo sát, không phải mức tăng năng suất 72%. AWS cũng là nhà cung cấp hạ tầng AI, nên thông tin về bên tài trợ cần đi cùng con số. Điều đó không tự làm dữ liệu mất giá trị, nhưng cần đọc phương pháp và phạm vi thay vì lấy thông cáo làm dự báo cho doanh nghiệp mình."
+      ],
+      [
+        "Đọc phụ lục trước khi so các tỷ lệ",
+        "[Phụ lục báo cáo, trang 16](https://www.unlockingaispotential.com/_files/ugd/c4ce6f_0e2e45f7ad694fef966c8cd2f4dbfb35.pdf) mô tả khảo sát 1.000 lãnh đạo doanh nghiệp và 1.000 người dân, dùng các nhóm trả lời trực tuyến và điều chỉnh trọng số sau thu thập. Mẫu doanh nghiệp được thiết kế theo quy mô, ngành và vùng. Vì vậy, không coi một tỷ lệ đã gán trọng số là số người nguyên trong mẫu. Khi trích một chỉ số, hãy ghi đối tượng, điều kiện lọc, thời gian và cách hỏi nếu có; không cộng các nhóm có thể chồng nhau hoặc đổi “kỳ vọng” thành “đã đạt”."
+      ],
+      [
+        "Tự báo lợi ích không tách được mọi nguyên nhân",
+        "Doanh nghiệp đầu tư AI có thể đồng thời đổi quy trình, đào tạo nhân viên hoặc có nhu cầu thị trường tăng. Một khảo sát cắt ngang hữu ích để hiểu thực trạng và cảm nhận, nhưng chưa cô lập phần thay đổi do AI tạo ra. Người trả lời cũng có thể hiểu “năng suất” theo cách khác nhau. Cách đọc thận trọng là giữ nguyên nhãn tự báo cáo và tìm nghiên cứu theo thời gian hoặc phép thử có đối chứng trước khi đưa ra lời hứa hiệu quả. Không suy rằng một công ty chưa ứng dụng sẽ thu được mức lợi ích trung bình của nhóm đã ứng dụng."
+      ],
+      [
+        "Chuyển câu hỏi thị trường thành phép thử của chính công việc",
+        "Ví dụ biên tập: một nhóm nhỏ muốn dùng AI để phân loại phiếu yêu cầu giả. Trước khi thử, quy định các loại, bộ đáp án được hai người rà và thế nào là lỗi nghiêm trọng. So sánh cách làm hiện tại với cách có AI trên các nhóm phiếu tương đương; đổi thứ tự giữa người làm và không cho dùng lại cùng phiếu. Ghi thời gian đến khi phân loại đã được kiểm, số phiếu cần xử lý lại và phần việc người kiểm phải làm. Đây là đề cương thử, chưa phải kết quả. Không cần tải hội thoại khách hàng thật để học cách đo."
+      ],
+      [
+        "Tính cả phần việc đã chuyển sang người khác",
+        "Một minh họa tài chính giả: 100 phiếu, cách cũ 8 phút/phiếu; cách mới 5 phút xử lý cộng 2 phút kiểm/phiếu. Tổng tiết kiệm là 100 phút, không phải 300 phút. Nếu dành thêm 120 phút thiết lập riêng cho lô đầu, lô đó chưa tiết kiệm thời gian. Đây chỉ là phép tính minh họa, không dự toán giá lao động hoặc giá sản phẩm. Ngân sách còn cần phí phần mềm, tích hợp, đào tạo và lỗi phải sửa. Chỉ quy thời gian ra tiền khi biết giờ đó được sử dụng thế nào, tránh đồng nhất thời gian rảnh hơn với khoản chi thực sự giảm."
+      ],
+      [
+        "Báo cả kết quả không đạt",
+        "Đăng ký trước điều kiện mở rộng: chẳng hạn không làm tăng lỗi nghiêm trọng và có giảm thời gian hoàn thiện trên bộ kiểm tra mới. Ngưỡng cụ thể phải do nhóm chịu trách nhiệm chọn theo rủi ro, không lấy từ một tỷ lệ quốc gia. Nếu AI chỉ tốt với nhóm phiếu đơn giản, báo riêng giới hạn đó. Hướng nghiên cứu tiếp theo nối kinh tế học tổ chức với tương tác người–máy: AI làm giảm việc hay chỉ chuyển việc sang khâu rà soát, ai được lợi, và chất lượng có bền khi người làm bớt chú ý sau vài tuần?"
+      ]
+    ],
+    "sources": [
+      [
+        "Amazon: kết quả khảo sát doanh nghiệp Việt Nam 2026",
+        "https://www.aboutamazon.sg/news/aws/vietnam-is-transforming-its-ai-ambitions-into-business-impact"
+      ],
+      [
+        "Unlocking Vietnam’s AI Potential 2026: báo cáo và phương pháp",
+        "https://www.unlockingaispotential.com/_files/ugd/c4ce6f_0e2e45f7ad694fef966c8cd2f4dbfb35.pdf"
+      ]
+    ],
+    "research": {
+      "question": "Một tỷ lệ đang nói về toàn bộ doanh nghiệp, nhóm dùng AI hay kỳ vọng tương lai?",
+      "evidence": "Khảo sát do nhà cung cấp đặt hàng, có phụ lục về lấy mẫu và trọng số; không phải thử nghiệm nhân quả.",
+      "method": "Lập bảng mẫu số của từng chỉ số; thử một công việc giả với đối chứng và tiêu chí định trước.",
+      "measure": "Thời gian xử lý cộng kiểm tra, lỗi nghiêm trọng, phí cố định và chi phí mỗi đầu ra đạt.",
+      "conditions": "Không lấy tỷ lệ tự báo cáo làm bảo đảm hoàn vốn; ví dụ số trong bài hoàn toàn giả.",
+      "next": "Nghiên cứu theo thời gian về phân bổ công việc và lợi ích giữa các vai trong tổ chức."
+    },
+    "prompt": "Với đoạn khảo sát sau, lập bảng: chỉ số, mẫu số, nhóm bị loại, tự báo hay đo độc lập, kỳ vọng hay đã xảy ra, điều chưa biết. Đừng suy ra quan hệ nhân quả: [đoạn nguồn công khai].",
+    "note": "Phần thiết kế thử và ví dụ trong bài là đề xuất biên tập, chưa được bản tin thực nghiệm. Không dùng dữ liệu riêng hoặc gọi dịch vụ trả phí. Đồ họa tự tạo, không mô tả kết quả đo.",
+    "checked": "09/11/2026",
+    "status": "Đã kiểm tra nguồn; chưa thực nghiệm"
+  },
+  {
+    "id": "vnpt-agent-kiem-quyen-cong-cu",
+    "title": "AI Agent trong doanh nghiệp: kiểm quyền ở công cụ, không chỉ trong lời nhắc",
+    "deck": "Từ chia sẻ của VNPT-IT về kiểm soát tác nhân AI, một bài thử phòng thủ nhỏ có thể phát hiện rủi ro trước khi nối dữ liệu và hành động thật.",
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "An toàn AI & thiết kế hệ thống",
+    "date": "09/11/2026",
+    "sourceDate": "12/09/2026 · sự kiện 10–11/09/2026",
+    "color": "blue",
+    "art": "05",
+    "read": "6 phút",
+    "intro": "Một trợ lý được giao tổng hợp tài liệu không cần quyền xóa tài liệu. Kiểm soát tốt bắt đầu từ những khả năng không trao cho nó, thay vì hy vọng nó luôn nhớ điều được dặn.",
+    "body": [
+      [
+        "Bằng chứng hiện có là chia sẻ chuyên môn",
+        "[VNPT-IT ngày 12/9](https://www.vnptit.vn/news/vnpt-it-chia-se-kiem-soat-ung-dung-ai-agent-security-bootcamp-2026) tường thuật tham luận tại Security Bootcamp 10–11/9 về kiểm soát AI Agent ở nhiều lớp, từ dữ liệu đến công cụ. Nguồn xác nhận nội dung trao đổi, không công bố tỷ lệ ngăn chặn tấn công hoặc kết quả kiểm định một sản phẩm. Bản tin không diễn giải buổi trình bày thành chứng nhận an toàn; thay vào đó, đề xuất cách kiểm một trợ lý tổng hợp tài liệu trong môi trường hoàn toàn giả."
+      ],
+      [
+        "Vẽ đường đi từ yêu cầu đến hành động",
+        "Đặt nhiệm vụ: tìm ba tài liệu giả có liên quan và tạo bản tóm tắt trong vùng nháp. Liệt kê riêng chức năng tìm, đọc, tạo bản nháp và mọi chức năng có thể thay đổi hệ thống khác. Mỗi chức năng cần biết người dùng nào yêu cầu, tài nguyên nào được phép chạm tới và đầu ra sẽ lưu ở đâu. Các hàm gửi, xóa hoặc thay quyền không thuộc nhiệm vụ này nên không cần cấp. Một bản thiết kế có thể được rà trên giấy trước khi có mô hình, tiết kiệm công xây những kết nối không cần thiết."
+      ],
+      [
+        "Đặt chốt ở nơi hành động thực sự diễn ra",
+        "[OWASP về Excessive Agency](https://genai.owasp.org/llmrisk/llm062025-excessive-agency/) khuyến nghị thu hẹp chức năng, quyền và mức tự chủ; kiểm quyền ở hệ thống phía sau thay vì để mô hình tự quyết. Trong bài thử đề xuất, bộ thực thi chỉ chấp nhận đọc tài nguyên giả thuộc danh sách cho phép và ghi vào thư mục nháp chỉ định. Nếu AI tạo yêu cầu ngoài danh sách, hệ thống phải từ chối ngay cả khi văn bản yêu cầu nghe hợp lý. Kiểm thử cần ghi cả quyết định của mô hình lẫn quyết định của bộ thực thi, vì hai lớp này có thể khác nhau."
+      ],
+      [
+        "Thêm tình huống nhầm lẫn vô hại",
+        "Không cần tải mã độc hay kiểm tra hệ thống của người khác. Chèn vào một tài liệu giả câu yêu cầu đổi nhiệm vụ, rồi xem trợ lý có coi nó là nội dung cần tóm tắt hay là quyền hành động. Tạo thêm trường hợp tên tệp gần giống, thiếu quyền đọc, yêu cầu lặp hai lần và kết nối bị gián đoạn. Với lệnh ghi được phép, dùng mã thao tác để nhận biết lần lặp, tránh tạo hai bản vì một lần thử lại. Mọi đích ghi đều nằm trong môi trường thử, không có email, khách hàng hoặc dịch vụ sản xuất thật."
+      ],
+      [
+        "Chấm tác động cuối, không chỉ câu trả lời lịch sự",
+        "Một câu “tôi không thể thực hiện” chưa đủ nếu trước đó đã có tác động. Sau mỗi tình huống, so trạng thái trước và sau: tệp nào thay đổi, có yêu cầu nào bị chặn và nhật ký có đủ để truy nguyên không. Đo tỷ lệ hoàn thành tác vụ hợp lệ cùng số hành động vượt phạm vi. Công cụ từ chối mọi thứ sẽ an toàn theo một số đo nhưng không hữu ích. Các kết quả cần gắn với phiên bản công cụ và bộ tình huống; vài thử nghiệm qua được không bảo đảm hệ thống chống mọi cách gây nhiễu."
+      ],
+      [
+        "Chi phí và bước mở rộng",
+        "Nguồn VNPT-IT không báo giá một gói triển khai. Bài thử giấy và bộ công cụ giả có thể chuẩn bị không cần API trả phí; chi phí chính là giờ thiết kế quyền, viết kiểm thử, rà nhật ký và bảo trì sau mỗi thay đổi. Nếu dùng mô hình ngoài, phải tính số lượt gọi lặp và thời gian con người xử lý điểm cần duyệt. Hướng mở rộng kết hợp kỹ thuật bảo mật với nghiên cứu hành vi: người duyệt có hiểu chính xác hành động sắp xảy ra hay chỉ bấm qua một thông báo chung chung? Chốt duyệt cần đủ rõ, không dựa vào sự cảnh giác vô hạn của người dùng."
+      ]
+    ],
+    "sources": [
+      [
+        "VNPT-IT: kiểm soát AI Agent tại Security Bootcamp 2026",
+        "https://www.vnptit.vn/news/vnpt-it-chia-se-kiem-soat-ung-dung-ai-agent-security-bootcamp-2026"
+      ],
+      [
+        "OWASP: LLM06:2025 Excessive Agency",
+        "https://genai.owasp.org/llmrisk/llm062025-excessive-agency/"
+      ]
+    ],
+    "research": {
+      "question": "Một tác vụ hợp lệ có thể hoàn thành mà không phát sinh hành động ngoài quyền?",
+      "evidence": "Bài chuyên môn của VNPT-IT và hướng dẫn OWASP, chưa phải kiểm định sản phẩm trong bài.",
+      "method": "Công cụ giả, quyền tối thiểu, tình huống nhầm lẫn vô hại; đối chiếu trạng thái trước và sau.",
+      "measure": "Tác vụ hợp lệ thành công, hành động ngoài quyền, tác động lặp và thời gian người duyệt.",
+      "conditions": "Chỉ môi trường thử do người làm kiểm soát; không mã độc, không tác động hệ thống thật.",
+      "next": "Nối kiểm thử quyền với thiết kế thông báo duyệt và nghiên cứu tải nhận thức."
+    },
+    "prompt": "Thiết kế ma trận quyền cho trợ lý đọc tài liệu giả và viết nháp. Chỉ ra nơi kiểm quyền ngoài mô hình, cách thử lại không ghi trùng và cách so trạng thái trước/sau. Không nối hệ thống thật.",
+    "note": "Phần thiết kế thử và ví dụ trong bài là đề xuất biên tập, chưa được bản tin thực nghiệm. Không dùng dữ liệu riêng hoặc gọi dịch vụ trả phí. Đồ họa tự tạo, không mô tả kết quả đo.",
+    "checked": "09/11/2026",
+    "status": "Đã kiểm tra nguồn; chưa thực nghiệm"
+  },
+  {
+    "id": "google-agile-deliberation-tieu-chi-anh",
+    "title": "Khi “ảnh phù hợp” chưa có nghĩa rõ ràng, AI cần giúp sửa tiêu chí trước",
+    "deck": "Agile Deliberation của Google Research gợi cách dùng những ảnh khó phân loại để làm rõ yêu cầu, thay vì sửa prompt theo từng lỗi rời rạc.",
+    "category": "AI thế giới",
+    "region": "Mỹ",
+    "kind": "Nghiên cứu & tương tác người–AI",
+    "date": "09/11/2026",
+    "sourceDate": "04/11/2026",
+    "color": "orange",
+    "art": "06",
+    "read": "6 phút",
+    "intro": "Một nhóm biên tập có thể đồng ý rằng ảnh bìa phải “tối giản”, rồi bất đồng ngay trước một hình có ít chi tiết nhưng chữ rất lớn. Khó khăn lúc này nằm cả ở tiêu chí của người chấm.",
+    "body": [
+      [
+        "Nghiên cứu có người tham gia, nhưng phạm vi còn hẹp",
+        "[Google Research ngày 4/11](https://www.research.google/blog/agile-deliberation-how-ai-helps-humans-define-the-gray-areas/) mô tả Agile Deliberation: hệ thống đưa ra trường hợp ảnh ở ranh giới để người dùng làm rõ khái niệm và điều chỉnh bộ phân loại. Nhóm tác giả báo nghiên cứu gồm 18 phiên, mỗi phiên 1,5 giờ, trên hai miền nội dung chủ quan. Bản tin đã đọc bài giới thiệu nghiên cứu, chưa kiểm lại toàn bộ dữ liệu và mã. Vì vậy, đây là bằng chứng do tác giả báo cáo trong phạm vi nghiên cứu, không phải bảo đảm một bộ phân loại sẽ hiểu mọi gu thẩm mỹ hay văn hóa."
+      ],
+      [
+        "Một ứng dụng gần: chọn ảnh cho bản tin học tập",
+        "Phép thử biên tập đề xuất dùng bộ hình tự vẽ, không ảnh người thật hoặc ảnh có quyền sử dụng chưa rõ. Viết yêu cầu ban đầu cho ảnh bìa: người đọc nhìn được trọng tâm, chữ đủ rõ trên màn hình nhỏ, không gây nhầm với ảnh chụp sự kiện. Tách các tiêu chí có thể đo, như chữ có bị cắt không, khỏi tiêu chí phụ thuộc người đọc, như “quá rối”. Thay vì gộp tất cả thành một nhãn đẹp/xấu, cho phép kết quả chưa quyết định và lý do cần trao đổi."
+      ],
+      [
+        "Chọn cặp ảnh khiến mọi người bất đồng",
+        "Tạo các cặp chỉ khác một yếu tố: cùng bố cục nhưng tăng chữ, cùng màu nhưng giảm tương phản, cùng sơ đồ nhưng thêm một mũi tên. Cho người chấm ghi quyết định độc lập trước khi thảo luận. Khi ý kiến khác nhau, hỏi họ đang áp dụng tiêu chí nào và thông tin gì còn thiếu. Cập nhật một bảng tiêu chí có phiên bản, ví dụ đúng, ví dụ sai và ngoại lệ. Đây là cách chuẩn bị một phép thử, chưa phải việc bản tin đã chạy hệ thống của Google."
+      ],
+      [
+        "Đừng dùng lại ảnh vừa tranh luận làm bằng chứng thắng",
+        "Dành riêng bộ hình mới chưa dùng để sửa tiêu chí. So hai cách làm có cùng thời gian: viết yêu cầu ban đầu rồi phân loại; và làm rõ tiêu chí qua ảnh ranh giới rồi phân loại. Đổi thứ tự giữa người tham gia để giảm ảnh hưởng việc đã quen đề. Đo mức thống nhất của cùng người sau một khoảng nghỉ, mức thống nhất giữa người và tỷ lệ ảnh cần thảo luận thêm. Một phiên bản tiêu chí làm mọi người đồng ý hơn vẫn có thể kém phù hợp với độc giả, nên không đồng nhất sự nhất trí với chất lượng truyền thông."
+      ],
+      [
+        "Chi phí cần ghi theo cả vòng sửa",
+        "Bài giới thiệu không đưa báo giá dịch vụ hoặc dự toán cho nhóm biên tập Việt Nam. Bản thử thủ công có thể dùng trình chiếu và bảng ghi trên máy sẵn có; nếu nối mô hình thị giác, phải tính tổng số ảnh gửi, độ phân giải, các lượt sửa và thời gian người chấm. Một vòng phản hồi chất lượng có thể tốn nhiều thời gian hơn prompt ban đầu nhưng giảm sửa đi sửa lại về sau. Chưa đo thì chưa thể kết luận có tiết kiệm. Chỉ dùng hình đã được phép gửi đến dịch vụ được chọn."
+      ],
+      [
+        "Giữ quyền bất đồng và tránh mở rộng sai mục đích",
+        "Không dùng bài tập này để xếp hạng con người hoặc suy đoán đặc điểm nhạy cảm từ ảnh. Với ảnh biên tập, có thể lưu trường hợp nhiều lựa chọn đều hợp lý thay vì ép một đáp án. Hướng nghiên cứu mở rộng kết hợp thiết kế thị giác, khả năng tiếp cận và nghiên cứu văn hóa: người dùng ở các nhóm tuổi hoặc thiết bị khác nhau có hiểu thông điệp như nhau không? Bộ phân loại nên hỗ trợ cuộc trao đổi đó, còn tiêu chí và trách nhiệm xuất bản vẫn do con người quyết định."
+      ]
+    ],
+    "sources": [
+      [
+        "Google Research: Agile Deliberation và nghiên cứu người dùng",
+        "https://www.research.google/blog/agile-deliberation-how-ai-helps-humans-define-the-gray-areas/"
+      ]
+    ],
+    "research": {
+      "question": "Trao đổi qua ảnh ranh giới có làm tiêu chí rõ và ổn định hơn so với chỉ viết một yêu cầu?",
+      "evidence": "Bài giới thiệu chính thức báo nghiên cứu nhỏ; bản tin chưa tái lập kết quả.",
+      "method": "Ảnh tự vẽ, chấm độc lập, sửa tiêu chí có phiên bản và kiểm trên bộ hình giữ riêng.",
+      "measure": "Mức nhất quán, số trường hợp còn bất đồng, thời gian và chi phí toàn bộ vòng sửa.",
+      "conditions": "Không lấy sự đồng ý của nhóm làm chân lý phổ quát; không áp dụng để đánh giá con người.",
+      "next": "Kết hợp thiết kế, khả năng tiếp cận và khác biệt văn hóa của người đọc."
+    },
+    "prompt": "Với mục tiêu ảnh bìa học tập sau, tách tiêu chí đo được khỏi tiêu chí chủ quan. Đề xuất các cặp hình tự vẽ chỉ khác một yếu tố để nhóm làm rõ bất đồng. Không giả định đã có kết quả thử.",
+    "note": "Phần thiết kế thử và ví dụ trong bài là đề xuất biên tập, chưa được bản tin thực nghiệm. Không dùng dữ liệu riêng hoặc gọi dịch vụ trả phí. Đồ họa tự tạo, không mô tả kết quả đo.",
+    "checked": "09/11/2026",
+    "status": "Đã kiểm tra nguồn; chưa thực nghiệm"
+  },
+  {
+    "id": "sakana-fugu-chi-phi-moi-ket-qua-dat",
+    "title": "Sakana Fugu: nhiều mô hình có đáng tiền hơn một mô hình?",
+    "deck": "Một phép so công bằng phải giữ ngân sách, chấm kết quả hoàn chỉnh và tính cả công kiểm lại, thay vì đếm số tác nhân tham gia.",
+    "category": "AI thế giới",
+    "region": "Nhật Bản",
+    "kind": "Nhật Bản & đánh giá chi phí AI",
+    "date": "09/11/2026",
+    "sourceDate": "Tài liệu sản phẩm và giá kiểm tra 09/11/2026",
+    "color": "green",
+    "art": "07",
+    "read": "6 phút",
+    "intro": "Một báo cáo do nhiều AI phối hợp tạo ra vẫn có thể cùng lặp lại một nguồn sai. Điều cần mua là kết quả sử dụng được với chi phí chấp nhận được, không phải số lượng mô hình ở phía sau.",
+    "body": [
+      [
+        "Khả năng được công bố và điều chưa nhìn thấy",
+        "[Sakana AI giới thiệu Fugu](https://sakana.ai/fugu/) như dịch vụ điều phối nhiều mô hình. FAQ cho biết lựa chọn mô hình bên trong không được công khai theo từng yêu cầu; Fugu Max và Ultra dùng nhóm mô hình cố định. Đây là mô tả của nhà cung cấp, chưa phải kết quả thử độc lập của bản tin. Khi chưa nhìn được tuyến xử lý, người đánh giá nên tập trung vào đầu ra, độ ổn định và điều kiện dữ liệu có thể xác minh, không tự đoán mô hình nào đã làm phần việc nào."
+      ],
+      [
+        "Chọn bài toán có đáp án kiểm được",
+        "Đề xuất một bộ hồ sơ công khai hoặc tự tạo gồm các bảng sản phẩm hư cấu có phiên bản và điều kiện khác nhau. Nhiệm vụ là lập danh sách lựa chọn đáp ứng yêu cầu, dẫn đúng dòng dữ kiện và ghi rõ phần thiếu. Đáp án chuẩn do người biên tập chuẩn bị trước, có một số trường hợp không có lựa chọn phù hợp. Giữ riêng một bộ hồ sơ mới cho lượt kiểm cuối. So dịch vụ điều phối với một mô hình đơn và một quy trình tra bảng không dùng AI; không cho một bên được dùng thêm nguồn mà bên kia không có."
+      ],
+      [
+        "So trong cùng trần ngân sách",
+        "Ấn định trước thời gian tối đa, số lượt được thử và số tiền tối đa cho mỗi nhiệm vụ nếu sau này có một thử nghiệm được cấp ngân sách. Báo cả kết quả bị dừng vì hết ngân sách; không loại chúng khỏi mẫu số. Thực hiện nhiều lượt độc lập để xem cùng một đề có lúc đúng, lúc sai không. Người chấm chỉ thấy đáp án, chưa thấy tên dịch vụ. Tiêu chí phải ưu tiên điều kiện bắt buộc và nguồn dẫn, không thưởng cho bản dài hơn. Trong ấn bản này, bản tin chỉ lập thiết kế và chưa mua hay gọi dịch vụ."
+      ],
+      [
+        "Ví dụ tính phí, không phải hóa đơn thực tế",
+        "Giá Fugu Max quan sát ngày 9/11 trên trang chính thức là 2 USD/triệu token vào, 6 USD/triệu token ra; web_search và web_fetch là 0,007 USD/lượt. Minh họa giả: nếu số lượng được tính phí là 50.000 token vào, 10.000 token ra và 10 lượt công cụ thì phần này là 0,23 USD: 0,10 + 0,06 + 0,07. Chưa gồm thuế hoặc khoản khác; không giả định số token tính phí bằng độ dài văn bản người dùng nhìn thấy. Cần đối chiếu báo cáo sử dụng thực tế và giá hiện hành trước mọi lần thử có trả phí."
+      ],
+      [
+        "Đo chi phí trên đầu ra đạt, kể cả thời gian rà",
+        "Tổng chi phí thử chia cho số đầu ra vượt tất cả tiêu chí cho biết giá của một kết quả đạt trong bộ thử đó. Nếu không có đầu ra đạt, báo không có kết quả đạt, không ghi chi phí bằng 0. Đồng thời báo giờ người kiểm phải dành cho mỗi báo cáo, lỗi nguồn và trường hợp bị bỏ sót. Ví dụ một cách làm rẻ hơn mỗi lượt nhưng cần chạy lại nhiều lần có thể đắt hơn ở mức công việc. Không suy kết quả trên bảng sản phẩm giả sang nghiên cứu khoa học, tài chính hoặc tác vụ dài có quyền thực thi."
+      ],
+      [
+        "Dữ liệu và độ bền quan trọng như giá",
+        "Trước nghiên cứu thực tế, xác minh điều khoản dữ liệu và phạm vi nhà cung cấp được nhận nội dung. Bản thử nêu trên chỉ dùng hồ sơ giả hoặc công khai phù hợp quyền sử dụng. Lưu phiên bản dịch vụ, ngày chạy, cấu hình và đầu ra để nhận ra khi kết quả thay đổi. Hướng mở rộng kết hợp kinh tế học thông tin với đánh giá độ tin cậy: nhiều mô hình có đem thêm bằng chứng độc lập hay chỉ đồng thuận từ cùng nguồn? Câu trả lời cần phép kiểm nguồn và lặp lại, không thể suy từ tên gọi đa tác nhân."
+      ]
+    ],
+    "sources": [
+      [
+        "Sakana AI: Fugu, FAQ và bảng giá",
+        "https://sakana.ai/fugu/"
+      ]
+    ],
+    "research": {
+      "question": "Điều phối nhiều mô hình có giảm chi phí mỗi kết quả đạt trong cùng trần ngân sách?",
+      "evidence": "Tài liệu nhà cung cấp mô tả sản phẩm và giá; chưa có phép đo độc lập cho bài toán đề xuất.",
+      "method": "Cùng hồ sơ giả, cùng ngân sách, nhiều lượt độc lập, chấm kín tên dịch vụ.",
+      "measure": "Tỷ lệ đạt đủ tiêu chí, chi phí mỗi đầu ra đạt, độ ổn định và thời gian người rà.",
+      "conditions": "Không suy rộng benchmark hay ví dụ tính phí thành hiệu quả sản xuất; chưa gọi API.",
+      "next": "Nghiên cứu tính độc lập của bằng chứng và chi phí kiểm chứng giữa các cấu hình."
+    },
+    "prompt": "Tạo rubric chấm bảng so sánh sản phẩm giả: đủ điều kiện bắt buộc, đúng nguồn, nhận biết dữ kiện thiếu. Thiết kế đối chứng cùng ngân sách và cách báo nhiệm vụ không đạt. Chưa chạy dịch vụ hoặc mua gói.",
+    "note": "Phần thiết kế thử và ví dụ trong bài là đề xuất biên tập, chưa được bản tin thực nghiệm. Không dùng dữ liệu riêng hoặc gọi dịch vụ trả phí. Đồ họa tự tạo, không mô tả kết quả đo.",
+    "checked": "09/11/2026",
+    "status": "Đã kiểm tra nguồn; chưa thực nghiệm"
+  },
+  {
     "id": "lam-dong-gemini-bai-toan-nho",
     "title": "Từ lớp Gemini ở Lâm Đồng đến một phép thử có thể đo",
     "deck": "Một buổi thực hành AI gợi cách bắt đầu phù hợp với doanh nghiệp nhỏ: chọn công việc lặp lại, tính cả thời gian sửa và bảo vệ dữ liệu đầu vào.",

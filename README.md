@@ -1,13 +1,13 @@
 # Bản tin công nghệ
 
-Ấn bản 08/11/2026 gồm 30 bài, giữ nguyên 24 bài cũ và bổ sung 6 bài: 5 bài AI Việt Nam và 1 bài quốc tế.
+Ấn bản 09/11/2026 có 37 bài: giữ nguyên nội dung 30 bài cũ, bổ sung 7 bài (5 AI Việt Nam, 2 quốc tế về Mỹ và Nhật Bản). Đạt mục tiêu 5 bài Việt Nam; số thiếu: 0. Không đồng nhất ngày kiểm tra với ngày sự kiện. Có tư liệu nền tháng 8–9 được ghi rõ, không trình bày như tin mới.
 
-Nguồn chính thức kiểm tra ngày 08/11/2026. Phân biệt ngày xuất bản, ngày sự kiện và kế hoạch chưa triển khai. Mọi phương pháp đánh giá trong sáu bài mới là đề xuất biên tập chưa thực nghiệm. Không dùng dữ liệu riêng, không gọi API trả phí.
+Đọc nguồn trực tiếp, phân biệt tuyên bố đối tác/nhà cung cấp với nghiên cứu độc lập. Bảy thiết kế thử là đề xuất biên tập chưa thực nghiệm. Hai phép tính số minh họa được ghi là giả. Không dùng dữ liệu riêng, không mua dịch vụ hoặc gọi API trả phí.
 
 ## Quyền sử dụng
 
-Nội dung và sơ đồ mới là biên tập nguyên bản; không sao chép ảnh bên thứ ba. Đường dẫn ngoài dẫn tới tài liệu thuộc chủ sở hữu tương ứng. Không bổ sung theo dõi hoặc biểu mẫu thu thập dữ liệu.
+Bài mới và bảy sơ đồ SVG là biên tập, đồ họa nguyên bản. Không sao chép ảnh bên thứ ba. Sơ đồ minh họa phương pháp, không biểu diễn kết quả đo. Nguồn liên kết thuộc các chủ sở hữu tương ứng. Không thêm trình theo dõi hoặc biểu mẫu.
 
-## Chạy và kiểm tra
+## Kiểm tra
 
-Website tĩnh, mở index.html hoặc phục vụ qua HTTP. Kiểm cú pháp bằng node --check content.js và node --check app.js. Kiểm trang chủ, chuyên mục, từng bài, nguồn, hình, tìm kiếm, sao chép, Back/Forward, menu di động và tràn ngang.
+Website tĩnh. Chạy `node --check content.js`, `node --check app.js`; kiểm cấu trúc và render toàn bộ bài. Kiểm trên trình duyệt: trang chủ, chuyên mục, bài, nguồn, ảnh, tìm kiếm, Back/Forward, menu và tràn ngang trên desktop/mobile. Giữ nguyên thiết kế.
