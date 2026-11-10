@@ -1,5 +1,417 @@
 window.ARTICLES=[
   {
+    "id": "viet-nhat-nexus-chuan-bi-ho-so",
+    "title": "NEXUS mở hướng AI Việt–Nhật: chuẩn bị đối tác trước khi chờ hồ sơ",
+    "deck": "Thông báo trước cho đợt gọi đề xuất AI là dịp chuẩn bị câu hỏi nghiên cứu và phân công, chưa phải một đợt nhận hồ sơ đang mở.",
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Tin mới và phân tích",
+    "date": "10/11/2026",
+    "sourceDate": "09/11/2026; trang JST kiểm tra 10/11/2026",
+    "color": "teal",
+    "art": "38",
+    "read": "8 phút",
+    "intro": "Một nhóm nghiên cứu Việt Nam muốn hợp tác AI với Nhật Bản nên làm gì sau thông báo mới? Việc hữu ích trước mắt là xác định đối tác thực sự bổ sung năng lực còn thiếu và soạn một đề cương nhỏ có thể kiểm chứng. Đừng vội viết hồ sơ theo mẫu của đợt cũ hoặc coi một định hướng hợp tác là khoản tài trợ đã được cấp.",
+    "body": [
+      [
+        "Điều mới đã được công bố",
+        "Ngày 9/11/2026, [Bộ Khoa học và Công nghệ](https://mst.gov.vn/viet-nam-nhat-ban-thuc-day-hop-tac-nghien-cuu-phat-trien-ai-va-so-huu-tri-tue-197261109212202448.htm) thông tin Việt Nam và Nhật Bản trao bản ghi nhớ nghiên cứu, phát triển AI, gồm nghiên cứu chung, trao đổi chuyên gia và chia sẻ kết quả. NEXUS là một hướng mở rộng hợp tác được nêu. Đồng thời, [trang JST](https://www.jst.go.jp/aspire/nexus/en/koubo/country/vietnam.html) đã có thông báo trước cho đợt gọi đề xuất thứ ba về bán dẫn và AI. Lịch nhận đề xuất dự kiến từ tháng 1 đến tháng 4/2027; chủ đề nhánh và biểu mẫu còn đang chuẩn bị. Đây là cửa sổ chuẩn bị, chưa phải lời mời nộp ngay."
+      ],
+      [
+        "Phân biệt kết quả đã chọn với cơ hội sắp tới",
+        "[Thông cáo JST ngày 9/11](https://www.jst.go.jp/pr/info/info1885/index_e.html) nói về sáu dự án được chọn ở lĩnh vực bán dẫn. Không nên chuyển con số này thành “sáu dự án AI mới” hay coi đó là kết quả của đợt sắp mở. [Trang thông báo trước](https://www.jst.go.jp/aspire/nexus/en/koubo/country/vietnam.html) cũng yêu cầu chú ý thỏa thuận giữa các tổ chức chủ trì. Những mốc này giúp nhóm lập kế hoạch, nhưng lịch dự kiến có thể thay đổi. Bài không suy ra hạn chót, mức tài trợ dự án hay điều kiện trúng tuyển từ một đợt trước."
+      ],
+      [
+        "Bắt đầu bằng một khoảng trống có thể kiểm tra",
+        "Phần còn lại là đề xuất chuẩn bị của bản tin. Hãy viết một trang trả lời: người nào đang gặp vấn đề, phương pháp hiện tại thất bại ở đâu, và bằng chứng nào sẽ khiến nhóm kết luận giải pháp AI không đáng tiếp tục. Ví dụ giả lập: phát hiện lỗi trên ảnh linh kiện ở điều kiện ánh sáng thay đổi. Đề cương nên nêu loại lỗi, ai xác nhận đáp án và vì sao một ngưỡng xử lý ảnh đơn giản chưa đủ. Cụm từ “xây nền tảng AI tiên tiến” chưa cho đối tác biết cần đóng góp năng lực gì."
+      ],
+      [
+        "Tìm phần việc hai bên thật sự cần nhau",
+        "Lập bảng phân công theo đầu ra: bên nào tạo dữ liệu, bên nào phát triển phương pháp, bên nào giữ bộ kiểm tra độc lập và bên nào xác nhận lợi ích tại nơi ứng dụng. Nếu mọi phần việc đều có thể làm riêng mà không cần trao đổi, lý do cho hợp tác chung còn yếu. Ngược lại, nếu tất cả dữ liệu và đánh giá đều do một bên nắm, bên kia có thể không tái lập được kết quả. Một cuộc trao đổi tốt nên kết thúc bằng những câu hỏi còn mở và người chịu trách nhiệm trả lời, thay vì chỉ có danh sách tên tham gia."
+      ],
+      [
+        "Ngân sách phải có cả công việc không mang tên mô hình",
+        "Trước khi biết trần tài trợ chính thức, có thể lập ba kịch bản nhu cầu thấp, vừa và cao nhưng để khoản chưa rõ ở trạng thái chưa xác minh. Tính công thu thập và gán nhãn, thiết bị đo, lưu trữ, tính toán, phiên dịch kỹ thuật, thời gian kiểm thử và duy trì dữ liệu. Không đưa một giá GPU quảng cáo vào bảng rồi coi là toàn bộ chi phí. Với ví dụ ảnh linh kiện, công chuyên gia xác định lỗi hiếm có thể là phần khó thay thế hơn thời gian chạy mô hình. Mọi con số dự toán cần ghi nguồn, đơn vị, kỳ tính và giả định sử dụng."
+      ],
+      [
+        "Thống nhất quyền dữ liệu trước khi trao file",
+        "Một bộ ảnh không có tên người vẫn có thể lộ bí mật quy trình hoặc thiết kế của doanh nghiệp. Trong bản chuẩn bị, tách quyền xem, quyền sao chép, quyền huấn luyện, quyền công bố và quyền chuyển cho bên khác. Kiểm tra giấy phép mô hình hoặc thư viện dự kiến dùng, nhưng đừng nhầm chúng với quyền đối với dữ liệu đầu vào. Có thể bắt đầu thảo luận bằng mô tả cấu trúc dữ liệu và mẫu giả lập. Chỉ chuyển dữ liệu thật khi các bên đã làm rõ phạm vi được phép, nơi lưu, thời hạn giữ và cách xử lý khi hợp tác kết thúc."
+      ],
+      [
+        "Một bước nhỏ đáng làm trong tuần này",
+        "Nhóm có thể chuẩn bị bản đề cương hai trang, danh sách năng lực còn thiếu và kế hoạch thử trong vài tuần. Chốt tiêu chí đánh giá trước khi tối ưu: lỗi nào phải phát hiện, tỷ lệ báo nhầm nào chấp nhận được, ai duyệt kết quả và lúc nào dừng. Giữ một danh sách riêng các điều cần đối chiếu khi hướng dẫn chính thức xuất hiện. Cách làm này tạo ra tài liệu hữu ích ngay cả nếu lịch gọi đề xuất đổi; nhóm vẫn biết mình cần hợp tác vì điều gì, thay vì chỉ có một hồ sơ theo đuổi cơ hội tài trợ."
+      ]
+    ],
+    "prompt": "Giúp tôi rà soát đề cương nghiên cứu AI giả lập sau. Tách rõ: vấn đề, phương pháp đối chứng không dùng AI, đóng góp cần từ từng đối tác, dữ liệu và quyền sử dụng, phép đo, điều kiện dừng, ngân sách chưa xác minh. Chỉ dùng thông tin tôi cung cấp; không tự điền tiêu chí NEXUS hoặc hứa khả năng được tài trợ: [đề cương].",
+    "sources": [
+      [
+        "Bộ KH&CN: hợp tác AI Việt–Nhật ngày 09/11/2026",
+        "https://mst.gov.vn/viet-nam-nhat-ban-thuc-day-hop-tac-nghien-cuu-phat-trien-ai-va-so-huu-tri-tue-197261109212202448.htm"
+      ],
+      [
+        "JST: thông báo trước đợt gọi đề xuất thứ ba Việt–Nhật",
+        "https://www.jst.go.jp/aspire/nexus/en/koubo/country/vietnam.html"
+      ],
+      [
+        "JST: sáu dự án bán dẫn được chọn ngày 09/11/2026",
+        "https://www.jst.go.jp/pr/info/info1885/index_e.html"
+      ]
+    ],
+    "note": "Kiểm tra nguồn ngày 10/11/2026. Lịch gọi đề xuất là dự kiến; biểu mẫu và chủ đề nhánh chưa công bố trên trang đã đọc. Bài không xác nhận đủ điều kiện, không nộp hồ sơ và không cam kết kinh phí. Các ví dụ là đề xuất chuẩn bị của bản tin.",
+    "research": {
+      "question": "Một đề cương chung có làm rõ phần đóng góp không thể thay thế của mỗi đối tác và tạo được phép thử độc lập trước khi xin tài trợ không?",
+      "evidence": "Nguồn [1] xác nhận bản ghi nhớ; [2] xác nhận trạng thái thông báo trước và lịch dự kiến; [3] là kết quả riêng về bán dẫn. Không nguồn nào chứng minh hiệu quả của ví dụ ảnh linh kiện trong bài.",
+      "method": "Đề xuất, chưa thực hiện: hai nhóm đọc độc lập đề cương ngắn, liệt kê dữ kiện còn thiếu và thử dựng lại kế hoạch đánh giá. Đối chiếu khác biệt trước khi hoàn thiện phân công.",
+      "measure": "Số câu hỏi chưa có người chịu trách nhiệm, số đầu ra không có tiêu chí nghiệm thu, khả năng tái lập phép thử và độ đầy đủ của dự toán, thay vì chỉ đếm số đối tác.",
+      "conditions": "Phải đối chiếu hướng dẫn chính thức khi phát hành. Ví dụ không phải khuyến nghị pháp lý, cam kết tài trợ hay bằng chứng công nghệ đã sẵn sàng. Dữ liệu thật chỉ được chia sẻ trong phạm vi được phép.",
+      "next": "Khi có biểu mẫu chính thức, lập bảng đối chiếu từng yêu cầu với bằng chứng đã có; đánh dấu các điểm còn thiếu trước khi quyết định nộp."
+    }
+  },
+  {
+    "id": "kyta-ho-so-doi-phien-ban",
+    "title": "Kyta và hồ sơ đổi phiên bản: AI đọc xong chưa có nghĩa đã duyệt",
+    "deck": "Sau giải thưởng AI4VN, phép thử đáng làm không phải đếm số tác vụ tự động mà là kiểm tra hồ sơ bổ sung có quay về đúng bước duyệt hay không.",
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Tin mới và phương pháp",
+    "date": "10/11/2026",
+    "sourceDate": "Giải thưởng 05/11/2026; FPT công bố 06/11; tài liệu eFlow 26/05/2026",
+    "color": "orange",
+    "art": "39",
+    "read": "8 phút",
+    "intro": "Một hồ sơ đã được chấp thuận rồi mới thay tài liệu đính kèm là bài thử khó hơn nhiều so với một bản demo đi thẳng từ đầu đến cuối. Nếu phần tóm tắt AI cập nhật nhưng dấu duyệt vẫn gắn với bản cũ, giao diện có vẻ trôi chảy trong khi người xử lý không còn biết mình đang chấp thuận điều gì.",
+    "body": [
+      [
+        "Tin mới và điều giải thưởng chưa chứng minh",
+        "Theo [FPT công bố ngày 6/11](https://fpt.com/en/news/fpt-wins-three-awards-at-ai-4-vn-2026), Kyta Platform thuộc nhóm ba sản phẩm AI xuất sắc tại lễ AI4VN ngày 5/11 ở Đại học Quốc gia Hà Nội. FPT mô tả nền tảng kết hợp thiết kế biểu mẫu, luồng công việc và AI đọc, đối chiếu tài liệu. Đây là thông tin từ nhà cung cấp, không phải kiểm thử độc lập cho quy trình của một đơn vị cụ thể. Giải thưởng không trả lời liệu một hồ sơ bị sửa giữa chừng có được kiểm soát đúng hay không."
+      ],
+      [
+        "Chốt quy tắc trước khi mở công cụ",
+        "Phần dưới là thiết kế thử do bản tin đề xuất, chưa chạy trên Kyta. Chọn việc ít rủi ro như yêu cầu dùng phòng sinh hoạt với tên và lịch giả. Vẽ các trạng thái: nháp, chờ kiểm tra, cần bổ sung, chờ duyệt, đã duyệt, hủy. Với mỗi mũi tên, ghi ai được chuyển trạng thái và phải có bằng chứng gì. Tách rõ AI đã trích xuất thông tin, người đã kiểm tra và người có thẩm quyền đã duyệt. Ba việc này không được gộp thành một dấu hoàn tất."
+      ],
+      [
+        "Thử một thay đổi làm mất hiệu lực quyết định cũ",
+        "Tạo bản A xin phòng cho 12 người, sau đó bản B đổi thành 40 người và thêm yêu cầu thiết bị. Trước khi thử, người phụ trách phải chốt thay đổi nào cần duyệt lại. Cho hồ sơ A đi hết quy trình rồi thay bằng B; kiểm xem bản được duyệt là bản nào, tóm tắt dẫn tới tài liệu nào và ai nhận việc tiếp theo. Không mặc định mọi sửa chính tả đều cần duyệt lại, nhưng cũng không để một thay đổi vật chất kế thừa im lặng sự chấp thuận cũ."
+      ],
+      [
+        "Đi đường vòng, không chỉ đường thuận",
+        "[Tài liệu eFlow ngày 26/5](https://kyta.fpt.com/vi/trung-tam-kien-thuc/kyta-eflow-trong-thuc-te-tu-dong-hoa-quy-trinh-phe-duyet-da-cap-giua-cac-phong-ban) mô tả định tuyến theo điều kiện, phê duyệt song song và nhật ký thao tác. Đó là mô tả tính năng cần kiểm tại cấu hình thực tế, không phải kết quả phép thử này. Hãy thêm tình huống hai người mở cùng hồ sơ rồi một người sửa; người còn lại bấm duyệt trên bản cũ; người tạo gửi lại hai lần sau lỗi mạng; hồ sơ bị trả về nhưng một nhánh song song vẫn đang chờ. Mỗi tình huống cần đáp án mong đợi được viết trước."
+      ],
+      [
+        "Đo hồ sơ đúng trạng thái thay vì số lần AI trả lời",
+        "Lập một bảng theo mã hồ sơ, phiên bản, trạng thái mong đợi, trạng thái thực tế, tài liệu làm căn cứ và người đang chịu trách nhiệm. Ghi riêng thời gian chờ, công kiểm lại và số lần phải sửa thủ công. Một lần gửi lại không nên sinh hai quyết định độc lập nếu quy tắc nghiệp vụ chỉ cho phép một. Ưu tiên phát hiện quyết định gắn sai bản, hồ sơ không còn người nhận và hồ sơ kết thúc thiếu bằng chứng. Đây là tiêu chí nghiệm thu do đơn vị lựa chọn, không phải khẳng định Kyta đang có các lỗi đó."
+      ],
+      [
+        "Giá niêm yết chưa phải tổng ngân sách",
+        "Khi kiểm tra ngày 10/11, [trang giá tiếng Anh của Kyta](https://kyta.fpt.com/en/pricing) hiển thị Kyta Platform ở mức 2.500.000 VND/người dùng/tháng. Đây là giá hiển thị của gói đó, không phải báo giá cho cấu hình eFlow trong bài. Cần xác nhận thuế, số tài khoản tính phí, triển khai, tích hợp, lưu trữ và hạn mức AI trước khi dự toán. Tính thêm công thiết kế quy tắc, kiểm ngoại lệ và xử lý hồ sơ sai. Chia tổng chi phí kỳ thử cho số hồ sơ đạt đủ điều kiện nghiệm thu, thay vì chia cho mọi lượt tạo yêu cầu."
+      ],
+      [
+        "Quyền riêng tư nằm cả trong lịch sử sửa",
+        "[Chính sách bảo mật công khai](https://kyta.fpt.com/vi/chinh-sach-bao-mat) mô tả xử lý dữ liệu cá nhân của khách hàng và nêu phạm vi áp dụng cho khách hàng cá nhân. Không nên xem trang này là bản mô tả đầy đủ luồng dữ liệu của một triển khai doanh nghiệp. Cần hỏi riêng nơi lưu tài liệu, bên xử lý AI, thời hạn giữ bản cũ và nhật ký, quyền xuất/xóa cùng mục đích tái sử dụng. Trong thử nghiệm đầu tiên chỉ dùng hồ sơ giả, không dùng hợp đồng thật, chữ ký hay dữ liệu nhân sự. Một tài liệu đã xóa khỏi giao diện vẫn cần được đối chiếu với chính sách giữ bản sao."
+      ],
+      [
+        "Chỉ mở rộng khi còn giải thích được từng quyết định",
+        "Bước tiếp theo là nhờ một người không tham gia cấu hình đọc nhật ký và dựng lại diễn biến của vài hồ sơ giả. Nếu họ không xác định được ai duyệt bản nào, cần sửa thiết kế trước khi thêm nhiều tác vụ tự động. Phê duyệt nghiệp vụ trong thử nghiệm cũng không đồng nghĩa ký hợp đồng, thanh toán hoặc cho phép AI tạo cam kết pháp lý. Giá trị đầu tiên của phép thử là làm rõ đường đi của quyết định, không phải chứng minh mọi thủ tục đều nên tự động hóa."
+      ]
+    ],
+    "prompt": "Hãy lập bảng kiểm trạng thái cho quy trình xin dùng phòng giả lập này: [quy tắc]. Với mỗi tình huống bổ sung tài liệu, thay số người, trả lại, gửi lại hai lần và hai người sửa đồng thời, ghi phiên bản cần duyệt, người nhận tiếp theo và bằng chứng cần giữ. Không giả định tính năng sản phẩm chưa được xác minh. Không thực hiện phê duyệt, ký hay gửi thông báo thật.",
+    "sources": [
+      [
+        "FPT: ba giải thưởng AI4VN, công bố 06/11/2026",
+        "https://fpt.com/en/news/fpt-wins-three-awards-at-ai-4-vn-2026"
+      ],
+      [
+        "Kyta: tài liệu eFlow, 26/05/2026",
+        "https://kyta.fpt.com/vi/trung-tam-kien-thuc/kyta-eflow-trong-thuc-te-tu-dong-hoa-quy-trinh-phe-duyet-da-cap-giua-cac-phong-ban"
+      ],
+      [
+        "Kyta: giá hiển thị, kiểm tra 10/11/2026",
+        "https://kyta.fpt.com/en/pricing"
+      ],
+      [
+        "Kyta/FPT IS: chính sách bảo mật dữ liệu cá nhân",
+        "https://kyta.fpt.com/vi/chinh-sach-bao-mat"
+      ]
+    ],
+    "note": "Nguồn được kiểm tra 10/11/2026. Chưa đăng ký, dùng thử hoặc đo hệ thống Kyta. Phương pháp và hồ sơ trong bài là đề xuất giả lập, không phải hướng dẫn tính năng đã kiểm thực tế. Không dùng ảnh nhà cung cấp hoặc dữ liệu riêng; sơ đồ nguyên bản minh họa điểm cần duyệt lại.",
+    "research": {
+      "question": "Sau khi nội dung hồ sơ thay đổi, quyết định và nhật ký có còn trỏ đúng phiên bản theo quy tắc đã thống nhất không?",
+      "evidence": "Nguồn [1] là thông tin giải thưởng của FPT; [2] mô tả eFlow; [3] là giá hiển thị chứ không phải tổng báo giá; [4] là chính sách công khai, không thay hợp đồng xử lý dữ liệu cho triển khai cụ thể.",
+      "method": "Đề xuất, chưa thực hiện: viết bảng trạng thái chuẩn; dùng hồ sơ giả có bản A/B; thử thay đổi sau duyệt, nhánh song song, trả lại và gửi trùng; để người độc lập dựng lại chuỗi quyết định từ nhật ký.",
+      "measure": "Số quyết định gắn sai phiên bản, hồ sơ mất người nhận, yêu cầu trùng, thời gian chờ, công sửa và tổng chi phí mỗi hồ sơ đạt nghiệm thu. Không lấy số tác vụ AI làm thước đo hoàn tất nghiệp vụ.",
+      "conditions": "Chỉ thử ở môi trường được phép bằng dữ liệu giả. Ngưỡng và quy tắc duyệt lại do đơn vị chốt trước. Không suy từ giải thưởng thành độ tin cậy vận hành; không thực hiện ký, thanh toán hay cam kết pháp lý.",
+      "next": "Sau khi hết lỗi trạng thái nghiêm trọng trong bộ thử, mở rộng từng loại ngoại lệ và kiểm lại khi quy tắc, biểu mẫu hoặc phiên bản sản phẩm thay đổi."
+    }
+  },
+  {
+    "id": "vgec-sua-it-giu-dung",
+    "title": "VGEC: một trợ lý sửa tiếng Việt tốt phải biết lúc nào không nên sửa",
+    "deck": "Trước thềm VLSP 2026, bài toán sửa ngữ pháp gợi một phép thử thực dụng cho người viết: giảm lỗi mà không đổi ý, dữ kiện hay giọng tác giả.",
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "10/11/2026",
+    "sourceDate": "Lịch VLSP 2026: 15/11/2026; mô tả VGEC kiểm tra 10/11/2026",
+    "color": "teal",
+    "art": "40",
+    "read": "8 phút",
+    "intro": "Một câu vốn đúng bị sửa thành sai là lỗi dễ lọt khỏi bài trình diễn chỉ có ví dụ thành công. Với người viết tiếng Việt, điều cần biết không chỉ là AI sửa được bao nhiêu lỗi mà còn là nó có giữ nguyên tên, con số, phủ định và cách nói có chủ đích hay không.",
+    "body": [
+      [
+        "Bài toán mới không chỉ là viết lại cho mượt",
+        "[Trang VGEC trên AIHUB](https://www.aihub.ml/competitions/1038) mô tả nhiệm vụ nhận diện loại lỗi và sửa câu tiếng Việt, gồm cả câu không cần sửa. Mỗi mô hình thành phần trong hệ thống dự thi bị giới hạn ở 8 tỷ tham số; dữ liệu ngoài cần được khai báo. Đây là điều kiện của sân chơi nghiên cứu, không phải bằng chứng một công cụ 8B đủ tốt cho mọi văn bản. [Lịch chính thức VLSP](https://vlsp.org.vn/node/206) ghi workshop ngày 15/11 và hạn bản hoàn chỉnh 12/11/2026. Bài này không công bố kết quả đội thắng, cũng không coi ngày kiểm tra nguồn là ngày ra mắt mô hình."
+      ],
+      [
+        "Sửa ngữ pháp khác sửa giọng người viết",
+        "Hãy tách ba việc: khắc phục lỗi, gợi ý diễn đạt và thay đổi phong cách. Một trợ lý có thể đề nghị câu trang trọng hơn, nhưng không nên gọi cách viết thân mật hợp ngữ cảnh là sai. Với bản thảo, nên hiển thị từng thay đổi cùng lý do và cho tác giả giữ nguyên. Đặc biệt, lời thoại, phương ngữ và câu trích dẫn cần được xử lý theo mục đích biên tập, không tự động chuẩn hóa toàn bộ. Tính hữu ích nằm ở việc giúp người viết quyết định, không nằm ở số lượng chỗ bị gạch đỏ."
+      ],
+      [
+        "Bộ thử phải có cả những câu đã đúng",
+        "Đề xuất chuẩn bị 40 câu tự viết: một nửa có lỗi đã được hai người thống nhất, một nửa đúng nhưng có cách diễn đạt đa dạng. Trong mỗi nhóm, đưa vào tên hư cấu, số lượng, phủ định và câu có hơn một cách hiểu. Cặp ví dụ có thể chỉ khác một dấu câu để kiểm tra hệ thống có phản ứng đúng chỗ. Không dùng bài tập thật của học sinh hoặc thư riêng của khách hàng. Giữ một phần câu chưa từng đưa vào quá trình sửa lời nhắc, tránh chỉ học cách vượt qua bộ thử quen thuộc."
+      ],
+      [
+        "Một lần chỉnh nhỏ cần giữ nguyên ý lớn",
+        "Với mỗi câu, viết trước những dữ kiện không được đổi: ai làm gì, số lượng bao nhiêu, việc đã xảy ra hay mới dự kiến. Khi kiểm đầu ra, đánh dấu riêng lỗi ngữ pháp còn lại và thay đổi nghĩa do công cụ tạo ra. Câu ngắn hơn chưa chắc tốt hơn nếu bỏ mất điều kiện. Khi câu gốc mơ hồ, đầu ra phù hợp có thể là câu hỏi cần tác giả xác nhận. Không thưởng cho việc tự chọn một nghĩa rồi viết lại rất trôi chảy. Đó là ranh giới giữa hỗ trợ biên tập và tự viết thay nội dung."
+      ],
+      [
+        "Chấm cả sửa đúng lẫn sửa thừa",
+        "[VGEC](https://www.aihub.ml/competitions/1038) đánh giá cả phân loại lỗi và chất lượng câu sửa, sử dụng các thước đo như Macro-F1 và GLEU+. Trong ứng dụng biên tập, nên bổ sung số câu đúng bị sửa thành sai, số thay đổi nghĩa và số gợi ý tác giả bác bỏ. Đây là thước đo bổ sung do bản tin đề xuất, không phải tiêu chí chính thức mới của cuộc thi. Hai bản sửa khác chữ vẫn có thể cùng chấp nhận được; vì thế, cần người đọc song song câu gốc và đầu ra, không lấy trùng khớp tuyệt đối với một đáp án làm trọng tài duy nhất."
+      ],
+      [
+        "So sánh quy trình, không chỉ so đầu ra đẹp",
+        "Chạy hai cách trên cùng dữ liệu: yêu cầu viết lại toàn câu và yêu cầu chỉ sửa tối thiểu, giải thích từng chỗ. Giữ nguyên công cụ, phiên bản, thiết lập và ngữ cảnh. Hoán đổi thứ tự đánh giá, che nhãn phương pháp nếu có thể. Đo tổng thời gian từ khi nhận gợi ý đến lúc duyệt xong, bao gồm thời gian đọc giải thích. Một cách tạo ít lỗi hơn nhưng quá dài để kiểm có thể cần giao diện khác. Lưu cả bản không tốt, không chỉ chọn vài câu chứng minh phương án yêu thích."
+      ],
+      [
+        "Quyền dùng dữ liệu và chi phí vẫn phải hỏi riêng",
+        "Trang mô tả nhiệm vụ không đủ để xác nhận quyền tái phân phối bộ dữ liệu hoặc sử dụng thương mại mọi tài nguyên liên quan. Đừng coi có đường đăng ký là có giấy phép mở. Bản tin chưa xác minh được bảng giá dịch vụ sửa văn bản gắn với nhiệm vụ này; một cuộc thi nghiên cứu cũng không phải sản phẩm bán sẵn. Nếu thử mô hình tự chạy, tính tài nguyên máy và công duyệt; nếu dùng dịch vụ, kiểm phí đầu vào, đầu ra và những lần chạy lại. Chỉ gửi văn bản được phép chia sẻ, kiểm cách lưu bản thảo và nhật ký."
+      ],
+      [
+        "Quyết định triển khai nên bắt đầu ở chế độ gợi ý",
+        "Một nhóm biên tập có thể thử trên thông báo giả rồi cho người viết chủ động nhận từng sửa đổi. Không bật thay thế hàng loạt trước khi biết tỷ lệ sửa thừa. Tiêu chí dừng cần được đặt trước, chẳng hạn mọi thay đổi số, tên hoặc phủ định đều phải duyệt bằng người. Với hợp đồng, bài nghiên cứu hay phát ngôn của người khác, cần quy trình chuyên môn phù hợp. Bài tập này nhằm xác định phạm vi trợ giúp, không chứng minh hệ thống có quyền quyết định thế nào là tiếng Việt đúng cho mọi cộng đồng."
+      ]
+    ],
+    "prompt": "Chỉ phát hiện lỗi ngữ pháp rõ ràng trong đoạn giả sau. Giữ ý, tên, số, phủ định và giọng tác giả. Với mỗi gợi ý, ghi câu gốc, sửa tối thiểu và lý do. Nếu câu đúng, ghi không cần sửa; nếu mơ hồ, hỏi lại thay vì chọn hộ nghĩa: [đoạn giả].",
+    "sources": [
+      [
+        "VGEC: mô tả nhiệm vụ, giới hạn và đánh giá",
+        "https://www.aihub.ml/competitions/1038"
+      ],
+      [
+        "VLSP 2026: lịch workshop và yêu cầu tham gia",
+        "https://vlsp.org.vn/node/206"
+      ]
+    ],
+    "note": "Nguồn được kiểm tra ngày 10/11/2026. Chưa thực nghiệm hệ thống; các tình huống, phương pháp và tiêu chí đề xuất là phân tích của bản tin, không phải kết quả nghiên cứu đã đo.",
+    "research": {
+      "question": "Yêu cầu sửa tối thiểu có giảm thay đổi nghĩa và công duyệt so với yêu cầu viết lại toàn câu trên cùng loại bản thảo không?",
+      "evidence": "Nguồn [1] xác nhận cấu trúc nhiệm vụ và ràng buộc dự thi; [2] xác nhận lịch sự kiện sắp tới. Chưa đọc báo cáo kết quả các đội, không suy diễn giới hạn tham số thành mức chất lượng thực tế.",
+      "method": "Dùng 40 câu giả đã có đáp án và các cách sửa chấp nhận được. So hai lời nhắc trong cùng cấu hình, giữ nhóm câu mới để kiểm lại. Hai người chấm độc lập nếu có thể; lưu bất đồng và quyết định phân xử.",
+      "measure": "Đếm lỗi sửa đúng, lỗi bị bỏ sót, câu đúng bị sửa hỏng, thay đổi dữ kiện và phút duyệt. Tách thay đổi phong cách khỏi lỗi ngữ pháp; báo số đếm theo từng nhóm câu.",
+      "conditions": "Mẫu nhỏ không đại diện tiếng Việt mọi vùng miền hoặc thể loại. Chưa xác minh giấy phép bộ dữ liệu nên không tải hay phân phối lại. Không dùng dữ liệu người thật; không tự động thay thế nội dung quan trọng.",
+      "next": "Thử giao diện làm nổi bật phần chữ thay đổi so với chỉ trình bày câu mới. Đo khả năng phát hiện việc đổi nghĩa và mức tải đọc giải thích của tác giả."
+    }
+  },
+  {
+    "id": "hducap-mo-ta-vi-tri",
+    "title": "HDUCap: mô tả ảnh tiếng Việt cần đúng vị trí, không chỉ gọi đúng đồ vật",
+    "deck": "Một nghiên cứu về chú thích ảnh gợi cách kiểm phần dễ bị bỏ qua: cái gì nằm trước, sau, bên trái hay bị che khuất, và khi nào nên nói chưa rõ.",
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "10/11/2026",
+    "sourceDate": "Bài báo thuộc số tháng 11/2026; kho tác giả kiểm tra 10/11/2026",
+    "color": "blue",
+    "art": "41",
+    "read": "8 phút",
+    "intro": "Hai bức ảnh có cùng đồ vật nhưng vị trí khác nhau có thể nhận những câu mô tả rất giống nhau. Khi dùng AI viết nháp tài liệu, lỗi nhỏ này làm người đọc hình dung sai. Một bộ thử theo cặp ảnh giúp tách khả năng gọi tên vật thể khỏi khả năng hiểu quan hệ giữa chúng.",
+    "body": [
+      [
+        "Từ gọi tên vật thể đến hiểu quan hệ",
+        "[Tóm tắt của bài báo HDUCap trên trang nhà xuất bản](https://www.sciencedirect.com/science/article/abs/pii/S1047320326002580) giới thiệu dữ liệu chú thích ảnh tiếng Việt và mô hình Transformer chú ý đến quan hệ không gian. Mỗi ảnh được mô tả bằng năm câu do người viết; các kết quả cải thiện là báo cáo của tác giả. Đây là bài thuộc số tháng 11/2026, không xác nhận ngày ra mắt chính xác trong tuần. Bản tin đọc được tóm tắt qua kết quả tìm kiếm nhưng trang toàn văn bị chặn truy cập; vì vậy không đưa số liệu hiệu năng hay khẳng định đã thẩm định toàn bộ phương pháp."
+      ],
+      [
+        "Kho công khai chưa đồng nghĩa quyền sử dụng mở",
+        "[Kho HDUCap do bài báo liên kết](https://github.com/long-nguyen12/HDUCap) cung cấp các thư mục mã và đường dẫn dữ liệu, mô tả tệp chia tập huấn luyện, kiểm tra và xác thực. README đã đọc chưa nêu giấy phép đủ rõ để kết luận được dùng thương mại hoặc tái phân phối ảnh. Có thể xem cấu trúc nghiên cứu, nhưng cần kiểm quyền từng thành phần trước khi tải để triển khai. Bản tin không tải ảnh, không chạy mã và không coi việc có kho công khai là sự cho phép tự do sử dụng tất cả dữ liệu."
+      ],
+      [
+        "Một ứng dụng nhỏ: nháp mô tả ảnh hướng dẫn",
+        "Nhóm làm tài liệu có thể thử tạo nháp mô tả cho ảnh bàn thực hành: một cốc ở bên trái hộp, một thước đặt phía sau quyển sổ. Dùng đồ vật phổ thông, tự chụp và không có người, giấy tờ hay màn hình tài khoản trong khung hình. Bài toán không phải tạo câu thơ về bức ảnh, mà giúp người đọc hình dung đúng cách bố trí. Không dùng hệ thống thử nghiệm để dẫn đường, kiểm an toàn hoặc thay mắt người trong tình huống có nguy cơ gây thương tích."
+      ],
+      [
+        "Tạo cặp ảnh chỉ đổi một quan hệ",
+        "Chuẩn bị khoảng 24 ảnh với cùng vài đồ vật. Trong từng cặp, chỉ đổi một yếu tố: trái sang phải, trước ra sau, vật được che một phần hoặc hai vật đổi vị trí. Ghi tọa độ nhìn theo khung ảnh, tránh một người hiểu bên trái của người quan sát còn người khác hiểu bên trái của nhân vật. Không lật ảnh chứa chữ rồi coi đó là tình huống tương đương. Cần người kiểm xác nhận các quan hệ có thể thấy rõ; ảnh mơ hồ nên được đánh dấu riêng thay vì ép thành một đáp án duy nhất."
+      ],
+      [
+        "Một câu ngắn đúng tốt hơn câu dài thêm chi tiết",
+        "Lập bảng đáp án gồm vật thể, số lượng, thuộc tính thấy được và quan hệ giữa chúng. Đếm riêng chi tiết mô hình thêm mà ảnh không chứng minh, chẳng hạn đoán vật làm bằng chất liệu gì hoặc ai là chủ sở hữu. Nếu hệ thống chỉ gọi đúng đồ vật nhưng nói sai vị trí, điểm nhận diện tốt không cứu được mô tả dùng cho hướng dẫn. Ngược lại, không bắt mọi câu phải kể hết mọi thứ trong ảnh; trước khi thử cần xác định thông tin nào thiết yếu cho người đọc và điều nào có thể bỏ."
+      ],
+      [
+        "Đừng chỉ dùng một câu mẫu để chấm",
+        "Một ảnh có nhiều cách mô tả đúng, nên người chấm cần đánh giá sự thật trong câu thay vì ép đầu ra giống từng chữ của một tham chiếu. Có thể dùng điểm tự động để theo dõi, nhưng phải công bố cách tính và giữ một lượt kiểm bằng người. Cho hai người đọc độc lập, che tên hệ thống và đổi thứ tự ảnh. Tách ba điểm: đúng nội dung, dễ hiểu và đủ thông tin cho nhiệm vụ. Không trộn thành một điểm đẹp nếu nó che khuất lỗi quan hệ không gian."
+      ],
+      [
+        "Kiểm xem người đọc có làm đúng từ mô tả không",
+        "Một bài thử tiếp theo là đưa mô tả cho người không xem ảnh, nhờ họ sắp xếp các đồ vật trong một mô hình bàn đơn giản. So cách bố trí với ảnh gốc bằng tiêu chí đã đặt. Đây là đề xuất, chưa phải kết quả HDUCap. Nếu người đọc vẫn đặt sai dù câu được chấm trôi chảy, hãy kiểm từ chỉ vị trí và điểm nhìn. Cũng cần so với mô tả do người viết, vì chính cách giao nhiệm vụ có thể mơ hồ. Đừng quy mọi lỗi thao tác cho mô hình."
+      ],
+      [
+        "Chi phí là giá của một mô tả đã duyệt",
+        "Các nguồn đã đọc không công bố bảng giá một dịch vụ HDUCap cho người dùng cuối. Khi cân nhắc tự chạy, cần tính thời gian cài đặt, tài nguyên tính toán, chuẩn bị ảnh và phút người duyệt; không suy từ kho mã sang dịch vụ miễn phí. Nếu chuyển ảnh sang API khác để so sánh, đó là một nhà cung cấp khác với chính sách dữ liệu riêng. Bắt đầu từ ảnh tự tạo, bỏ siêu dữ liệu vị trí khi không cần, và giữ quyền truy cập thư mục ảnh hẹp. Mục tiêu trước mắt là nháp có thể kiểm, không phải tự động phát hành hàng nghìn mô tả."
+      ]
+    ],
+    "prompt": "Mô tả ảnh tự tạo này bằng tiếng Việt để người đọc hiểu cách bố trí đồ vật. Chỉ nêu điều nhìn thấy; dùng trái/phải theo khung ảnh. Không đoán danh tính, chủ sở hữu hay chất liệu nếu không rõ. Tách phần chắc chắn và phần bị che khuất cần kiểm lại.",
+    "sources": [
+      [
+        "HDUCap: tóm tắt công trình tại nhà xuất bản",
+        "https://www.sciencedirect.com/science/article/abs/pii/S1047320326002580"
+      ],
+      [
+        "Kho mã và README HDUCap do tác giả công bố",
+        "https://github.com/long-nguyen12/HDUCap"
+      ]
+    ],
+    "note": "Nguồn được kiểm tra ngày 10/11/2026. Chưa thực nghiệm hệ thống; các tình huống, phương pháp và tiêu chí đề xuất là phân tích của bản tin, không phải kết quả nghiên cứu đã đo.",
+    "research": {
+      "question": "Một quy trình kiểm quan hệ không gian có phát hiện lỗi chú thích ảnh mà đánh giá độ trôi chảy thường bỏ qua không?",
+      "evidence": "Nguồn [1] đọc được ở mức tóm tắt tìm kiếm, chưa truy cập toàn văn. Nguồn [2] xác nhận cấu trúc tài nguyên và liên hệ tác giả; chưa xác minh giấy phép sử dụng thương mại. Không trích điểm hiệu năng hoặc tuyên bố thắng mọi mô hình.",
+      "method": "Tạo 24 ảnh đồ vật không có người, chia cặp chỉ đổi một quan hệ rõ ràng. Lập bảng đáp án nhiều cách diễn đạt, giữ góc nhìn nhất quán. Người chấm độc lập kiểm vật thể, số lượng và vị trí trước khi xem điểm tự động.",
+      "measure": "Đếm quan hệ đúng, quan hệ sai, chi tiết tự thêm và thông tin thiết yếu bị bỏ. Đo thời gian duyệt và tỷ lệ người đọc tái tạo đúng bố trí, so với một bản mô tả người viết.",
+      "conditions": "Ảnh đồ vật nhỏ không đại diện cảnh đông người hoặc ngoài trời. Không ứng dụng điều hướng hay an toàn. Chưa có giấy phép rõ thì không đưa dữ liệu nghiên cứu vào sản phẩm; chỉ dùng ảnh được phép xử lý.",
+      "next": "Thử mô tả theo hai độ dài và có hoặc không có câu nêu điểm nhìn. Đánh giá xem cách viết nào giảm nhầm vị trí mà không tăng quá nhiều thời gian đọc."
+    }
+  },
+  {
+    "id": "viegrand-canh-bao-co-nguoi-nhan",
+    "title": "VieGrand: cảnh báo chăm sóc người cao tuổi phải đến được người có thể giúp",
+    "deck": "Dự án sinh viên Bách khoa đặt ra một bài toán gần gũi: phát hiện tình huống bất thường mới là bước đầu; còn phải biết cảnh báo được nhận, hiểu và xử lý thế nào.",
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "10/11/2026",
+    "sourceDate": "06/11/2026 · kiểm tra nguồn 10/11/2026",
+    "color": "orange",
+    "art": "42",
+    "read": "8 phút",
+    "intro": "Phát hiện tình huống đáng chú ý chỉ là đầu đường. Một cảnh báo tới điện thoại đang tắt mạng, hoặc không ai biết mình phải phản hồi, vẫn chưa tạo thành sự hỗ trợ. Dự án VieGrand là dịp nhìn kỹ khoảng cách giữa tín hiệu kỹ thuật và một quy trình chăm sóc có người chịu trách nhiệm.",
+    "body": [
+      [
+        "Một dự án đáng theo dõi, chưa phải bằng chứng lâm sàng",
+        "[Bài đăng ngày 06/11 của Trung tâm Đổi mới sáng tạo ĐHQG-HCM](https://innovationhub.vnuhcm.edu.vn/vi/news/he-sinh-thai-ai-cham-soc-nguoi-cao-tuoi-viegrand) giới thiệu VieGrand do nhóm sinh viên Bách khoa phát triển, kết hợp camera AI, thiết bị đeo, robot và ứng dụng giọng nói. Nguồn mô tả việc đối chiếu tín hiệu, hỏi xác nhận rồi gửi cảnh báo khi cần. Đây là mô tả dự án, không phải báo cáo thử nghiệm lâm sàng hay kiểm định độc lập. Bản tin chưa có dữ liệu chứng minh độ nhạy phát hiện, tỷ lệ báo nhầm hoặc độ tin cậy khi dùng dài ngày trong gia đình."
+      ],
+      [
+        "Câu hỏi nên đặt trước khi hỏi độ chính xác",
+        "Một gia đình cần biết ai nhận thông báo đầu tiên, nếu người đó bận thì ai tiếp theo, và làm sao phân biệt đã gửi với đã được đọc. Trong quy trình đề xuất, nên vẽ một đường đi đơn giản từ tín hiệu đến người phản hồi rồi đến hành động đã thống nhất. Mỗi bước có trạng thái rõ ràng. Không mặc định điện thoại đổ chuông nghĩa là đã có người hỗ trợ. Cũng không nên dựa hoàn toàn vào một ứng dụng thử nghiệm để thay việc chăm sóc trực tiếp hoặc kế hoạch liên lạc khẩn cấp sẵn có."
+      ],
+      [
+        "Chỉ thử lỗi hệ thống bằng mô phỏng an toàn",
+        "Có thể kiểm đường cảnh báo bằng các sự kiện giả trong môi trường thử, không yêu cầu người cao tuổi thực hiện động tác nguy hiểm và tuyệt đối không tổ chức té ngã để lấy dữ liệu. Lập các tình huống: điện thoại người nhận mất mạng, ứng dụng tắt, thiết bị đeo hết pin, thông báo đến hai lần hoặc đến trễ. Ghi rõ đây là diễn tập để người tham gia không gọi cứu hộ nhầm. Phạm vi này kiểm việc chuyển và nhận tin, không chứng minh AI nhận biết được một biến cố sức khỏe thật."
+      ],
+      [
+        "Cảnh báo thiếu thông tin cũng khó xử lý",
+        "Một thông báo có thể nêu thời điểm, thiết bị liên quan, trạng thái xác nhận và hành động tiếp theo do gia đình đã thống nhất. Không cần phát tán toàn bộ video hay lịch sử sinh hoạt cho mọi người nhận. Trong bài thử, hỏi người đọc hiểu tình huống gì và sẽ làm gì, rồi so với kịch bản. Nếu hai người hiểu khác nhau, sửa nội dung trước khi tăng độ phức tạp của mô hình. Nhãn chưa xác nhận cần thật rõ để tránh biến một tín hiệu nghi ngờ thành lời khẳng định có tai nạn."
+      ],
+      [
+        "Cần đo những khoảng im lặng, không chỉ tiếng chuông",
+        "Ghi thời gian từ lúc phát sự kiện giả đến lúc có người xác nhận đã nhận; đếm cảnh báo thất lạc, trùng và không có người xử lý. Báo riêng trường hợp hệ thống ngừng hoạt động mà người dùng không biết. Với đánh giá phát hiện thật, cần chuyên môn, quy trình đạo đức và dữ liệu phù hợp; không lấy bài diễn tập kết nối để suy ra tỷ lệ bỏ sót té ngã. Một thiết bị gửi tin hoàn hảo vẫn có thể phát hiện sai, và một mô hình phát hiện tốt vẫn có thể thất bại nếu đường liên lạc bị đứt."
+      ],
+      [
+        "Người được chăm sóc phải có tiếng nói",
+        "Trước bất kỳ thử nghiệm tại nhà nào, cần giải thích bằng ngôn ngữ dễ hiểu cảm biến nào hoạt động, có thu hình hoặc tiếng không, ai được xem và cách dừng. Không xem sự đồng ý của người thân là thay thế đương nhiên cho lựa chọn của người được theo dõi. Ưu tiên lượng dữ liệu tối thiểu cần cho mục tiêu và tránh không gian riêng tư. Nếu một người không muốn camera, cần xem phương án khác đáp ứng đến đâu, thay vì gây áp lực bằng lời hứa an toàn chưa được chứng minh."
+      ],
+      [
+        "Hỏi nhà phát triển những điều chưa có trong bài giới thiệu",
+        "Nguồn đang có chưa đủ để xác nhận bảng giá, gói thuê bao, giấy phép mã hoặc điều khoản lưu trữ và xóa dữ liệu cho một sản phẩm thương mại. Vì vậy, chưa nên tính chi phí như thể đã có bộ thiết bị sẵn bán. Danh sách cần hỏi gồm thiết bị bắt buộc, phí kết nối, thay pin, bảo trì, hỗ trợ khi hỏng và người chịu trách nhiệm vận hành. Với dữ liệu, cần biết xử lý tại máy hay trên máy chủ, thời hạn lưu, người có quyền truy cập và quy trình rút khỏi thử nghiệm."
+      ],
+      [
+        "Giá trị thực dụng nằm ở một kế hoạch có giới hạn",
+        "[Nguồn giới thiệu VieGrand](https://innovationhub.vnuhcm.edu.vn/vi/news/he-sinh-thai-ai-cham-soc-nguoi-cao-tuoi-viegrand) xác định hướng hỗ trợ theo dõi và cảnh báo, không thay chẩn đoán hoặc điều trị. Cách đọc thận trọng là xem đây là dự án để tiếp tục đánh giá, không phải lời khuyên mua thiết bị bảo đảm an toàn. Ngay cả khi chưa dùng AI, gia đình vẫn có thể làm rõ danh sách liên hệ và cách xác nhận đã nhận tin. Nếu sau này thử công nghệ, giữ kế hoạch hiện có và đặt điểm dừng khi có lỗi chưa giải thích được. Bản tin không đưa chỉ định y tế, không đánh giá sức khỏe cá nhân và chưa thử VieGrand."
+      ]
+    ],
+    "prompt": "Lập bảng diễn tập đường truyền cảnh báo bằng dữ liệu hoàn toàn giả: mã sự kiện, thời điểm gửi, người nhận theo vai trò, trạng thái nhận, xác nhận và bước tiếp theo. Gồm mất mạng, hết pin và cảnh báo trùng. Không mô phỏng té ngã thật, không gọi dịch vụ khẩn cấp và không dùng hồ sơ sức khỏe cá nhân.",
+    "sources": [
+      [
+        "Trung tâm Đổi mới sáng tạo ĐHQG-HCM: dự án VieGrand, 06/11/2026",
+        "https://innovationhub.vnuhcm.edu.vn/vi/news/he-sinh-thai-ai-cham-soc-nguoi-cao-tuoi-viegrand"
+      ]
+    ],
+    "note": "Nguồn được kiểm tra ngày 10/11/2026. Chưa thực nghiệm hệ thống; các tình huống, phương pháp và tiêu chí đề xuất là phân tích của bản tin, không phải kết quả nghiên cứu đã đo.",
+    "research": {
+      "question": "Quy trình cảnh báo có đến được một người chịu trách nhiệm và cho biết rõ trường hợp chưa có phản hồi khi thiết bị hoặc mạng bị gián đoạn không?",
+      "evidence": "Nguồn [1] là bài giới thiệu dự án của đơn vị thuộc ĐHQG-HCM. Không có trong phần đã đọc bộ thử độc lập, báo giá thương mại hoặc chính sách dữ liệu sản phẩm đủ chi tiết để xác nhận hiệu quả và chi phí.",
+      "method": "Chỉ diễn tập sự kiện giả với người tham gia đã hiểu mục đích; kiểm lỗi mạng, pin, người nhận bận và thông báo trùng. Không thu dữ liệu người cao tuổi, không tạo sự cố thể chất, không thay kế hoạch chăm sóc hiện có.",
+      "measure": "Đo thời gian nhận và xác nhận, cảnh báo thất lạc hoặc trùng, thông báo thiếu người phản hồi và trạng thái thiết bị không hoạt động. Những chỉ số này không phải độ chính xác phát hiện biến cố sức khỏe.",
+      "conditions": "Thử nghiệm kỹ thuật không xác nhận lợi ích lâm sàng. Không dùng thử nghiệm như bảo đảm an toàn. Việc triển khai thực tế cần sự đồng ý phù hợp, đánh giá chuyên môn và chính sách bảo vệ dữ liệu rõ ràng.",
+      "next": "Thử cách hiển thị trạng thái chưa nhận so với chưa phản hồi, rồi kiểm người chăm sóc có phân biệt được hai vấn đề và thực hiện đúng quy trình đã thống nhất hay không."
+    }
+  },
+  {
+    "id": "language-explorer-khoang-trong-du-lieu",
+    "title": "Language Explorer: có tên trên bản đồ chưa có dữ liệu cho AI",
+    "deck": "Công cụ trực quan của Google giúp đặt câu hỏi về độ phủ ngôn ngữ. Nó không chứng minh chatbot phục vụ tốt từng cộng đồng.",
+    "category": "AI thế giới",
+    "region": "Mỹ",
+    "kind": "Tin mới và phân tích",
+    "date": "10/11/2026",
+    "sourceDate": "09/11/2026; dữ liệu nền từ nghiên cứu 2024",
+    "color": "blue",
+    "art": "43",
+    "read": "8 phút",
+    "intro": "Một sản phẩm tự nhận hỗ trợ nhiều ngôn ngữ có thể vẫn không hiểu cách người dùng thực sự viết. Khi chuẩn bị mở rộng một trợ lý AI, danh sách ngôn ngữ là điểm khởi đầu cho nghiên cứu người dùng, không phải dấu kiểm hoàn thành. Language Explorer gợi ra cách nhìn rõ hơn những khoảng trống đó.",
+    "body": [
+      [
+        "Thông tin mới nằm ở đâu?",
+        "[Bài Google Research ngày 9/11/2026](https://research.google/blog/exploring-the-worlds-languages-with-language-explorer/) giới thiệu Language Explorer trong bối cảnh trưng bày tại Bảo tàng Truyền thông Berlin. Đây là công cụ web trực quan hóa đa dạng ngôn ngữ, sử dụng dữ liệu LinguaMeta. Không nên diễn giải bài đăng thành việc Google vừa ra mắt một mô hình dịch mới hoặc đã giải quyết khả năng hỗ trợ mọi ngôn ngữ. [Nghiên cứu LinguaMeta](https://research.google/pubs/linguameta-unified-metadata-for-thousands-of-languages/) là tài nguyên metadata: thông tin mô tả ngôn ngữ như mã, hệ chữ và số người nói, khác với tập câu đã gán nhãn để huấn luyện AI."
+      ],
+      [
+        "Metadata giúp đặt đúng câu hỏi",
+        "[Trang giải thích chính thức](https://sites.research.google/languages/language-explorer/) cho biết dữ liệu có thể truy về nguồn và tổng hợp từ những nguồn có giấy phép riêng. Phạm vi cũng không bao gồm mọi loại ngôn ngữ, chẳng hạn ngôn ngữ ký hiệu. Vì vậy, một mục thiếu trên bản đồ không phải bằng chứng cộng đồng đó không tồn tại; một mục có mặt cũng không chứng minh mô hình hiểu được. Những giới hạn này cần được ghi vào tài liệu đánh giá ngay từ đầu, thay vì để người xem suy ra năng lực AI từ một hình ảnh phủ rộng."
+      ],
+      [
+        "Bài tập cho một nhóm làm sản phẩm đa ngôn ngữ",
+        "Đề xuất của bản tin là chọn một hành trình sử dụng nhỏ, chẳng hạn tìm hướng dẫn trả hàng bằng văn bản, rồi lập bảng nhu cầu thay vì bắt đầu bằng danh sách mô hình. Với mỗi nhóm người dùng dự kiến, ghi cách họ tự gọi ngôn ngữ của mình, hệ chữ thường dùng, dạng viết tắt, khả năng trộn ngôn ngữ và thiết bị truy cập. Dùng metadata làm đầu mối tra cứu, sau đó kiểm với người hiểu bối cảnh. Không tự suy ra quốc tịch, dân tộc hoặc năng lực đọc của một cá nhân chỉ từ ngôn ngữ họ chọn trên giao diện."
+      ],
+      [
+        "Đừng để một mã ngôn ngữ che nhiều cách dùng",
+        "Trong ví dụ giả lập, hai nhóm cùng chọn một nhãn ngôn ngữ nhưng có thể dùng hệ chữ hoặc cách viết khác nhau. Hãy giữ riêng những khác biệt có ảnh hưởng tới nhiệm vụ và mời người dùng xác nhận cách mô tả. Bộ thử nên có câu phổ biến, câu viết thiếu dấu, tên sản phẩm ngoại ngữ và câu pha trộn thực tế đã được phép sử dụng. Nếu đội ngũ chỉ dịch nguyên bộ câu tiếng Anh sang nhiều thứ tiếng, họ có nguy cơ đo độ giống bản gốc hơn là đo khả năng giúp người dùng hoàn thành việc."
+      ],
+      [
+        "Đo hoàn thành công việc, không chỉ độ mượt của câu",
+        "Cho người thử tìm một thông tin cụ thể từ tài liệu giả lập và nêu chỗ làm căn cứ. Đánh giá họ có hiểu điều kiện trả hàng, phân biệt thời hạn và biết bước tiếp theo không. Lưu riêng lỗi dịch, lỗi tìm thông tin và lỗi giao diện. Một câu trả lời có ngữ pháp đẹp nhưng dẫn người dùng vào sai nút vẫn là thất bại của sản phẩm. Không gộp tất cả nhóm thành một điểm trung bình: nhóm có ít mẫu dễ bị che khuất bởi nhóm đông, trong khi chính họ có thể gặp khó khăn lớn nhất."
+      ],
+      [
+        "Mở dữ liệu không phải giấy phép thu thập mọi thứ",
+        "Nhóm nên ghi rõ nguồn và điều kiện tái sử dụng của từng phần dữ liệu, không mặc định mọi thành phần đều chung một giấy phép. Metadata công khai cũng không cấp quyền thu giọng nói, tin nhắn hoặc danh tính của cộng đồng. Khi thiết kế bài thử, ưu tiên câu giả lập đã được người có năng lực ngôn ngữ rà soát; nếu cần ví dụ thật, giải thích mục đích và phạm vi sử dụng trước khi thu thập. Đừng tải nội dung riêng tư lên công cụ trực tuyến chỉ để lấp một ô trống trong bảng độ phủ."
+      ],
+      [
+        "Chi phí thực nằm sau bản đồ",
+        "Các nguồn được đọc không đưa ra bảng giá cho một dịch vụ AI triển khai từ dữ liệu này, nên bài không gán giá miễn phí cho cả giải pháp. Ngân sách cần tính công đối chiếu nguồn, người bản ngữ kiểm mẫu, tuyển người thử, sửa giao diện và đo lại sau thay đổi. Một nhóm ít tài nguyên có thể bắt đầu với một hành trình và vài nhóm người dùng phù hợp nhất thay vì tuyên bố hỗ trợ hàng trăm ngôn ngữ. Kết quả hữu ích đầu tiên là biết nhóm nào chưa được kiểm và thiếu bằng chứng gì, không phải một bản đồ có thật nhiều chấm."
+      ]
+    ],
+    "prompt": "Lập mẫu bảng kiểm độ phủ ngôn ngữ cho một trợ lý hướng dẫn trả hàng giả lập. Gồm ngôn ngữ tự gọi, hệ chữ, cách viết thường gặp, nhiệm vụ cần làm, nguồn metadata, quyền sử dụng dữ liệu, người kiểm và bằng chứng còn thiếu. Không đoán dân tộc hoặc quốc tịch từ ngôn ngữ; không tự điền số người nói hay tuyên bố mô hình hỗ trợ nếu chưa có nguồn.",
+    "sources": [
+      [
+        "Google Research: Language Explorer, 09/11/2026",
+        "https://research.google/blog/exploring-the-worlds-languages-with-language-explorer/"
+      ],
+      [
+        "Language Explorer: phạm vi, nguồn dữ liệu và giấy phép",
+        "https://sites.research.google/languages/language-explorer/"
+      ],
+      [
+        "Google Research: nghiên cứu LinguaMeta",
+        "https://research.google/pubs/linguameta-unified-metadata-for-thousands-of-languages/"
+      ]
+    ],
+    "note": "Kiểm tra nguồn ngày 10/11/2026. Bài phân biệt thông tin mới ngày 09/11 với dữ liệu nghiên cứu nền. Chưa thử tương tác toàn bộ bản đồ, đánh giá mô hình hoặc thu thập dữ liệu người dùng. Phép thử là đề xuất, không phải kết quả thực nghiệm.",
+    "research": {
+      "question": "Việc tách nhóm theo cách viết và nhiệm vụ thay vì chỉ mã ngôn ngữ có giúp phát hiện khoảng trống hỗ trợ trước khi phát hành trợ lý không?",
+      "evidence": "Nguồn [1] giới thiệu công cụ và bối cảnh mới; [2] giải thích phạm vi cùng nguồn dữ liệu; [3] xác nhận LinguaMeta là metadata. Đây không phải benchmark chất lượng mô hình cho từng cộng đồng.",
+      "method": "Đề xuất, chưa thực hiện: lập ma trận nhóm người dùng và nhiệm vụ, chọn mẫu giả lập có người hiểu ngôn ngữ rà soát, kiểm một hành trình ngắn và phân loại nguyên nhân thất bại. Giữ các nhóm nhỏ trong báo cáo.",
+      "measure": "Tỷ lệ hoàn thành đúng nhiệm vụ, hiểu sai điều kiện, yêu cầu trợ giúp, mẫu chưa có người kiểm và chi phí hoàn thiện mỗi nhóm; không suy ra chất lượng từ số ngôn ngữ được liệt kê.",
+      "conditions": "Không suy diễn danh tính từ metadata. Mẫu nhỏ không đại diện cộng đồng; cần quyền dữ liệu và xác nhận ngôn ngữ từ người phù hợp. Không dùng điểm trung bình chung để che nhóm chưa được kiểm.",
+      "next": "Mở rộng từng nhóm sau khi xác nhận nhu cầu, quyền sử dụng và người đánh giá. Kiểm lại khi tài liệu, giao diện hoặc mô hình thay đổi, đồng thời duy trì danh sách phạm vi chưa được hỗ trợ."
+    }
+  },
+  {
     "id": "skywise-ai-hang-khong-moc-thoi-gian",
     "title": "AI hàng không: cảnh báo sớm chỉ có ý nghĩa khi dữ liệu không đến từ tương lai",
     "deck": "Từ hợp tác FPT, Vietnam Airlines và Skywise, một câu hỏi cần kiểm trước mô hình: tại thời điểm dự báo, hệ thống thực sự đã biết những gì?",
