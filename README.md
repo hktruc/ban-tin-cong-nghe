@@ -1,22 +1,17 @@
 # Bản tin công nghệ
 
-Ấn bản 10/11/2026 có 43 bài: giữ nguyên nội dung 37 bài cũ, bổ sung 6 bài (5 AI Việt Nam, 1 quốc tế). Đạt mục tiêu 5 bài Việt Nam; số thiếu: 0. Không coi ngày kiểm tra là ngày sự kiện. Nguồn nền, lịch dự kiến và nội dung chưa đọc được toàn văn được ghi rõ.
+Ấn bản 11/11/2026: 48 bài, giữ nguyên 43 bài cũ và thiết kế. Bổ sung 5 bài nghiên cứu ứng dụng AI Việt Nam. Mục tiêu 5 bài Việt Nam: đạt, số thiếu 0. Đây là công trình nền 2020–2024 được phân tích lại, không phải tin ra mắt mới năm 2026.
 
-## Nội dung mới
+## Bài mới và bằng chứng
+- PhoGPT: chi phí tự vận hành trên đầu ra đạt yêu cầu, thay vì chỉ tiền mỗi lượt. Đọc README, giấy phép và tóm tắt/lịch phiên bản báo cáo.
+- BARTpho: khôi phục dấu câu không làm đổi nghĩa; phân biệt mô hình nền và checkpoint theo tác vụ. Đọc README và tóm tắt công trình.
+- UIT-ViCTSD: hàng đợi duyệt bình luận, không nhầm phản biện với độc hại. Đọc README/tóm tắt, chưa xác minh đủ quyền dùng dataset thương mại.
+- ViText2SQL: kiểm trên schema mới và dữ liệu ca biên. Đọc README/tóm tắt; dataset giới hạn nghiên cứu/giáo dục, không tái phân phối.
+- PhoNER_COVID19: nhận diện thực thể không đồng nghĩa ẩn danh. Đọc README/tóm tắt; không tải/công bố dữ liệu bệnh nhân, không lời khuyên y tế.
 
-- NEXUS Việt–Nhật: chuẩn bị đề cương trong giai đoạn thông báo trước, chưa phải đợt nhận hồ sơ đang mở.
-- Kyta: kiểm trạng thái hồ sơ và phiên bản cần duyệt; phân biệt giá niêm yết với chi phí triển khai.
-- VGEC: sửa tối thiểu và đo cả lỗi sửa thừa, trước workshop VLSP 15/11.
-- HDUCap: kiểm quan hệ không gian trong chú thích ảnh; mới đọc tóm tắt nhà xuất bản và kho tác giả, không trích hiệu năng, chưa xác minh giấy phép.
-- VieGrand: diễn tập đường nhận cảnh báo bằng sự kiện giả; không thử té ngã và không suy ra hiệu quả lâm sàng.
-- Language Explorer: metadata ngôn ngữ không phải dữ liệu huấn luyện hay benchmark năng lực AI.
+Không tuyên bố đã đọc toàn văn PDF hoặc tái lập benchmark. Các phương pháp, kích thước mẫu, ví dụ là đề xuất biên tập chưa thực nghiệm. Không giả báo giá triển khai. Không API trả phí, mua dịch vụ, dữ liệu riêng hoặc credential.
 
-Đọc nguồn trực tiếp và tài nguyên được dẫn; phân biệt tuyên bố nhà cung cấp với kiểm chứng độc lập. Sáu thiết kế thử là đề xuất biên tập chưa thực nghiệm. Không dùng dữ liệu riêng, không mua dịch vụ, tạo credential hay gọi API trả phí. Bảng giá và chính sách công khai không được coi là hợp đồng cho triển khai cụ thể.
+## Quyền sử dụng và kiểm tra
+Năm bài và năm SVG là biên tập/đồ họa nguyên bản. Không sao chép ảnh hoặc dataset bên thứ ba. Sơ đồ minh họa phương pháp, không phải kết quả đo. Nguồn liên kết thuộc các chủ sở hữu tương ứng.
 
-## Quyền sử dụng
-
-Bài mới và sáu sơ đồ SVG là biên tập, đồ họa nguyên bản. Không sao chép ảnh bên thứ ba. Sơ đồ minh họa phương pháp, không biểu diễn kết quả đo. Nguồn liên kết thuộc các chủ sở hữu tương ứng. Không thêm trình theo dõi hoặc biểu mẫu.
-
-## Kiểm tra kỹ thuật
-
-Website tĩnh. Kiểm cú pháp JavaScript, cấu trúc bài, nguồn, ảnh và render các tuyến bài. Giữ nguyên style.css và nội dung 37 bài cũ. Đối chiếu commit, trạng thái GitHub Pages và tài nguyên live trước khi báo hoàn tất. Việc kiểm website không đồng nghĩa đã thực nghiệm sản phẩm AI được viết trong bài.
+Website tĩnh; kiểm cú pháp JavaScript, cấu trúc nguồn/bài/ảnh, tuyến bài bằng DOM mô phỏng; không coi kiểm website là thử nghiệm sản phẩm. Đối chiếu commit, Pages deploy và nội dung live trước báo hoàn tất. style.css và 43 bài cũ được bảo toàn.

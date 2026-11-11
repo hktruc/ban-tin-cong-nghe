@@ -1,5 +1,311 @@
 window.ARTICLES=[
   {
+    "id": "phogpt-tu-van-hanh-chi-phi-that",
+    "title": "PhoGPT tự vận hành: không trả tiền mỗi lượt chưa có nghĩa là miễn phí",
+    "deck": "Một mô hình tiếng Việt có thể là đối chứng hữu ích cho tác vụ hẹp, nhưng phải tính cả bộ nhớ, công kiểm và giới hạn năng lực.",
+    "sourceDate": "Nghiên cứu 2023–2024; đối chiếu tài liệu 11/11/2026",
+    "intro": "Nếu muốn thử AI tiếng Việt trên máy của mình, câu hỏi đầu tiên không phải là mô hình có tải miễn phí hay không. Cần xác định đầu ra nào thực sự dùng được, ai sửa khi sai, và tổng công sức để tạo ra đầu ra ấy. PhoGPT là một trường hợp cụ thể để thiết kế phép so sánh này.",
+    "body": [
+      [
+        "Nguồn xác nhận điều gì?",
+        "[Kho chính thức PhoGPT](https://github.com/VinAIResearch/PhoGPT) giới thiệu bản nền và bản Chat, nêu hạn chế về lập luận, lập trình, toán và khả năng tạo nội dung sai. [Báo cáo kỹ thuật](https://arxiv.org/abs/2311.02945) có bản sửa tháng 3/2024. Đây là công trình nền được đọc lại, không phải mô hình vừa ra mắt tháng 11/2026. Kết quả tác giả công bố không chứng minh nó tốt hơn mọi dịch vụ hiện hành, cũng không xác nhận chất lượng cho công việc của một đơn vị cụ thể."
+      ],
+      [
+        "Chọn một việc hẹp trước khi chọn cấu hình",
+        "Đề xuất biên tập: thử viết mô tả sản phẩm từ năm thuộc tính đã có, không giao dự toán hay quyết định chuyên môn. Soạn 30 tình huống tự tạo gồm dữ kiện đủ, thiếu, mâu thuẫn và yêu cầu không được đáp ứng. Với mỗi tình huống, lập trước danh sách dữ kiện bắt buộc, điều cấm bịa và câu hỏi cần hỏi lại. Một mẫu văn bản cố định không dùng AI là đối chứng đáng giữ: nếu đã giải quyết tốt bài toán, mô hình phải chứng minh giá trị bổ sung."
+      ],
+      [
+        "Đừng đánh đồng tải được với chạy ổn",
+        "README ghi nạp bản float16 cần khoảng 7 GB bộ nhớ GPU, nhưng đây không phải cam kết đủ cho mọi độ dài đầu vào, số người dùng hay môi trường. Ghi cấu hình, phiên bản, lượng tử hóa, độ dài và số yêu cầu đồng thời khi đo. Tăng lần lượt một biến; ghi cả hết bộ nhớ và thời gian chờ, không chỉ tốc độ lượt thành công. Hướng dẫn lệnh trong một repo cũ có thể khác phiên bản công cụ đang dùng: đối chiếu tài liệu hiện hành, không sao chép rồi tự cho là đã thử."
+      ],
+      [
+        "Tính chi phí trên đầu ra đã duyệt",
+        "Mẫu tính đề xuất: tổng tiền điện, thuê hoặc phân bổ thiết bị, lưu trữ và giờ vận hành cộng giờ sửa nội dung, chia cho số bản được chấp nhận. Nếu máy có sẵn, vẫn ghi thời gian của người kiểm và điện; không tự gán giá bằng không cho công việc này. So sánh với cách làm thủ công trên cùng tập câu hỏi. Không đưa giá dịch vụ khác vào bảng nếu chưa kiểm tra đúng gói, đơn vị và ngày. Bài này không mua GPU, gọi API trả phí hay đưa ra báo giá triển khai."
+      ],
+      [
+        "Quyền riêng tư phải kiểm bằng đường đi dữ liệu",
+        "Chạy tại chỗ chỉ có ích cho riêng tư khi ứng dụng, nhật ký, tiện ích và bước sao lưu không gửi nội dung ra ngoài ngoài ý muốn. Bắt đầu với văn bản tự tạo; kiểm quyền đọc thư mục, nơi lưu log và thời hạn giữ. [Giấy phép BSD-3-Clause](https://github.com/VinAIResearch/PhoGPT/blob/main/LICENSE) của repo không thay cho quyền sử dụng dữ liệu đầu vào. Không bật thực thi mã từ xa hoặc tải tiện ích không rõ nguồn chỉ vì một đoạn hướng dẫn yêu cầu."
+      ],
+      [
+        "Tiêu chí quyết định",
+        "Hai người có thể chấm độc lập một phần đầu ra, không biết nó đến từ mô hình hay mẫu văn bản. Đo tỷ lệ thêm dữ kiện không có nguồn, số phút sửa và tỷ lệ từ chối đúng khi thiếu thông tin. Giữ cả ca thất bại. Nếu lợi ích chỉ xuất hiện sau khi sửa quá nhiều, thu hẹp tác vụ hoặc giữ đối chứng; không cần biến một thí nghiệm thành nền tảng dùng chung."
+      ]
+    ],
+    "prompt": "Thiết kế bảng đánh giá cho tác vụ viết mô tả từ thuộc tính có sẵn: dữ kiện cần giữ, điều cấm bịa, đầu vào thiếu và thời gian sửa. Chỉ lập phương pháp, không giả kết quả thử: [mô tả tác vụ].",
+    "sources": [
+      [
+        "VinAI: README PhoGPT",
+        "https://github.com/VinAIResearch/PhoGPT"
+      ],
+      [
+        "Báo cáo PhoGPT, lịch phiên bản",
+        "https://arxiv.org/abs/2311.02945"
+      ],
+      [
+        "Giấy phép repo",
+        "https://github.com/VinAIResearch/PhoGPT/blob/main/LICENSE"
+      ]
+    ],
+    "research": {
+      "question": "Một mô hình tự vận hành có giảm công sửa trên mỗi đầu ra đạt yêu cầu không?",
+      "evidence": "Đã đọc README, giấy phép và trang tóm tắt/lịch phiên bản báo cáo; chưa chạy mô hình hoặc tái lập benchmark.",
+      "method": "Giữ 30 tình huống tự tạo và mẫu văn bản đối chứng; đo cấu hình, lỗi và thời gian kiểm trên cùng đầu vào.",
+      "measure": "Chi phí trên bản được duyệt, lỗi bịa dữ kiện, độ trễ và công sửa; không chỉ token/giây.",
+      "conditions": "Kích thước mẫu là đề xuất thăm dò, không đủ suy rộng. Mô hình không được dùng như nguồn sự thật.",
+      "next": "Kết hợp nghiên cứu chi phí vận hành và trải nghiệm người biên tập, kiểm lại trên loại văn bản khác."
+    },
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "11/11/2026",
+    "color": "teal",
+    "art": "44",
+    "read": "7 phút",
+    "note": "Kiểm tra nguồn 11/11/2026. Đây là nghiên cứu nền, không phải tin ra mắt mới. Phương pháp, số mẫu và ví dụ do bản tin đề xuất, chưa thực nghiệm. Không dùng dữ liệu riêng, không gọi API trả phí. Minh họa nguyên bản, không sao chép ảnh hay dataset."
+  },
+  {
+    "id": "bartpho-dau-cau-khong-doi-nghia",
+    "title": "BARTpho: thêm dấu câu phải giữ được ý người nói",
+    "deck": "Một bản chép lời dễ đọc hơn có thể sai nghĩa hơn. Thiết kế phép kiểm khôi phục dấu câu cần nhìn cả câu hỏi, phủ định và ranh giới lượt nói.",
+    "sourceDate": "INTERSPEECH 2022; tài liệu kiểm tra 11/11/2026",
+    "intro": "Thêm dấu câu cho bản chép lời tưởng là chỉnh hình thức. Nhưng chuyển một câu hỏi thành lời khẳng định có thể làm người đọc hiểu sai ý định. Nghiên cứu BARTpho gợi mở một bài thử hẹp, khác với việc giao cho chatbot viết lại toàn bộ cuộc trao đổi.",
+    "body": [
+      [
+        "Đọc đúng phạm vi nghiên cứu",
+        "[BARTpho](https://github.com/VinAIResearch/BARTpho) có các biến thể âm tiết và từ, với yêu cầu tiền xử lý khác nhau. [Tóm tắt công trình INTERSPEECH 2022](https://arxiv.org/abs/2109.09701) nêu các thử nghiệm tóm tắt, khôi phục viết hoa và dấu câu. Đó là kết quả tác giả trong thiết lập nghiên cứu; không có nghĩa tải trọng số nền là đã có một ứng dụng chỉnh biên bản sẵn dùng. Cần kiểm đúng checkpoint đã tinh chỉnh cho tác vụ và quy trình đánh giá của nó."
+      ],
+      [
+        "Đầu ra cần nghiệm thu",
+        "Đề xuất một bộ 40 đoạn ngắn tự viết, không lấy biên bản riêng tư. Giữ bản gốc có dấu để làm đáp án, rồi tạo phiên bản bỏ dấu câu nhưng không thay chữ. Tách riêng đoạn có phủ định, câu hỏi, số thập phân, lời dẫn và hai người đổi lượt. Ví dụ minh họa tự tạo: “không cần gửi hôm nay à” có thể là câu hỏi xác nhận; không nên tự biến thành mệnh lệnh “Không cần gửi hôm nay.” khi thiếu ngữ cảnh."
+      ],
+      [
+        "Hai lỗi không được nhập làm một",
+        "Đo lỗi dấu câu và lỗi từ ngữ riêng. Nếu hệ thống tự đổi chữ, nó đã vượt phạm vi khôi phục dấu, dù câu nghe tự nhiên hơn. Giữ bảng so sánh đầu vào với đầu ra, đánh dấu chỗ thêm dấu và chỗ thay từ. Người kiểm đọc một số đoạn trong ngữ cảnh trước và sau; nếu có âm thanh được phép dùng, nghe lại phần không chắc thay vì đoán. Không suy ra người nói đã cam kết từ một dấu chấm do AI tự thêm."
+      ],
+      [
+        "Thiết kế đối chứng có thể lặp lại",
+        "So sánh ba cách: giữ nguyên, quy tắc dấu đơn giản và mô hình tinh chỉnh phù hợp. Chốt tập kiểm trước khi chọn tham số. Với bản word, dùng đúng phân đoạn từ được tài liệu yêu cầu; không so kết quả của đầu vào sai định dạng với bản syllable rồi kết luận kiến trúc nào kém hơn. Ghi phiên bản tokenizer và cách xử lý văn bản dài. Khi phải chia đoạn, đo riêng những lỗi xảy ra ở chỗ nối."
+      ],
+      [
+        "Tính công sửa, không chỉ điểm tự động",
+        "Một dấu phẩy sai và một dấu hỏi sai có thể có tác động khác nhau. Báo cáo số lỗi đổi nghĩa, thời gian người biên tập sửa, tỷ lệ đoạn phải nghe lại và sai số dấu câu. Nhờ hai người nhận xét độc lập các ca mơ hồ; ghi bất đồng thay vì ép thành nhãn chắc chắn. Điểm tự động là thông tin bổ sung, không thay cho kiểm đúng ý trong ứng dụng."
+      ],
+      [
+        "Giới hạn, chi phí và quyền",
+        "Repo công bố giấy phép MIT cho phần mềm; dữ liệu tinh chỉnh và âm thanh vẫn cần quyền riêng. Không có giá triển khai trọn gói trong nguồn này. Ngân sách phải gồm gán nhãn, tính toán và kiểm của người dùng. Dùng văn bản không riêng tư ở vòng đầu, không tự gửi ghi âm cho dịch vụ đám mây. Chỉ nối vào công việc thật khi cơ chế giữ bản gốc, xem thay đổi và hoàn tác đã rõ."
+      ]
+    ],
+    "prompt": "Đọc hai phiên bản văn bản sau. Chỉ tìm chỗ thay dấu có thể đổi câu hỏi, phủ định hoặc người nói; không tự viết lại. Ghi trường hợp thiếu ngữ cảnh: [bản gốc] [bản xử lý].",
+    "sources": [
+      [
+        "README BARTpho và tiền xử lý",
+        "https://github.com/VinAIResearch/BARTpho"
+      ],
+      [
+        "BARTpho, công trình 2022",
+        "https://arxiv.org/abs/2109.09701"
+      ]
+    ],
+    "research": {
+      "question": "Khôi phục dấu có giúp đọc nhanh hơn mà không tăng lỗi đổi nghĩa không?",
+      "evidence": "Đã đọc README và tóm tắt nghiên cứu; chưa kiểm checkpoint hoặc chạy tác vụ. Không trích mức cải thiện chưa tái lập.",
+      "method": "40 đoạn tự tạo, phân nhóm lỗi, ba đối chứng và kiểm mù trên các ca khó.",
+      "measure": "Lỗi đổi nghĩa, lỗi thay chữ, thời gian sửa và lỗi tại ranh giới đoạn.",
+      "conditions": "Ví dụ là do bản tin tự viết; chưa dùng dữ liệu hội thoại thật. Tiền xử lý phải phù hợp biến thể.",
+      "next": "Kết hợp ngữ dụng học và trải nghiệm biên tập; kiểm khác biệt khi có và không có ngữ cảnh âm thanh."
+    },
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "11/11/2026",
+    "color": "blue",
+    "art": "45",
+    "read": "7 phút",
+    "note": "Kiểm tra nguồn 11/11/2026. Đây là nghiên cứu nền, không phải tin ra mắt mới. Phương pháp, số mẫu và ví dụ do bản tin đề xuất, chưa thực nghiệm. Không dùng dữ liệu riêng, không gọi API trả phí. Minh họa nguyên bản, không sao chép ảnh hay dataset."
+  },
+  {
+    "id": "victsd-binh-luan-gop-y-khong-phai-doc-hai",
+    "title": "UIT-ViCTSD: đừng để AI nhầm góp ý gay gắt với bình luận cần xóa",
+    "deck": "Tính xây dựng và tính độc hại là hai câu hỏi khác nhau. Một bộ lọc nên hỗ trợ người duyệt, không âm thầm loại phản hồi bất lợi.",
+    "sourceDate": "IEA/AIE 2021; nguồn kiểm tra 11/11/2026",
+    "intro": "Một trang cộng đồng có thể cần phát hiện lời xúc phạm nhưng vẫn muốn giữ phản biện. Gộp mọi cảm xúc tiêu cực vào nhãn “xấu” khiến hệ thống vừa bỏ sót công kích khéo léo, vừa làm mất góp ý thật. UIT-ViCTSD là điểm khởi đầu để thiết kế lại phép đo, không phải giấy phép tự động xóa bình luận.",
+    "body": [
+      [
+        "Nghiên cứu nền, không phải dịch vụ kiểm duyệt mới",
+        "[Kho UIT-ViCTSD của nhóm tác giả](https://github.com/tarudesu/ViCTSD) giới thiệu 10.000 bình luận có gán nhãn, phân chia tập huấn luyện, xác thực và kiểm tra. [Tóm tắt nghiên cứu 2021](https://arxiv.org/abs/2103.10069) phân biệt phát hiện tính xây dựng và tính độc hại. Tác giả báo cáo hai mức F1 khác nhau; đây không phải tỷ lệ chính xác cho fanpage bất kỳ năm 2026. Bài này không sử dụng dữ liệu người theo dõi và chưa huấn luyện bộ lọc."
+      ],
+      [
+        "Viết chính sách trước khi chọn mô hình",
+        "Đề xuất: mô tả rõ điều gì cần chuyển người duyệt, điều gì được giữ và khi nào cần thêm ngữ cảnh. Một lời phàn nàn về dịch vụ có thể hữu ích dù không lịch sự. Một câu khen mỉa có thể công kích. Tạo ví dụ tự viết cho bốn tổ hợp xây dựng/không xây dựng và độc hại/không độc hại, nhưng đừng coi chúng là nhãn chính thức của dataset nếu chưa đối chiếu hướng dẫn gán nhãn đầy đủ."
+      ],
+      [
+        "Bắt đầu ở chế độ chỉ gợi ý",
+        "Lấy một tập ví dụ có quyền sử dụng, bỏ thông tin định danh không cần thiết và nhờ hai người đánh giá độc lập. Cho hệ thống đề xuất hàng đợi cần xem, không xóa, ẩn hay trả lời tự động. Lưu lý do người duyệt đồng ý hoặc bác gợi ý. Ca không chắc đi sang hàng đợi riêng; số lượng hàng đợi này cũng là chi phí thật. Không dùng một điểm số độc hại để đánh giá phẩm chất của người bình luận."
+      ],
+      [
+        "Đối chứng phải có phản biện hợp lệ",
+        "So sánh với cách tìm từ khóa và với người duyệt không có trợ lý. Tập kiểm cần chứa lời góp ý thẳng, tiếng lóng, trích dẫn lời xúc phạm để phản đối và câu lệ thuộc ngữ cảnh. Giữ các biến thể gần nghĩa ở cùng phần dữ liệu để tránh mô hình thấy câu gần giống ở cả học và kiểm. Khi khảo sát ngữ cảnh, chỉ bổ sung phần thật sự cần và được phép đọc, không kéo toàn bộ hồ sơ cá nhân."
+      ],
+      [
+        "Đo tổn thất hai phía",
+        "Đo tỷ lệ bình luận lành bị gắn cờ và tỷ lệ bình luận độc hại bị bỏ sót riêng, cùng công duyệt trên mỗi trăm bình luận. So kết quả theo nhóm ngôn ngữ hoặc chủ đề, không dùng thuộc tính nhạy cảm của cá nhân để quyết định xử lý. Một cấu hình tăng khả năng bắt lỗi nhưng tạo quá nhiều báo nhầm có thể làm người duyệt bỏ qua cả cảnh báo thật. Quyết định ngưỡng phải dựa vào khả năng xử lý và chính sách cộng đồng, không chỉ điểm F1 cao nhất."
+      ],
+      [
+        "Giới hạn quyền và chi phí",
+        "README được đọc chưa cung cấp điều khoản đủ rõ để khẳng định quyền dùng dataset cho sản phẩm thương mại. Cần làm rõ với chủ sở hữu trước khi lấy dữ liệu vào sản phẩm; bài chỉ dẫn nguồn, không phân phối lại dữ liệu. Dự toán gồm công gán nhãn, giải quyết bất đồng, vận hành và khiếu nại. Một mô hình tải được không làm các khoản này biến mất. Kiểm lại sau khi thay đổi chủ đề hoặc cách nói của cộng đồng."
+      ]
+    ],
+    "prompt": "Giúp lập tiêu chí cho hàng đợi người duyệt bình luận. Tách phản biện hợp lệ, xúc phạm, thiếu ngữ cảnh và thông tin riêng tư. Không tự kết luận về con người, không đề xuất xóa tự động: [chính sách và ví dụ tự tạo].",
+    "sources": [
+      [
+        "Kho tác giả UIT-ViCTSD",
+        "https://github.com/tarudesu/ViCTSD"
+      ],
+      [
+        "Nghiên cứu Constructive and Toxic Speech Detection",
+        "https://arxiv.org/abs/2103.10069"
+      ]
+    ],
+    "research": {
+      "question": "Trợ lý có giảm thời gian duyệt mà vẫn giữ phản biện hợp lệ không?",
+      "evidence": "Nguồn gốc xác nhận hai tác vụ và dataset; chưa có bằng chứng độc lập cho hiệu quả ở cộng đồng cụ thể.",
+      "method": "Kiểm mù ví dụ được phép dùng; so từ khóa, người duyệt và trợ lý chỉ gắn cờ; giữ nhóm mơ hồ.",
+      "measure": "Báo nhầm, bỏ sót, phút duyệt và bất đồng; không dùng tổng điểm thay mọi lỗi.",
+      "conditions": "Chưa xác minh đủ giấy phép dataset thương mại; không tự động ẩn, xóa hoặc trả lời.",
+      "next": "Kết hợp nghiên cứu ngôn ngữ với quản trị cộng đồng và khả năng giải thích quyết định cho người dùng."
+    },
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "11/11/2026",
+    "color": "orange",
+    "art": "46",
+    "read": "7 phút",
+    "note": "Kiểm tra nguồn 11/11/2026. Đây là nghiên cứu nền, không phải tin ra mắt mới. Phương pháp, số mẫu và ví dụ do bản tin đề xuất, chưa thực nghiệm. Không dùng dữ liệu riêng, không gọi API trả phí. Minh họa nguyên bản, không sao chép ảnh hay dataset."
+  },
+  {
+    "id": "vitext2sql-schema-moi-kiem-dung",
+    "title": "ViText2SQL: câu truy vấn chạy được vẫn có thể trả lời sai câu hỏi",
+    "deck": "Muốn hỏi dữ liệu bằng tiếng Việt, hãy kiểm mô hình trên cấu trúc bảng chưa gặp và trên những bộ dữ liệu có thể làm lộ lỗi logic.",
+    "sourceDate": "Findings EMNLP 2020; đối chiếu 11/11/2026",
+    "intro": "Một trợ lý viết SQL có thể trả một bảng rất thuyết phục dù chọn sai cột hoặc nhân đôi dòng khi nối bảng. ViText2SQL đem lại nền nghiên cứu tiếng Việt để hỏi một câu khó hơn: hệ thống có hiểu cấu trúc dữ liệu mới, hay chỉ nhớ những dạng câu đã thấy?",
+    "body": [
+      [
+        "Nguồn và phạm vi sử dụng",
+        "[ViText2SQL](https://github.com/VinAIResearch/ViText2SQL) là bộ dữ liệu khoảng 10.000 cặp câu hỏi và SQL. [Công trình 2020](https://aclanthology.org/2020.findings-emnlp.364/) nghiên cứu các cách liên kết câu hỏi với schema và tiền xử lý tiếng Việt. Đây không phải API mới hay bằng chứng một chatbot hiện hành truy vấn đúng dữ liệu doanh nghiệp. Repo chỉ cho mục đích nghiên cứu/giáo dục và không cho phân phối lại dataset, kể cả bản sửa. Không đưa các cặp dữ liệu ấy vào bài viết hay mặc định đem vào sản phẩm thương mại."
+      ],
+      [
+        "Phân biệt cú pháp, kết quả và ý nghĩa",
+        "SQL không lỗi cú pháp mới qua cửa đầu. Truy vấn có thể trả đúng tình cờ vì bộ dữ liệu thử không chứa ca khó. Ví dụ tự tạo: một đơn hàng có ba dòng sản phẩm; phép nối sai có thể cộng tổng đơn ba lần. Nếu chỉ thử đơn một dòng thì lỗi bị che. Cần viết câu hỏi bằng ngôn ngữ nghiệp vụ, xác định đơn vị tính, mốc thời gian và cách xử lý hủy/hoàn trước khi đánh giá truy vấn."
+      ],
+      [
+        "Thiết kế thử cấu trúc mới",
+        "Tạo hai schema giả nhỏ có ý nghĩa tương đương nhưng tên và cách tách bảng khác nhau. Giữ schema thứ hai khỏi phần hướng dẫn ví dụ. Với mỗi câu hỏi, chuẩn bị đáp án kiểm tay và ít nhất hai bộ dữ liệu: bình thường và có ca biên. Không gọi đây là benchmark đại diện cho mọi doanh nghiệp. Nó là phép kiểm sớm xem cách làm có phụ thuộc tên cột hoặc sơ đồ quen thuộc quá mức hay không."
+      ],
+      [
+        "Dữ liệu để làm lộ lỗi",
+        "Đưa vào bộ tự tạo giá trị rỗng, ngày giáp tháng, bản ghi trùng hợp lệ, quan hệ một-nhiều và nhóm không có giao dịch. Chạy truy vấn ứng viên và truy vấn được người hiểu nghiệp vụ xác nhận trên cùng các bộ này. Khi kết quả khác nhau, ghi lỗi thuộc hiểu câu hỏi, chọn bảng, nối bảng, lọc hay tổng hợp. Không chỉ so chuỗi SQL vì nhiều câu khác nhau có thể tương đương."
+      ],
+      [
+        "Hàng rào phải nằm ngoài lời nhắc",
+        "Trong ứng dụng thật, quyền cơ sở dữ liệu phải giới hạn được thao tác và vùng dữ liệu; không trông chờ câu “chỉ đọc” trong prompt. Một truy vấn SELECT vẫn có thể đọc quá rộng hoặc tốn tài nguyên. Thiết kế kiểm phân tích cú pháp, danh sách bảng/view được phép, giới hạn thời gian và lượng kết quả theo hệ thống cụ thể. Câu hỏi mơ hồ cần hỏi lại; không dùng AI tự chọn định nghĩa doanh thu để tạo báo cáo ra quyết định."
+      ],
+      [
+        "Chi phí và điều kiện tiếp tục",
+        "Tính cả công mô tả schema, tạo bộ thử, sửa lỗi và duy trì khi bảng thay đổi. Không có giá trọn gói triển khai trong hai nguồn đã đọc; bài không chạy API hay kết nối cơ sở dữ liệu riêng. Một bước tiếp theo hữu ích là chọn mười câu hỏi thống kê ít rủi ro, xác nhận ý nghĩa với người sử dụng rồi mới mở rộng. Giá trị nằm ở kết quả có thể kiểm, không ở số câu truy vấn hệ thống sinh ra."
+      ]
+    ],
+    "prompt": "Từ schema giả sau, hãy chỉ ra điểm mơ hồ trong câu hỏi thống kê và đề xuất dữ liệu ca biên để kiểm truy vấn. Chưa viết lệnh chạy trên hệ thống thật: [schema] [câu hỏi].",
+    "sources": [
+      [
+        "VinAI: ViText2SQL và điều kiện sử dụng",
+        "https://github.com/VinAIResearch/ViText2SQL"
+      ],
+      [
+        "A Pilot Study of Text-to-SQL Semantic Parsing for Vietnamese",
+        "https://aclanthology.org/2020.findings-emnlp.364/"
+      ]
+    ],
+    "research": {
+      "question": "Hệ thống có giữ đúng ý nghĩa khi schema thay đổi và dữ liệu chứa ca biên không?",
+      "evidence": "Đã đọc README và tóm tắt bài gốc; không tái lập các mô hình nghiên cứu và không kết nối dữ liệu doanh nghiệp.",
+      "method": "Hai schema tự tạo, một schema giữ lại; đáp án kiểm tay và nhiều bộ dữ liệu đối chứng.",
+      "measure": "Đúng kết quả trên các biến thể, lỗi nối bảng, tỷ lệ hỏi lại đúng và tài nguyên truy vấn.",
+      "conditions": "Điều khoản dataset hạn chế nghiên cứu/giáo dục; chỉ đọc không đồng nghĩa không có rủi ro riêng tư hoặc tài nguyên.",
+      "next": "Kết hợp kiểm thử cơ sở dữ liệu, ngữ nghĩa nghiệp vụ và nghiên cứu giao tiếp khi câu hỏi chưa đủ rõ."
+    },
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "11/11/2026",
+    "color": "purple",
+    "art": "47",
+    "read": "7 phút",
+    "note": "Kiểm tra nguồn 11/11/2026. Đây là nghiên cứu nền, không phải tin ra mắt mới. Phương pháp, số mẫu và ví dụ do bản tin đề xuất, chưa thực nghiệm. Không dùng dữ liệu riêng, không gọi API trả phí. Minh họa nguyên bản, không sao chép ảnh hay dataset."
+  },
+  {
+    "id": "phoner-nhan-dien-chua-phai-an-danh",
+    "title": "PhoNER: nhận ra tên trong văn bản chưa đồng nghĩa đã ẩn danh",
+    "deck": "Từ một bộ dữ liệu nghiên cứu tiếng Việt, nhìn rõ khoảng cách giữa phát hiện thực thể và bảo vệ người được nhắc đến.",
+    "sourceDate": "NAACL 2021; đối chiếu nguồn 11/11/2026",
+    "intro": "Trước khi đưa văn bản cho AI hoặc công khai, nhiều người nghĩ chỉ cần xóa tên. Nhưng tổ hợp thời gian, nơi chốn và mô tả hiếm vẫn có thể chỉ về một người. PhoNER_COVID19 là một ví dụ nghiên cứu giúp tách hai việc: đánh dấu thực thể trong câu và đánh giá rủi ro nhận diện.",
+    "body": [
+      [
+        "Nghiên cứu nói gì, không nói gì?",
+        "[Repo PhoNER_COVID19](https://github.com/VinAIResearch/PhoNER_COVID19) mô tả 10.000 câu, khoảng 35.000 thực thể và mười loại nhãn trong miền dịch bệnh. [Bài NAACL 2021](https://aclanthology.org/2021.naacl-main.173/) nghiên cứu nhận diện thực thể, không chứng nhận một quy trình ẩn danh. Bài hiện tại chỉ đọc tài liệu và tóm tắt nghiên cứu, không tải hay công bố lại dữ liệu cá nhân trong bộ dữ liệu. Không dùng kết quả này để suy ra chẩn đoán hoặc khuyến nghị y tế."
+      ],
+      [
+        "Tách đúng đầu ra",
+        "Một bộ nhận diện đánh dấu đoạn văn thuộc loại nào; bộ che dữ liệu quyết định phần nào phải bỏ, thay hoặc giữ; kiểm riêng tư xem người đọc còn suy ra danh tính được không. Ba bước có thể dùng công cụ khác nhau và cần người chịu trách nhiệm. Nếu gộp chúng vào một câu lệnh “ẩn danh giúp tôi”, sẽ khó biết lỗi nằm ở bỏ sót tên, chính sách che quá ít hay liên kết nhiều mảnh thông tin."
+      ],
+      [
+        "Phép thử không cần hồ sơ thật",
+        "Đề xuất viết 30 đoạn hoàn toàn hư cấu và ghi nhãn sẵn các mảnh nhận diện. Bao gồm tên viết tắt, lỗi dấu, nghề nghiệp hiếm, mốc thời gian cụ thể, địa chỉ và nhiều câu nói về cùng một người. Dùng các mã giả thay vì tên người thật; kiểm cả trường hợp hai người trùng tên. Tập này chỉ là bài thử thăm dò, không chứng minh bảo vệ được mọi văn bản. Đừng trích một ca bệnh có thật chỉ để minh họa lỗi che tên."
+      ],
+      [
+        "Kiểm cả thứ không bị che",
+        "Sau khi đánh dấu và xử lý, nhờ người thứ hai đọc bản dự kiến chia sẻ theo mục đích cụ thể. Với tài liệu thống kê, có thể chỉ cần vùng rộng và khoảng thời gian; với ghi chú nội bộ, nhu cầu khác. Đặt câu hỏi: chi tiết nào thật sự cần để hiểu kết quả, và tổ hợp nào khiến một cá nhân trở nên dễ đoán? Không mặc định rằng nhiều nhãn đã bị che nghĩa là rủi ro bằng không."
+      ],
+      [
+        "Đo lỗi và độ hữu ích riêng",
+        "Đếm số đoạn cần che bị bỏ sót, số thông tin vô hại bị che nhầm và công người kiểm. Đo ở mức đoạn thực thể, đồng thời kiểm ở mức toàn tài liệu để thấy những liên kết giữa câu. So cách tìm mẫu, người kiểm và hệ thống hỗ trợ. Nếu bỏ sót thông tin rủi ro cao, không cho phép tự động xuất bản; nếu che quá nhiều, bản tóm tắt có thể không còn dùng được. Cần ghi cả hai mặt thay vì chọn một điểm tổng."
+      ],
+      [
+        "Quyền sử dụng và hướng áp dụng",
+        "Repo giới hạn dataset cho nghiên cứu/giáo dục và cấm phân phối lại nguyên bản hoặc bản sửa. Điều đó không phải quyền đưa dữ liệu ấy vào sản phẩm thương mại. Không có giá dịch vụ ẩn danh hay bảo đảm riêng tư trong nguồn; chi phí thực tế gồm kiểm người và quản trị quyền truy cập. Hướng mở rộng là thiết kế bộ thử riêng đúng miền dữ liệu có quyền sử dụng, phối hợp người phụ trách dữ liệu và người dùng tài liệu. Nhận diện thực thể là trợ giúp, không phải chứng chỉ an toàn."
+      ]
+    ],
+    "prompt": "Với đoạn hoàn toàn hư cấu sau, hãy tách: thực thể trực tiếp, chi tiết gián tiếp có thể nhận diện khi kết hợp, và thông tin cần giữ cho mục đích thống kê. Không khẳng định đã ẩn danh an toàn: [đoạn tự tạo].",
+    "sources": [
+      [
+        "VinAI: PhoNER_COVID19 và giới hạn sử dụng",
+        "https://github.com/VinAIResearch/PhoNER_COVID19"
+      ],
+      [
+        "COVID-19 Named Entity Recognition for Vietnamese",
+        "https://aclanthology.org/2021.naacl-main.173/"
+      ]
+    ],
+    "research": {
+      "question": "Một công cụ đánh dấu thực thể bỏ sót điều gì khi được dùng trong quy trình giảm lộ thông tin?",
+      "evidence": "Nguồn nghiên cứu chỉ hỗ trợ phạm vi nhận diện thực thể; không có chứng cứ ẩn danh đầy đủ hoặc hiệu quả trên miền mới.",
+      "method": "30 đoạn hư cấu có nhãn, kiểm đoạn và toàn tài liệu, so mẫu đơn giản với người kiểm và trợ lý.",
+      "measure": "Bỏ sót chi tiết cần che, che nhầm, liên kết định danh giữa câu và thời gian rà soát.",
+      "conditions": "Không dùng bệnh án thật; không đưa lời khuyên y tế; giấy phép dữ liệu không cho tái phân phối.",
+      "next": "Kết hợp NLP với quản trị dữ liệu và thiết kế tài liệu theo mục đích, giữ cơ chế duyệt trước chia sẻ."
+    },
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "11/11/2026",
+    "color": "teal",
+    "art": "48",
+    "read": "7 phút",
+    "note": "Kiểm tra nguồn 11/11/2026. Đây là nghiên cứu nền, không phải tin ra mắt mới. Phương pháp, số mẫu và ví dụ do bản tin đề xuất, chưa thực nghiệm. Không dùng dữ liệu riêng, không gọi API trả phí. Minh họa nguyên bản, không sao chép ảnh hay dataset."
+  }
+,
+
+  {
     "id": "viet-nhat-nexus-chuan-bi-ho-so",
     "title": "NEXUS mở hướng AI Việt–Nhật: chuẩn bị đối tác trước khi chờ hồ sơ",
     "deck": "Thông báo trước cho đợt gọi đề xuất AI là dịp chuẩn bị câu hỏi nghiên cứu và phân công, chưa phải một đợt nhận hồ sơ đang mở.",
