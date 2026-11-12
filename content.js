@@ -1,5 +1,297 @@
 window.ARTICLES=[
   {
+    "id": "saigon-ai-hub-bai-toan-co-chu",
+    "title": "Saigon AI Hub: trước khi tìm đội AI, hãy tìm người chịu trách nhiệm bài toán",
+    "deck": "Cohort 2 gợi một cách tổ chức nghiên cứu đáng học: chủ bài toán, chuyên gia nghiệp vụ và tiêu chí nghiệm thu phải có từ đầu.",
+    "sourceDate": "Lộ trình Cohort 2 công bố trên trang chương trình; kiểm tra 12/11/2026",
+    "intro": "Một doanh nghiệp có thể có nhiều dữ liệu mà vẫn chưa có bài toán nghiên cứu rõ ràng. Điều thiếu thường là người quyết định kết quả nào đủ tốt, ai cung cấp dữ liệu và ai sử dụng đầu ra sau buổi trình diễn.",
+    "body": [
+      [
+        "Thông tin đã xác nhận",
+        "[Trang Saigon AI Hub](https://saigonaihub.com/) giới thiệu chương trình do VNG và ĐHQG-HCM đồng sáng lập. Lộ trình Cohort 2 đặt giai đoạn phát triển đề bài vào tháng 10–11/2026, mở lời mời nhóm nghiên cứu vào tháng 12 và dự kiến khởi động tháng 2/2027. Trang yêu cầu bên đưa bài toán có người bảo trợ, chuyên gia nghiệp vụ, dữ liệu và môi trường kiểm chứng. Đây là thông tin của đơn vị tổ chức, không phải bằng chứng rằng mọi dự án sẽ thành công."
+      ],
+      [
+        "Một đề bài tốt khác một danh sách tính năng",
+        "Ví dụ tự xây dựng: xưởng muốn phát hiện lỗi bề mặt trước đóng gói. Thay vì viết “làm camera AI”, hãy ghi quyết định cần hỗ trợ, loại lỗi nào gây tổn thất, ai được dừng dây chuyền và trường hợp nào chuyển người kiểm. Một ảnh đẹp trên màn hình không trả lời được những câu này. Đầu ra nghiên cứu nên là một báo cáo so sánh trên lô hàng chưa từng dùng để chỉnh mô hình, kèm quy trình xử lý lỗi."
+      ],
+      [
+        "Thiết kế phép thử trước buổi gặp đối tác",
+        "Đề xuất phương pháp: lấy mẫu theo ca làm, loại sản phẩm và điều kiện ánh sáng; tách lô sản xuất giữa tập phát triển và tập đánh giá. So sánh mô hình với quy trình kiểm hiện tại, không chỉ với một mô hình khác. Người có chuyên môn xác nhận nhãn lỗi và lưu trường hợp bất đồng. Đo cả lỗi bị bỏ sót, hàng tốt bị loại và thời gian kiểm lại; tỷ lệ chính xác chung có thể che mất lỗi hiếm nhưng đắt."
+      ],
+      [
+        "Chi phí và quyền dữ liệu cần thành văn",
+        "Chương trình nói tài nguyên được thỏa thuận theo nhu cầu nghiên cứu, không công bố một quyền dùng máy tính miễn phí vô hạn. Điều khoản trên trang nêu sở hữu trí tuệ chung theo thỏa thuận dự án. Trước khi tham gia cần làm rõ quyền công bố, dữ liệu được mang ra ngoài hay không, thời gian chuyên gia, chi phí gắn thiết bị và người bảo trì sau hỗ trợ. Bài viết không xác nhận suất tài trợ hoặc phí cụ thể và không thay thế việc đọc hợp đồng."
+      ],
+      [
+        "Nghiệm thu một kết quả có thể tiếp tục dùng",
+        "Đề xuất chia thành ba cửa kiểm: dữ liệu có đủ đại diện; phương pháp vượt đối chứng ở lỗi quan trọng; vận hành không làm người dùng phải làm thêm quá nhiều. Nếu thất bại ở cửa đầu, sửa cách thu thập thay vì vội đổi mô hình. Hướng nghiên cứu mở rộng là kết hợp kỹ thuật AI với quản trị vận hành và thiết kế công việc: một cảnh báo đúng nhưng không có ai nhận vẫn chưa tạo giá trị."
+      ]
+    ],
+    "sources": [
+      [
+        "Saigon AI Hub: Cohort 2, điều kiện, lộ trình và hợp tác",
+        "https://saigonaihub.com/"
+      ]
+    ],
+    "research": {
+      "question": "Tổ chức nghiên cứu thế nào để kết quả được người vận hành dùng?",
+      "evidence": "Đã đọc thông tin chương trình; chưa kiểm chứng độc lập hiệu quả các dự án.",
+      "method": "Phân lô đánh giá, giữ quy trình hiện tại làm đối chứng, chuyên gia xác nhận lỗi.",
+      "measure": "Bỏ sót lỗi quan trọng, loại nhầm hàng tốt, thời gian xử lý và tổng công vận hành.",
+      "conditions": "Ví dụ xưởng là đề xuất phương pháp, không phải dự án đã thử hoặc được tài trợ.",
+      "next": "Nghiên cứu quan hệ giữa chất lượng cảnh báo, tổ chức ca làm và trách nhiệm quyết định."
+    },
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "12/11/2026",
+    "color": "teal",
+    "read": "6 phút",
+    "note": "Kiểm tra nguồn 12/11/2026. Phương pháp và ví dụ do bản tin đề xuất, chưa thực nghiệm; không dùng dữ liệu riêng, không gọi API trả phí. Minh họa nguyên bản. Không coi thông tin chương trình hoặc benchmark tác giả là hiệu quả đã kiểm chứng độc lập."
+  },
+  {
+    "id": "vncorenlp-tach-tu-giu-vi-tri",
+    "title": "VnCoreNLP: tách từ đúng nhưng mất vị trí gốc vẫn làm hỏng tìm kiếm",
+    "deck": "Một bước xử lý tiếng Việt nhỏ có thể ảnh hưởng toàn bộ đường dẫn từ kết quả tìm kiếm về tài liệu.",
+    "sourceDate": "Công trình 2018; tài liệu và giấy phép kiểm tra 12/11/2026",
+    "intro": "Khi xây công cụ tìm kiếm tiếng Việt, nối các tiếng thành một từ chỉ là bước đầu. Người đọc còn cần bấm kết quả và nhìn đúng đoạn gốc. Nếu tiền xử lý làm mất dấu vết, hệ thống có thể tìm trúng nhưng tô sáng sai.",
+    "body": [
+      [
+        "Công cụ làm gì, không làm gì",
+        "[README chính thức](https://github.com/vncorenlp/VnCoreNLP/blob/master/Readme.md) mô tả tách từ, gán nhãn từ loại, nhận diện thực thể và phân tích phụ thuộc. Có thể chỉ chọn thành phần tách từ. Đây không phải trợ lý sinh câu trả lời và không tự chứng minh một tài liệu đúng. Tuyên bố hiệu năng trong công trình 2018 phải đọc trong bối cảnh tập đánh giá lúc đó, không dùng làm thứ hạng hiện tại."
+      ],
+      [
+        "Bài toán thực hành: tra cứu một bộ hướng dẫn công khai",
+        "Đề xuất giữ ba lớp riêng: văn bản gốc, văn bản đã chuẩn hóa và các token kèm vị trí đối chiếu. Không ghi đè bản gốc bằng chuỗi có dấu gạch dưới. Với tài liệu có xuống dòng, ký tự tổ hợp, số hiệu và tên riêng, cần kiểm vị trí trước và sau chuẩn hóa. Mỗi kết quả tìm kiếm nên trở về một đoạn cụ thể, không chỉ trả một tên tệp."
+      ],
+      [
+        "Cách kiểm mà không cần mô hình lớn",
+        "Tự viết khoảng 40 câu thử thuộc các nhóm tên người, tên tổ chức, từ ghép, số và chữ không dấu. Một người đánh dấu cụm cần giữ; người khác kiểm độc lập các trường hợp khó. Chạy hai phương án lập chỉ mục: tách theo khoảng trắng và dùng bộ tách từ. Giữ nguyên câu hỏi và tài liệu giữa hai phương án. Đo tỷ lệ tìm được đoạn đúng trong nhóm kết quả đầu và tỷ lệ tô sáng đúng vị trí, thay vì chỉ đếm số token tạo ra."
+      ],
+      [
+        "Chuẩn bị và chi phí thực",
+        "README yêu cầu Java 1.8 trở lên và mô tả cách dùng Python wrapper; các ví dụ có tùy chọn chỉ chạy wseg. Người triển khai cần đối chiếu phiên bản runtime và thư viện trước cài. Chi phí gồm máy chạy, thời gian xử lý lại kho và công xử lý ngoại lệ. Không cần gọi API trả phí chỉ để đánh giá thiết kế này, nhưng bài viết chưa đo tốc độ hay RAM trên máy thực và không cam kết cấu hình tối thiểu."
+      ],
+      [
+        "Giấy phép và riêng tư",
+        "[LICENSE chính thức](https://github.com/vncorenlp/VnCoreNLP/blob/master/LICENSE.md) ghi GPL phiên bản 3 hoặc mới hơn. Không lấy giấy phép từ một bản fork rồi áp cho kho gốc. Nếu đóng gói phân phối sản phẩm, cần rà nghĩa vụ áp dụng cho cách tích hợp cụ thể. Chạy tại chỗ không tự bảo đảm riêng tư: kiểm log, thư mục đầu ra và sao lưu. Thử với tài liệu công khai hoặc tự tạo, không đưa hồ sơ khách hàng vào ví dụ."
+      ],
+      [
+        "Đi xa hơn tách từ",
+        "Nếu bộ tìm kiếm không khá hơn, kiểm câu hỏi và tài liệu có cùng cách xử lý hay không trước khi đổi thuật toán. Hướng mở rộng hữu ích là kết hợp ngôn ngữ học với thiết kế giao diện: người dùng có hiểu vì sao đoạn này được chọn, có nhìn được nguyên văn và sửa truy vấn dễ hơn không? Một chỉ số token tốt không thay thế được phép thử hoàn thành công việc."
+      ]
+    ],
+    "sources": [
+      [
+        "VnCoreNLP README",
+        "https://github.com/vncorenlp/VnCoreNLP/blob/master/Readme.md"
+      ],
+      [
+        "Giấy phép kho gốc",
+        "https://github.com/vncorenlp/VnCoreNLP/blob/master/LICENSE.md"
+      ],
+      [
+        "Công trình NAACL 2018",
+        "https://aclanthology.org/N18-5012/"
+      ]
+    ],
+    "research": {
+      "question": "Tách từ có cải thiện tìm kiếm và vẫn giữ đường về nguyên văn không?",
+      "evidence": "Đã đọc README và giấy phép; chưa chạy pipeline hoặc tái lập benchmark.",
+      "method": "So sánh hai chỉ mục trên cùng tài liệu và truy vấn; kiểm riêng ánh xạ vị trí.",
+      "measure": "Đoạn đúng được tìm thấy, vị trí tô sáng đúng, thời gian và lỗi ngoại lệ.",
+      "conditions": "40 câu là mẫu thăm dò đề xuất; phải mở rộng theo miền tài liệu.",
+      "next": "Kết hợp đánh giá ngôn ngữ với thử khả năng tra cứu của người sử dụng."
+    },
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "12/11/2026",
+    "color": "teal",
+    "read": "6 phút",
+    "note": "Kiểm tra nguồn 12/11/2026. Phương pháp và ví dụ do bản tin đề xuất, chưa thực nghiệm; không dùng dữ liệu riêng, không gọi API trả phí. Minh họa nguyên bản. Không coi thông tin chương trình hoặc benchmark tác giả là hiệu quả đã kiểm chứng độc lập."
+  },
+  {
+    "id": "vit5-tom-tat-giu-ngoai-le",
+    "title": "ViT5: bản tóm tắt phải giữ điều kiện ngoại lệ, không chỉ giữ từ khóa",
+    "deck": "Đánh giá tóm tắt tiếng Việt bằng bảng dữ kiện và trường hợp phủ định, trước khi tin vào độ trôi chảy.",
+    "sourceDate": "Công trình 2022; kiểm tra nguồn 12/11/2026",
+    "intro": "Một bản hướng dẫn rút ngắn có thể đọc rất dễ mà bỏ mất câu “chỉ áp dụng khi”. Đối với người dùng, mất điều kiện này thường nghiêm trọng hơn một câu văn hơi vụng.",
+    "body": [
+      [
+        "Chọn đúng checkpoint cho đúng việc",
+        "[VietAI](https://research.vietai.org/vit5/) giới thiệu ViT5 là mô hình encoder–decoder tiếng Việt và báo cáo thử nghiệm tóm tắt cùng nhận diện thực thể. [Kho mã](https://github.com/vietai/ViT5) phân biệt mô hình tiền huấn luyện với checkpoint đã tinh chỉnh cho tóm tắt Vietnews. Không nên lấy bản nền rồi mặc định nó đã sẵn sàng làm tốt mọi yêu cầu hội thoại. Đây là nghiên cứu 2022, không phải tin phát hành mới năm 2026."
+      ],
+      [
+        "Lập bảng những điều không được mất",
+        "Ví dụ tự tạo: thông báo lớp học có giờ bắt đầu, điều kiện đổi lịch và ngoại lệ cho người đã đăng ký. Trước khi sinh tóm tắt, ghi riêng các dữ kiện này và câu gốc hỗ trợ từng dữ kiện. Bản tóm tắt có thể bỏ lời chào, nhưng không được biến điều kiện thành quyết định vô điều kiện. Nếu nguồn mâu thuẫn, đầu ra phải báo mâu thuẫn thay vì tự lựa một phiên bản."
+      ],
+      [
+        "Phép thử đề xuất",
+        "Soạn 30 văn bản ngắn được phép sử dụng, phân nhóm có phủ định, số liệu, ngoại lệ và nhiều người phát biểu. So sánh checkpoint tóm tắt với cách chọn câu quan trọng không sinh mới. Để người chấm không biết đầu ra từ phương án nào. Với mỗi dữ kiện, đánh dấu được giữ đúng, bị bỏ hoặc bị đổi; đo thêm thời gian sửa đến bản có thể gửi. Không suy rộng từ một văn bản mẫu cho cả kho tài liệu."
+      ],
+      [
+        "Cẩn thận với văn bản dài",
+        "Nguồn công trình có các cấu hình độ dài khác nhau; số token không phải số từ tiếng Việt. Trước khi xử lý, kiểm phần nào thực sự đi vào mô hình. Nếu chia đoạn, giữ tiêu đề, người nói và điều kiện liên quan, rồi kiểm bản ghép với toàn văn. Một câu ngoại lệ ở cuối tài liệu không được biến mất chỉ vì vượt cửa sổ đầu vào. Không đặt chỉ tiêu rút ngắn bằng mọi giá."
+      ],
+      [
+        "Chi phí và dữ liệu",
+        "Chi phí tự chạy gồm bộ nhớ, thời gian suy luận và công duyệt; bài này không đo phần cứng hoặc báo giá thuê GPU. Thẻ mô hình nền trên Hugging Face ghi MIT, nhưng phải kiểm đúng checkpoint và dữ liệu dùng trong sản phẩm, không suy quyền thương mại cho mọi tài liệu huấn luyện. Không tải tài liệu nội bộ lên notebook hoặc dịch vụ công cộng chỉ vì ví dụ chạy ở đó."
+      ],
+      [
+        "Khi nào nên dùng?",
+        "Nên bắt đầu ở bản nháp có người đối chiếu nguồn, không ở văn bản tự động tạo nghĩa vụ. Tiêu chí đạt do người dùng đặt trước theo mức tổn thất khi bỏ sót; không chỉ lấy điểm trùng từ làm thước đo. Nghiên cứu tiếp có thể nối khoa học ngôn ngữ với thiết kế học liệu: người đọc bản ngắn có ra quyết định đúng như khi đọc bản đầy đủ không?"
+      ]
+    ],
+    "sources": [
+      [
+        "VietAI giới thiệu nghiên cứu ViT5",
+        "https://research.vietai.org/vit5/"
+      ],
+      [
+        "Mã và checkpoint",
+        "https://github.com/vietai/ViT5"
+      ],
+      [
+        "Thẻ mô hình nền",
+        "https://huggingface.co/VietAI/vit5-base"
+      ]
+    ],
+    "research": {
+      "question": "Bản tóm tắt có giữ điều kiện và ngoại lệ cần cho quyết định không?",
+      "evidence": "Đã đọc bài giới thiệu và README; chưa chạy mô hình. Kết quả benchmark là báo cáo của tác giả.",
+      "method": "30 văn bản thăm dò, bảng dữ kiện nguồn, đối chứng chọn câu và chấm ẩn danh phương án.",
+      "measure": "Dữ kiện đổi nghĩa, điều kiện bỏ sót, thời gian sửa và quyết định của người đọc.",
+      "conditions": "Không coi kết quả từ tin tức tự chuyển sang thông báo nghiệp vụ; cần kiểm đúng checkpoint.",
+      "next": "Đánh giá khả năng hiểu và hành động của người đọc thay cho chỉ số tương đồng chữ."
+    },
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "12/11/2026",
+    "color": "teal",
+    "read": "6 phút",
+    "note": "Kiểm tra nguồn 12/11/2026. Phương pháp và ví dụ do bản tin đề xuất, chưa thực nghiệm; không dùng dữ liệu riêng, không gọi API trả phí. Minh họa nguyên bản. Không coi thông tin chương trình hoặc benchmark tác giả là hiệu quả đã kiểm chứng độc lập."
+  },
+  {
+    "id": "viquad-biet-khi-nao-khong-tra-loi",
+    "title": "UIT-ViQuAD 2.0: biết không trả lời là một năng lực cần đo",
+    "deck": "Một đoạn văn có từ giống câu hỏi chưa chắc chứa câu trả lời. Thiết kế phép thử cho trợ lý tài liệu phải có câu không đáp án.",
+    "sourceDate": "Bài toán VLSP 2021; kiểm tra nguồn 12/11/2026",
+    "intro": "Khi hỏi một trợ lý về điều tài liệu không nói, câu trả lời trôi chảy có thể nguy hiểm hơn lời từ chối rõ ràng. Đây không phải lỗi có thể đo bằng một bộ câu hỏi mà câu nào cũng có đáp án.",
+    "body": [
+      [
+        "Nguồn cung cấp nền tảng gì?",
+        "[Trang bài toán VLSP 2021](https://vlsp.org.vn/vi/node/121) mô tả UIT-ViQuAD 2.0 có cả câu hỏi trích xuất được đáp án và câu hỏi không được ngữ cảnh hỗ trợ. Nguồn giải thích EM và F1, đồng thời yêu cầu mô hình biết không trả lời. Đây là đánh giá đọc hiểu dựa trên đoạn văn Wikipedia, không tự tương đương hệ thống tìm tài liệu rồi sinh câu trả lời nhiều bước."
+      ],
+      [
+        "Một tình huống rất gần doanh nghiệp",
+        "Ví dụ tự tạo: tài liệu ghi cửa hàng A mở lúc 8 giờ; người hỏi cửa hàng B mở lúc nào. Cụm “8 giờ” hiện diện nhưng thuộc sai đối tượng. Một bộ thử tốt phải chứa các cặp câu gần giống như vậy. Bổ sung ngày khác, chi nhánh khác và chính sách đã hết hiệu lực. Không dùng câu hỏi vô nghĩa quá dễ để làm đẹp tỷ lệ từ chối."
+      ],
+      [
+        "Chia hai lỗi trước khi sửa",
+        "Với trợ lý có tìm kiếm, kiểm trước đoạn đúng có được lấy về không. Sau đó đưa cùng một đoạn cho bước trả lời và kiểm nó có chọn đúng bằng chứng hay không. Nếu trộn hai bước, rất dễ chỉnh lời nhắc trong khi lỗi thật nằm ở chỉ mục tài liệu. Lưu câu hỏi, phiên bản nguồn, đoạn đưa vào và kết luận người kiểm; không lưu dữ liệu nhạy cảm chỉ để có log đầy đủ."
+      ],
+      [
+        "Phương pháp và mẫu đo đề xuất",
+        "Tự xây bộ nhỏ cân bằng giữa câu có đáp án, không có và có dữ kiện gây nhầm. Tách tài liệu giữa giai đoạn chỉnh và đánh giá cuối để tránh học thuộc. Với từng mức ngưỡng từ chối, báo số câu trả lời đúng, câu không nên trả lời nhưng vẫn trả lời và câu có đáp án bị từ chối. Đường đánh đổi này hữu ích hơn một điểm trung bình; mức chấp nhận phụ thuộc tác vụ, không có con số chuẩn chung."
+      ],
+      [
+        "Giới hạn, giá và quyền sử dụng",
+        "Trang VLSP là tài liệu cuộc thi cũ, không phải cam kết API đang hoạt động hay dữ liệu được dùng thương mại tự do. Bài này không tải hoặc tái phân phối dataset và chưa xác minh điều khoản cấp dữ liệu hiện hành. Người làm thử có thể tự viết đoạn văn có quyền sử dụng. Chi phí lớn cần tính là gán nhãn và rà bất đồng; nếu dùng API để thử, phải kiểm bảng giá và giới hạn ngân sách riêng."
+      ],
+      [
+        "Từ điểm số tới trải nghiệm",
+        "Một lời từ chối hữu ích nên nói thiếu thông tin gì và chỉ ra tài liệu đã xét, không chỉ “tôi không biết”. Nghiên cứu tiếp có thể kết hợp đo độ tin cậy với trải nghiệm hỗ trợ khách hàng: lời từ chối có giúp người hỏi cung cấp đúng thông tin tiếp theo, hay chỉ làm họ phải hỏi lại nhiều lần?"
+      ]
+    ],
+    "sources": [
+      [
+        "VLSP: mô tả UIT-ViQuAD 2.0 và cách đánh giá",
+        "https://vlsp.org.vn/vi/node/121"
+      ],
+      [
+        "Công trình UIT-ViQuAD 2020",
+        "https://aclanthology.org/2020.coling-main.233/"
+      ]
+    ],
+    "research": {
+      "question": "Hệ thống có từ chối đúng câu thiếu bằng chứng mà không bỏ quá nhiều câu trả lời được?",
+      "evidence": "Đã đọc mô tả bài toán VLSP; chưa tải dataset hay chạy mô hình.",
+      "method": "Đo riêng tìm kiếm và trả lời; bộ thăm dò có câu gây nhầm, tách tài liệu khi đánh giá.",
+      "measure": "Trả lời sai khi thiếu nguồn, từ chối nhầm, trả lời đúng và công hỏi lại.",
+      "conditions": "Không suy benchmark Wikipedia thành độ tin cậy tài liệu doanh nghiệp; quyền dataset chưa xác minh.",
+      "next": "Phối hợp đánh giá độ tin cậy với thiết kế lời từ chối có ích."
+    },
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "12/11/2026",
+    "color": "teal",
+    "read": "6 phút",
+    "note": "Kiểm tra nguồn 12/11/2026. Phương pháp và ví dụ do bản tin đề xuất, chưa thực nghiệm; không dùng dữ liệu riêng, không gọi API trả phí. Minh họa nguyên bản. Không coi thông tin chương trình hoặc benchmark tác giả là hiệu quả đã kiểm chứng độc lập."
+  },
+  {
+    "id": "vihealthbert-viet-tat-khong-tu-doan",
+    "title": "ViHealthBERT: gặp chữ viết tắt, hệ thống nên giữ lại khả năng chưa biết",
+    "deck": "Khai thác văn bản chuyên ngành cần tách gợi ý thuật ngữ khỏi kết luận chuyên môn.",
+    "sourceDate": "Công trình LREC 2022; kiểm tra 12/11/2026",
+    "intro": "Một chữ viết tắt có thể mang nhiều nghĩa theo ngữ cảnh. Mở rộng sai rồi đưa vào bộ tìm kiếm sẽ làm lỗi lan sang các bước sau, dù câu cuối cùng trông đầy đủ và chuyên nghiệp.",
+    "body": [
+      [
+        "Bằng chứng nghiên cứu",
+        "[README ViHealthBERT](https://github.com/demdecuong/vihealthbert) giới thiệu mô hình tiếng Việt miền sức khỏe và các tác vụ gồm nhận diện thực thể, giải nghĩa viết tắt và tóm tắt. [Tóm tắt LREC 2022](https://lrec.elra.info/lrec2022-main-035) xác nhận mục tiêu nghiên cứu miền chuyên biệt. Các kết quả được tác giả báo cáo không chứng minh an toàn lâm sàng và không phải giấy phép dùng hệ thống để chẩn đoán."
+      ],
+      [
+        "Chọn ứng dụng ít rủi ro hơn",
+        "Một hướng nghiên cứu phù hợp là hỗ trợ biên mục tài liệu đào tạo công khai: đánh dấu chữ viết tắt và đề xuất các nghĩa để biên tập viên lựa chọn. Giữ nguyên chữ gốc và vị trí nguồn, không âm thầm thay văn bản. Bài này không hướng dẫn chẩn đoán, điều trị, hoặc xử lý hồ sơ bệnh nhân; mọi ví dụ thử cần tự tạo hoặc có quyền sử dụng."
+      ],
+      [
+        "Thiết kế bộ thử theo khái niệm",
+        "Đề xuất lập bảng viết tắt, các nghĩa có thể có và câu ngữ cảnh. Chia dữ liệu theo tài liệu, tránh để cùng một mẫu câu xuất hiện ở cả phần chỉnh và phần đánh giá. Thêm nhóm không đủ ngữ cảnh, lỗi gõ và từ không nằm trong danh mục. Đối chứng đơn giản là từ điển có nhiều nghĩa và để người chọn; mô hình chỉ có ích nếu giảm công mà không làm người kiểm tin nhầm."
+      ],
+      [
+        "Không chấm chỉ ca dễ",
+        "Báo riêng độ đúng khi đã có đủ ngữ cảnh và tỷ lệ không chắc chắn được giữ lại. Hai người có chuyên môn đối chiếu một phần mẫu; lưu bất đồng thay vì ép một đáp án khi nguồn không rõ. Đếm cả số lần người biên tập phải mở lại tài liệu. Hệ thống luôn đưa một nghĩa nghe hợp lý có thể được điểm cao trên ca phổ biến nhưng thất bại đúng nơi cần thận trọng."
+      ],
+      [
+        "Điều kiện triển khai và chi phí",
+        "Kho mô tả hai biến thể theo từ và theo âm tiết; cần chọn tiền xử lý phù hợp, không thay tokenizer tùy tiện. Bài viết chưa đo tốc độ, bộ nhớ hay chi phí huấn luyện. Tổng ngân sách phải tính cả chuyên gia kiểm, bảo trì từ điển và kiểm lại sau cập nhật. README đã đọc chưa đủ để xác nhận toàn bộ quyền thương mại của trọng số và tập dữ liệu; làm rõ trước khi đưa vào sản phẩm."
+      ],
+      [
+        "Riêng tư và hướng nghiên cứu",
+        "Dữ liệu sức khỏe cần kiểm quyền và mục đích chặt chẽ; việc mô hình tải được không cho phép đưa hồ sơ riêng vào bất kỳ dịch vụ nào. Khi nghiên cứu thử, dùng tài liệu công khai phù hợp thay vì bệnh án. Hướng mở rộng là kết hợp xử lý ngôn ngữ với khoa học thông tin: giữ thuật ngữ, phiên bản và người duyệt để một gợi ý có thể được kiểm lại, sửa lại và không bị hiểu thành kết luận chuyên môn."
+      ]
+    ],
+    "sources": [
+      [
+        "Kho ViHealthBERT",
+        "https://github.com/demdecuong/vihealthbert"
+      ],
+      [
+        "LREC 2022: tóm tắt công trình",
+        "https://lrec.elra.info/lrec2022-main-035"
+      ]
+    ],
+    "research": {
+      "question": "Gợi ý nghĩa viết tắt có giảm công biên mục mà không tăng sự tự tin sai?",
+      "evidence": "Đã đọc README và tóm tắt công trình, chưa tái lập kết quả; không đánh giá lâm sàng.",
+      "method": "Bộ thử tự tạo có nhiều nghĩa và thiếu ngữ cảnh, đối chứng từ điển, người chuyên môn rà bất đồng.",
+      "measure": "Gợi ý sai, từ chối đúng, thời gian kiểm và số lần mở lại nguồn.",
+      "conditions": "Chỉ đề xuất nghiên cứu biên mục; chưa xác minh đủ giấy phép triển khai thương mại.",
+      "next": "Liên kết ngôn ngữ học, quản trị thuật ngữ và khả năng kiểm toán thay đổi."
+    },
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "12/11/2026",
+    "color": "teal",
+    "read": "6 phút",
+    "note": "Kiểm tra nguồn 12/11/2026. Phương pháp và ví dụ do bản tin đề xuất, chưa thực nghiệm; không dùng dữ liệu riêng, không gọi API trả phí. Minh họa nguyên bản. Không coi thông tin chương trình hoặc benchmark tác giả là hiệu quả đã kiểm chứng độc lập."
+  }
+,
+
+  {
     "id": "phogpt-tu-van-hanh-chi-phi-that",
     "title": "PhoGPT tự vận hành: không trả tiền mỗi lượt chưa có nghĩa là miễn phí",
     "deck": "Một mô hình tiếng Việt có thể là đối chứng hữu ích cho tác vụ hẹp, nhưng phải tính cả bộ nhớ, công kiểm và giới hạn năng lực.",
