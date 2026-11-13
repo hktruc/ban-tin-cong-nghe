@@ -1,15 +1,15 @@
 # Bản tin công nghệ
 
-Ấn bản 12/11/2026: 53 bài. Bổ sung 5 bài AI Việt Nam, giữ nguyên nội dung 48 bài cũ, style.css và thiết kế. Mục tiêu 5 bài Việt Nam đạt, thiếu 0.
+Ấn bản 13/11/2026: 58 bài. Bổ sung 5 bài nghiên cứu ứng dụng AI Việt Nam, bảo toàn nội dung 53 bài cũ và thiết kế. Mục tiêu 5 bài Việt Nam đạt, thiếu 0.
 
-## Đề tài và nguồn
-- Saigon AI Hub: đọc trang Cohort 2, lộ trình và điều kiện; chỉ xem là thông tin tổ chức, chưa kiểm chứng hiệu quả độc lập.
-- VnCoreNLP: đọc README, LICENSE gốc và trang tóm tắt ACL; GPL v3 hoặc mới hơn. Kiểm đường về nguyên văn khi tách từ.
-- ViT5: đọc bài VietAI, README, thẻ mô hình nền; giữ điều kiện ngoại lệ khi tóm tắt, phân biệt checkpoint nền/tinh chỉnh.
-- UIT-ViQuAD 2.0: đọc trang bài toán VLSP 2021 và tóm tắt công trình; quyền dùng dataset chưa xác minh, không tải hay tái phân phối.
-- ViHealthBERT: đọc README và tóm tắt LREC 2022; chỉ nghiên cứu biên mục thuật ngữ, không ứng dụng lâm sàng hoặc dữ liệu bệnh nhân. Quyền thương mại cần làm rõ.
+## Đề tài và kiểm chứng nguồn
+- ViP-VL: đọc abstract công trình 2026 và recipe chính thức trong ChunkFormer. Phân biệt encoder tự giám sát với hệ thống chép lời hoàn chỉnh.
+- VietPrism: đọc abstract và HTML công trình tháng 9/2026. Là preprint gửi ICASSP 2027, không gọi là đã được hội nghị chấp nhận. Điểm phát hiện giọng giả không phải bằng chứng kết tội.
+- MTet / EnViT5: đọc trang VietAI, README và model card. Công trình nền từ 2022, không trình bày như sản phẩm mới 2026. Tách quyền code, mô hình và dữ liệu.
+- ViDeBERTa: đọc ACL Anthology, README, MIT LICENSE của code và model card. Công trình 2023; quyền checkpoint cần làm rõ, không suy diễn từ giấy phép mã.
+- UIT-VSFC: đọc dataset card chính thức. Nguồn nền 2018; license còn Unknown, không tải hay tái phân phối dữ liệu. Phân biệt cảm xúc, chủ đề và hành động cần làm.
 
-Không tuyên bố đã đọc toàn văn PDF hoặc chạy/tái lập mô hình. Mẫu thử, tiêu chí và ví dụ là đề xuất biên tập chưa thực nghiệm. Giá triển khai chưa đo; không giả báo giá. Không mua dịch vụ, API trả phí, dữ liệu riêng hay credential. Bốn công trình nền được phân tích lại, không trình bày như tin mới năm 2026.
+Nội dung là phân tích nguyên bản, đề xuất cách thử có đối chứng, không phải báo cáo đã chạy mô hình. Không dùng dữ liệu riêng, trả tiền API, tạo credential hoặc mua dịch vụ. Không tuyên bố đọc toàn văn PDF; dữ liệu tác giả báo cáo được phân biệt với kiểm chứng độc lập. Chi phí vận hành phải đo trên cấu hình thực, không giả báo giá. Giới hạn quyền riêng tư và quyền sử dụng được nêu riêng trong từng bài.
 
 ## Minh họa và kiểm tra
-Năm SVG là sơ đồ nguyên bản, không sao chép ảnh hoặc dataset. Tài liệu nguồn thuộc chủ sở hữu tương ứng. Kiểm JSON 53 bài, ID duy nhất, bảo toàn 48 bài cũ, đường dẫn minh họa và schema. Môi trường thực thi không khả dụng; không tuyên bố kiểm trình duyệt hay đo hiệu năng. Kiểm GitHub commit, Pages deployment và nội dung live riêng trước khi thông báo xuất bản.
+Năm SVG sơ đồ nguyên bản, không sao chép ảnh hay dataset. JSON có 58 ID duy nhất; 53 bài cũ được đối chiếu bảo toàn. Kiểm cú pháp JavaScript và XML SVG, xem bản render sơ đồ. Giữ style.css và app.js; cập nhật ngày ấn bản và cache key content.js trong index.html. Xác minh commit, GitHub Pages và nội dung live sau xuất bản.

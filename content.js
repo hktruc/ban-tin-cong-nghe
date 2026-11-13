@@ -1,5 +1,291 @@
 window.ARTICLES=[
   {
+    "id": "vipvl-tien-huan-luyen-khong-phai-chep-loi",
+    "title": "ViP-VL: mô hình nghe tiếng Việt chưa phải ứng dụng chép lời hoàn chỉnh",
+    "deck": "Phân biệt bộ mã hóa âm thanh với hệ thống nhận dạng giúp tránh chọn sai công cụ và đánh giá nhầm kết quả.",
+    "sourceDate": "ViP-VL, bản sửa 10/06/2026; kiểm nguồn 13/11/2026",
+    "intro": "Một nhóm làm phụ đề thường muốn tải mô hình về rồi nhận ngay văn bản. Nhưng tên một công trình về tiếng nói có thể chỉ một thành phần ở giữa hệ thống. Chọn đúng tầng công nghệ là bước đầu để biết mình cần xây thêm gì.",
+    "body": [
+      [
+        "Nguồn nói gì, và chưa nói gì",
+        "[Công trình ViP-VL](https://arxiv.org/abs/2606.10360) nghiên cứu tiền huấn luyện tự giám sát tiếng Việt. Đây là kết quả do nhóm tác giả công bố, chưa được bản tin tái lập. Điểm thực hành quan trọng nằm ở [recipe chính thức](https://github.com/khanld/chunkformer/blob/main/examples/ssl/vipvl/README.md): đầu ra là checkpoint bộ mã hóa để tinh chỉnh tiếp; recipe không có bước giải mã văn bản hoặc tính WER. Vì vậy không thể lấy riêng recipe này làm bằng chứng đã có dịch vụ chép lời."
+      ],
+      [
+        "Một câu hỏi ứng dụng đủ nhỏ",
+        "Tình huống minh họa: thư viện cần làm bản chép lời cho bài nói công khai đã được phép sử dụng. Trước khi chọn mô hình, ghi đầu ra cần có: văn bản, dấu câu, mốc thời gian hay nhãn người nói? Sau đó lập sơ đồ âm thanh đầu vào → chuẩn hóa → mô hình nhận dạng đã tinh chỉnh → căn thời gian → người nghe lại. Một bộ mã hóa tốt không tự thay thế toàn bộ các bước sau."
+      ],
+      [
+        "Phép thử đề xuất",
+        "Chọn các đoạn có tốc độ nói, tiếng nền và cách phát âm khác nhau, giữ riêng người nói giữa tập chỉnh và tập kiểm. So sánh một hệ thống chép lời đang dùng với phương án mới trên cùng âm thanh và cùng bản chép chuẩn do người kiểm. Đếm sai từ, nhưng cũng ghi riêng tên riêng, số và phủ định; một sai sót ở tên địa điểm có thể tốn nhiều công sửa hơn nhiều lỗi dấu câu. Đây là thiết kế thử nghiệm, chưa phải kết quả chạy."
+      ],
+      [
+        "Đừng để tốc độ che công sửa",
+        "Đo thời gian toàn luồng, bộ nhớ cực đại, độ trễ đoạn đầu và số phút người nghe lại trên mỗi giờ âm thanh. Lặp ở nhiều độ dài, không suy rộng từ đoạn ngắn sang bản ghi dài. Nếu mô hình trả lời nhanh nhưng người biên tập phải sửa nhiều, tổng chi phí có thể tăng. Chỉ so sánh khi lưu rõ phiên bản mô hình, cách chuẩn hóa và phần cứng."
+      ],
+      [
+        "Quyền dùng và chi phí",
+        "[LICENSE của repo ChunkFormer](https://github.com/khanld/chunkformer/blob/main/LICENSE) ghi CC BY 4.0, có điều kiện ghi công; vẫn cần kiểm điều kiện của checkpoint và dữ liệu cụ thể trước triển khai. Bản tin không tải trọng số hoặc âm thanh, không đo giá GPU. Chi phí phải gồm máy, lưu trữ, người làm bản chuẩn và rà lỗi. Giọng nói có thể nhận diện người; chỉ dùng bản ghi có quyền, giới hạn người truy cập và thời gian lưu. Hướng mở rộng là nghiên cứu tương tác giữa âm học, ngôn ngữ vùng miền và quy trình biên tập, thay vì chỉ chạy đua điểm benchmark."
+      ]
+    ],
+    "sources": [
+      [
+        "ViP-VL: công trình của tác giả",
+        "https://arxiv.org/abs/2606.10360"
+      ],
+      [
+        "Recipe tiền huấn luyện chính thức",
+        "https://github.com/khanld/chunkformer/blob/main/examples/ssl/vipvl/README.md"
+      ],
+      [
+        "Giấy phép repo",
+        "https://github.com/khanld/chunkformer/blob/main/LICENSE"
+      ]
+    ],
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "13/11/2026",
+    "color": "teal",
+    "read": "6 phút",
+    "note": "Kiểm tra nguồn 13/11/2026. Minh họa và phương pháp thử do bản tin đề xuất, chưa thực nghiệm. Không dùng dữ liệu riêng hoặc API trả phí. Không coi báo cáo tác giả là hiệu quả vận hành đã kiểm chứng độc lập.",
+    "research": {
+      "question": "Phân biệt bộ mã hóa âm thanh với hệ thống nhận dạng giúp tránh chọn sai công cụ và đánh giá nhầm kết quả.",
+      "evidence": "Nguồn trực tiếp được dẫn trong bài; chưa tái lập mô hình hoặc benchmark.",
+      "method": "Chọn các đoạn có tốc độ nói, tiếng nền và cách phát âm khác nhau, giữ riêng người nói giữa tập chỉnh và tập kiểm. So sánh một hệ thống chép lời đang dùng với phương án mới trên cùng âm thanh và cùng bản chép chuẩn do người kiểm. Đếm sai từ, nhưng cũng ghi riêng tên riêng, số và phủ định; một sai sót ở tên địa điểm có thể tốn nhiều công sửa hơn nhiều lỗi dấu câu. Đây là thiết kế thử nghiệm, chưa phải kết quả chạy.",
+      "measure": "Đo thời gian toàn luồng, bộ nhớ cực đại, độ trễ đoạn đầu và số phút người nghe lại trên mỗi giờ âm thanh. Lặp ở nhiều độ dài, không suy rộng từ đoạn ngắn sang bản ghi dài. Nếu mô hình trả lời nhanh nhưng người biên tập phải sửa nhiều, tổng chi phí có thể tăng. Chỉ so sánh khi lưu rõ phiên bản mô hình, cách chuẩn hóa và phần cứng.",
+      "conditions": "Ví dụ minh họa, không phải ca triển khai đã thành công. Chi phí và quyền dữ liệu phải xác minh trước sử dụng.",
+      "next": "[LICENSE của repo ChunkFormer](https://github.com/khanld/chunkformer/blob/main/LICENSE) ghi CC BY 4.0, có điều kiện ghi công; vẫn cần kiểm điều kiện của checkpoint và dữ liệu cụ thể trước triển khai. Bản tin không tải trọng số hoặc âm thanh, không đo giá GPU. Chi phí phải gồm máy, lưu trữ, người làm bản chuẩn và rà lỗi. Giọng nói có thể nhận diện người; chỉ dùng bản ghi có quyền, giới hạn người truy cập và thời gian lưu. Hướng mở rộng là nghiên cứu tương tác giữa âm học, ngôn ngữ vùng miền và quy trình biên tập, thay vì chỉ chạy đua điểm benchmark."
+    }
+  },
+  {
+    "id": "vietprism-giong-gia-khong-ket-toi",
+    "title": "VietPrism: điểm nghi ngờ giọng giả không phải bằng chứng để kết tội",
+    "deck": "Nghiên cứu tiếng nói Việt gợi cách kiểm hệ thống phát hiện giả mạo theo giọng vùng miền và điều kiện sử dụng thật.",
+    "sourceDate": "Preprint 24/09/2026, chưa xác nhận chấp nhận hội nghị; kiểm 13/11/2026",
+    "intro": "Một công cụ đánh dấu âm thanh là giả có thể hữu ích để sàng lọc, nhưng cũng có thể làm người thật bị nghi ngờ. Câu hỏi ứng dụng không chỉ là mô hình nhận ra giọng tổng hợp tốt đến đâu, mà là điều gì xảy ra sau cảnh báo.",
+    "body": [
+      [
+        "Đọc đúng mức độ bằng chứng",
+        "[VietPrism](https://arxiv.org/abs/2609.30005) là preprint về bộ dữ liệu tiếng Việt, phương ngữ, nói xen tiếng Anh và phát hiện giọng tổng hợp. Trang nguồn ghi là bản nộp ICASSP 2027, không phải xác nhận đã được hội nghị chấp nhận. Tác giả báo cáo kết quả phát hiện thay đổi theo mô hình sinh giọng và nhóm phương ngữ. Bản tin đã đọc bản HTML nhưng chưa tái lập thí nghiệm; không dùng điểm tác giả như tỷ lệ chính xác ngoài đời."
+      ],
+      [
+        "Vấn đề cần kiểm trước triển khai",
+        "Ví dụ giả định: ban quản trị cộng đồng nhận một đoạn ghi âm gây tranh cãi. Hệ thống chỉ nên đưa vào hàng đợi kiểm chứng, không tự đăng cáo buộc hoặc khóa người gửi. Người xử lý cần bản gốc, nguồn gửi và kênh xác minh độc lập. Việc âm thanh đã nén, lọc tiếng ồn hoặc phát lại qua loa có thể khác hẳn mẫu nghiên cứu; phải đánh giá chính các điều kiện đó."
+      ],
+      [
+        "Phương pháp thử an toàn",
+        "Đề xuất dùng âm thanh được cho phép, có nhãn nguồn gốc xác thực; không tự nhân bản giọng người khác để thử. Tách người nói giữa các tập, đồng thời giữ riêng một nguồn giọng tổng hợp chưa dùng để điều chỉnh ngưỡng. Đo tỷ lệ báo nhầm trên người thật và bỏ lọt mẫu tổng hợp ở nhiều mức nén. Báo từng nhóm giọng, không chỉ một con số gộp, để thấy nhóm ít dữ liệu có bị thiệt hơn không."
+      ],
+      [
+        "Thiết kế quyết định thay vì chỉ bộ phân loại",
+        "Chọn ngưỡng theo chi phí sai trong tình huống cụ thể. Với hoạt động truyền thông, một cảnh báo có thể kích hoạt kiểm nguồn trước khi đăng; nó không được biến thành kết luận pháp lý. Nên có trạng thái không đủ bằng chứng và cơ chế người dùng phản hồi. Lưu nguyên nhân chuyển kiểm, người xử lý và kết quả đối chiếu để sửa quy trình khi báo nhầm."
+      ],
+      [
+        "Quyền dữ liệu và nghiên cứu tiếp",
+        "Bài báo mô tả nguồn thu thập công khai, nhưng điều đó không tự cấp quyền tái sử dụng giọng, huấn luyện thương mại hay công bố danh tính. Bản tin chưa xác minh đầy đủ giấy phép phân phối dataset nên không hướng dẫn tải lại hoặc tái phân phối. Chưa có chi phí triển khai đã đo; tính cả lưu âm thanh, xử lý bảo mật và công xác minh. Hướng nghiên cứu mở là kết hợp phát hiện tín hiệu với truy nguyên nguồn, hiểu biết truyền thông và quy trình chống lừa đảo, không giao toàn bộ niềm tin cho một điểm AI."
+      ]
+    ],
+    "sources": [
+      [
+        "VietPrism: ngày và trạng thái preprint",
+        "https://arxiv.org/abs/2609.30005"
+      ],
+      [
+        "Bản HTML công trình",
+        "https://arxiv.org/html/2609.30005v1"
+      ]
+    ],
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "13/11/2026",
+    "color": "teal",
+    "read": "6 phút",
+    "note": "Kiểm tra nguồn 13/11/2026. Minh họa và phương pháp thử do bản tin đề xuất, chưa thực nghiệm. Không dùng dữ liệu riêng hoặc API trả phí. Không coi báo cáo tác giả là hiệu quả vận hành đã kiểm chứng độc lập.",
+    "research": {
+      "question": "Nghiên cứu tiếng nói Việt gợi cách kiểm hệ thống phát hiện giả mạo theo giọng vùng miền và điều kiện sử dụng thật.",
+      "evidence": "Nguồn trực tiếp được dẫn trong bài; chưa tái lập mô hình hoặc benchmark.",
+      "method": "Đề xuất dùng âm thanh được cho phép, có nhãn nguồn gốc xác thực; không tự nhân bản giọng người khác để thử. Tách người nói giữa các tập, đồng thời giữ riêng một nguồn giọng tổng hợp chưa dùng để điều chỉnh ngưỡng. Đo tỷ lệ báo nhầm trên người thật và bỏ lọt mẫu tổng hợp ở nhiều mức nén. Báo từng nhóm giọng, không chỉ một con số gộp, để thấy nhóm ít dữ liệu có bị thiệt hơn không.",
+      "measure": "Chọn ngưỡng theo chi phí sai trong tình huống cụ thể. Với hoạt động truyền thông, một cảnh báo có thể kích hoạt kiểm nguồn trước khi đăng; nó không được biến thành kết luận pháp lý. Nên có trạng thái không đủ bằng chứng và cơ chế người dùng phản hồi. Lưu nguyên nhân chuyển kiểm, người xử lý và kết quả đối chiếu để sửa quy trình khi báo nhầm.",
+      "conditions": "Ví dụ minh họa, không phải ca triển khai đã thành công. Chi phí và quyền dữ liệu phải xác minh trước sử dụng.",
+      "next": "Bài báo mô tả nguồn thu thập công khai, nhưng điều đó không tự cấp quyền tái sử dụng giọng, huấn luyện thương mại hay công bố danh tính. Bản tin chưa xác minh đầy đủ giấy phép phân phối dataset nên không hướng dẫn tải lại hoặc tái phân phối. Chưa có chi phí triển khai đã đo; tính cả lưu âm thanh, xử lý bảo mật và công xác minh. Hướng nghiên cứu mở là kết hợp phát hiện tín hiệu với truy nguyên nguồn, hiểu biết truyền thông và quy trình chống lừa đảo, không giao toàn bộ niềm tin cho một điểm AI."
+    }
+  },
+  {
+    "id": "mtet-dich-khac-mien",
+    "title": "MTet và EnViT5: dịch đúng tài liệu kỹ thuật không chỉ là dịch câu trôi chảy",
+    "deck": "Một bộ thử theo miền và bảng thuật ngữ có thể hữu ích hơn việc chọn mô hình bằng điểm tổng hợp.",
+    "sourceDate": "Công trình nền MTet 2022; kiểm tài liệu hiện hành 13/11/2026",
+    "intro": "Dịch tài liệu cho nhân viên khác dịch một đoạn quảng cáo. Tên nút, đơn vị đo, thứ tự thao tác và cảnh báo cần nhất quán. Đây là bài nghiên cứu ứng dụng lại một công trình nền, không phải tin ra mắt mô hình mới.",
+    "body": [
+      [
+        "Nền tảng có thật",
+        "[VietAI mô tả MTet](https://research.vietai.org/mtet/) là dữ liệu dịch Anh–Việt đa miền. [Thẻ EnViT5](https://huggingface.co/VietAI/envit5-translation) cung cấp mô hình dịch hai chiều và ví dụ tải bằng Transformers. Đó là nguồn trực tiếp của tác giả; bản tin không chạy mô hình và không xác nhận hiệu quả độc lập trên tài liệu doanh nghiệp."
+      ],
+      [
+        "Từ dịch câu sang một quy trình có kiểm soát",
+        "Tình huống minh họa: một nhóm biên tập hướng dẫn sử dụng thiết bị bằng hai ngôn ngữ. Tạo danh mục thuật ngữ được người có chuyên môn duyệt và giữ mã mục, số bước, đơn vị. Chia theo phần có nghĩa, không cắt giữa cảnh báo với thao tác liên quan. Đặt bản nguồn cạnh bản dịch để người duyệt nhìn thấy nội dung thiếu, thay vì chỉ đọc tiếng Việt cho xuôi tai."
+      ],
+      [
+        "Thiết kế tập kiểm theo miền",
+        "Đề xuất tách các nhóm: hướng dẫn thao tác, thông số, cảnh báo và giao diện. Mỗi nhóm có ví dụ ngắn, dài và nhiều tham chiếu chéo. Giữ nguyên một tập đánh giá chưa dùng để chỉnh cách xử lý. So sánh mô hình với bản dịch hiện tại bằng người đọc song ngữ không biết phương án nào tạo ra. Ghi lỗi đổi nghĩa, sai thuật ngữ, mất số và thiếu câu; đừng lấy điểm trôi chảy bù cho một cảnh báo bị sai."
+      ],
+      [
+        "Chi phí nằm cả ở người sửa",
+        "Tính thời gian người sửa và kiểm lại mỗi trang, số lần phải quay về nguồn, chi phí máy và lưu phiên bản. Không mặc định chạy local miễn phí hoàn toàn hoặc dịch tự động thay được chuyên gia. Bài chưa đo phần cứng, chưa có báo giá triển khai. Với tài liệu nhạy cảm, đánh giá đường truyền và nơi giữ bản nguồn; một bản thử nên dùng tài liệu công khai hợp quyền hoặc ví dụ do nhóm tự viết."
+      ],
+      [
+        "Một giới hạn kỹ thuật có thể gặp",
+        "Thẻ mô hình hiện cảnh báo pipeline translation không còn hỗ trợ theo cách cũ trong Transformers v5 và hướng dẫn tải mô hình trực tiếp. Vì vậy hướng dẫn cài đặt phải ghi phiên bản thư viện, không sao chép lệnh cũ rồi kết luận mô hình lỗi. Thẻ gắn nhãn OpenRAIL; cần đọc điều khoản áp dụng cụ thể, không coi đó là quyền dùng không điều kiện. Quyền của dữ liệu MTet cũng cần kiểm riêng. Hướng tiếp theo là kết hợp dịch máy, quản lý thuật ngữ và kiểm cấu trúc tài liệu để giảm công sửa có đo lường."
+      ]
+    ],
+    "sources": [
+      [
+        "VietAI: MTet",
+        "https://research.vietai.org/mtet/"
+      ],
+      [
+        "Repo MTet",
+        "https://github.com/vietai/mTet"
+      ],
+      [
+        "EnViT5 model card và hướng dẫn thư viện",
+        "https://huggingface.co/VietAI/envit5-translation"
+      ]
+    ],
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "13/11/2026",
+    "color": "teal",
+    "read": "6 phút",
+    "note": "Kiểm tra nguồn 13/11/2026. Minh họa và phương pháp thử do bản tin đề xuất, chưa thực nghiệm. Không dùng dữ liệu riêng hoặc API trả phí. Không coi báo cáo tác giả là hiệu quả vận hành đã kiểm chứng độc lập.",
+    "research": {
+      "question": "Một bộ thử theo miền và bảng thuật ngữ có thể hữu ích hơn việc chọn mô hình bằng điểm tổng hợp.",
+      "evidence": "Nguồn trực tiếp được dẫn trong bài; chưa tái lập mô hình hoặc benchmark.",
+      "method": "Đề xuất tách các nhóm: hướng dẫn thao tác, thông số, cảnh báo và giao diện. Mỗi nhóm có ví dụ ngắn, dài và nhiều tham chiếu chéo. Giữ nguyên một tập đánh giá chưa dùng để chỉnh cách xử lý. So sánh mô hình với bản dịch hiện tại bằng người đọc song ngữ không biết phương án nào tạo ra. Ghi lỗi đổi nghĩa, sai thuật ngữ, mất số và thiếu câu; đừng lấy điểm trôi chảy bù cho một cảnh báo bị sai.",
+      "measure": "Tính thời gian người sửa và kiểm lại mỗi trang, số lần phải quay về nguồn, chi phí máy và lưu phiên bản. Không mặc định chạy local miễn phí hoàn toàn hoặc dịch tự động thay được chuyên gia. Bài chưa đo phần cứng, chưa có báo giá triển khai. Với tài liệu nhạy cảm, đánh giá đường truyền và nơi giữ bản nguồn; một bản thử nên dùng tài liệu công khai hợp quyền hoặc ví dụ do nhóm tự viết.",
+      "conditions": "Ví dụ minh họa, không phải ca triển khai đã thành công. Chi phí và quyền dữ liệu phải xác minh trước sử dụng.",
+      "next": "Thẻ mô hình hiện cảnh báo pipeline translation không còn hỗ trợ theo cách cũ trong Transformers v5 và hướng dẫn tải mô hình trực tiếp. Vì vậy hướng dẫn cài đặt phải ghi phiên bản thư viện, không sao chép lệnh cũ rồi kết luận mô hình lỗi. Thẻ gắn nhãn OpenRAIL; cần đọc điều khoản áp dụng cụ thể, không coi đó là quyền dùng không điều kiện. Quyền của dữ liệu MTet cũng cần kiểm riêng. Hướng tiếp theo là kết hợp dịch máy, quản lý thuật ngữ và kiểm cấu trúc tài liệu để giảm công sửa có đo lường."
+    }
+  },
+  {
+    "id": "videberta-mo-hinh-dung-viec",
+    "title": "ViDeBERTa: chuyển yêu cầu đúng nhóm không nhất thiết cần một chatbot lớn",
+    "deck": "Bắt đầu từ nhãn công việc và đối chứng đơn giản trước khi đầu tư vào một mô hình tiếng Việt.",
+    "sourceDate": "EACL Findings, tháng 5/2023; kiểm nguồn 13/11/2026",
+    "intro": "Hộp thư hỗ trợ có nhiều câu hỏi lặp lại, nhưng một mô hình lớn trả lời dài chưa chắc giúp nhân viên phân việc nhanh hơn. Điều cần giải quyết có thể chỉ là nhận ra nhóm xử lý phù hợp và biết khi nào chưa đủ thông tin.",
+    "body": [
+      [
+        "Đặt đúng vai trò công nghệ",
+        "[ViDeBERTa](https://aclanthology.org/2023.findings-eacl.79/) là công trình mô hình ngôn ngữ tiếng Việt với các cỡ khác nhau; tác giả đánh giá trên những tác vụ như nhận dạng thực thể và hỏi đáp. Đây không phải lời hứa về chatbot đa dụng. Bản tin đọc nguồn nghiên cứu và [repo tác giả](https://github.com/HySonLab/ViDeBERTa), chưa chạy hoặc tái lập benchmark. Bài này ứng dụng lại tư duy từ công trình nền, không coi là tin ra mắt năm 2026."
+      ],
+      [
+        "Bài toán minh họa cho SME",
+        "Một bộ phận hỗ trợ có thể cần chia yêu cầu thành hỏi thông tin, lỗi dịch vụ, thay đổi đơn và chưa rõ. Trước khi huấn luyện, phải xác định ai nhận mỗi nhóm, trường hợp giao nhiều nhóm và cách sửa nhãn. Đừng biến từ khóa giận dữ thành nhãn khách hàng xấu. Mục đích là giảm thời gian tìm người hỗ trợ, không ra quyết định bất lợi về người gửi."
+      ],
+      [
+        "Đối chứng phải đủ rẻ để đáng so",
+        "Đề xuất bắt đầu bằng luật từ khóa hoặc một bộ phân loại đơn giản, rồi mới thử mô hình tiếng Việt được tinh chỉnh. Chia dữ liệu theo thời gian hoặc nguồn; tránh để những bản sao của cùng mẫu thư lọt vào cả tập học và kiểm. Người kiểm nhãn không nên biết phương án nào tạo ra kết quả. Thử thêm câu thiếu thông tin, có nhiều nhu cầu và phủ định để không chỉ đánh giá trên câu dễ."
+      ],
+      [
+        "Đo tác động sau bước phân loại",
+        "Báo tỷ lệ đúng theo từng nhóm và trung bình không để nhóm đông lấn át nhóm ít. Ghi riêng số yêu cầu quan trọng bị chuyển sai, tỷ lệ phải chuyển người kiểm, thời gian chờ và số lần chuyển tiếp. Cho phép kết quả chưa rõ khi bằng chứng yếu. Nếu độ chính xác tăng nhưng nhân viên mất công sửa nhiều hơn, chưa nên mở rộng. Đây là phương pháp đề xuất, chưa có thử nghiệm thực."
+      ],
+      [
+        "Giấy phép và tài nguyên",
+        "[Mã repo có MIT](https://github.com/HySonLab/ViDeBERTa/blob/main/LICENSE), nhưng [thẻ checkpoint](https://huggingface.co/Fsoft-AIC/videberta-base) chưa cho bản tin đủ căn cứ xác nhận toàn bộ quyền trọng số và dữ liệu; cần kiểm riêng trước dùng thương mại. Không suy bộ nhớ từ một con số tham số. Phải đo thời gian tinh chỉnh, bộ nhớ và tốc độ trên máy dự kiến; tự vận hành vẫn có chi phí máy, bảo trì và gắn nhãn. Chỉ dùng thư đã được phép, loại bí mật và giữ quyền truy cập. Hướng nghiên cứu tiếp là học từ những trường hợp khó do nhân viên sửa, thay vì thu thập dữ liệu tràn lan."
+      ]
+    ],
+    "sources": [
+      [
+        "ViDeBERTa tại EACL 2023",
+        "https://aclanthology.org/2023.findings-eacl.79/"
+      ],
+      [
+        "Repo tác giả",
+        "https://github.com/HySonLab/ViDeBERTa"
+      ],
+      [
+        "LICENSE mã",
+        "https://github.com/HySonLab/ViDeBERTa/blob/main/LICENSE"
+      ],
+      [
+        "Thẻ checkpoint",
+        "https://huggingface.co/Fsoft-AIC/videberta-base"
+      ]
+    ],
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "13/11/2026",
+    "color": "teal",
+    "read": "6 phút",
+    "note": "Kiểm tra nguồn 13/11/2026. Minh họa và phương pháp thử do bản tin đề xuất, chưa thực nghiệm. Không dùng dữ liệu riêng hoặc API trả phí. Không coi báo cáo tác giả là hiệu quả vận hành đã kiểm chứng độc lập.",
+    "research": {
+      "question": "Bắt đầu từ nhãn công việc và đối chứng đơn giản trước khi đầu tư vào một mô hình tiếng Việt.",
+      "evidence": "Nguồn trực tiếp được dẫn trong bài; chưa tái lập mô hình hoặc benchmark.",
+      "method": "Đề xuất bắt đầu bằng luật từ khóa hoặc một bộ phân loại đơn giản, rồi mới thử mô hình tiếng Việt được tinh chỉnh. Chia dữ liệu theo thời gian hoặc nguồn; tránh để những bản sao của cùng mẫu thư lọt vào cả tập học và kiểm. Người kiểm nhãn không nên biết phương án nào tạo ra kết quả. Thử thêm câu thiếu thông tin, có nhiều nhu cầu và phủ định để không chỉ đánh giá trên câu dễ.",
+      "measure": "Báo tỷ lệ đúng theo từng nhóm và trung bình không để nhóm đông lấn át nhóm ít. Ghi riêng số yêu cầu quan trọng bị chuyển sai, tỷ lệ phải chuyển người kiểm, thời gian chờ và số lần chuyển tiếp. Cho phép kết quả chưa rõ khi bằng chứng yếu. Nếu độ chính xác tăng nhưng nhân viên mất công sửa nhiều hơn, chưa nên mở rộng. Đây là phương pháp đề xuất, chưa có thử nghiệm thực.",
+      "conditions": "Ví dụ minh họa, không phải ca triển khai đã thành công. Chi phí và quyền dữ liệu phải xác minh trước sử dụng.",
+      "next": "[Mã repo có MIT](https://github.com/HySonLab/ViDeBERTa/blob/main/LICENSE), nhưng [thẻ checkpoint](https://huggingface.co/Fsoft-AIC/videberta-base) chưa cho bản tin đủ căn cứ xác nhận toàn bộ quyền trọng số và dữ liệu; cần kiểm riêng trước dùng thương mại. Không suy bộ nhớ từ một con số tham số. Phải đo thời gian tinh chỉnh, bộ nhớ và tốc độ trên máy dự kiến; tự vận hành vẫn có chi phí máy, bảo trì và gắn nhãn. Chỉ dùng thư đã được phép, loại bí mật và giữ quyền truy cập. Hướng nghiên cứu tiếp là học từ những trường hợp khó do nhân viên sửa, thay vì thu thập dữ liệu tràn lan."
+    }
+  },
+  {
+    "id": "uitvsfc-cam-xuc-va-viec-can-lam",
+    "title": "UIT-VSFC: cảm xúc của phản hồi không phải mức ưu tiên xử lý",
+    "deck": "Một bảng phân tích phản hồi cần tách điều người học cảm thấy, chủ đề họ nói và việc người phụ trách cần làm.",
+    "sourceDate": "Bộ dữ liệu nghiên cứu năm 2018; kiểm nguồn 13/11/2026",
+    "intro": "Đếm lời khen và lời chê là việc dễ trình diễn. Hiểu phản hồi nào cần hành động lại là bài toán khác. Nếu đồng nhất tiêu cực với thiếu hợp tác, một hệ thống phân tích có thể làm người quản lý bỏ qua góp ý có giá trị.",
+    "body": [
+      [
+        "Bằng chứng từ nguồn chính chủ",
+        "[UIT-VSFC trên tài khoản UIT NLP](https://huggingface.co/datasets/uitnlp/vietnamese_students_feedback) mô tả bộ phản hồi sinh viên có nhãn cảm xúc và chủ đề, với các phần train, validation và test. Đây là dữ liệu nghiên cứu từ năm 2018, không đại diện tự động cho mọi lớp học hiện nay. Bản tin đọc thẻ và README, không tải corpus hoặc kiểm chứng độc lập chất lượng nhãn."
+      ],
+      [
+        "Tách ba câu hỏi",
+        "Ví dụ tự viết: “Buổi học rất hữu ích, nhưng tôi chưa mở được tài liệu để làm bài.” Cảm xúc có phần tích cực; chủ đề gồm nội dung học và truy cập; hành động cần làm là hỗ trợ tài liệu. Không thể dùng một nhãn khen để kết luận không có việc cần xử lý. Với câu vừa khen vừa góp ý, quy ước phân tích mới nên giữ nhiều ý hoặc trạng thái hỗn hợp, không ép giống schema cũ."
+      ],
+      [
+        "Thiết kế nghiên cứu nhỏ",
+        "Đề xuất dùng phản hồi mới có quyền sử dụng, liên kết mỗi đoạn với mã ẩn danh và giữ nguyên văn trong vùng hạn chế truy cập. Hai người gắn nhãn độc lập rồi thảo luận bất đồng. Chia tập theo lớp hoặc kỳ học, không chỉ xáo ngẫu nhiên các câu gần giống. Kiểm riêng câu ngắn, phủ định, mỉa mai và nhãn ít xuất hiện. Mô hình chỉ hỗ trợ sắp xếp; người phụ trách quyết định cần làm gì."
+      ],
+      [
+        "Đo sự cải thiện có ích",
+        "Ngoài chất lượng nhãn, đo nhu cầu bị bỏ sót, hai vấn đề bị gộp nhầm, thời gian người đọc lại và tỷ lệ việc có người nhận. Không dùng tỷ lệ phản hồi tích cực làm đánh giá phẩm chất học viên. Khi đổi câu hỏi khảo sát, phải kiểm lại phân bố câu trả lời; thay đổi cách hỏi có thể tạo ra thay đổi nhãn mà không có thay đổi trải nghiệm thực."
+      ],
+      [
+        "Điều kiện sử dụng chưa được phép bỏ qua",
+        "README chính chủ ghi giấy phép Unknown và thiếu mô tả ở một số mục về dữ liệu cá nhân, thiên lệch. Không lấy nhãn giấy phép trên bản sao khác làm quyền sử dụng thay thế. Vì vậy bài không hướng dẫn tải lại, tái phân phối hoặc thương mại hóa corpus. Một dự án thực phải tính công xin quyền, gắn nhãn, rà soát và vận hành; chưa có giá đã đo. Hướng mở rộng liên ngành là kết hợp ngôn ngữ học, thiết kế khảo sát và đánh giá giáo dục để kiểm xem hệ thống có giúp cải thiện việc học hay chỉ tạo biểu đồ đẹp."
+      ]
+    ],
+    "sources": [
+      [
+        "UIT NLP: thẻ dữ liệu chính chủ",
+        "https://huggingface.co/datasets/uitnlp/vietnamese_students_feedback"
+      ],
+      [
+        "README và tình trạng giấy phép",
+        "https://huggingface.co/datasets/uitnlp/vietnamese_students_feedback/blob/main/README.md"
+      ]
+    ],
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "13/11/2026",
+    "color": "teal",
+    "read": "6 phút",
+    "note": "Kiểm tra nguồn 13/11/2026. Minh họa và phương pháp thử do bản tin đề xuất, chưa thực nghiệm. Không dùng dữ liệu riêng hoặc API trả phí. Không coi báo cáo tác giả là hiệu quả vận hành đã kiểm chứng độc lập.",
+    "research": {
+      "question": "Một bảng phân tích phản hồi cần tách điều người học cảm thấy, chủ đề họ nói và việc người phụ trách cần làm.",
+      "evidence": "Nguồn trực tiếp được dẫn trong bài; chưa tái lập mô hình hoặc benchmark.",
+      "method": "Đề xuất dùng phản hồi mới có quyền sử dụng, liên kết mỗi đoạn với mã ẩn danh và giữ nguyên văn trong vùng hạn chế truy cập. Hai người gắn nhãn độc lập rồi thảo luận bất đồng. Chia tập theo lớp hoặc kỳ học, không chỉ xáo ngẫu nhiên các câu gần giống. Kiểm riêng câu ngắn, phủ định, mỉa mai và nhãn ít xuất hiện. Mô hình chỉ hỗ trợ sắp xếp; người phụ trách quyết định cần làm gì.",
+      "measure": "Ngoài chất lượng nhãn, đo nhu cầu bị bỏ sót, hai vấn đề bị gộp nhầm, thời gian người đọc lại và tỷ lệ việc có người nhận. Không dùng tỷ lệ phản hồi tích cực làm đánh giá phẩm chất học viên. Khi đổi câu hỏi khảo sát, phải kiểm lại phân bố câu trả lời; thay đổi cách hỏi có thể tạo ra thay đổi nhãn mà không có thay đổi trải nghiệm thực.",
+      "conditions": "Ví dụ minh họa, không phải ca triển khai đã thành công. Chi phí và quyền dữ liệu phải xác minh trước sử dụng.",
+      "next": "README chính chủ ghi giấy phép Unknown và thiếu mô tả ở một số mục về dữ liệu cá nhân, thiên lệch. Không lấy nhãn giấy phép trên bản sao khác làm quyền sử dụng thay thế. Vì vậy bài không hướng dẫn tải lại, tái phân phối hoặc thương mại hóa corpus. Một dự án thực phải tính công xin quyền, gắn nhãn, rà soát và vận hành; chưa có giá đã đo. Hướng mở rộng liên ngành là kết hợp ngôn ngữ học, thiết kế khảo sát và đánh giá giáo dục để kiểm xem hệ thống có giúp cải thiện việc học hay chỉ tạo biểu đồ đẹp."
+    }
+  },
+  {
     "id": "saigon-ai-hub-bai-toan-co-chu",
     "title": "Saigon AI Hub: trước khi tìm đội AI, hãy tìm người chịu trách nhiệm bài toán",
     "deck": "Cohort 2 gợi một cách tổ chức nghiên cứu đáng học: chủ bài toán, chuyên gia nghiệp vụ và tiêu chí nghiệm thu phải có từ đầu.",
@@ -288,9 +574,7 @@ window.ARTICLES=[
     "color": "teal",
     "read": "6 phút",
     "note": "Kiểm tra nguồn 12/11/2026. Phương pháp và ví dụ do bản tin đề xuất, chưa thực nghiệm; không dùng dữ liệu riêng, không gọi API trả phí. Minh họa nguyên bản. Không coi thông tin chương trình hoặc benchmark tác giả là hiệu quả đã kiểm chứng độc lập."
-  }
-,
-
+  },
   {
     "id": "phogpt-tu-van-hanh-chi-phi-that",
     "title": "PhoGPT tự vận hành: không trả tiền mỗi lượt chưa có nghĩa là miễn phí",
@@ -594,9 +878,7 @@ window.ARTICLES=[
     "art": "48",
     "read": "7 phút",
     "note": "Kiểm tra nguồn 11/11/2026. Đây là nghiên cứu nền, không phải tin ra mắt mới. Phương pháp, số mẫu và ví dụ do bản tin đề xuất, chưa thực nghiệm. Không dùng dữ liệu riêng, không gọi API trả phí. Minh họa nguyên bản, không sao chép ảnh hay dataset."
-  }
-,
-
+  },
   {
     "id": "viet-nhat-nexus-chuan-bi-ho-so",
     "title": "NEXUS mở hướng AI Việt–Nhật: chuẩn bị đối tác trước khi chờ hồ sơ",
