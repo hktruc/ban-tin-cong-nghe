@@ -1,15 +1,15 @@
 # Bản tin công nghệ
 
-Ấn bản 13/11/2026: 58 bài. Bổ sung 5 bài nghiên cứu ứng dụng AI Việt Nam, bảo toàn nội dung 53 bài cũ và thiết kế. Mục tiêu 5 bài Việt Nam đạt, thiếu 0.
+Ấn bản 14/11/2026: 63 bài. Thêm 5 bài nghiên cứu ứng dụng AI Việt Nam; bảo toàn nguyên nội dung 58 bài cũ và thiết kế. Mục tiêu 5 bài đạt, thiếu 0.
 
-## Đề tài và kiểm chứng nguồn
-- ViP-VL: đọc abstract công trình 2026 và recipe chính thức trong ChunkFormer. Phân biệt encoder tự giám sát với hệ thống chép lời hoàn chỉnh.
-- VietPrism: đọc abstract và HTML công trình tháng 9/2026. Là preprint gửi ICASSP 2027, không gọi là đã được hội nghị chấp nhận. Điểm phát hiện giọng giả không phải bằng chứng kết tội.
-- MTet / EnViT5: đọc trang VietAI, README và model card. Công trình nền từ 2022, không trình bày như sản phẩm mới 2026. Tách quyền code, mô hình và dữ liệu.
-- ViDeBERTa: đọc ACL Anthology, README, MIT LICENSE của code và model card. Công trình 2023; quyền checkpoint cần làm rõ, không suy diễn từ giấy phép mã.
-- UIT-VSFC: đọc dataset card chính thức. Nguồn nền 2018; license còn Unknown, không tải hay tái phân phối dữ liệu. Phân biệt cảm xúc, chủ đề và hành động cần làm.
+## Nguồn và phạm vi
+- ViNLI: COLING 2022, abstract và phần định nghĩa nhãn trong PDF. Phân biệt suy luận với giống từ.
+- ViFactCheck: abstract arXiv, dataset card tác giả và repo chính thức. Trang AAAI truy cập trực tiếp bị chặn, không tuyên bố đọc toàn văn ở đó.
+- ViSpamReviews: README gốc và abstract nghiên cứu metadata 2024. Nêu đúng giới hạn mục đích nghiên cứu/cổng truy cập.
+- ViSP: trang NAACL 2025 và README gốc, chỉ nghiên cứu/giáo dục.
+- ViNumFCR: trang INLG 2025 và PDF v2; không dùng các số hiệu năng chưa làm rõ để quảng bá.
 
-Nội dung là phân tích nguyên bản, đề xuất cách thử có đối chứng, không phải báo cáo đã chạy mô hình. Không dùng dữ liệu riêng, trả tiền API, tạo credential hoặc mua dịch vụ. Không tuyên bố đọc toàn văn PDF; dữ liệu tác giả báo cáo được phân biệt với kiểm chứng độc lập. Chi phí vận hành phải đo trên cấu hình thực, không giả báo giá. Giới hạn quyền riêng tư và quyền sử dụng được nêu riêng trong từng bài.
+Đây là phân tích nghiên cứu nền, không phải năm tin ra mắt mới. Phương pháp và ví dụ đề xuất chưa thực nghiệm; không gọi API trả phí, tải dữ liệu riêng hay tạo credentials. Nêu chi phí cần đo, không bịa báo giá. Các SVG là sơ đồ nguyên bản, không sao chép ảnh nguồn. Không tải hoặc tái phân phối dataset.
 
-## Minh họa và kiểm tra
-Năm SVG sơ đồ nguyên bản, không sao chép ảnh hay dataset. JSON có 58 ID duy nhất; 53 bài cũ được đối chiếu bảo toàn. Kiểm cú pháp JavaScript và XML SVG, xem bản render sơ đồ. Giữ style.css và app.js; cập nhật ngày ấn bản và cache key content.js trong index.html. Xác minh commit, GitHub Pages và nội dung live sau xuất bản.
+## Kiểm tra
+Giữ 58 bài cũ theo đối chiếu JSON, ID duy nhất; kiểm cú pháp JS và XML SVG. Chưa xem được render ảnh trong môi trường lượt này: Chromium bị chặn socket, bộ chuyển SVG thiếu thư viện. Sửa nhãn ấn bản cũ còn lưu trong app.js để khớp tổng 63 bài và ngày hiện hành. Không đổi bố cục/CSS. Xác minh commit, Pages và nội dung live sau xuất bản.

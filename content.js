@@ -1,5 +1,251 @@
 window.ARTICLES=[
   {
+    "id": "vinli-suy-ra-khong-phai-giong-nhau",
+    "title": "ViNLI: hai câu giống từ chưa chắc suy ra được nhau",
+    "deck": "Một phép kiểm suy luận tiếng Việt giúp rà lời quảng cáo và bản tóm tắt, nhưng không thay người chịu trách nhiệm nội dung.",
+    "sourceDate": "COLING, tháng 10/2022; kiểm nguồn 14/11/2026",
+    "intro": "Một trợ lý viết lại câu có thể giữ gần hết từ khóa mà vẫn làm mạnh thêm lời hứa. Thay vì chỉ hỏi câu mới có hay không, hãy hỏi: thông tin gốc có thực sự đủ để kết luận như vậy?",
+    "body": [
+      [
+        "Công trình nền, không phải sản phẩm mới",
+        "[ViNLI tại COLING 2022](https://aclanthology.org/2022.coling-1.339/) là bộ dữ liệu đánh giá suy luận ngôn ngữ tiếng Việt. Nhóm tác giả xây hơn 30.000 cặp câu từ tin tức; đây là kết quả nghiên cứu đã công bố, không phải chứng nhận một hệ thống đang bán trên thị trường. [Bài báo](https://aclanthology.org/2022.coling-1.339.pdf) phân biệt quan hệ suy ra, mâu thuẫn, trung lập và không liên quan. Bản tin chưa chạy lại mô hình."
+      ],
+      [
+        "Bài toán nhỏ có thể bắt đầu",
+        "Ví dụ do bản tin đặt: bản gốc nói một cửa hàng dự kiến mở vào tháng sau; bản viết lại khẳng định cửa hàng chắc chắn mở vào tháng sau. Câu sau thêm mức chắc chắn mà câu trước không cung cấp. Một nhóm tiếp thị có thể dùng bộ kiểm như lớp cảnh báo trước khi duyệt, không để máy tự sửa lời cam kết với khách hàng."
+      ],
+      [
+        "Thử từng biến đổi, không thử một đoạn chung chung",
+        "Tự soạn một bộ câu không chứa dữ liệu khách hàng: giữ nguyên nghĩa, đổi ngày, đổi chủ thể, bỏ chữ phủ định, đổi một số thành tất cả, hoặc đổi dự kiến thành đã thực hiện. Mỗi biến thể chỉ đổi một điểm. Hai người đọc độc lập ghi câu gốc có đủ căn cứ không, rồi giải quyết bất đồng trước khi chấm máy. Đây là phương pháp thử đề xuất, không phải một benchmark đã đo."
+      ],
+      [
+        "Đo lỗi nguy hiểm riêng",
+        "Chia theo tài liệu gốc để các bản gần giống không lọt sang cả tập chỉnh và tập kiểm. So sánh quy tắc đơn giản với bộ phân loại hoặc mô hình có sẵn trên cùng các cặp. Ngoài tỷ lệ đúng, đếm riêng số câu bị tăng mức cam kết nhưng vẫn được duyệt. Thêm mức chưa rõ và buộc người đọc lại khi thiếu ngữ cảnh. Một hệ thống có điểm trung bình tốt vẫn có thể bỏ sót đúng lỗi doanh nghiệp sợ nhất."
+      ],
+      [
+        "Điều kiện, chi phí và giới hạn",
+        "Nguồn công bố ViNLI cho mục đích nghiên cứu; không suy diễn rằng có quyền dùng dữ liệu thương mại. Muốn triển khai phải kiểm điều kiện dữ liệu và checkpoint cụ thể. Thử nghiệm cần công tạo nhãn, máy chạy và thời gian người rà, chưa có báo giá vận hành đã kiểm. Nếu dùng dịch vụ bên ngoài, loại thông tin khách hàng và kiểm lưu giữ dữ liệu trước khi gửi."
+      ],
+      [
+        "Mở rộng theo cách có ích",
+        "Kết hợp ngôn ngữ học với kiểm soát chất lượng nội dung: lập danh sách kiểu thay đổi làm tăng rủi ro, rồi kiểm lại sau mỗi phiên bản mô hình. Suy luận giữa hai câu không chứng minh bản gốc đúng ngoài đời; nó chỉ hỗ trợ phát hiện câu mới đi xa hơn căn cứ được đưa vào. Nguồn sai hoặc lỗi thời vẫn cần quy trình kiểm nguồn riêng."
+      ]
+    ],
+    "sources": [
+      [
+        "ViNLI, COLING 2022",
+        "https://aclanthology.org/2022.coling-1.339/"
+      ],
+      [
+        "Bài báo và định nghĩa nhãn",
+        "https://aclanthology.org/2022.coling-1.339.pdf"
+      ]
+    ],
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "14/11/2026",
+    "color": "teal",
+    "read": "6 phút",
+    "note": "Kiểm tra nguồn 14/11/2026. Ví dụ và phương pháp đề xuất chưa thực nghiệm. Không dùng dữ liệu riêng hoặc API trả phí. Báo cáo tác giả không đồng nghĩa hiệu quả thực tế đã được kiểm chứng độc lập."
+  },
+  {
+    "id": "vifactcheck-nguon-du-khong-dong-nghia-dung",
+    "title": "ViFactCheck: tách việc tìm bằng chứng khỏi việc kết luận đúng sai",
+    "deck": "Một trợ lý biên tập cần chỉ ra vì sao chưa đủ thông tin, thay vì gán nhãn sai cho điều mình chưa tìm thấy.",
+    "sourceDate": "Preprint 19/12/2024; AAAI 2025; kiểm nguồn 14/11/2026",
+    "intro": "Khi AI rà một bản tin, lỗi có thể xuất hiện trước bước kết luận: nó lấy nhầm đoạn, bỏ mất ngày hoặc không tìm ra nguồn. Gộp tất cả thành một câu trả lời đúng/sai làm người biên tập khó biết cần sửa ở đâu.",
+    "body": [
+      [
+        "Bằng chứng nghiên cứu",
+        "[ViFactCheck](https://arxiv.org/abs/2412.15308) xây 7.232 cặp phát biểu và bằng chứng có người gán nhãn từ tin tiếng Việt. [Thẻ dữ liệu của tác giả](https://huggingface.co/datasets/tranthaihoa/vifactcheck) mô tả ba nhãn: được hỗ trợ, bị bác bỏ, chưa đủ thông tin. Bài nghiên cứu thuộc AAAI 2025; không phải tin ra mắt tháng 11/2026. Kết quả benchmark do tác giả báo cáo chưa được bản tin tái lập."
+      ],
+      [
+        "Hai phép thử cần tách",
+        "Trong bài thử thứ nhất, cho hệ thống phát biểu cùng đúng đoạn bằng chứng do người chọn: đo khả năng đọc và suy luận. Trong bài thứ hai, chỉ cho phát biểu và một kho tài liệu được phép: hệ thống phải tự tìm đoạn rồi kết luận. Nếu bài thứ nhất tốt nhưng bài thứ hai kém, nên sửa truy xuất thay vì lập tức mua mô hình lớn hơn. Đây là thiết kế thử của bản tin, không phải kết quả của công trình."
+      ],
+      [
+        "Một tình huống biên tập cụ thể",
+        "Ví dụ minh họa: người viết nói một chương trình đã mở đăng ký, nhưng thông báo nguồn chỉ nói sẽ mở đăng ký. Lưu phát biểu, đoạn nguồn, URL, ngày sự kiện, ngày đọc và lý do kết luận trong một hàng. Không tìm được trang không có nghĩa chương trình không tồn tại. Nếu nguồn không đủ, đưa về hàng đợi kiểm lại thay vì xuất bản lời phủ nhận."
+      ],
+      [
+        "Kiểm kết quả có thể lặp lại",
+        "Chọn một bộ thông báo công khai có quyền đọc; tạo các biến thể đổi ngày, tên chương trình hoặc điều kiện. Giữ các bài cùng sự kiện trong cùng một phần dữ liệu để tránh học thuộc. Ghi riêng tỷ lệ tìm đúng bằng chứng, chất lượng kết luận khi bằng chứng đúng và số lần gán sai nhãn chưa đủ thông tin. Lưu phiên bản tài liệu để kết quả hôm sau có thể đối chiếu với hôm trước."
+      ],
+      [
+        "Không nhầm quyền tải với quyền tái bản",
+        "Dataset card ghi MIT, nhưng nội dung báo chí bên trong còn có nguồn gốc và quyền riêng. Không vì vậy mà sao chép nguyên bài lên một sản phẩm khác. Bài này chỉ liên kết nguồn, không tải hay tái phân phối tập dữ liệu. Với nội dung nội bộ, ưu tiên xử lý trong phạm vi được phép và loại dữ liệu cá nhân; quyền truy cập tài liệu phải được kiểm trước khi cho AI tìm kiếm."
+      ],
+      [
+        "Chi phí và hướng phát triển",
+        "Chi phí thực gồm lưu và lập chỉ mục tài liệu, mô hình suy luận, người giải quyết trường hợp chưa rõ và bảo trì nguồn. Không có phép đo chi phí hay tốc độ thực ở đây. Một hướng mở rộng đáng thử là phối hợp kỹ năng thư viện với báo chí dữ liệu: chấm chất lượng bằng chứng, không chỉ chấm nhãn cuối. Hệ thống nên giúp biên tập viên truy ngược đường kết luận, chứ không tự nhận làm trọng tài chân lý."
+      ]
+    ],
+    "sources": [
+      [
+        "Công trình của tác giả",
+        "https://arxiv.org/abs/2412.15308"
+      ],
+      [
+        "Dữ liệu do tác giả công bố",
+        "https://huggingface.co/datasets/tranthaihoa/vifactcheck"
+      ],
+      [
+        "Mã nguồn chính thức",
+        "https://github.com/TTHHA/ViFactCheck"
+      ]
+    ],
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "14/11/2026",
+    "color": "teal",
+    "read": "6 phút",
+    "note": "Kiểm tra nguồn 14/11/2026. Ví dụ và phương pháp đề xuất chưa thực nghiệm. Không dùng dữ liệu riêng hoặc API trả phí. Báo cáo tác giả không đồng nghĩa hiệu quả thực tế đã được kiểm chứng độc lập."
+  },
+  {
+    "id": "vispamreviews-dung-ngu-canh-san-pham",
+    "title": "ViSpamReviews: bình luận có liên quan phải được đọc cùng sản phẩm",
+    "deck": "Thêm mô tả sản phẩm có thể giúp phân loại đánh giá, nhưng cũng tạo nguy cơ học thuộc danh mục và gắn nhãn oan.",
+    "sourceDate": "Nghiên cứu 2022; bản mở rộng sửa 01/08/2024; kiểm nguồn 14/11/2026",
+    "intro": "Câu đánh giá ngắn không tự nói hết nó có ích hay không. Với một nhóm kinh doanh nhỏ, mục tiêu tốt hơn việc xóa thật nhiều bình luận là giảm công rà mà không làm mất phản hồi thật của khách hàng.",
+    "body": [
+      [
+        "Nghiên cứu đặt vấn đề gì",
+        "[Công trình ViSpamReviews v2](https://arxiv.org/abs/2405.13292) nghiên cứu bổ sung thông tin sản phẩm vào phát hiện đánh giá rác tiếng Việt. Tác giả thử đặc trưng danh mục và mô tả bên cạnh văn bản bình luận. [Kho chính thức](https://github.com/sonlam1102/vispamdetection) phân biệt bản dữ liệu gốc với bản có metadata. Đây là nghiên cứu nền 2022–2024, không phải dịch vụ phát hiện gian lận mới ra mắt."
+      ],
+      [
+        "Ứng dụng nên giới hạn ở hàng đợi rà",
+        "Ví dụ minh họa: câu nói về kích cỡ có thể hợp lý với quần áo nhưng cần đọc lại khi gắn với một sản phẩm số. Sự lệch ngữ cảnh chỉ là tín hiệu để người phụ trách xem, chưa chứng minh người viết cố tình lừa đảo. Không dùng nhãn máy để tự động công khai cáo buộc hoặc khóa tài khoản. Giao diện nên hiển thị bình luận cạnh đúng mô tả sản phẩm tại thời điểm mua."
+      ],
+      [
+        "Thiết kế phép thử có đối chứng",
+        "Dùng các đánh giá đã được phép xử lý, bỏ định danh khách hàng. So sánh ba đầu vào trên cùng một bộ kiểm: chỉ bình luận, bình luận cộng danh mục, bình luận cộng mô tả. Tách theo sản phẩm và theo thời gian; nếu cùng một mô tả xuất hiện ở cả hai tập, mô hình có thể nhớ sản phẩm thay vì hiểu bình luận. Thêm một nhóm có metadata thiếu hoặc sai để xem hệ thống suy giảm thế nào."
+      ],
+      [
+        "Đo chất lượng công việc, không chỉ điểm máy",
+        "Người kiểm cần ghi rõ lý do giữ, chuyển xem lại hoặc loại. Tính riêng tỷ lệ cảnh báo nhầm trên đánh giá hợp lệ, số phút rà mỗi trăm đánh giá và số trường hợp cần khiếu nại lại. Đọc cả bình luận ngắn, tiếng lóng và phản hồi tiêu cực thật. Các chỉ số này là đề xuất của bản tin, chưa được đo trong một cửa hàng thực tế; điểm nghiên cứu không thay kết quả vận hành."
+      ],
+      [
+        "Quyền truy cập là một điều kiện riêng",
+        "README nêu mục đích nghiên cứu, dẫn dữ liệu có cổng truy cập và yêu cầu liên hệ tác giả khi muốn sử dụng. Vì vậy không coi một bản sao ở nơi khác là giấy phép thương mại. Bản tin không tải dữ liệu hoặc chạy notebook. Trước ứng dụng, xác minh quyền dataset, mô hình và điều khoản nền tảng chứa đánh giá; chỉ lưu trường dữ liệu thực sự cần thiết."
+      ],
+      [
+        "Chi phí và mở rộng",
+        "Bổ sung metadata làm tăng công làm sạch, cập nhật và lưu vết phiên bản sản phẩm. Cần tính cả máy chạy và nhân sự rà sai, không chỉ tiền suy luận. Chưa có chi phí hoặc lợi ích đã kiểm chứng độc lập ở đây. Hướng nghiên cứu liên ngành là kết hợp trải nghiệm khách hàng và quản trị danh mục: khi sản phẩm thay đổi, kiểm xem hệ thống còn hiểu đúng phản hồi cũ hay không."
+      ]
+    ],
+    "sources": [
+      [
+        "ViSpamReviews v2, công trình 2024",
+        "https://arxiv.org/abs/2405.13292"
+      ],
+      [
+        "Kho tác giả và điều kiện truy cập",
+        "https://github.com/sonlam1102/vispamdetection"
+      ]
+    ],
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "14/11/2026",
+    "color": "teal",
+    "read": "6 phút",
+    "note": "Kiểm tra nguồn 14/11/2026. Ví dụ và phương pháp đề xuất chưa thực nghiệm. Không dùng dữ liệu riêng hoặc API trả phí. Báo cáo tác giả không đồng nghĩa hiệu quả thực tế đã được kiểm chứng độc lập."
+  },
+  {
+    "id": "visp-viet-lai-khong-doi-cam-ket",
+    "title": "ViSP: viết lại cho dễ hiểu nhưng không được đổi lời hứa",
+    "deck": "Một câu nghe tự nhiên hơn vẫn có thể sai về điều kiện, mức độ chắc chắn hoặc người chịu trách nhiệm.",
+    "sourceDate": "Findings of NAACL, tháng 4/2025; kiểm nguồn 14/11/2026",
+    "intro": "Khi AI viết lại thông báo, mô tả sản phẩm hay hướng dẫn học tập, người dùng thường chọn câu hay nhất. Nhưng tiêu chuẩn đầu tiên phải là giữ đúng nghĩa. Một từ chuyển từ có thể sang sẽ đủ biến khả năng thành cam kết.",
+    "body": [
+      [
+        "Nghiên cứu cho ta điểm xuất phát nào?",
+        "[Công trình ViSP](https://aclanthology.org/2025.findings-naacl.59/) giới thiệu khoảng 1,2 triệu cặp câu tiếng Việt để nghiên cứu diễn đạt lại. Nhóm tác giả kết hợp tạo tự động với đánh giá thủ công và so sánh nhiều phương pháp. Đây là nghiên cứu nền từ năm 2025, không phải một dịch vụ mới vừa ra mắt. Bản tin chưa tái lập các thí nghiệm; quy mô bộ dữ liệu không tự chứng minh rằng mọi câu viết lại đều an toàn để công bố."
+      ],
+      [
+        "Ứng dụng nên bắt đầu từ câu có ràng buộc",
+        "Tình huống minh họa: một cửa hàng muốn viết hướng dẫn giao hàng dễ đọc hơn. Câu gốc do bản tin đặt: Đơn xác nhận trước 12 giờ có thể giao trong ngày nếu địa chỉ thuộc khu vực hỗ trợ. Bản viết lại Đặt trước trưa, nhận ngay hôm nay mất cả điều kiện địa lý lẫn mức độ chắc chắn. Trước khi gọi AI, người biên tập đánh dấu các thành phần không được thay đổi: thời gian, điều kiện, phủ định, số lượng và chủ thể thực hiện."
+      ],
+      [
+        "Phép thử đề xuất, chưa phải kết quả thực nghiệm",
+        "Chuẩn bị một tập câu thuộc chính loại tài liệu cần dùng, chỉ lấy nội dung có quyền. Chia theo tài liệu gốc, tránh để những câu gần giống nằm ở cả phần chỉnh và phần kiểm. So sánh câu gốc, bản sửa thủ công và bản do AI tạo mà không cho người đánh giá biết nguồn. Mỗi câu được chấm riêng về dễ hiểu, giữ nghĩa và lỗi nghiêm trọng. Một câu trôi chảy nhưng mất điều kiện phải bị loại, không được bù bằng điểm văn phong."
+      ],
+      [
+        "Đo hiệu quả ở người đọc và người biên tập",
+        "Cho người đọc trả lời cùng một câu hỏi hành động sau mỗi phiên bản: Trường hợp nào chưa được bảo đảm giao trong ngày? Nếu câu mới khiến họ hiểu sai nhiều hơn, đó chưa phải cải tiến. Ghi thêm thời gian rà soát, tỷ lệ cần sửa và số câu phải quay lại nguyên bản. Lưu câu gốc cạnh câu mới cùng phiên bản mô hình. Với hướng dẫn quan trọng, giữ nguyên bản làm chuẩn; AI chỉ đưa phương án chứ không tự thay thế tài liệu đã duyệt."
+      ],
+      [
+        "Quyền dùng, chi phí và hướng phát triển",
+        "[README chính thức](https://github.com/ngwgsang/ViSP) nêu dataset chỉ dành cho nghiên cứu hoặc giáo dục và yêu cầu trích dẫn công trình khi công bố kết quả. Vì vậy không nên coi repo công khai là giấy phép đưa dữ liệu vào sản phẩm thương mại. Quyền của checkpoint cũng cần kiểm riêng. Chi phí gồm máy hoặc API, thời gian duyệt và xử lý sai sót; chưa có phép đo ở đây để báo giá. Không gửi tài liệu khách hàng lên dịch vụ ngoài khi chưa có quyền. Hướng mở rộng là phối hợp ngôn ngữ học, thiết kế hướng dẫn và nghiên cứu khả năng đọc hiểu, thay vì chỉ tối đa hóa mức khác biệt câu chữ."
+      ]
+    ],
+    "sources": [
+      [
+        "ViSP, Findings of NAACL 2025",
+        "https://aclanthology.org/2025.findings-naacl.59/"
+      ],
+      [
+        "Repo tác giả và điều kiện sử dụng",
+        "https://github.com/ngwgsang/ViSP"
+      ]
+    ],
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "14/11/2026",
+    "color": "teal",
+    "read": "6 phút",
+    "note": "Kiểm tra nguồn 14/11/2026. Ví dụ và phương pháp đề xuất chưa thực nghiệm. Không dùng dữ liệu riêng hoặc API trả phí. Báo cáo tác giả không đồng nghĩa hiệu quả thực tế đã được kiểm chứng độc lập."
+  },
+  {
+    "id": "vinumfcr-con-so-can-dung-mau-so",
+    "title": "ViNumFCR: kiểm chứng con số phải giữ cả đơn vị, kỳ và mẫu số",
+    "deck": "Tìm thấy đúng con số trong tài liệu chưa đủ để xác nhận một phát biểu về tăng trưởng hay tỷ lệ.",
+    "sourceDate": "INLG tháng 10/2025, PDF v2; kiểm nguồn 14/11/2026",
+    "intro": "Một bài đăng nói tăng 20% có thể trông thuyết phục khi kèm đường dẫn. Nhưng tăng so với thời điểm nào, tính trên nhóm nào và theo đơn vị nào? AI kiểm số cần trả lời những câu đó trước khi gắn nhãn đúng.",
+    "body": [
+      [
+        "Từ benchmark đến bài toán thực tế",
+        "[ViNumFCR](https://aclanthology.org/2025.inlg-main.9/) nghiên cứu kiểm chứng thông tin số tiếng Việt, với hơn 10.000 mẫu và 12 chủ đề theo công bố tác giả. Bài toán ghép một phát biểu với đoạn ngữ cảnh, tìm bằng chứng và phân loại được hỗ trợ, bị bác bỏ hoặc chưa đủ thông tin. Đây là nghiên cứu năm 2025; bản tin không tái lập kết quả. Một mô hình làm tốt trên đoạn được cung cấp chưa đồng nghĩa tự tìm được nguồn đầy đủ trên Internet."
+      ],
+      [
+        "Tách dữ kiện trước khi tính",
+        "Ví dụ giả định: một báo cáo công khai ghi số đăng ký từ 100 lên 120. Phát biểu tăng 20% đúng cho phép so sánh đó; tăng 20 điểm phần trăm lại cần hai tỷ lệ, không phải hai số đếm. Quy trình đề xuất là trích riêng đối tượng, kỳ, đơn vị, số gốc, số mới và phạm vi mẫu. Chỉ chuyển sang tính khi các trường tương thích. Thiếu mẫu số phải trả về chưa đủ thông tin, không tự mượn số ở đoạn khác."
+      ],
+      [
+        "Một thiết kế kiểm thử có thể làm nhỏ trước",
+        "Chọn các bảng công khai có quyền sử dụng và tạo bản chuẩn do người kiểm. Với mỗi phát biểu đúng, dựng biến thể sai một yếu tố: đổi năm, đổi đơn vị, đảo tăng thành giảm hoặc thay mẫu số. Tách nguồn tài liệu giữa phần phát triển và phần kiểm để tránh học thuộc. So sánh cách dùng AI đơn thuần với cách AI trích dữ kiện rồi chuyển phép tính sang công cụ tính xác định. Đây là thử nghiệm đề xuất; bài viết chưa chứng minh phương án nào tốt hơn."
+      ],
+      [
+        "Đừng gộp mọi lỗi thành một điểm chính xác",
+        "Đánh giá riêng việc tìm đúng đoạn, nhận đúng số, tính đúng và kết luận đúng. Lưu phép tính và đường dẫn trang để người duyệt làm lại được. Đếm cả số trường hợp AI nhận đúng thiếu dữ kiện; hệ thống luôn trả lời chắc chắn có thể trông nhanh nhưng gây công sửa lớn. Đo thời gian người kiểm trên mỗi phát biểu đạt chuẩn, không chỉ số phát biểu xử lý trong một phút. Một nguồn chính thức cũng cần được đọc theo kỳ và phạm vi, không coi danh tiếng nguồn là thay thế việc đối chiếu."
+      ],
+      [
+        "Giới hạn, chi phí và trách nhiệm công bố",
+        "[PDF v2 của công trình](https://aclanthology.org/2025.inlg-main.9v2.pdf) mô tả thí nghiệm trên dữ liệu xây dựng từ báo trực tuyến. Khi chuyển sang báo cáo doanh nghiệp, bảng biểu và cách viết số có thể khác, nên cần tập kiểm riêng. Trong lượt đọc này chưa xác minh được giấy phép phân phối dataset; không coi có sẵn cho nghiên cứu là quyền tái sử dụng thương mại. Không tải dữ liệu nội bộ lên API nếu chưa được phép. Chi phí cần tính cả trích tài liệu, tính toán, rà nguồn và lưu dấu vết; bản tin chưa đo giá vận hành. Hướng mở rộng hữu ích là nối xử lý ngôn ngữ với thống kê và thiết kế bảng dữ liệu, giúp người đọc kiểm lại thay vì chỉ tin nhãn AI."
+      ]
+    ],
+    "sources": [
+      [
+        "ViNumFCR, INLG 2025",
+        "https://aclanthology.org/2025.inlg-main.9/"
+      ],
+      [
+        "Toàn văn PDF v2",
+        "https://aclanthology.org/2025.inlg-main.9v2.pdf"
+      ]
+    ],
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "14/11/2026",
+    "color": "teal",
+    "read": "6 phút",
+    "note": "Kiểm tra nguồn 14/11/2026. Ví dụ và phương pháp đề xuất chưa thực nghiệm. Không dùng dữ liệu riêng hoặc API trả phí. Báo cáo tác giả không đồng nghĩa hiệu quả thực tế đã được kiểm chứng độc lập."
+  },
+  {
     "id": "vipvl-tien-huan-luyen-khong-phai-chep-loi",
     "title": "ViP-VL: mô hình nghe tiếng Việt chưa phải ứng dụng chép lời hoàn chỉnh",
     "deck": "Phân biệt bộ mã hóa âm thanh với hệ thống nhận dạng giúp tránh chọn sai công cụ và đánh giá nhầm kết quả.",
