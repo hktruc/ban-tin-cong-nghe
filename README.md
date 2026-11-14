@@ -12,4 +12,4 @@
 Đây là phân tích nghiên cứu nền, không phải năm tin ra mắt mới. Phương pháp và ví dụ đề xuất chưa thực nghiệm; không gọi API trả phí, tải dữ liệu riêng hay tạo credentials. Nêu chi phí cần đo, không bịa báo giá. Các SVG là sơ đồ nguyên bản, không sao chép ảnh nguồn. Không tải hoặc tái phân phối dataset.
 
 ## Kiểm tra
-Giữ 58 bài cũ theo đối chiếu JSON, ID duy nhất; kiểm cú pháp JS và XML SVG. Chưa xem được render ảnh trong môi trường lượt này: Chromium bị chặn socket, bộ chuyển SVG thiếu thư viện. Sửa nhãn ấn bản cũ còn lưu trong app.js để khớp tổng 63 bài và ngày hiện hành. Không đổi bố cục/CSS. Xác minh commit, Pages và nội dung live sau xuất bản.
+Giữ 58 bài cũ theo đối chiếu JSON, ID duy nhất; kiểm cú pháp JS và XML SVG; render bằng Sharp và xem đủ năm sơ đồ, không cắt chữ. Chromium không chạy được do socket nên chưa có kiểm UI trình duyệt trong lượt này. Sửa nhãn ấn bản cũ còn lưu trong app.js để khớp tổng 63 bài và ngày hiện hành. Không đổi bố cục/CSS. Xác minh commit, Pages và nội dung live sau xuất bản.
