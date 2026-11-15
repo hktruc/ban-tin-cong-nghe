@@ -1,5 +1,267 @@
 window.ARTICLES=[
   {
+    "id": "vmmu-doc-chu-chua-du-hieu-hinh",
+    "title": "VMMU: đọc được chữ chưa đủ để hiểu hình",
+    "deck": "Kiểm trợ lý học tập tiếng Việt bằng sơ đồ, biểu đồ và bằng chứng thị giác.",
+    "sourceDate": "Findings of AACL, tháng 11/2026; tiền bản từ 2025",
+    "intro": "Khi ảnh bài tập có biểu đồ, mô hình có thể đọc đúng đề nhưng bỏ qua nhãn trục. Chất lượng OCR và chất lượng suy luận thị giác cần được kiểm riêng, trước khi tin một lời giải nghe hợp lý.",
+    "body": [
+      [
+        "Công trình Việt Nam cần đọc đúng phiên bản",
+        "[VMMU tại ACL](https://aclanthology.org/2026.findings-aacl.44/) có 2.548 câu hỏi thuộc bảy lĩnh vực, từ khoa học tự nhiên đến địa lý, thi lái xe và IQ. Đây là benchmark đa phương thức tiếng Việt, không phải sản phẩm chấm bài. [Trang dự án](https://vmmu-bench.github.io/) có cập nhật bổ sung nên không nên ghép số mô hình ở đó với kết quả bản hội nghị. Đánh giá trong nghiên cứu do nhóm tác giả thực hiện; bản tin chưa chạy tái lập và không suy từ điểm trắc nghiệm ra năng lực gia sư toàn diện."
+      ],
+      [
+        "Ứng dụng minh họa: chọn trợ lý giải thích biểu đồ",
+        "Một giáo viên muốn AI gợi ý cách đọc biểu đồ cho người học, không tự cho điểm. Kết quả cần chỉ ra trục, đơn vị và phần hình làm căn cứ. Nếu ảnh thiếu rõ ràng, hệ thống phải yêu cầu ảnh tốt hơn thay vì đoán. Đây là mục tiêu hẹp, kiểm được; khác việc giao toàn bộ quy trình đánh giá học viên cho mô hình."
+      ],
+      [
+        "Thiết kế kiểm tra ba chế độ",
+        "Chuẩn bị 30 câu có quyền dùng, chia đều bảng, biểu đồ và sơ đồ. Với cùng mô hình và cấu hình, so ảnh đầy đủ, chỉ chữ OCR, và ảnh kèm chữ OCR. Người có chuyên môn lập đáp án trước. Chấm riêng đáp án, giải thích và vị trí bằng chứng; ghi trường hợp đúng do đoán. Đổi một nhãn trục hoặc giá trị và xem câu trả lời có thay đổi phù hợp không. Không dùng đề kiểm cuối để tinh chỉnh prompt."
+      ],
+      [
+        "Một lỗi kỹ thuật có thể làm sai cả báo cáo",
+        "[Dataset card chính thức](https://huggingface.co/datasets/anvo25/vmmu) có các split và biến thể, không nên cộng tất cả hàng thành số câu độc lập. Một số ảnh chứa nhiều câu, và đáp án không luôn là một chữ A–D. Vì vậy cần đọc schema, giữ ID câu và kiểm bộ chuẩn hóa đáp án trước khi tính tỷ lệ đúng. Nếu công cụ chấm chỉ lấy chữ đầu tiên, sự khác nhau có thể đến từ trình chấm chứ không phải mô hình."
+      ],
+      [
+        "Điều kiện, quyền và tổng chi phí",
+        "Nhãn giấy phép của dataset không tự quyết định quyền mã đánh giá hoặc từng hình đề nguồn. Kiểm từng thành phần trước tái phân phối; bài này dùng sơ đồ tự vẽ, không sao chép ảnh đề. Chi phí thử phải tính cả kích thước ảnh, số lượt suy luận, độ trễ và thời gian chuyên gia kiểm. Chưa có báo giá cố định cho ứng dụng này; không cần mua API để hiểu phương pháp. Không đưa bài hoặc danh tính học viên thật vào thử nghiệm công khai."
+      ],
+      [
+        "Hướng nghiên cứu mở rộng",
+        "Kết hợp giáo dục và tương tác người máy: câu giải thích có giúp học viên tự nhận ra lỗi hay chỉ làm họ tin máy hơn? So sánh đáp án nhanh với đáp án có kiểm bằng chứng, và ghi tỷ lệ sai nhưng rất tự tin. Một mô hình điểm cao vẫn cần người chịu trách nhiệm khi kết quả ảnh hưởng học viên."
+      ]
+    ],
+    "sources": [
+      [
+        "VMMU – ACL",
+        "https://aclanthology.org/2026.findings-aacl.44/"
+      ],
+      [
+        "Trang dự án",
+        "https://vmmu-bench.github.io/"
+      ],
+      [
+        "Dataset chính thức",
+        "https://huggingface.co/datasets/anvo25/vmmu"
+      ],
+      [
+        "Mã đánh giá",
+        "https://github.com/vytuongdang/VMMU"
+      ]
+    ],
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "15/11/2026",
+    "color": "teal",
+    "read": "5 phút",
+    "note": "Kiểm nguồn 15/11/2026. Phương pháp, tình huống và tiêu chí thử trong bài là đề xuất biên tập, chưa được thực nghiệm. Không phải khuyến nghị mua dịch vụ; chi phí triển khai và quyền sử dụng dữ liệu cần kiểm tra riêng."
+  },
+  {
+    "id": "vn-mteb-chon-embedding-bang-tac-vu",
+    "title": "VN-MTEB: chọn embedding theo việc cần tìm, không theo thứ hạng chung",
+    "deck": "Một phép thử nhỏ giúp tránh đổi mô hình tìm kiếm chỉ vì điểm benchmark đẹp.",
+    "sourceDate": "Findings of EACL, tháng 03/2026; tiền bản 29/07/2025",
+    "intro": "Embedding biến văn bản thành biểu diễn số để tìm nội dung gần nghĩa. Nhưng tìm câu hỏi gần nhau không giống tìm đúng điều khoản, mã sản phẩm hoặc hướng dẫn dài. Chọn mô hình phải bắt đầu từ tác vụ thực tế.",
+    "body": [
+      [
+        "Bằng chứng và phạm vi",
+        "[VN-MTEB](https://aclanthology.org/2026.findings-eacl.86/) báo cáo 41 bộ dữ liệu và sáu nhóm tác vụ đánh giá embedding tiếng Việt. Nguồn tiếng Anh được dịch và lọc chất lượng, không phải tất cả là tiếng Việt tự nhiên. [Bài báo đầy đủ](https://aclanthology.org/2026.findings-eacl.86.pdf) nêu các giới hạn về sắc thái ngôn ngữ, dữ liệu tổng hợp, nhiễm dữ liệu và tài liệu dài. Đây là cơ sở so sánh nghiên cứu do tác giả thực hiện, chưa xác nhận mô hình nào tốt nhất cho kho tài liệu của một doanh nghiệp cụ thể."
+      ],
+      [
+        "Tình huống minh họa: tìm đúng hướng dẫn",
+        "Một nhóm hỗ trợ khách hàng muốn tìm tài liệu trả lời câu “đổi địa chỉ nhận hàng trước khi giao thế nào?”. Hệ thống cần đưa ra tài liệu đúng phiên bản. Tài liệu có câu chữ giống nhưng đã hết hiệu lực là kết quả sai. Trong bài toán này, lọc phiên bản và quyền truy cập phải hoạt động cùng tìm kiếm ngữ nghĩa, không giao hết cho embedding."
+      ],
+      [
+        "Phương pháp thử trước khi chuyển hệ thống",
+        "Chọn hai hoặc ba mô hình phù hợp tài nguyên. Giữ cùng bộ tài liệu được phép, cách chia đoạn và cấu hình chỉ mục; lập 50 câu hỏi chưa dùng tối ưu, có người xác định tài liệu đúng. Thêm tìm kiếm từ khóa làm mốc. Giữ riêng các nhóm không dấu, viết tắt, mã chính xác và câu hỏi dài. Thử không có đáp án để đánh giá việc hệ thống có biết dừng, thay vì luôn lấy một kết quả gần nhất."
+      ],
+      [
+        "Đo chất lượng cùng chi phí vận hành",
+        "Recall@5 là tỷ lệ câu hỏi có tài liệu đúng trong năm kết quả đầu; nDCG giúp xét thứ tự kết quả khi có nhiều mức phù hợp. Bên cạnh điểm này, ghi thời gian truy vấn, RAM, dung lượng chỉ mục và thời gian lập lại chỉ mục. Không đổi đồng thời mô hình, cách chia đoạn và bộ tìm kiếm rồi quy mọi cải thiện cho mô hình. Lưu cấu hình để lần sau lặp được."
+      ],
+      [
+        "Giới hạn giấy phép và dữ liệu riêng",
+        "Phụ lục nguồn liệt kê nhiều giấy phép khác nhau và có mục chưa rõ, nên không gọi toàn bộ benchmark là tự do thương mại. Kiểm từng dataset và mô hình ở [bộ sưu tập của nhóm](https://huggingface.co/collections/GreenNode/vn-mteb). Local vẫn tốn máy và công vận hành; API có thể tính theo lượng văn bản. Bài không đưa báo giá chưa xác minh. Quyết định gửi tài liệu nội bộ ra dịch vụ ngoài cần xét riêng; chạy benchmark không phải giấy phép truyền dữ liệu."
+      ],
+      [
+        "Hướng nghiên cứu liên ngành",
+        "Kết hợp truy xuất thông tin với quản trị tri thức: tài liệu thiếu người phụ trách và phiên bản có thể gây hại hơn khác biệt nhỏ giữa hai mô hình. Kiểm xem cải thiện nhãn, cấu trúc và thời hạn tài liệu giúp nhiều hơn đổi embedding không. Chỉ chọn cấu hình sau khi cân bằng tỷ lệ tìm đúng với chi phí, quyền truy cập và khả năng bảo trì."
+      ]
+    ],
+    "sources": [
+      [
+        "VN-MTEB – ACL",
+        "https://aclanthology.org/2026.findings-eacl.86/"
+      ],
+      [
+        "Bài báo đầy đủ",
+        "https://aclanthology.org/2026.findings-eacl.86.pdf"
+      ],
+      [
+        "Bộ sưu tập GreenNode",
+        "https://huggingface.co/collections/GreenNode/vn-mteb"
+      ]
+    ],
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "15/11/2026",
+    "color": "teal",
+    "read": "5 phút",
+    "note": "Kiểm nguồn 15/11/2026. Phương pháp, tình huống và tiêu chí thử trong bài là đề xuất biên tập, chưa được thực nghiệm. Không phải khuyến nghị mua dịch vụ; chi phí triển khai và quyền sử dụng dữ liệu cần kiểm tra riêng."
+  },
+  {
+    "id": "visqa-nghe-dung-tra-loi-dung",
+    "title": "ViSQA: nghe đúng chưa chắc đã trả lời đúng",
+    "deck": "Tách lỗi nhận giọng nói khỏi lỗi hiểu câu hỏi để đánh giá trợ lý tiếng Việt.",
+    "sourceDate": "PLOS One, 12/01/2026",
+    "intro": "Một trợ lý nghe lại buổi hướng dẫn có thể chép gần đúng nhưng trả lời sai đúng con số quan trọng. Kiểm bản chép lời thôi chưa đủ: phải kiểm cả câu trả lời và đoạn ghi âm làm bằng chứng.",
+    "body": [
+      [
+        "Bằng chứng nói được điều gì?",
+        "[ViSQA](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0340771) là nghiên cứu đã bình duyệt, tạo hơn 13.000 cặp hỏi đáp từ UIT-ViQuAD qua chuỗi tổng hợp giọng nói và nhận dạng tiếng nói. Tác giả so sánh văn bản sạch, bản nhận dạng và âm thanh thêm nhiễu. Kết quả cho thấy lỗi nhận dạng làm suy giảm hỏi đáp; huấn luyện với bản chép lời giúp tăng độ bền. Đây là bằng chứng trong thí nghiệm của nhóm, chưa phải kiểm chứng độc lập cho tổng đài thực tế. Âm thanh tổng hợp giúp kiểm soát biến, nhưng không đại diện đầy đủ hội thoại tự nhiên."
+      ],
+      [
+        "Tình huống minh họa: tra cứu hướng dẫn bằng giọng nói",
+        "Một nhóm đào tạo muốn hỏi “bước nào cần làm trước?” từ bản ghi hướng dẫn công khai. Hệ thống cần trả lời kèm mốc thời gian, không chỉ một đoạn văn trôi chảy. Khi không tìm thấy căn cứ, câu trả lời đúng có thể là “chưa đủ thông tin”. Ví dụ này giả định; chưa có hệ thống được triển khai trong bài."
+      ],
+      [
+        "Thiết kế phép thử có thể lặp lại",
+        "Chuẩn bị 30 câu hỏi trên các bản ghi được phép dùng, gồm tên riêng, số, phủ định và thứ tự thao tác. Hai người tự ghi đáp án cùng đoạn bằng chứng rồi thống nhất bất đồng. Chạy cùng bộ hỏi trên bản chép tay và bản ASR, giữ nguyên mô hình hỏi đáp. Sau đó mới đổi ASR. Lưu phiên bản, cấu hình và độ dài âm thanh; tách người nói giữa tập chỉnh và tập kiểm cuối."
+      ],
+      [
+        "Đo lỗi theo tầng, không lấy điểm trung bình che lỗi nặng",
+        "Ghi tỷ lệ trả lời đúng, tỷ lệ viện dẫn đúng đoạn, trường hợp đáng lẽ từ chối nhưng vẫn đoán và thời gian xử lý. So sánh từng cặp: nếu bản chép tay đúng còn ASR sai, ưu tiên sửa tầng nghe; nếu cả hai sai, xem tầng tìm đoạn và suy luận. Đếm riêng sai số, sai tên và phủ định vì chúng có thể làm đảo nghĩa dù tỷ lệ từ sai thấp."
+      ],
+      [
+        "Điều kiện, chi phí và quyền riêng tư",
+        "Chi phí gồm xử lý mỗi phút âm thanh, lưu trữ, mô hình trả lời và người đối chiếu. Không có báo giá triển khai cố định từ benchmark; hãy đo trên mẫu trước khi nhân theo khối lượng tháng. Không đưa cuộc họp riêng hoặc giọng người chưa đồng ý lên dịch vụ ngoài. Với dữ liệu nghiên cứu ở [Figshare](https://figshare.com/articles/dataset/ViSQA_v1_0_0/29493149), kiểm giấy phép đúng phiên bản và quyền tài liệu nguồn trước khi dùng lại; quyền đọc bài báo không tự cấp quyền mọi mục đích dữ liệu."
+      ],
+      [
+        "Hướng nghiên cứu tiếp",
+        "Kết hợp âm học với thiết kế giao diện: nút nghe lại đoạn bằng chứng có giúp người dùng phát hiện lỗi nhanh hơn không? Sau thử nghiệm tổng hợp, cần bộ ghi âm được đồng ý, có giọng vùng miền và ngập ngừng tự nhiên. So sánh việc cải thiện ASR với việc cho trợ lý biết khi nào phải hỏi lại, thay vì mặc định mô hình lớn hơn luôn tốt hơn."
+      ]
+    ],
+    "sources": [
+      [
+        "ViSQA – PLOS One",
+        "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0340771"
+      ],
+      [
+        "Dữ liệu tác giả – Figshare",
+        "https://figshare.com/articles/dataset/ViSQA_v1_0_0/29493149"
+      ]
+    ],
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "15/11/2026",
+    "color": "teal",
+    "read": "5 phút",
+    "note": "Kiểm nguồn 15/11/2026. Phương pháp, tình huống và tiêu chí thử trong bài là đề xuất biên tập, chưa được thực nghiệm. Không phải khuyến nghị mua dịch vụ; chi phí triển khai và quyền sử dụng dữ liệu cần kiểm tra riêng."
+  },
+  {
+    "id": "vihos-to-sang-doan-can-xem",
+    "title": "ViHOS: tô sáng đoạn cần xem, không tự kết tội cả bình luận",
+    "deck": "Một cách hỗ trợ người kiểm duyệt tiếng Việt bằng vị trí bằng chứng thay vì nhãn chung.",
+    "sourceDate": "EACL, tháng 05/2023",
+    "intro": "Nhãn “độc hại” chưa chỉ ra người kiểm duyệt phải xem chỗ nào. Tô sáng đúng đoạn có thể giảm công rà soát, nhưng phần được tô cũng có thể là trích dẫn để phản bác chứ không phải lời công kích của người viết.",
+    "body": [
+      [
+        "Nghiên cứu nền, không phải tin vừa ra mắt",
+        "[ViHOS tại EACL 2023](https://aclanthology.org/2023.eacl-main.47/) giới thiệu khoảng 26.000 đoạn được gán nhãn trong 11.000 bình luận, cùng hướng dẫn xác định đoạn thù ghét và xúc phạm tiếng Việt. Đây là bài toán định vị đoạn, khác với chỉ phân loại cả bình luận. Bài báo có thử nghiệm và phân tích lỗi do tác giả thực hiện. Giá trị với vận hành là gợi ý thiết kế công cụ hỗ trợ xem xét, không chứng minh công cụ đủ an toàn để tự khóa tài khoản."
+      ],
+      [
+        "Một quy trình dùng được cho nhóm nhỏ",
+        "Minh họa: người quản trị diễn đàn nhận danh sách bình luận kèm đoạn nghi vấn và toàn bộ ngữ cảnh. Họ chọn giữ, yêu cầu xem thêm hoặc xử lý theo quy định đã công bố. Mô hình không tự gửi cảnh cáo. Giữ lý do quyết định của con người tách khỏi dự đoán máy để có thể sửa khiếu nại mà không biến dự đoán cũ thành “sự thật”."
+      ],
+      [
+        "Cách tự kiểm trước khi áp dụng",
+        "Lập mẫu có bình luận bình thường, trích dẫn, mỉa mai, viết tắt và lời tự nói về mình. Hai người gán nhãn độc lập, lưu phần bất đồng. So sánh ba giao diện: chỉ nhãn, nhãn kèm tô sáng và văn bản không gợi ý. Đảo thứ tự mẫu để giảm học thuộc. Đo cả vị trí tô sáng lẫn quyết định cuối; không để cùng một bình luận xuất hiện ở tập chỉnh và tập kiểm."
+      ],
+      [
+        "Thước đo liên quan đến người dùng",
+        "Tách cảnh báo nhầm khỏi bỏ sót; theo dõi số bình luận vô hại bị chặn và thời gian người kiểm duyệt cần để quyết định. Độ trùng vùng chữ không đủ: một vùng dài có thể “bắt trúng” nhưng gây hiểu nhầm. Kiểm thêm liệu người xem có bị máy dẫn dắt, và liệu sai sót tập trung ở nhóm tiếng lóng hay cách diễn đạt nào. Không suy danh tính nhạy cảm từ câu chữ."
+      ],
+      [
+        "Điều kiện triển khai và chi phí",
+        "Bắt đầu ở chế độ chỉ gợi ý, có nút bỏ qua và cơ chế kháng nghị. Chi phí gồm mô hình, lượng bình luận và nhân công kiểm, chưa có định mức sản phẩm từ nghiên cứu này. [Kho tác giả](https://github.com/phusroyal/ViHOS) là điểm kiểm phiên bản và điều kiện sử dụng; không mặc định dữ liệu mạng xã hội được phép tái công khai hay dùng thương mại. Xóa định danh không cần thiết và giới hạn người được xem bản gốc. Bài này không tái đăng câu xúc phạm hay dữ liệu cá nhân."
+      ],
+      [
+        "Mở rộng theo hướng liên ngành",
+        "Nghiên cứu kết hợp xử lý ngôn ngữ, tâm lý nhận thức và quản trị cộng đồng: tô sáng có thật sự giúp công bằng hơn hay chỉ tăng tốc? Đánh giá riêng trích dẫn để phê phán và lời trực tiếp công kích. Khi cộng đồng thay đổi ngôn ngữ, rà lại mẫu thực tế thay vì tin rằng điểm benchmark cũ vẫn đại diện."
+      ]
+    ],
+    "sources": [
+      [
+        "ViHOS – EACL 2023",
+        "https://aclanthology.org/2023.eacl-main.47/"
+      ],
+      [
+        "Kho tác giả",
+        "https://github.com/phusroyal/ViHOS"
+      ]
+    ],
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "15/11/2026",
+    "color": "teal",
+    "read": "5 phút",
+    "note": "Kiểm nguồn 15/11/2026. Phương pháp, tình huống và tiêu chí thử trong bài là đề xuất biên tập, chưa được thực nghiệm. Không phải khuyến nghị mua dịch vụ; chi phí triển khai và quyền sử dụng dữ liệu cần kiểm tra riêng."
+  },
+  {
+    "id": "openviic-mo-ta-anh-khong-them-chuyen",
+    "title": "UIT-OpenViIC: viết mô tả ảnh tiếng Việt mà không thêm chuyện",
+    "deck": "Phân biệt điều nhìn thấy, bối cảnh được cung cấp và suy đoán khi làm nội dung hình ảnh.",
+    "sourceDate": "Trang dữ liệu dẫn công trình 2023; kiểm nguồn 15/11/2026",
+    "intro": "Một câu mô tả ảnh nghe tự nhiên vẫn có thể bịa địa điểm, nghề nghiệp hoặc cảm xúc. Với thư viện ảnh và nội dung hỗ trợ tiếp cận, đúng sự vật quan trọng hơn văn phong bay bổng.",
+    "body": [
+      [
+        "Nguồn và mức độ tin cậy",
+        "[UIT-OpenViIC](https://uit-together.github.io/datasets/UIT-OpenViIC/) công bố 13.100 ảnh và 61.241 mô tả tiếng Việt. Nhóm nghiên cứu thu thập ảnh qua tìm kiếm Google/Bing và tổ chức nhiều người viết mô tả độc lập; trang dẫn công trình năm 2023. Đây là tài nguyên nghiên cứu do nhóm công bố, không phải một dịch vụ tạo caption mới được kiểm nghiệm bởi bản tin. Nhiều cách mô tả cùng ảnh nhắc ta rằng khớp đúng một câu tham chiếu không phải thước đo duy nhất."
+      ],
+      [
+        "Tình huống thực dụng",
+        "Minh họa: một đơn vị có 50 ảnh sản phẩm tự chụp cần alt text để người dùng trình đọc màn hình hiểu nội dung. Tách alt text mô tả thông tin thiết yếu khỏi caption bán hàng. Không tự đoán chất liệu, công dụng hay xuất xứ chỉ vì bề ngoài giống. Thông tin từ hồ sơ sản phẩm phải được đánh dấu là dữ liệu bổ sung, không giả là AI nhìn thấy trong ảnh."
+      ],
+      [
+        "Bài thử ba lớp bằng chứng",
+        "Dùng ảnh mình có quyền, chuẩn bị ba cột: điều nhìn thấy, thông tin ngoài ảnh đã xác nhận, điều chưa biết. Cho mô hình mô tả ở chế độ chỉ ảnh rồi chế độ ảnh kèm hồ sơ. Người rà đối chiếu từng mệnh đề với đúng lớp nguồn. Cố ý thêm trường hợp vật bị che, ảnh tối, cảnh quen thuộc dễ khiến AI đoán địa danh. Giữ tập kiểm cuối chưa dùng để sửa prompt."
+      ],
+      [
+        "Cách chấm và tiêu chí đạt",
+        "Đếm vật thể bị thêm, thuộc tính sai, thông tin quan trọng bị bỏ, chữ tiếng Việt không tự nhiên và độ dài không phù hợp mục đích. Chấm theo mệnh đề thay vì chỉ độ giống câu mẫu. Với alt text, nhờ người dùng công cụ tiếp cận kiểm xem mô tả giúp hoàn thành tác vụ không. Một ảnh có thể cần mô tả khác nhau khi dùng trong hướng dẫn sửa máy và trong danh mục bán hàng."
+      ],
+      [
+        "Giấy phép và chi phí là hai việc riêng",
+        "Việc bộ dữ liệu có liên kết tải không có nghĩa mọi ảnh được cấp phép quảng cáo. Nguồn ảnh tìm qua máy tìm kiếm cần kiểm quyền từng phạm vi sử dụng; bản tin không tải hoặc tái phân phối ảnh ấy. Dùng ảnh tự chụp hoặc được cấp phép để thử sản phẩm. Chi phí mô hình thường phụ thuộc ảnh, độ phân giải và lượt thử; chưa có báo giá triển khai ở nguồn này. Đo chi phí trên 50 ảnh, cộng giờ kiểm duyệt, trước khi xử lý cả thư viện."
+      ],
+      [
+        "Nghiên cứu tiếp: tiếp cận và văn hóa",
+        "Có thể nghiên cứu mô tả phù hợp bối cảnh Việt Nam mà không biến nhận biết văn hóa thành suy đoán về con người. So sánh cách diễn đạt với người khiếm thị và biên tập viên, đo hoàn thành tác vụ thay vì chỉ điểm ngôn ngữ. Mọi nhận diện cá nhân, thuộc tính nhạy cảm hay cảm xúc suy đoán cần nằm ngoài mục tiêu mô tả cơ bản."
+      ]
+    ],
+    "sources": [
+      [
+        "Trang dữ liệu UIT-Together",
+        "https://uit-together.github.io/datasets/UIT-OpenViIC/"
+      ],
+      [
+        "Công trình gốc",
+        "https://arxiv.org/abs/2305.04166"
+      ]
+    ],
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "15/11/2026",
+    "color": "teal",
+    "read": "5 phút",
+    "note": "Kiểm nguồn 15/11/2026. Phương pháp, tình huống và tiêu chí thử trong bài là đề xuất biên tập, chưa được thực nghiệm. Không phải khuyến nghị mua dịch vụ; chi phí triển khai và quyền sử dụng dữ liệu cần kiểm tra riêng."
+  },
+  {
     "id": "vinli-suy-ra-khong-phai-giong-nhau",
     "title": "ViNLI: hai câu giống từ chưa chắc suy ra được nhau",
     "deck": "Một phép kiểm suy luận tiếng Việt giúp rà lời quảng cáo và bản tóm tắt, nhưng không thay người chịu trách nhiệm nội dung.",
