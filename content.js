@@ -1,5 +1,275 @@
 window.ARTICLES=[
   {
+    "id": "vimqa-noi-du-bang-chung",
+    "title": "VIMQA: câu trả lời cần đủ các mắt xích bằng chứng",
+    "deck": "Thử trợ lý tra cứu tiếng Việt khi một tài liệu không chứa đủ câu trả lời.",
+    "sourceDate": "LREC, tháng 6/2022",
+    "intro": "Một trợ lý có thể tìm đúng hai đoạn văn nhưng ghép chúng sai. Với câu hỏi cần nhiều nguồn, cần kiểm cả đường nối giữa các nguồn chứ không chỉ chấm câu cuối.",
+    "body": [
+      [
+        "Bằng chứng nghiên cứu",
+        "[Công trình VIMQA](https://aclanthology.org/2022.lrec-1.700/) trình bày hơn 10.000 cặp hỏi đáp tiếng Việt dựa trên Wikipedia, có bằng chứng ở cấp câu và yêu cầu suy luận qua nhiều đoạn. Đây là tài nguyên nghiên cứu năm 2022, không phải tin ra mắt hôm nay. Kết quả trong bài do tác giả đánh giá; bản tin chưa tái lập. Nó giúp đặt câu hỏi về cách kiểm một hệ thống tra cứu, nhưng không chứng minh mọi trợ lý dùng tài liệu doanh nghiệp sẽ hoạt động tốt."
+      ],
+      [
+        "Tình huống minh họa",
+        "Một doanh nghiệp cần biết sản phẩm nào phù hợp với một điều kiện bảo hành. Danh mục sản phẩm nằm ở tài liệu A, điều kiện bảo hành nằm ở B. Ví dụ này do biên tập đặt ra, không lấy từ dataset. Đầu ra tốt phải nêu sản phẩm, dẫn đúng phiên bản của cả hai tài liệu và chỉ rõ điều kiện áp dụng. Chỉ trích một nguồn rồi suy đoán nguồn còn lại là chưa đạt."
+      ],
+      [
+        "Phương pháp thử có thể lặp lại",
+        "Tự soạn 30 câu từ tài liệu giả lập hoặc tài liệu được phép dùng: 10 câu một nguồn, 10 câu cần hai nguồn, 10 câu thiếu một mắt xích. Hai người lập đáp án và đoạn căn cứ trước khi chạy. So hai cách: tìm kiếm một lượt rồi trả lời; tìm kiếm lượt hai dựa trên thực thể còn thiếu. Giữ nguyên mô hình, ngân sách dữ liệu đầu vào và tập thử. Lưu ID nguồn, phiên bản, đoạn truy xuất và đáp án; không cần yêu cầu mô hình tiết lộ suy nghĩ nội bộ."
+      ],
+      [
+        "Đo cả lỗi nối nguồn",
+        "Chấm riêng: tìm đủ nguồn hay không, mỗi mệnh đề có được nguồn hỗ trợ không, kết luận cuối có đúng không. Thay tên một thực thể trùng tên để kiểm khả năng phân biệt. Sau đó bỏ nguồn B: hệ thống phải báo thiếu bằng chứng thay vì giữ câu trả lời cũ. Đếm chi phí cho mỗi câu đúng có đủ căn cứ, không chỉ chi phí mỗi lượt. Một kết luận tình cờ đúng nhưng dẫn sai nguồn vẫn bị tính lỗi."
+      ],
+      [
+        "Điều kiện, chi phí và quyền riêng tư",
+        "[PDF gốc](https://aclanthology.org/2022.lrec-1.700.pdf) mô tả thiết kế nghiên cứu; quyền của bài báo không tự bao phủ mọi dữ liệu hay phần mềm triển khai. Trước tải hoặc tái phân phối dataset, kiểm điều khoản đúng bản và nguồn Wikipedia. Thử thiết kế bằng tài liệu tự tạo không đòi hỏi mua API. Nếu chạy mô hình, tính thêm lượt tìm kiếm, lưu chỉ mục và công kiểm chứng. Không gửi tài liệu khách hàng cho dịch vụ ngoài khi chưa có quyền; kiểm quyền truy xuất trước khi tạo câu trả lời."
+      ],
+      [
+        "Hướng nghiên cứu mở rộng",
+        "Kết hợp quản trị tri thức và thiết kế giao diện: người dùng có phát hiện mắt xích thiếu nhanh hơn khi thấy sơ đồ nguồn không? So sánh cách trình bày hai trích dẫn rời rạc với một bảng mệnh đề–bằng chứng. Cần đo thời gian sửa và lỗi còn sót, không coi việc có nhiều trích dẫn là chất lượng cao."
+      ]
+    ],
+    "sources": [
+      [
+        "VIMQA, LREC 2022",
+        "https://aclanthology.org/2022.lrec-1.700/"
+      ],
+      [
+        "Toàn văn",
+        "https://aclanthology.org/2022.lrec-1.700.pdf"
+      ]
+    ],
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "16/11/2026",
+    "color": "teal",
+    "read": "5 phút",
+    "note": "Kiểm nguồn 16/11/2026. Tình huống và phương pháp thử là đề xuất biên tập chưa thực nghiệm. Chi phí và quyền triển khai phải kiểm riêng; không gọi công trình cũ là tin ra mắt hôm nay."
+  },
+  {
+    "id": "vimmrc-dao-dap-an-kiem-doc-hieu",
+    "title": "ViMMRC 2.0: chọn đúng đáp án chưa chứng minh đã đọc hiểu",
+    "deck": "Kiểm trợ lý học tiếng Việt bằng bằng chứng trong đoạn và độ ổn định khi đổi thứ tự lựa chọn.",
+    "sourceDate": "Tiền bản 2023; bản v3 ngày 18/07/2025",
+    "intro": "Một bài trắc nghiệm có thể được trả lời nhờ dấu hiệu ở đáp án, không nhờ hiểu văn bản. Trợ lý học tập cần được kiểm theo cách tách hai khả năng đó.",
+    "body": [
+      [
+        "Nguồn và phạm vi",
+        "[ViMMRC 2.0 bản v3](https://arxiv.org/abs/2303.18162v3) mô tả 699 đoạn văn, thơ và 5.273 câu hỏi từ lớp 1 đến lớp 12. Số lựa chọn không cố định ở bốn. Nghiên cứu phân tích khó khăn khi hiểu ngữ cảnh hàm ý và liên kết thông tin. Các kết quả là thí nghiệm của tác giả, không phải chứng nhận cho gia sư AI thương mại. Bài này không dùng điểm benchmark để quyết định điểm học viên."
+      ],
+      [
+        "Ứng dụng minh họa: trợ lý giúp đọc chậm lại",
+        "Thay vì trả ngay A/B/C, trợ lý gợi người học tìm một chi tiết liên quan rồi mới chọn đáp án. Một giáo viên có thể thử bằng đoạn văn tự viết, có quyền sử dụng. Mục tiêu là giúp học viên quay về văn bản; không phải tạo thêm một máy đưa đáp án nhanh. Đây là thiết kế đề xuất chưa thử với lớp học thực."
+      ],
+      [
+        "Bài thử ba phiên bản",
+        "Tạo 20 câu thuộc ba kiểu: tìm thông tin trực tiếp, liên kết hai chi tiết, giải thích hàm ý. Với mỗi câu tạo bản gốc, bản đổi thứ tự đáp án và bản sửa một chi tiết quyết định trong văn bản. Giữ nghĩa của lựa chọn khi đảo vị trí. Ghi đáp án theo nội dung lựa chọn, không chỉ chữ cái. Tách các biến thể của cùng câu về cùng một tập dữ liệu để tránh rò rỉ giữa tập phát triển và tập kiểm cuối."
+      ],
+      [
+        "Kiểm kết quả và giới hạn",
+        "Chấm đáp án và câu căn cứ riêng. Đáp án đúng nhưng căn cứ không liên quan chưa đủ. Khi chỉ đảo lựa chọn, nội dung được chọn phải ổn định; khi sửa chi tiết quyết định, đáp án cần đổi đúng. Với câu hàm ý có nhiều cách diễn giải hợp lý, giáo viên ghi phạm vi chấp nhận trước. Không tự lấy lời giải do AI tạo làm đáp án chuẩn cho chính AI. Có thể thử thêm chế độ không đưa đoạn văn để phát hiện câu đoán được từ mẹo."
+      ],
+      [
+        "Quyền dữ liệu không đọc từ một nhãn",
+        "[Trang dataset của UIT](https://huggingface.co/datasets/uitnlp/vimmrc2.0) có nhãn CC BY-SA 4.0 nhưng đồng thời ghi chỉ dành cho nghiên cứu, cần ký thỏa thuận và chia sẻ thông tin tài khoản để truy cập. Đây là điểm cần làm rõ với chủ dữ liệu trước dùng thương mại, không phải lời cho phép tải hàng loạt. Bản tin không chấp nhận điều khoản hay tải dữ liệu thay người đọc. Hình bài này là sơ đồ tự vẽ, không sao chép trang sách."
+      ],
+      [
+        "Chi phí và nghiên cứu tiếp",
+        "Bộ thử tự viết có thể bắt đầu trên bảng tính; chi phí chính là người ra đề, phản biện đáp án và rà giải thích. Nếu dùng API, đo tổng token của cả ba biến thể và số lần thử, không công bố giá cố định khi chưa chọn dịch vụ. Không gửi danh tính hoặc bài học sinh lên nơi công khai. Hướng nghiên cứu giáo dục đáng làm là kiểm sau khi tắt AI: học viên có tự tìm bằng chứng tốt hơn không, thay vì chỉ đo tỷ lệ đúng khi có trợ giúp."
+      ]
+    ],
+    "sources": [
+      [
+        "ViMMRC 2.0 v3",
+        "https://arxiv.org/abs/2303.18162v3"
+      ],
+      [
+        "Toàn văn",
+        "https://arxiv.org/html/2303.18162v3"
+      ],
+      [
+        "Dataset UIT",
+        "https://huggingface.co/datasets/uitnlp/vimmrc2.0"
+      ]
+    ],
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "16/11/2026",
+    "color": "teal",
+    "read": "5 phút",
+    "note": "Kiểm nguồn 16/11/2026. Tình huống và phương pháp thử là đề xuất biên tập chưa thực nghiệm. Chi phí và quyền triển khai phải kiểm riêng; không gọi công trình cũ là tin ra mắt hôm nay."
+  },
+  {
+    "id": "viocd-khieu-nai-can-nguoi-xu-ly",
+    "title": "ViOCD: nhận ra lời phàn nàn rồi phải chuyển được cho người xử lý",
+    "deck": "Một phép thử cho doanh nghiệp nhỏ: phân luồng phản hồi mà không bỏ sót lời chê nhẹ.",
+    "sourceDate": "Công trình 2021; tiền bản v3 ngày 05/07/2021",
+    "intro": "Khách hàng có thể vừa khen sản phẩm vừa báo một lỗi cần sửa. Phân loại cảm xúc chung không đủ để quyết định phản hồi nào cần được hỗ trợ.",
+    "body": [
+      [
+        "Bằng chứng có giới hạn",
+        "[Nghiên cứu UIT-ViOCD](https://arxiv.org/abs/2104.11969) xây bộ 5.485 đánh giá được con người gán nhãn, thuộc bốn nhóm sản phẩm trên các website thương mại điện tử. Đây là nghiên cứu phát hiện phàn nàn, không phải hệ thống giải quyết khiếu nại đã triển khai. Bản tin không dùng chỉ số trong bài để hứa mức chính xác tại cửa hàng khác; ngôn ngữ, mặt hàng và tỷ lệ phàn nàn đều có thể đổi."
+      ],
+      [
+        "Một mục tiêu thực dụng",
+        "Tình huống minh họa do biên tập đặt ra: câu 'Hàng đẹp, nhưng thiếu phụ kiện' cần vào hàng đợi hỗ trợ dù mở đầu tích cực. Hệ thống chỉ gợi ý chuyển việc; nhân viên xác minh rồi xử lý theo chính sách cửa hàng. Nhãn phàn nàn không tự cho phép hoàn tiền, nhận trách nhiệm pháp lý, xóa bình luận hay trả lời thay khách."
+      ],
+      [
+        "Thử nghiệm không cần bắt đầu bằng mô hình lớn",
+        "Lấy 100 phản hồi được phép dùng, bỏ thông tin liên hệ và mã đơn. Hai người gán nhãn độc lập 'có vấn đề cần xử lý', 'không', 'chưa rõ', sau đó hòa giải khác biệt. Dành riêng một phần chưa xem để kiểm cuối. So một bộ quy tắc đơn giản với bộ phân loại hiện có, dùng cùng dữ liệu. Thêm các câu vừa khen vừa chê, phủ định, mỉa mai và phản hồi chỉ hỏi cách sử dụng. Ví dụ giả lập phải được đánh dấu riêng, không trộn vào báo cáo chất lượng thực tế."
+      ],
+      [
+        "Đo điều tác động công việc",
+        "Ghi số phàn nàn bị bỏ sót, số phản hồi bị chuyển nhầm, số trường hợp cần người đọc và thời gian mỗi ca. Tính theo từng nhóm hàng, không chỉ một điểm trung bình. Nếu tăng độ nhạy làm hàng đợi quá tải, đặt mức ưu tiên và khả năng tiếp nhận thay vì âm thầm bỏ bớt. Chạy ở chế độ gợi ý bên cạnh quy trình cũ trước; một người kiểm toàn bộ mẫu thử để phát hiện những gì máy không đưa vào hàng đợi."
+      ],
+      [
+        "Schema, quyền và chi phí",
+        "[Dataset card](https://huggingface.co/datasets/tarudesu/ViOCD) cho thấy các trường review, review_tokenize, label và domain. Hai dạng văn bản không phải hai khách hàng độc lập; cần giữ ID và không đếm đôi. Trang truy cập công khai không tự xác lập quyền thương mại cho dữ liệu nguồn, nên kiểm giấy phép và xin làm rõ nếu thiếu. Không đưa nội dung riêng của khách lên demo công khai. Chi phí gồm gán nhãn, vận hành, công rà ca sai và lượt mô hình nếu có; chưa có một giá cố định cho quy trình này."
+      ],
+      [
+        "Mở rộng liên ngành",
+        "Kết hợp nghiên cứu dịch vụ và ngôn ngữ: lời chê lịch sự có bị bỏ sót nhiều hơn lời gay gắt không? Có thể lập nhóm đánh giá cho cách nói vùng miền và câu ngắn thiếu dấu, nhưng không suy ra nhân khẩu học của từng người từ ngôn ngữ. Chỉ triển khai khi việc chuyển tiếp thật sự giúp giảm ca bỏ quên; nhiều nhãn đúng chưa đồng nghĩa chăm sóc khách hàng tốt hơn."
+      ]
+    ],
+    "sources": [
+      [
+        "Bài nghiên cứu",
+        "https://arxiv.org/abs/2104.11969"
+      ],
+      [
+        "Dataset card",
+        "https://huggingface.co/datasets/tarudesu/ViOCD"
+      ],
+      [
+        "Nhóm NLP UIT",
+        "https://nlp.uit.edu.vn/datasets"
+      ]
+    ],
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "16/11/2026",
+    "color": "teal",
+    "read": "5 phút",
+    "note": "Kiểm nguồn 16/11/2026. Tình huống và phương pháp thử là đề xuất biên tập chưa thực nghiệm. Chi phí và quyền triển khai phải kiểm riêng; không gọi công trình cũ là tin ra mắt hôm nay."
+  },
+  {
+    "id": "vilexnorm-visolex-giu-y-nguoi-viet",
+    "title": "ViLexNorm và ViSoLex: sửa tiếng lóng mà không sửa mất ý người viết",
+    "deck": "Chuẩn hóa bình luận để tìm kiếm tốt hơn, nhưng phải giữ nguyên bản và biết lúc nào không sửa.",
+    "sourceDate": "EACL tháng 3/2024; COLING tháng 1/2025",
+    "intro": "Một cửa hàng có thể bỏ sót câu hỏi vì khách viết tắt. Nhưng thay mọi từ lạ bằng từ chuẩn cũng nguy hiểm: tên thương hiệu, mã sản phẩm và cách nói riêng có thể bị đổi nghĩa.",
+    "body": [
+      [
+        "Hai tài nguyên, hai vai trò",
+        "[ViLexNorm](https://aclanthology.org/2024.eacl-long.85/) gồm 10.467 cặp bình luận cho nghiên cứu chuẩn hóa tiếng Việt. Kết quả ERR trong bài không phải tỷ lệ câu hoàn toàn đúng. [ViSoLex](https://aclanthology.org/2025.coling-demos.18/) bổ sung tra từ phi chuẩn và chuẩn hóa câu; bài báo mô tả một nhánh gọi GPT-4o API khi tra từ điển không có kết quả. Do đó không thể gọi toàn bộ thiết kế là chạy tại máy và miễn phí. Đây là công trình 2024–2025, không phải tin mới phát hành hôm nay; bản tin chưa chạy tái lập."
+      ],
+      [
+        "Phép thử đề xuất cho tìm kiếm",
+        "Chọn 120 câu tự tạo hoặc có quyền dùng, chia thành viết tắt rõ nghĩa, từ lóng cần ngữ cảnh, tên riêng/mã hàng và câu vốn đúng. Hai người đọc độc lập ghi bản chuẩn chấp nhận được cùng trường hợp nên giữ nguyên. So ba tuyến: tìm bản gốc; tra từ điển kiểm soát; thêm mô hình chuẩn hóa. Giữ cùng công cụ tìm kiếm và tách tập chỉnh quy tắc khỏi tập kiểm cuối. Đây là thiết kế minh họa, chưa thử trên dữ liệu khách hàng."
+      ],
+      [
+        "Ví dụ và cách đo",
+        "Ví dụ tự tạo: 'sp này còn k' có thể hỗ trợ tìm câu hỏi tồn kho; nhưng K20 là mã hàng cần bảo vệ. Đếm số câu tìm được đúng tài liệu trong năm kết quả đầu, số từ đúng bị sửa sai và số lần đổi tên, mã hoặc phủ định. Ghi thời gian người kiểm sửa lại. Tăng khả năng tìm kiếm nhưng thường làm sai mã hàng chưa đủ đạt yêu cầu. Kiểm cả nhóm câu không cần sửa để phát hiện hệ thống quá nhiệt tình."
+      ],
+      [
+        "Giữ đường về bản gốc",
+        "Lưu original_text, normalized_text, danh sách thay đổi và phiên bản bộ chuẩn hóa. Người xem phải quay về lời gốc bằng một thao tác. Câu mơ hồ nên giữ nguyên hoặc chuyển người đọc, không ép máy đoán. Không dùng bản chuẩn hóa thay lời trích dẫn nguyên văn của khách. Nếu kết quả tìm kiếm được lưu, phải chỉ rõ nó đến từ bản nào để có thể điều tra lỗi sau này."
+      ],
+      [
+        "Chi phí và giấy phép",
+        "[Repo ViLexNorm](https://github.com/ngxtnhi/ViLexNorm) ghi CC BY-NC-SA 4.0, dành cho nghiên cứu; [mã ViSoLex](https://github.com/HaDung2002/visolex) ghi MIT. Quyền mã không tự đổi quyền dữ liệu phụ thuộc. Trước dùng thương mại cần kiểm riêng dữ liệu, mô hình và đường API. Chi phí gồm tính toán, kiểm lỗi và dịch vụ ngoài nếu bật; chưa có mức tổng cố định. Thử bằng dữ liệu giả lập và tắt đường gửi ngoài chưa được duyệt; không ghi thông tin nhận diện khách vào log."
+      ],
+      [
+        "Hướng nghiên cứu mở rộng",
+        "Kết hợp ngôn ngữ học xã hội và tìm kiếm: một cách viết là lỗi hay bản sắc cộng đồng? Đánh giá theo nhóm từ và theo thời gian để tránh coi một lối nói là sai. Thử cho người dùng chọn giữ từ gốc và đo chất lượng tìm kiếm sau lựa chọn đó. Mục tiêu là hiểu tốt hơn, không đồng hóa cách viết."
+      ]
+    ],
+    "sources": [
+      [
+        "ViLexNorm",
+        "https://aclanthology.org/2024.eacl-long.85/"
+      ],
+      [
+        "ViSoLex",
+        "https://aclanthology.org/2025.coling-demos.18/"
+      ],
+      [
+        "Mã và giấy phép ViLexNorm",
+        "https://github.com/ngxtnhi/ViLexNorm"
+      ],
+      [
+        "Mã ViSoLex",
+        "https://github.com/HaDung2002/visolex"
+      ]
+    ],
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "16/11/2026",
+    "color": "teal",
+    "read": "5 phút",
+    "note": "Kiểm nguồn 16/11/2026. Tình huống và phương pháp thử là đề xuất biên tập chưa thực nghiệm. Chi phí và quyền triển khai phải kiểm riêng; không gọi công trình cũ là tin ra mắt hôm nay."
+  },
+  {
+    "id": "vicoqa-giu-dung-ngu-canh-hoi-tiep",
+    "title": "UIT-ViCoQA: chatbot nhớ hội thoại hay chỉ trả lời câu cuối?",
+    "deck": "Nhớ đúng đối tượng quan trọng hơn lưu thật nhiều lịch sử.",
+    "sourceDate": "ICCCI 2021; tiền bản sửa ngày 30/09/2021",
+    "intro": "Một trợ lý có thể trả lời đúng câu hỏi đầy đủ rồi sai khi nghe 'còn trường hợp đó?'. Kiểm từng câu riêng lẻ sẽ bỏ qua lỗi chuyển đối tượng và điều kiện qua nhiều lượt.",
+    "body": [
+      [
+        "Nghiên cứu cung cấp gì?",
+        "[UIT-ViCoQA](https://arxiv.org/abs/2105.01542) gồm 10.000 câu hỏi và đáp án trong 2.000 hội thoại về bài báo sức khỏe. Đây là tài nguyên đọc hiểu hội thoại dựa trên văn bản, không chứng minh một chatbot đủ năng lực tư vấn y tế. Công trình năm 2021 do nhóm tác giả đánh giá; không lấy điểm mô hình nền thời đó để xếp hạng chatbot hiện nay. Bản tin chưa tái lập thử nghiệm."
+      ],
+      [
+        "Tình huống minh họa",
+        "Tài liệu giả lập có khóa A học trực tiếp, khóa B học trực tuyến. Người dùng hỏi lịch A, hỏi tiếp 'còn B?', rồi 'khóa đó học cuối tuần không?'. Hệ thống phải hiểu đối tượng hiện tại là B và tra đúng tài liệu. Chỉ nối toàn bộ lịch sử chưa bảo đảm giải quyết được việc này. Đây là ví dụ biên tập, không dùng dữ liệu học viên thật. Có thể bắt đầu từ hướng dẫn nội bộ không nhạy cảm thay vì quyết định y tế hoặc quyền lợi."
+      ],
+      [
+        "Thiết kế kiểm có thể lặp lại",
+        "Tự viết 30 hội thoại từ tài liệu đơn vị sở hữu. Mỗi hội thoại có lượt hỏi trực tiếp, hỏi bằng đại từ, sửa đối tượng và đổi chủ đề. Ghi đối tượng đúng, đoạn nguồn và điều kiện cần hỏi lại trước khi chạy. So ba cấu hình: chỉ câu cuối; toàn bộ lịch sử; lịch sử kèm bảng trạng thái ngắn về đối tượng và điều kiện. Giữ cùng mô hình, nguồn và yêu cầu trích dẫn; đổi thứ tự chủ đề để tránh chỉ kiểm một chuỗi quen thuộc."
+      ],
+      [
+        "Prompt và cách kiểm",
+        "Prompt minh họa: 'Trả lời dựa trên tài liệu được cung cấp. Nêu đối tượng đang được hỏi. Nếu lời hỏi tiếp có thể chỉ nhiều đối tượng, hỏi lại thay vì tự chọn. Dẫn đoạn nguồn cho kết luận.' Ghi riêng lỗi nhầm đối tượng, kéo điều kiện cũ sang chủ đề mới, thiếu nguồn và hỏi lại không cần thiết. So tỷ lệ đúng lượt đầu với lượt sau. Một điểm trung bình cao có thể che đúng phần hội thoại khó nhất."
+      ],
+      [
+        "Chi phí, dữ liệu và quyền",
+        "Gửi toàn bộ lịch sử mãi có thể tốn hơn mà vẫn nhớ sai; bảng trạng thái cũng có thể tóm tắt sai rồi kéo lỗi sang các lượt sau. Cần giữ đường đối chiếu câu gốc, đo chi phí mỗi hội thoại và thời gian chờ. [Dataset card UIT](https://huggingface.co/datasets/uitnlp/vicoqa/blob/main/README.md) gắn MIT trong khi bài báo nêu mục đích nghiên cứu. Cần làm rõ quyền dữ liệu nguồn trước dùng thương mại, không suy một nhãn metadata bao phủ tất cả. Bài thử tự soạn tránh phải tải dataset; không gửi lịch sử khách hàng thật lên demo công khai."
+      ],
+      [
+        "Nghiên cứu tiếp về trải nghiệm",
+        "Khi nào hỏi lại làm người dùng tin hơn, khi nào chỉ gây phiền? Thử hai cách hỏi lại trên cùng những trường hợp mơ hồ và đo số lượt sửa sai, thời gian hoàn thành. Đừng chỉ tối ưu trả lời thật ít lượt: một câu hỏi đúng lúc có thể tránh một chuỗi trả lời sai. Các phương pháp ở đây là đề xuất, chưa có thử nghiệm người dùng do bản tin thực hiện."
+      ]
+    ],
+    "sources": [
+      [
+        "UIT-ViCoQA",
+        "https://arxiv.org/abs/2105.01542"
+      ],
+      [
+        "Dataset card UIT",
+        "https://huggingface.co/datasets/uitnlp/vicoqa/blob/main/README.md"
+      ],
+      [
+        "Repo tác giả",
+        "https://github.com/sonlam1102/vicoqa-cmc"
+      ]
+    ],
+    "category": "AI Việt Nam",
+    "region": "Việt Nam",
+    "kind": "Nghiên cứu ứng dụng",
+    "date": "16/11/2026",
+    "color": "teal",
+    "read": "5 phút",
+    "note": "Kiểm nguồn 16/11/2026. Tình huống và phương pháp thử là đề xuất biên tập chưa thực nghiệm. Chi phí và quyền triển khai phải kiểm riêng; không gọi công trình cũ là tin ra mắt hôm nay."
+  },
+  {
     "id": "vmmu-doc-chu-chua-du-hieu-hinh",
     "title": "VMMU: đọc được chữ chưa đủ để hiểu hình",
     "deck": "Kiểm trợ lý học tập tiếng Việt bằng sơ đồ, biểu đồ và bằng chứng thị giác.",

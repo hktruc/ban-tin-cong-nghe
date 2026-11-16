@@ -1,15 +1,15 @@
 # Bản tin công nghệ
 
-Ấn bản 15/11/2026: 68 bài. Thêm 5 bài nghiên cứu ứng dụng AI Việt Nam; giữ nguyên 63 bài cũ và bố cục/CSS. Mục tiêu 5 bài đạt, thiếu 0. Không gọi các công trình cũ là tin ra mắt hôm nay.
+Ấn bản 16/11/2026: 73 bài. Thêm 5 bài AI Việt Nam, giữ nguyên 68 bài cũ và CSS/bố cục. Mục tiêu 5 bài đạt, thiếu 0. Đây là nghiên cứu nền 2021–2025, không phải năm tin ra mắt hôm nay.
 
 ## Nguồn và phạm vi
-- VMMU: ACL tháng 11/2026, trang dự án, dataset card và mã tác giả; không trộn phiên bản báo cáo.
-- VN-MTEB: EACL tháng 3/2026 và PDF; làm rõ dữ liệu dịch, giấy phép từng tập.
-- ViSQA: PLOS One 12/01/2026; phân biệt thí nghiệm giọng tổng hợp với hội thoại thực.
-- ViHOS: EACL 2023 và repo; định vị đoạn không phải quyết định tự động xử phạt.
-- UIT-OpenViIC: trang UIT-Together và công trình gốc 2023; không suy quyền ảnh thương mại từ liên kết tải.
+- VIMQA: ACL LREC 2022 và PDF; kiểm chuỗi bằng chứng.
+- ViMMRC 2.0: arXiv v3 18/07/2025 và dataset UIT; lưu ý điều khoản nghiên cứu dù có nhãn CC BY-SA.
+- ViOCD: bài 2021 và dataset card; phân luồng hỗ trợ, không tự xử lý khiếu nại.
+- ViLexNorm / ViSoLex: EACL 2024, COLING 2025 và repo; phân biệt CC BY-NC-SA dữ liệu với MIT mã, nhánh API bên ngoài không mặc định miễn phí.
+- ViCoQA: bài 2021 và card UIT; kiểm ngữ cảnh hội thoại, không tư vấn y tế.
 
-Các phương pháp ứng dụng là đề xuất biên tập chưa thực nghiệm. Không gọi API AI, mua dịch vụ, tải dữ liệu riêng hay tạo credentials. Chi phí cần đo theo triển khai, không bịa giá. Năm SVG tự vẽ, không dùng ảnh dataset. Phần sự kiện nguồn ngắn; phần phương pháp là phân tích độc lập.
+Phương pháp là đề xuất chưa thực nghiệm, không gọi API AI hay tải dataset. Không dùng dữ liệu riêng. Năm SVG tự vẽ không sao chép hình nguồn. Chi phí được nêu theo cấu phần cần đo, không bịa giá cố định.
 
 ## Kiểm tra
-Đối chiếu JSON bảo toàn 63 bài cũ; ID duy nhất; kiểm cú pháp JavaScript, nguồn HTTPS và XML SVG; render năm SVG để kiểm chữ. Không thay thiết kế hay nội dung người dùng đã chỉnh. Xác minh commit, Pages và nội dung live sau xuất bản. Kiểm UI trình duyệt chỉ được công nhận nếu có quan sát thực tế.
+JSON bảo toàn 68 bài cũ; ID duy nhất; kiểm cú pháp JS, cấu trúc bài và SVG. Xác minh commit/deploy/live sau xuất bản. Không nhận đã thử mô hình hay browser UI nếu không quan sát thực tế.
